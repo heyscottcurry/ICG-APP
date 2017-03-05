@@ -16,7 +16,8 @@
 		AB07EE4B1E6BA9E0009A9948 /* Indianapolis_Coffee_GuideUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB07EE4A1E6BA9E0009A9948 /* Indianapolis_Coffee_GuideUITests.swift */; };
 		AB07EE5B1E6BAA09009A9948 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB07EE5A1E6BAA09009A9948 /* MapKit.framework */; };
 		AB07EE5D1E6BABC6009A9948 /* CoffeeShopTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB07EE5C1E6BABC6009A9948 /* CoffeeShopTableViewCell.swift */; };
-		AB07EE5F1E6BAF07009A9948 /* ShopViewCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB07EE5E1E6BAF07009A9948 /* ShopViewCollectionViewController.swift */; };
+		AB07EE611E6BBB80009A9948 /* CoffeeShop.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB07EE601E6BBB80009A9948 /* CoffeeShop.swift */; };
+		AB07EE631E6BBE54009A9948 /* ShopTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB07EE621E6BBE54009A9948 /* ShopTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,7 +54,8 @@
 		AB07EE581E6BA9FD009A9948 /* Indianapolis Coffee Guide.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Indianapolis Coffee Guide.entitlements"; sourceTree = "<group>"; };
 		AB07EE5A1E6BAA09009A9948 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		AB07EE5C1E6BABC6009A9948 /* CoffeeShopTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoffeeShopTableViewCell.swift; sourceTree = "<group>"; };
-		AB07EE5E1E6BAF07009A9948 /* ShopViewCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ShopViewCollectionViewController.swift; path = ../ShopViewCollectionViewController.swift; sourceTree = "<group>"; };
+		AB07EE601E6BBB80009A9948 /* CoffeeShop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoffeeShop.swift; sourceTree = "<group>"; };
+		AB07EE621E6BBE54009A9948 /* ShopTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShopTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,7 +108,8 @@
 		AB07EE291E6BA9E0009A9948 /* Indianapolis Coffee Guide */ = {
 			isa = PBXGroup;
 			children = (
-				AB07EE5E1E6BAF07009A9948 /* ShopViewCollectionViewController.swift */,
+				AB07EE621E6BBE54009A9948 /* ShopTableViewController.swift */,
+				AB07EE601E6BBB80009A9948 /* CoffeeShop.swift */,
 				AB07EE581E6BA9FD009A9948 /* Indianapolis Coffee Guide.entitlements */,
 				AB07EE2A1E6BA9E0009A9948 /* AppDelegate.swift */,
 				AB07EE2C1E6BA9E0009A9948 /* ViewController.swift */,
@@ -291,9 +294,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				AB07EE2D1E6BA9E0009A9948 /* ViewController.swift in Sources */,
-				AB07EE5F1E6BAF07009A9948 /* ShopViewCollectionViewController.swift in Sources */,
+				AB07EE611E6BBB80009A9948 /* CoffeeShop.swift in Sources */,
 				AB07EE2B1E6BA9E0009A9948 /* AppDelegate.swift in Sources */,
 				AB07EE5D1E6BABC6009A9948 /* CoffeeShopTableViewCell.swift in Sources */,
+				AB07EE631E6BBE54009A9948 /* ShopTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
