@@ -15,6 +15,8 @@
 		AB07EE401E6BA9E0009A9948 /* Indianapolis_Coffee_GuideTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB07EE3F1E6BA9E0009A9948 /* Indianapolis_Coffee_GuideTests.swift */; };
 		AB07EE4B1E6BA9E0009A9948 /* Indianapolis_Coffee_GuideUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB07EE4A1E6BA9E0009A9948 /* Indianapolis_Coffee_GuideUITests.swift */; };
 		AB07EE5B1E6BAA09009A9948 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB07EE5A1E6BAA09009A9948 /* MapKit.framework */; };
+		AB07EE5D1E6BABC6009A9948 /* CoffeeShopTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB07EE5C1E6BABC6009A9948 /* CoffeeShopTableViewCell.swift */; };
+		AB07EE5F1E6BAF07009A9948 /* ShopViewCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB07EE5E1E6BAF07009A9948 /* ShopViewCollectionViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +52,8 @@
 		AB07EE4C1E6BA9E0009A9948 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AB07EE581E6BA9FD009A9948 /* Indianapolis Coffee Guide.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Indianapolis Coffee Guide.entitlements"; sourceTree = "<group>"; };
 		AB07EE5A1E6BAA09009A9948 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		AB07EE5C1E6BABC6009A9948 /* CoffeeShopTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoffeeShopTableViewCell.swift; sourceTree = "<group>"; };
+		AB07EE5E1E6BAF07009A9948 /* ShopViewCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ShopViewCollectionViewController.swift; path = ../ShopViewCollectionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,10 +106,12 @@
 		AB07EE291E6BA9E0009A9948 /* Indianapolis Coffee Guide */ = {
 			isa = PBXGroup;
 			children = (
+				AB07EE5E1E6BAF07009A9948 /* ShopViewCollectionViewController.swift */,
 				AB07EE581E6BA9FD009A9948 /* Indianapolis Coffee Guide.entitlements */,
 				AB07EE2A1E6BA9E0009A9948 /* AppDelegate.swift */,
 				AB07EE2C1E6BA9E0009A9948 /* ViewController.swift */,
 				AB07EE2E1E6BA9E0009A9948 /* Main.storyboard */,
+				AB07EE5C1E6BABC6009A9948 /* CoffeeShopTableViewCell.swift */,
 				AB07EE311E6BA9E0009A9948 /* Assets.xcassets */,
 				AB07EE331E6BA9E0009A9948 /* LaunchScreen.storyboard */,
 				AB07EE361E6BA9E0009A9948 /* Info.plist */,
@@ -285,7 +291,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				AB07EE2D1E6BA9E0009A9948 /* ViewController.swift in Sources */,
+				AB07EE5F1E6BAF07009A9948 /* ShopViewCollectionViewController.swift in Sources */,
 				AB07EE2B1E6BA9E0009A9948 /* AppDelegate.swift in Sources */,
+				AB07EE5D1E6BABC6009A9948 /* CoffeeShopTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
