@@ -1,0 +1,559 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AB07EE2B1E6BA9E0009A9948 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB07EE2A1E6BA9E0009A9948 /* AppDelegate.swift */; };
+		AB07EE2D1E6BA9E0009A9948 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB07EE2C1E6BA9E0009A9948 /* ViewController.swift */; };
+		AB07EE301E6BA9E0009A9948 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB07EE2E1E6BA9E0009A9948 /* Main.storyboard */; };
+		AB07EE321E6BA9E0009A9948 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB07EE311E6BA9E0009A9948 /* Assets.xcassets */; };
+		AB07EE351E6BA9E0009A9948 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB07EE331E6BA9E0009A9948 /* LaunchScreen.storyboard */; };
+		AB07EE401E6BA9E0009A9948 /* Indianapolis_Coffee_GuideTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB07EE3F1E6BA9E0009A9948 /* Indianapolis_Coffee_GuideTests.swift */; };
+		AB07EE4B1E6BA9E0009A9948 /* Indianapolis_Coffee_GuideUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB07EE4A1E6BA9E0009A9948 /* Indianapolis_Coffee_GuideUITests.swift */; };
+		AB07EE5B1E6BAA09009A9948 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB07EE5A1E6BAA09009A9948 /* MapKit.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		AB07EE3C1E6BA9E0009A9948 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AB07EE1F1E6BA9DF009A9948 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AB07EE261E6BA9E0009A9948;
+			remoteInfo = "Indianapolis Coffee Guide";
+		};
+		AB07EE471E6BA9E0009A9948 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AB07EE1F1E6BA9DF009A9948 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AB07EE261E6BA9E0009A9948;
+			remoteInfo = "Indianapolis Coffee Guide";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		AB07EE271E6BA9E0009A9948 /* Indianapolis Coffee Guide.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Indianapolis Coffee Guide.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AB07EE2A1E6BA9E0009A9948 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		AB07EE2C1E6BA9E0009A9948 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		AB07EE2F1E6BA9E0009A9948 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		AB07EE311E6BA9E0009A9948 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AB07EE341E6BA9E0009A9948 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		AB07EE361E6BA9E0009A9948 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AB07EE3B1E6BA9E0009A9948 /* Indianapolis Coffee GuideTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Indianapolis Coffee GuideTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AB07EE3F1E6BA9E0009A9948 /* Indianapolis_Coffee_GuideTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Indianapolis_Coffee_GuideTests.swift; sourceTree = "<group>"; };
+		AB07EE411E6BA9E0009A9948 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AB07EE461E6BA9E0009A9948 /* Indianapolis Coffee GuideUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Indianapolis Coffee GuideUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AB07EE4A1E6BA9E0009A9948 /* Indianapolis_Coffee_GuideUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Indianapolis_Coffee_GuideUITests.swift; sourceTree = "<group>"; };
+		AB07EE4C1E6BA9E0009A9948 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AB07EE581E6BA9FD009A9948 /* Indianapolis Coffee Guide.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Indianapolis Coffee Guide.entitlements"; sourceTree = "<group>"; };
+		AB07EE5A1E6BAA09009A9948 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AB07EE241E6BA9E0009A9948 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AB07EE5B1E6BAA09009A9948 /* MapKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AB07EE381E6BA9E0009A9948 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AB07EE431E6BA9E0009A9948 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AB07EE1E1E6BA9DF009A9948 = {
+			isa = PBXGroup;
+			children = (
+				AB07EE291E6BA9E0009A9948 /* Indianapolis Coffee Guide */,
+				AB07EE3E1E6BA9E0009A9948 /* Indianapolis Coffee GuideTests */,
+				AB07EE491E6BA9E0009A9948 /* Indianapolis Coffee GuideUITests */,
+				AB07EE281E6BA9E0009A9948 /* Products */,
+				AB07EE591E6BAA09009A9948 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		AB07EE281E6BA9E0009A9948 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AB07EE271E6BA9E0009A9948 /* Indianapolis Coffee Guide.app */,
+				AB07EE3B1E6BA9E0009A9948 /* Indianapolis Coffee GuideTests.xctest */,
+				AB07EE461E6BA9E0009A9948 /* Indianapolis Coffee GuideUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AB07EE291E6BA9E0009A9948 /* Indianapolis Coffee Guide */ = {
+			isa = PBXGroup;
+			children = (
+				AB07EE581E6BA9FD009A9948 /* Indianapolis Coffee Guide.entitlements */,
+				AB07EE2A1E6BA9E0009A9948 /* AppDelegate.swift */,
+				AB07EE2C1E6BA9E0009A9948 /* ViewController.swift */,
+				AB07EE2E1E6BA9E0009A9948 /* Main.storyboard */,
+				AB07EE311E6BA9E0009A9948 /* Assets.xcassets */,
+				AB07EE331E6BA9E0009A9948 /* LaunchScreen.storyboard */,
+				AB07EE361E6BA9E0009A9948 /* Info.plist */,
+			);
+			path = "Indianapolis Coffee Guide";
+			sourceTree = "<group>";
+		};
+		AB07EE3E1E6BA9E0009A9948 /* Indianapolis Coffee GuideTests */ = {
+			isa = PBXGroup;
+			children = (
+				AB07EE3F1E6BA9E0009A9948 /* Indianapolis_Coffee_GuideTests.swift */,
+				AB07EE411E6BA9E0009A9948 /* Info.plist */,
+			);
+			path = "Indianapolis Coffee GuideTests";
+			sourceTree = "<group>";
+		};
+		AB07EE491E6BA9E0009A9948 /* Indianapolis Coffee GuideUITests */ = {
+			isa = PBXGroup;
+			children = (
+				AB07EE4A1E6BA9E0009A9948 /* Indianapolis_Coffee_GuideUITests.swift */,
+				AB07EE4C1E6BA9E0009A9948 /* Info.plist */,
+			);
+			path = "Indianapolis Coffee GuideUITests";
+			sourceTree = "<group>";
+		};
+		AB07EE591E6BAA09009A9948 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AB07EE5A1E6BAA09009A9948 /* MapKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AB07EE261E6BA9E0009A9948 /* Indianapolis Coffee Guide */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AB07EE4F1E6BA9E0009A9948 /* Build configuration list for PBXNativeTarget "Indianapolis Coffee Guide" */;
+			buildPhases = (
+				AB07EE231E6BA9E0009A9948 /* Sources */,
+				AB07EE241E6BA9E0009A9948 /* Frameworks */,
+				AB07EE251E6BA9E0009A9948 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Indianapolis Coffee Guide";
+			productName = "Indianapolis Coffee Guide";
+			productReference = AB07EE271E6BA9E0009A9948 /* Indianapolis Coffee Guide.app */;
+			productType = "com.apple.product-type.application";
+		};
+		AB07EE3A1E6BA9E0009A9948 /* Indianapolis Coffee GuideTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AB07EE521E6BA9E0009A9948 /* Build configuration list for PBXNativeTarget "Indianapolis Coffee GuideTests" */;
+			buildPhases = (
+				AB07EE371E6BA9E0009A9948 /* Sources */,
+				AB07EE381E6BA9E0009A9948 /* Frameworks */,
+				AB07EE391E6BA9E0009A9948 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AB07EE3D1E6BA9E0009A9948 /* PBXTargetDependency */,
+			);
+			name = "Indianapolis Coffee GuideTests";
+			productName = "Indianapolis Coffee GuideTests";
+			productReference = AB07EE3B1E6BA9E0009A9948 /* Indianapolis Coffee GuideTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		AB07EE451E6BA9E0009A9948 /* Indianapolis Coffee GuideUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AB07EE551E6BA9E0009A9948 /* Build configuration list for PBXNativeTarget "Indianapolis Coffee GuideUITests" */;
+			buildPhases = (
+				AB07EE421E6BA9E0009A9948 /* Sources */,
+				AB07EE431E6BA9E0009A9948 /* Frameworks */,
+				AB07EE441E6BA9E0009A9948 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AB07EE481E6BA9E0009A9948 /* PBXTargetDependency */,
+			);
+			name = "Indianapolis Coffee GuideUITests";
+			productName = "Indianapolis Coffee GuideUITests";
+			productReference = AB07EE461E6BA9E0009A9948 /* Indianapolis Coffee GuideUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AB07EE1F1E6BA9DF009A9948 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = "Scott Curry";
+				TargetAttributes = {
+					AB07EE261E6BA9E0009A9948 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 6T3Q5NH7AD;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 0;
+							};
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
+					};
+					AB07EE3A1E6BA9E0009A9948 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 6T3Q5NH7AD;
+						ProvisioningStyle = Automatic;
+						TestTargetID = AB07EE261E6BA9E0009A9948;
+					};
+					AB07EE451E6BA9E0009A9948 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 6T3Q5NH7AD;
+						ProvisioningStyle = Automatic;
+						TestTargetID = AB07EE261E6BA9E0009A9948;
+					};
+				};
+			};
+			buildConfigurationList = AB07EE221E6BA9DF009A9948 /* Build configuration list for PBXProject "Indianapolis Coffee Guide" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AB07EE1E1E6BA9DF009A9948;
+			productRefGroup = AB07EE281E6BA9E0009A9948 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AB07EE261E6BA9E0009A9948 /* Indianapolis Coffee Guide */,
+				AB07EE3A1E6BA9E0009A9948 /* Indianapolis Coffee GuideTests */,
+				AB07EE451E6BA9E0009A9948 /* Indianapolis Coffee GuideUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AB07EE251E6BA9E0009A9948 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AB07EE351E6BA9E0009A9948 /* LaunchScreen.storyboard in Resources */,
+				AB07EE321E6BA9E0009A9948 /* Assets.xcassets in Resources */,
+				AB07EE301E6BA9E0009A9948 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AB07EE391E6BA9E0009A9948 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AB07EE441E6BA9E0009A9948 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AB07EE231E6BA9E0009A9948 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AB07EE2D1E6BA9E0009A9948 /* ViewController.swift in Sources */,
+				AB07EE2B1E6BA9E0009A9948 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AB07EE371E6BA9E0009A9948 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AB07EE401E6BA9E0009A9948 /* Indianapolis_Coffee_GuideTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AB07EE421E6BA9E0009A9948 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AB07EE4B1E6BA9E0009A9948 /* Indianapolis_Coffee_GuideUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AB07EE3D1E6BA9E0009A9948 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AB07EE261E6BA9E0009A9948 /* Indianapolis Coffee Guide */;
+			targetProxy = AB07EE3C1E6BA9E0009A9948 /* PBXContainerItemProxy */;
+		};
+		AB07EE481E6BA9E0009A9948 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AB07EE261E6BA9E0009A9948 /* Indianapolis Coffee Guide */;
+			targetProxy = AB07EE471E6BA9E0009A9948 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		AB07EE2E1E6BA9E0009A9948 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AB07EE2F1E6BA9E0009A9948 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		AB07EE331E6BA9E0009A9948 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AB07EE341E6BA9E0009A9948 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		AB07EE4D1E6BA9E0009A9948 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		AB07EE4E1E6BA9E0009A9948 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AB07EE501E6BA9E0009A9948 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Indianapolis Coffee Guide/Indianapolis Coffee Guide.entitlements";
+				DEVELOPMENT_TEAM = 6T3Q5NH7AD;
+				INFOPLIST_FILE = "Indianapolis Coffee Guide/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "ICG.Indianapolis-Coffee-Guide";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		AB07EE511E6BA9E0009A9948 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Indianapolis Coffee Guide/Indianapolis Coffee Guide.entitlements";
+				DEVELOPMENT_TEAM = 6T3Q5NH7AD;
+				INFOPLIST_FILE = "Indianapolis Coffee Guide/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "ICG.Indianapolis-Coffee-Guide";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		AB07EE531E6BA9E0009A9948 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 6T3Q5NH7AD;
+				INFOPLIST_FILE = "Indianapolis Coffee GuideTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "ICG.Indianapolis-Coffee-GuideTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Indianapolis Coffee Guide.app/Indianapolis Coffee Guide";
+			};
+			name = Debug;
+		};
+		AB07EE541E6BA9E0009A9948 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 6T3Q5NH7AD;
+				INFOPLIST_FILE = "Indianapolis Coffee GuideTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "ICG.Indianapolis-Coffee-GuideTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Indianapolis Coffee Guide.app/Indianapolis Coffee Guide";
+			};
+			name = Release;
+		};
+		AB07EE561E6BA9E0009A9948 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = 6T3Q5NH7AD;
+				INFOPLIST_FILE = "Indianapolis Coffee GuideUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "ICG.Indianapolis-Coffee-GuideUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = "Indianapolis Coffee Guide";
+			};
+			name = Debug;
+		};
+		AB07EE571E6BA9E0009A9948 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = 6T3Q5NH7AD;
+				INFOPLIST_FILE = "Indianapolis Coffee GuideUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "ICG.Indianapolis-Coffee-GuideUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = "Indianapolis Coffee Guide";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AB07EE221E6BA9DF009A9948 /* Build configuration list for PBXProject "Indianapolis Coffee Guide" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AB07EE4D1E6BA9E0009A9948 /* Debug */,
+				AB07EE4E1E6BA9E0009A9948 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AB07EE4F1E6BA9E0009A9948 /* Build configuration list for PBXNativeTarget "Indianapolis Coffee Guide" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AB07EE501E6BA9E0009A9948 /* Debug */,
+				AB07EE511E6BA9E0009A9948 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		AB07EE521E6BA9E0009A9948 /* Build configuration list for PBXNativeTarget "Indianapolis Coffee GuideTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AB07EE531E6BA9E0009A9948 /* Debug */,
+				AB07EE541E6BA9E0009A9948 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		AB07EE551E6BA9E0009A9948 /* Build configuration list for PBXNativeTarget "Indianapolis Coffee GuideUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AB07EE561E6BA9E0009A9948 /* Debug */,
+				AB07EE571E6BA9E0009A9948 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AB07EE1F1E6BA9DF009A9948 /* Project object */;
+}
