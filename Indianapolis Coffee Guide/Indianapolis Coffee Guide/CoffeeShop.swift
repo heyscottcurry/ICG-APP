@@ -14,15 +14,23 @@ class CoffeeShop {
     
     var name: String
     var neighborhood: String
+    var long: Double
+    var lat: Double
+    var listBrew: String
+    var listSpace: String
     
     
-    init(name: String, neighborhood: String) {
+    init(name: String, neighborhood: String, long: Double, lat: Double, listBrew: String, listSpace: String) {
         
         
         
         // Initialize stored properties.
         self.name = name
         self.neighborhood = neighborhood
+        self.long = long
+        self.lat = lat
+        self.listBrew = listBrew
+        self.listSpace = listSpace
         
         
     }

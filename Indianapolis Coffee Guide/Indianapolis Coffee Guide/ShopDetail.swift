@@ -10,14 +10,20 @@ import UIKit
 
 class ShopDetail: UIViewController {
 
+   
 
+    @IBOutlet weak var navTitle: UINavigationItem!
     @IBOutlet weak var shopNavTitle: UILabel!
+ 
     
     var detailShop: CoffeeShop? {
         didSet {
             configureView()
         }
     }
+    
+
+    
     
     func configureView() {
         if let detailShop = detailShop {
@@ -30,6 +36,7 @@ class ShopDetail: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureView()
+        self.title = detailShop?.name
     }
     
     override func didReceiveMemoryWarning() {

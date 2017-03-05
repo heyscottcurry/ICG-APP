@@ -52,11 +52,8 @@ class ShopTableViewController: UITableViewController {
         // Configure the cell...
         
         
-        // Fetches the appropriate meal for the data source layout.
+        // Fetches the appropriate coffee shop for the data source layout.
         let shop = shops[indexPath.row]
-        
-        
-        
         
         cell.shopName.text = shop.name
         cell.shopNeighborhood.text = shop.neighborhood
@@ -121,15 +118,187 @@ class ShopTableViewController: UITableViewController {
         
         
         
-        let shop1 = CoffeeShop(name: "Coat Check Coffee", neighborhood: "Downtown")
+        let shop1 = CoffeeShop(
+            name: "Coat Check Coffee",
+            neighborhood: "Downtown",
+            long: 39.941468,
+            lat: -86.149626,
+            listBrew: " ",
+            listSpace: " "
+        )
         
-        let shop2 = CoffeeShop(name: "Georgia Street Grind", neighborhood: "Downtown")
+        let shop2 = CoffeeShop(
+            name: "Georgia Street Grind",
+            neighborhood: "Downtown",
+            long: 39.941468,
+            lat: -86.149626,
+            listBrew: " ",
+            listSpace: " "
+        )
         
-        let shop3 = CoffeeShop(name: "Quills Coffee", neighborhood: "Downtown")
+        let shop3 = CoffeeShop(
+            name: "Quills Coffee",
+            neighborhood: "Downtown",
+            long: 39.941468,
+            lat: -86.149626,
+            listBrew: " ",
+            listSpace: " "
+        )
+        
+        let shop4 = CoffeeShop(
+            name: "Open Society Public House",
+            neighborhood: "Broad Ripple",
+            long: 39.941468,
+            lat: -86.149626,
+            listBrew: " ",
+            listSpace: " "
+        )
+        
+        let shop5 = CoffeeShop(
+            name: "Kaffeine Coffee",
+            neighborhood: "Downtown",
+            long: 39.941468,
+            lat: -86.149626,
+            listBrew: " ",
+            listSpace: " "
+        )
+        
+        let shop6 = CoffeeShop(
+            name: "General American Donut Company",
+            neighborhood: "Fountain Square",
+            long: 39.941468,
+            lat: -86.149626,
+            listBrew: " ",
+            listSpace: " "
+        )
+        
+        let shop7 = CoffeeShop(
+            name: "Bee Coffee",
+            neighborhood: "Downtown",
+            long: 39.941468,
+            lat: -86.149626,
+            listBrew: " ",
+            listSpace: " "
+        )
+        
+        let shop8 = CoffeeShop(
+            name: "Thirsty Scholar",
+            neighborhood: "Downtown",
+            long: 39.941468,
+            lat: -86.149626,
+            listBrew: " ",
+            listSpace: " "
+        )
+        
+        let shop9 = CoffeeShop(
+            name: "Foundry Provisions",
+            neighborhood: "Downtown",
+            long: 39.941468,
+            lat: -86.149626,
+            listBrew: " ",
+            listSpace: " "
+        )
+        
+        let shop10 = CoffeeShop(
+            name: "Rabble Coffee",
+            neighborhood: "Irvington",
+            long: 39.941468,
+            lat: -86.149626,
+            listBrew: " ",
+            listSpace: " "
+        )
+        
+        
+        let shop11 = CoffeeShop(
+            name: "Coal Yard Coffee",
+            neighborhood: "Irvington",
+            long: 39.941468,
+            lat: -86.149626,
+            listBrew: " ",
+            listSpace: " "
+        )
+        
+        let shop12 = CoffeeShop(
+            name: "Neidhammer Coffee Company",
+            neighborhood: "Irvington",
+            long: 39.941468,
+            lat: -86.149626,
+            listBrew: " ",
+            listSpace: " "
+        )
+        
+        let shop13 = CoffeeShop(
+            name: "Calvin Fletcher's Coffee Company",
+            neighborhood: "Fountain Square",
+            long: 39.941468,
+            lat: -86.149626,
+            listBrew: " ",
+            listSpace: " "
+        )
+        
+        let shop14 = CoffeeShop(
+            name: "VeloWorks Urban Cyclery & Coffee Shop",
+            neighborhood: "Fountain Square",
+            long: 39.941468,
+            lat: -86.149626,
+            listBrew: " ",
+            listSpace: " "
+        )
+        
+        let shop15 = CoffeeShop(
+            name: "The Quirky Feather Confectionary",
+            neighborhood: "Carmel",
+            long: 39.941468,
+            lat: -86.149626,
+            listBrew: " ",
+            listSpace: " "
+        )
+        
+        let shop16 = CoffeeShop(
+            name: "Hubbard & Cravens",
+            neighborhood: "Carmel",
+            long: 39.941468,
+            lat: -86.149626,
+            listBrew: " ",
+            listSpace: " "
+        )
+        
+        let shop17 = CoffeeShop(
+            name: "The Well Coffee House",
+            neighborhood: "Fishers",
+            long: 39.941468,
+            lat: -86.149626,
+            listBrew: " ",
+            listSpace: " "
+        )
+        
+        let shop18 = CoffeeShop(
+            name: "Sure Shot Coffee",
+            neighborhood: "Fishers",
+            long: 39.941468,
+            lat: -86.149626,
+            listBrew: " ",
+            listSpace: " "
+        )
+        
+        let shop19 = CoffeeShop(
+            name: "Bee Coffee Roasters : Roastery",
+            neighborhood: "Eagle Creek",
+            long: 39.941468,
+            lat: -86.149626,
+            listBrew: " ",
+            listSpace: " "
+        )
+
         
         
         
-        shops += [shop1, shop2, shop3]
+        
+        
+        
+        
+        
+        shops += [shop1, shop2, shop3, shop4, shop5, shop6, shop7, shop8, shop9, shop10, shop11, shop12, shop13, shop14, shop15, shop16, shop17, shop18, shop19]
     }
     
     
