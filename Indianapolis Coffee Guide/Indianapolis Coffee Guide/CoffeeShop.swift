@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import MapKit
 
 class CoffeeShop {
     //MARK: properties

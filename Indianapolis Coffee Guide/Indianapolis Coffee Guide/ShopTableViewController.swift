@@ -7,13 +7,25 @@
 //
 
 import UIKit
+import MapKit
 
 class ShopTableViewController: UITableViewController {
 
     
+    // MARK: - location manager to authorize user location for Maps app
+    var locationManager = CLLocationManager()
+    func checkLocationAuthorizationStatus() {
+        if CLLocationManager.authorizationStatus() == .authorizedWhenInUse {
+            locationManager.requestWhenInUseAuthorization()
+        }
+    }
+    
+    
+    
     //MARK: Properties
     
     var shops = [CoffeeShop]()
+    
     
     
     
