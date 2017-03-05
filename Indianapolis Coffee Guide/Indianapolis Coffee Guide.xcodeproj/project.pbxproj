@@ -18,6 +18,7 @@
 		AB07EE5D1E6BABC6009A9948 /* CoffeeShopTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB07EE5C1E6BABC6009A9948 /* CoffeeShopTableViewCell.swift */; };
 		AB07EE611E6BBB80009A9948 /* CoffeeShop.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB07EE601E6BBB80009A9948 /* CoffeeShop.swift */; };
 		AB07EE631E6BBE54009A9948 /* ShopTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB07EE621E6BBE54009A9948 /* ShopTableViewController.swift */; };
+		AB07EE651E6BCB47009A9948 /* ShopDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB07EE641E6BCB47009A9948 /* ShopDetail.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,7 @@
 		AB07EE5C1E6BABC6009A9948 /* CoffeeShopTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoffeeShopTableViewCell.swift; sourceTree = "<group>"; };
 		AB07EE601E6BBB80009A9948 /* CoffeeShop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoffeeShop.swift; sourceTree = "<group>"; };
 		AB07EE621E6BBE54009A9948 /* ShopTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShopTableViewController.swift; sourceTree = "<group>"; };
+		AB07EE641E6BCB47009A9948 /* ShopDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShopDetail.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +116,7 @@
 				AB07EE2A1E6BA9E0009A9948 /* AppDelegate.swift */,
 				AB07EE2C1E6BA9E0009A9948 /* ViewController.swift */,
 				AB07EE2E1E6BA9E0009A9948 /* Main.storyboard */,
+				AB07EE641E6BCB47009A9948 /* ShopDetail.swift */,
 				AB07EE5C1E6BABC6009A9948 /* CoffeeShopTableViewCell.swift */,
 				AB07EE311E6BA9E0009A9948 /* Assets.xcassets */,
 				AB07EE331E6BA9E0009A9948 /* LaunchScreen.storyboard */,
@@ -293,6 +296,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB07EE651E6BCB47009A9948 /* ShopDetail.swift in Sources */,
 				AB07EE2D1E6BA9E0009A9948 /* ViewController.swift in Sources */,
 				AB07EE611E6BBB80009A9948 /* CoffeeShop.swift in Sources */,
 				AB07EE2B1E6BA9E0009A9948 /* AppDelegate.swift in Sources */,

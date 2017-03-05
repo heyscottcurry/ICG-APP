@@ -40,15 +40,29 @@ class ShopTableViewController: UITableViewController {
         return shops.count
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        
+        
+        let cellIdentifier = "CoffeeShopTableViewCell"
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? CoffeeShopTableViewCell  else {
+            fatalError("The dequeued cell is not an instance of CoffeeShopTableViewCell.")
+        }
 
         // Configure the cell...
-
+        
+        
+        // Fetches the appropriate meal for the data source layout.
+        let shop = shops[indexPath.row]
+        
+        
+        
+        
+        cell.shopName.text = shop.name
+        cell.shopNeighborhood.text = shop.neighborhood
         return cell
     }
-    */
+    
 
     /*
     // Override to support conditional editing of the table view.
@@ -116,7 +130,18 @@ class ShopTableViewController: UITableViewController {
         
         
         shops += [shop1, shop2, shop3]
-        
+    }
+    
+    
+    // MARK: - Segues
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showDetail" {
+            if let indexPath = tableView.indexPathForSelectedRow {
+                let shop = shops[indexPath.row]
+                let controller = (segue.destination as! UINavigationController).topViewController as! ShopDetail
+                controller.detailShop = shop
+            }
+        }
     }
     
 
