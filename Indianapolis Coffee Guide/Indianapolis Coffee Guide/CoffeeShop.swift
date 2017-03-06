@@ -9,10 +9,12 @@
 import Foundation
 import UIKit
 import MapKit
+import CoreLocation
 
 class CoffeeShop {
     //MARK: properties
     
+
     var name: String
     var neighborhood: String
     var long: Double

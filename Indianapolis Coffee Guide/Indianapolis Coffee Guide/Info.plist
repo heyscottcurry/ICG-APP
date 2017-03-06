@@ -42,5 +42,7 @@
 	<string>Let us know where you are so we can tell you where the coffee is.</string>
 	<key>NSLocationAlwaysUsageDescription</key>
 	<string>Let us know where you are so we can tell you where the coffee is.</string>
+	<key>NSLocationUsageDescription</key>
+	<string>There&apos;s coffee nearby!</string>
 </dict>
 </plist>

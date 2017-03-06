@@ -8,31 +8,35 @@
 
 import UIKit
 import MapKit
+import CoreLocation
 
-class ShopTableViewController: UITableViewController {
-
+class ShopTableViewController: UITableViewController, CLLocationManagerDelegate {
     
-    // MARK: - location manager to authorize user location for Maps app
-    var locationManager = CLLocationManager()
-    func checkLocationAuthorizationStatus() {
-        if CLLocationManager.authorizationStatus() == .authorizedWhenInUse {
-            locationManager.requestWhenInUseAuthorization()
-        }
-    }
+    
     
     
     
     //MARK: Properties
     
     var shops = [CoffeeShop]()
+    var locationManager: CLLocationManager!
+    var currentLocation = CLLocation!.self
     
-    
-    
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
+        self.locationManager = CLLocationManager()
+        self.locationManager.requestAlwaysAuthorization()
+        self.locationManager.requestWhenInUseAuthorization()
+        
+        view.backgroundColor = UIColor.gray
+       
+
         loadShops()
+        
+        
     }
 
     override func didReceiveMemoryWarning() {
