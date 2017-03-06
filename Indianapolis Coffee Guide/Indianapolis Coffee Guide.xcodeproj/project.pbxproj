@@ -43,7 +43,7 @@
 		AB07EE2A1E6BA9E0009A9948 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AB07EE2C1E6BA9E0009A9948 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		AB07EE2F1E6BA9E0009A9948 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		AB07EE311E6BA9E0009A9948 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AB07EE311E6BA9E0009A9948 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = "Indianapolis Coffee Guide/Assets.xcassets"; sourceTree = SOURCE_ROOT; };
 		AB07EE341E6BA9E0009A9948 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AB07EE361E6BA9E0009A9948 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AB07EE3B1E6BA9E0009A9948 /* Indianapolis Coffee GuideTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Indianapolis Coffee GuideTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
