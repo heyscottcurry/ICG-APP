@@ -21,7 +21,9 @@ class ShopTableViewController: UITableViewController, CLLocationManagerDelegate 
     var shops = [CoffeeShop]()
     var locationManager: CLLocationManager!
     var currentLocation = CLLocation!.self
-    
+    var userLatitude:CLLocationDegrees! = 0
+    var userLongitude:CLLocationDegrees! = 0
+   /* var userCoordinate = CLLocation(latitude: 1.0, longitude: 1.0) */
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,8 +36,20 @@ class ShopTableViewController: UITableViewController, CLLocationManagerDelegate 
         view.backgroundColor = UIColor.gray
        
 
+        if CLLocationManager.locationServicesEnabled()
+            
+        {
+            locationManager.delegate = self
+            locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
+            locationManager.startMonitoringSignificantLocationChanges()
+            self.locationManager.startUpdatingLocation()
+            userLatitude  = locationManager.location?.coordinate.latitude
+            userLongitude = locationManager.location?.coordinate.longitude
+            
+        }
+       /* userCoordinate = CLLocation(latitude: userLatitude, longitude: userLongitude) */
         loadShops()
-        
+       /* print("\(userCoordinate)") */
         
     }
 
