@@ -20,6 +20,14 @@ class CoffeeShopTableViewCell: UITableViewCell {
     @IBOutlet weak var shopDistance: UILabel!
     @IBOutlet weak var shopName: UILabel!
     
+    
+    
+ /*   func viewDidLoad() {
+        featureThumbnail.contentMode = .scaleAspectFit
+    } */
+    
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

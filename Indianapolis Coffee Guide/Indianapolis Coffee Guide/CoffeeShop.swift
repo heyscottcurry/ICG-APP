@@ -21,9 +21,11 @@ class CoffeeShop {
     var lat: Double
     var listBrew: String
     var listSpace: String
+    var feature: UIImage?
+    var newShop: Bool
     
     
-    init(name: String, neighborhood: String, long: Double, lat: Double, listBrew: String, listSpace: String) {
+    init(name: String, neighborhood: String, long: Double, lat: Double, listBrew: String, listSpace: String, feature: UIImage?, newShop: Bool) {
         
         
         
@@ -34,7 +36,8 @@ class CoffeeShop {
         self.lat = lat
         self.listBrew = listBrew
         self.listSpace = listSpace
-        
+        self.feature = feature
+        self.newShop = newShop
         
     }
 

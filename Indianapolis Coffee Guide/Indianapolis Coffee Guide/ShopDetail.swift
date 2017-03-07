@@ -16,7 +16,9 @@ class ShopDetail: UIViewController {
 
     @IBOutlet weak var navTitle: UINavigationItem!
     @IBOutlet weak var shopNavTitle: UILabel!
- 
+    @IBOutlet weak var shopImage: UIImageView!
+    
+    
     
     var detailShop: CoffeeShop? {
         didSet {
@@ -39,6 +41,8 @@ class ShopDetail: UIViewController {
         super.viewDidLoad()
         configureView()
         self.title = detailShop?.name
+        self.shopImage.image = detailShop?.feature
+        /* self.shopImage.contentMode = .scaleAspectFit */
     }
     
     override func didReceiveMemoryWarning() {
