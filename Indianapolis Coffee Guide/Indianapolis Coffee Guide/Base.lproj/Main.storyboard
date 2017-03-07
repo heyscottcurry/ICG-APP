@@ -13,13 +13,14 @@
         <!--Coffee Shops-->
         <scene sceneID="kp9-U9-VJq">
             <objects>
-                <tableViewController id="LG2-a3-Iyb" customClass="ShopTableViewController" customModule="Indianapolis_Coffee_Guide" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController modalTransitionStyle="flipHorizontal" id="LG2-a3-Iyb" customClass="ShopTableViewController" customModule="Indianapolis_Coffee_Guide" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="130" sectionHeaderHeight="28" sectionFooterHeight="28" id="nG1-Wh-jdG">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="0.0" shouldIndentWhileEditing="NO" reuseIdentifier="CoffeeShopTableViewCell" focusStyle="custom" rowHeight="130" id="OoH-oK-giB" customClass="CoffeeShopTableViewCell" customModule="Indianapolis_Coffee_Guide" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="gray" indentationWidth="0.0" shouldIndentWhileEditing="NO" reuseIdentifier="CoffeeShopTableViewCell" rowHeight="130" id="OoH-oK-giB" customClass="CoffeeShopTableViewCell" customModule="Indianapolis_Coffee_Guide" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="130"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="OoH-oK-giB" id="d2k-eK-UpB">
@@ -35,7 +36,7 @@
                                             <size key="shadowOffset" width="0.0" height="0.0"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Neighborhood" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mjc-lR-nta">
-                                            <rect key="frame" x="140" y="49" width="164" height="21"/>
+                                            <rect key="frame" x="141" y="49" width="164" height="21"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="14"/>
                                             <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
@@ -60,7 +61,7 @@
                                     <outlet property="shopDistance" destination="aA3-fr-1Ez" id="V2y-Ao-gi0"/>
                                     <outlet property="shopName" destination="3Sq-1C-rVz" id="TOf-LL-AbJ"/>
                                     <outlet property="shopNeighborhood" destination="Mjc-lR-nta" id="1x7-UQ-FVZ"/>
-                                    <segue destination="gsz-Mj-wzN" kind="showDetail" identifier="showDetail" id="hPz-7o-lok"/>
+                                    <segue destination="WVe-fQ-9Sp" kind="show" identifier="showDetail" id="re1-Q2-luL"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -80,7 +81,7 @@
         <!--Shop Name-->
         <scene sceneID="0FK-4Y-7Bb">
             <objects>
-                <viewController id="QRW-iw-vCy" customClass="ShopDetail" customModule="Indianapolis_Coffee_Guide" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalTransitionStyle="flipHorizontal" id="QRW-iw-vCy" customClass="ShopDetail" customModule="Indianapolis_Coffee_Guide" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="FAE-JK-Cly"/>
                         <viewControllerLayoutGuide type="bottom" id="6VY-bb-AP3"/>
@@ -95,23 +96,26 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView verifyAmbiguity="off" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Fus-zy-Xh1">
+                            <imageView verifyAmbiguity="off" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Fus-zy-Xh1">
                                 <rect key="frame" x="0.0" y="44" width="375" height="222"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="dG6-VF-s8h" secondAttribute="trailing" constant="136" id="M9U-OM-SKU"/>
-                            <constraint firstItem="dG6-VF-s8h" firstAttribute="leading" secondItem="8cD-ex-b3R" secondAttribute="leadingMargin" constant="8" id="g4B-kG-Kee"/>
-                            <constraint firstItem="6VY-bb-AP3" firstAttribute="top" secondItem="dG6-VF-s8h" secondAttribute="bottom" constant="356" id="rvG-MQ-9az"/>
-                            <constraint firstItem="dG6-VF-s8h" firstAttribute="top" secondItem="FAE-JK-Cly" secondAttribute="bottom" constant="246" id="zvk-1p-zoe"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Fus-zy-Xh1" secondAttribute="trailing" constant="-16" id="1oj-kd-ReN"/>
+                            <constraint firstItem="Fus-zy-Xh1" firstAttribute="top" secondItem="FAE-JK-Cly" secondAttribute="bottom" constant="2.2737367544323206e-13" id="Afe-em-HPY"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="dG6-VF-s8h" secondAttribute="trailing" constant="136" id="JKM-la-CP6"/>
+                            <constraint firstItem="dG6-VF-s8h" firstAttribute="leading" secondItem="8cD-ex-b3R" secondAttribute="leadingMargin" constant="8" id="PxI-NG-mQL"/>
+                            <constraint firstItem="6VY-bb-AP3" firstAttribute="top" secondItem="Fus-zy-Xh1" secondAttribute="bottom" constant="400.99999999999977" id="b44-fD-7ml"/>
+                            <constraint firstItem="6VY-bb-AP3" firstAttribute="top" secondItem="dG6-VF-s8h" secondAttribute="bottom" constant="356" id="ecx-p0-hiS"/>
+                            <constraint firstItem="Fus-zy-Xh1" firstAttribute="leading" secondItem="8cD-ex-b3R" secondAttribute="leadingMargin" constant="-16" id="we7-bx-pZo"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Shop Name" id="WQT-hS-lmR">
                         <barButtonItem key="leftBarButtonItem" title="Back" id="qAr-JG-A1i">
                             <connections>
-                                <segue destination="RbH-SZ-QX5" kind="showDetail" id="U0C-Dy-lGX"/>
+                                <segue destination="ZyE-3v-hFQ" kind="unwind" identifier="unwindToMenu" unwindAction="unwindToMenuWithSegue:" id="Thi-EE-KWc"/>
                             </connections>
                         </barButtonItem>
                         <connections>
@@ -123,11 +127,13 @@
                         <outlet property="navTitle" destination="WQT-hS-lmR" id="70F-XW-yhf"/>
                         <outlet property="shopImage" destination="Fus-zy-Xh1" id="zSX-79-FtU"/>
                         <outlet property="shopNavTitle" destination="dG6-VF-s8h" id="Hfn-kh-z0i"/>
+                        <segue destination="ZyE-3v-hFQ" kind="unwind" identifier="unwindToMenu" unwindAction="unwindToMenuWithSegue:" id="2R6-D8-Dys"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="leu-wH-4rc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="ZyE-3v-hFQ" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1724" y="349"/>
+            <point key="canvasLocation" x="1737" y="341"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="uQm-7x-dw3">
@@ -148,22 +154,23 @@
             <point key="canvasLocation" x="969" y="-373"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="ugK-jL-yJs">
+        <scene sceneID="JLb-7c-ohb">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="gsz-Mj-wzN" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="WVe-fQ-9Sp" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="c72-tU-jrt">
+                    <navigationItem key="navigationItem" id="8dr-Tt-Uhd"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="DPH-Ky-8s5">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="QRW-iw-vCy" kind="relationship" relationship="rootViewController" id="9eB-N4-zXO"/>
+                        <segue destination="QRW-iw-vCy" kind="relationship" relationship="rootViewController" id="6cu-W0-XWQ"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="pjQ-3F-zk2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Nh9-4M-OaD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1724" y="-374"/>
+            <point key="canvasLocation" x="1738" y="-374"/>
         </scene>
     </scenes>
 </document>

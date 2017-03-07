@@ -26,6 +26,7 @@ class ShopTableViewController: UITableViewController, CLLocationManagerDelegate 
     /* var userCoordinate = CLLocation(latitude: 1.0, longitude: 1.0) */
     var locValue:CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: 1.0, longitude: 1.0)
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -51,11 +52,21 @@ class ShopTableViewController: UITableViewController, CLLocationManagerDelegate 
         /* userCoordinate = CLLocation(latitude: userLatitude, longitude: userLongitude) */
         locValue = locationManager.location!.coordinate
         
+        
+        
+        
+        
+  
+        
         loadShops()
-        /* print("\(userLatitude), \(userLongitude)") */
+
         print("\(locValue.latitude), \(locValue.longitude)")
         
     }
+    
+
+    
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -89,9 +100,19 @@ class ShopTableViewController: UITableViewController, CLLocationManagerDelegate 
         // Fetches the appropriate coffee shop for the data source layout.
         let shop = shops[indexPath.row]
         
+        let shopLocale = CLLocation(latitude: shop.long, longitude: shop.lat)
+        let userLocale = CLLocation(latitude: userLatitude, longitude: userLongitude)
+        
+        let distanceInMeters = userLocale.distance(from: shopLocale)
+        let distanceinMiles = (distanceInMeters*0.000621371)
+        
+        cell.shopDistance.text = String(format: "%.1f", distanceinMiles)
         cell.shopName.text = shop.name
         cell.shopNeighborhood.text = shop.neighborhood
         cell.featureThumbnail.image = shop.feature
+        
+        
+        
         return cell
     }
     
@@ -394,13 +415,14 @@ class ShopTableViewController: UITableViewController, CLLocationManagerDelegate 
         
         
         
-        
+
         
         
         
         
         shops += [shop1, shop2, shop3, shop4, shop5, shop6, shop7, shop8, shop9, shop10, shop11, shop12, shop13, shop14, shop15, shop16, shop17, shop18, shop19, shop20]
         
+     
         
     }
     
@@ -418,4 +440,9 @@ class ShopTableViewController: UITableViewController, CLLocationManagerDelegate 
     }
     
     
+    @IBAction func unwindToMenu(segue: UIStoryboardSegue) {}
+    
+    
+    
+
 }

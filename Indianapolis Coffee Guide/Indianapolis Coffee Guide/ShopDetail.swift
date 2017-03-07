@@ -19,7 +19,6 @@ class ShopDetail: UIViewController {
     @IBOutlet weak var shopImage: UIImageView!
     
     
-    
     var detailShop: CoffeeShop? {
         didSet {
             configureView()
