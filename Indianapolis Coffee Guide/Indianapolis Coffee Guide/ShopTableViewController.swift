@@ -14,6 +14,7 @@ class ShopTableViewController: UITableViewController, CLLocationManagerDelegate 
     
     
     
+    @IBOutlet var shopTable: UITableView!
     
     
     //MARK: Properties
@@ -30,6 +31,10 @@ class ShopTableViewController: UITableViewController, CLLocationManagerDelegate 
     override func viewDidLoad() {
         super.viewDidLoad()
         
+    
+
+        
+        handleRefresh()
         
         self.locationManager = CLLocationManager()
         self.locationManager.requestAlwaysAuthorization()
@@ -55,11 +60,15 @@ class ShopTableViewController: UITableViewController, CLLocationManagerDelegate 
         
         
         
-        
+       
   
         
         loadShops()
-
+        func sortList() { // should probably be called sort and not filter
+            shops.sort() { $0.neighborhood < $1.neighborhood } // sort the fruit by name
+            self.shopTable.reloadData(); // notify the table view the data has changed
+        }
+        sortList()
         print("\(locValue.latitude), \(locValue.longitude)")
         
     }
@@ -105,8 +114,9 @@ class ShopTableViewController: UITableViewController, CLLocationManagerDelegate 
         
         let distanceInMeters = userLocale.distance(from: shopLocale)
         let distanceinMiles = (distanceInMeters*0.000621371)
+        let distanceText = String(format: "%.1f", distanceinMiles)
         
-        cell.shopDistance.text = String(format: "%.1f", distanceinMiles)
+        cell.shopDistance.text = String(" \(distanceText) miles away")
         cell.shopName.text = shop.name
         cell.shopNeighborhood.text = shop.neighborhood
         cell.featureThumbnail.image = shop.feature
@@ -114,6 +124,7 @@ class ShopTableViewController: UITableViewController, CLLocationManagerDelegate 
         
         
         return cell
+        
     }
     
     
@@ -422,10 +433,13 @@ class ShopTableViewController: UITableViewController, CLLocationManagerDelegate 
         
         shops += [shop1, shop2, shop3, shop4, shop5, shop6, shop7, shop8, shop9, shop10, shop11, shop12, shop13, shop14, shop15, shop16, shop17, shop18, shop19, shop20]
         
+        
      
         
     }
     
+    
+  
     
     // MARK: - Segues
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -442,6 +456,27 @@ class ShopTableViewController: UITableViewController, CLLocationManagerDelegate 
     
     @IBAction func unwindToMenu(segue: UIStoryboardSegue) {}
     
+    
+    
+    func handleRefresh() {
+        // Do some reloading of data and update the table view's data source
+        // Fetch more objects from a web service, for example...
+        
+        refreshControl = UIRefreshControl()
+        
+        refreshControl?.backgroundColor = UIColor.red
+        refreshControl?.tintColor = UIColor.yellow
+        
+        
+        shopTable.addSubview(refreshControl!)
+        
+        // Simply adding an object to the data source for this example
+        
+        shops.sort() { $0.neighborhood > $1.neighborhood }
+        
+        self.shopTable.reloadData()
+        refreshControl?.endRefreshing()
+    }
     
     
 
