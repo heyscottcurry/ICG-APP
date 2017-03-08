@@ -27,12 +27,15 @@ class ShopTableViewController: UITableViewController, CLLocationManagerDelegate 
     /* var userCoordinate = CLLocation(latitude: 1.0, longitude: 1.0) */
     var locValue:CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: 1.0, longitude: 1.0)
     
+
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-    
 
+        
+     
+        
         
         handleRefresh()
         
