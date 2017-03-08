@@ -37,7 +37,7 @@ class ShopTableViewController: UITableViewController, CLLocationManagerDelegate 
      
         
         
-        handleRefresh()
+        /* handleRefresh() */
         
         self.locationManager = CLLocationManager()
         self.locationManager.requestAlwaysAuthorization()
