@@ -24,27 +24,73 @@ class ShopTableViewController: UITableViewController, CLLocationManagerDelegate 
     var currentLocation = CLLocation!.self
     var userLatitude:CLLocationDegrees! = 0
     var userLongitude:CLLocationDegrees! = 0
-    /* var userCoordinate = CLLocation(latitude: 1.0, longitude: 1.0) */
     var locValue:CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: 1.0, longitude: 1.0)
     
+    
+    @IBOutlet weak var indyHandle: UIButton!
 
+    
+    @IBAction func igCoffee(_ sender: UIButton) {
+        
+        let instagramHooks = "instagram://user?username=indianapoliscoffee"
+        let instagramUrl = NSURL(string: instagramHooks)
+        let fallbackURL = NSURL(string: "https://www.instagram.com/indianapoliscoffee")
+        if UIApplication.shared.canOpenURL(instagramUrl! as URL)
+        {
+            UIApplication.shared.open(instagramUrl! as URL, options: [:], completionHandler: nil)
+            
+            
+        } else {
+            //redirect to safari because the user doesn't have Instagram
+            
+            UIApplication.shared.open(fallbackURL! as URL, options: [:], completionHandler: nil)
+            
+        }
+
+    }
+  
+ 
+    @IBAction func igHashtag(_ sender: UIButton) {
+        
+        
+        let instagramHooks = "instagram://tag?name=nomorebadcoffee"
+        let instagramUrl = NSURL(string: instagramHooks)
+        let fallbackURL = NSURL(string: "https://www.instagram.com/indianapoliscoffee")
+        if UIApplication.shared.canOpenURL(instagramUrl! as URL)
+        {
+            UIApplication.shared.open(instagramUrl! as URL, options: [:], completionHandler: nil)
+            
+            
+        } else {
+            //redirect to safari because the user doesn't have Instagram
+            
+            UIApplication.shared.open(fallbackURL! as URL, options: [:], completionHandler: nil)
+            
+        }
+        
+        
+        
+        
+        
+        
+    }
+    
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        
-     
         
         
-        /* handleRefresh() */
+        
+        
+        
+        
         
         self.locationManager = CLLocationManager()
         self.locationManager.requestAlwaysAuthorization()
         self.locationManager.requestWhenInUseAuthorization()
         
-        view.backgroundColor = UIColor.gray
-        
+        view.backgroundColor = UIColor.black
         
         if CLLocationManager.locationServicesEnabled()
             
@@ -63,8 +109,8 @@ class ShopTableViewController: UITableViewController, CLLocationManagerDelegate 
         
         
         
-       
-  
+        
+        
         
         loadShops()
         func sortList() { // should probably be called sort and not filter
@@ -73,10 +119,11 @@ class ShopTableViewController: UITableViewController, CLLocationManagerDelegate 
         }
         sortList()
         print("\(locValue.latitude), \(locValue.longitude)")
+        // handleRefresh()
         
     }
     
-
+    
     
     
     
@@ -123,6 +170,7 @@ class ShopTableViewController: UITableViewController, CLLocationManagerDelegate 
         cell.shopName.text = shop.name
         cell.shopNeighborhood.text = shop.neighborhood
         cell.featureThumbnail.image = shop.feature
+        
         
         
         
@@ -214,7 +262,8 @@ class ShopTableViewController: UITableViewController, CLLocationManagerDelegate 
             listBrew: " ",
             listSpace: " ",
             feature: featCoatCheck!,
-            newShop: false
+            newShop: false,
+            igHandle: "coatcheckcoffee"
         )
         
         let shop2 = CoffeeShop(
@@ -225,7 +274,8 @@ class ShopTableViewController: UITableViewController, CLLocationManagerDelegate 
             listBrew: " ",
             listSpace: " ",
             feature: featGeorgiaStreet!,
-            newShop: false
+            newShop: false,
+            igHandle: "georgiastreetgrind"
         )
         
         let shop3 = CoffeeShop(
@@ -236,7 +286,8 @@ class ShopTableViewController: UITableViewController, CLLocationManagerDelegate 
             listBrew: " ",
             listSpace: " ",
             feature: featQuills!,
-            newShop: false
+            newShop: false,
+            igHandle: "quillscoffee"
         )
         
         let shop4 = CoffeeShop(
@@ -247,7 +298,8 @@ class ShopTableViewController: UITableViewController, CLLocationManagerDelegate 
             listBrew: " ",
             listSpace: " ",
             feature: featOpenSociety!,
-            newShop: false
+            newShop: false,
+            igHandle: "opensocietyindy"
         )
         
         let shop5 = CoffeeShop(
@@ -258,7 +310,8 @@ class ShopTableViewController: UITableViewController, CLLocationManagerDelegate 
             listBrew: " ",
             listSpace: " ",
             feature: featKaffeine!,
-            newShop: false
+            newShop: false,
+            igHandle: "kaffeinecoffee"
         )
         
         let shop6 = CoffeeShop(
@@ -269,7 +322,8 @@ class ShopTableViewController: UITableViewController, CLLocationManagerDelegate 
             listBrew: " ",
             listSpace: " ",
             feature: featGeneralAmerican!,
-            newShop: false
+            newShop: false,
+            igHandle: "generalamericandonut"
         )
         
         let shop7 = CoffeeShop(
@@ -280,7 +334,8 @@ class ShopTableViewController: UITableViewController, CLLocationManagerDelegate 
             listBrew: " ",
             listSpace: " ",
             feature: featBee!,
-            newShop: false
+            newShop: false,
+            igHandle: "beecoffeeroasters"
         )
         
         let shop8 = CoffeeShop(
@@ -291,7 +346,8 @@ class ShopTableViewController: UITableViewController, CLLocationManagerDelegate 
             listBrew: " ",
             listSpace: " ",
             feature: featThirstyScholar!,
-            newShop: false
+            newShop: false,
+            igHandle: "thirstyscholarindy"
         )
         
         let shop9 = CoffeeShop(
@@ -302,7 +358,8 @@ class ShopTableViewController: UITableViewController, CLLocationManagerDelegate 
             listBrew: " ",
             listSpace: " ",
             feature: featFoundry!,
-            newShop: false
+            newShop: false,
+            igHandle: "foundryindy"
         )
         
         let shop10 = CoffeeShop(
@@ -313,7 +370,8 @@ class ShopTableViewController: UITableViewController, CLLocationManagerDelegate 
             listBrew: " ",
             listSpace: " ",
             feature: featRabble!,
-            newShop: false
+            newShop: false,
+            igHandle: "rabblecoffee"
         )
         
         
@@ -325,7 +383,8 @@ class ShopTableViewController: UITableViewController, CLLocationManagerDelegate 
             listBrew: " ",
             listSpace: " ",
             feature: featCoalYard!,
-            newShop: false
+            newShop: false,
+            igHandle: "coalyardcoffee"
         )
         
         let shop12 = CoffeeShop(
@@ -336,7 +395,8 @@ class ShopTableViewController: UITableViewController, CLLocationManagerDelegate 
             listBrew: " ",
             listSpace: " ",
             feature: featNeidhammer!,
-            newShop: false
+            newShop: false,
+            igHandle: "neidhammercoffee"
         )
         
         let shop13 = CoffeeShop(
@@ -347,7 +407,8 @@ class ShopTableViewController: UITableViewController, CLLocationManagerDelegate 
             listBrew: " ",
             listSpace: " ",
             feature: featCalvinFletchers!,
-            newShop: false
+            newShop: false,
+            igHandle: "calvinfletcherscoffeeco"
         )
         
         let shop14 = CoffeeShop(
@@ -358,7 +419,8 @@ class ShopTableViewController: UITableViewController, CLLocationManagerDelegate 
             listBrew: " ",
             listSpace: " ",
             feature: featVeloWorks!,
-            newShop: false
+            newShop: false,
+            igHandle: "veloworksindy"
         )
         
         let shop15 = CoffeeShop(
@@ -369,7 +431,8 @@ class ShopTableViewController: UITableViewController, CLLocationManagerDelegate 
             listBrew: " ",
             listSpace: " ",
             feature: featQuirkyFeather!,
-            newShop: false
+            newShop: false,
+            igHandle: "quirky_feather"
         )
         
         let shop16 = CoffeeShop(
@@ -380,7 +443,8 @@ class ShopTableViewController: UITableViewController, CLLocationManagerDelegate 
             listBrew: " ",
             listSpace: " ",
             feature: featHubbardCarmel!,
-            newShop: false
+            newShop: false,
+            igHandle: "hubbardcravens"
         )
         
         let shop17 = CoffeeShop(
@@ -391,7 +455,8 @@ class ShopTableViewController: UITableViewController, CLLocationManagerDelegate 
             listBrew: " ",
             listSpace: " ",
             feature: featTheWell!,
-            newShop: false
+            newShop: false,
+            igHandle: "wellcoffeehousefishers"
         )
         
         let shop18 = CoffeeShop(
@@ -402,7 +467,8 @@ class ShopTableViewController: UITableViewController, CLLocationManagerDelegate 
             listBrew: " ",
             listSpace: " ",
             feature: featSureShot!,
-            newShop: false
+            newShop: false,
+            igHandle: "sureshotcoffee"
         )
         
         let shop19 = CoffeeShop(
@@ -413,7 +479,8 @@ class ShopTableViewController: UITableViewController, CLLocationManagerDelegate 
             listBrew: " ",
             listSpace: " ",
             feature: featBeeRoaster!,
-            newShop: false
+            newShop: false,
+            igHandle: "beecoffeeroasters"
         )
         
         let shop20 = CoffeeShop(
@@ -424,12 +491,13 @@ class ShopTableViewController: UITableViewController, CLLocationManagerDelegate 
             listBrew: " ",
             listSpace: " ",
             feature: featMileSquare!,
-            newShop: false
+            newShop: false,
+            igHandle: "milesquareindy"
         )
         
         
         
-
+        
         
         
         
@@ -437,12 +505,12 @@ class ShopTableViewController: UITableViewController, CLLocationManagerDelegate 
         shops += [shop1, shop2, shop3, shop4, shop5, shop6, shop7, shop8, shop9, shop10, shop11, shop12, shop13, shop14, shop15, shop16, shop17, shop18, shop19, shop20]
         
         
-     
+        
         
     }
     
     
-  
+    
     
     // MARK: - Segues
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -467,20 +535,20 @@ class ShopTableViewController: UITableViewController, CLLocationManagerDelegate 
         
         refreshControl = UIRefreshControl()
         
-        refreshControl?.backgroundColor = UIColor.red
-        refreshControl?.tintColor = UIColor.yellow
-        
-        
         shopTable.addSubview(refreshControl!)
         
         // Simply adding an object to the data source for this example
         
-        shops.sort() { $0.neighborhood > $1.neighborhood }
+        // shops.sort() { $0.neighborhood > $1.neighborhood }
         
         self.shopTable.reloadData()
+        
+        
         refreshControl?.endRefreshing()
+        
+        return
     }
     
     
-
+    
 }

@@ -23,9 +23,10 @@ class CoffeeShop {
     var listSpace: String
     var feature: UIImage?
     var newShop: Bool
+    var igHandle: String
     
     
-    init(name: String, neighborhood: String, long: Double, lat: Double, listBrew: String, listSpace: String, feature: UIImage?, newShop: Bool) {
+    init(name: String, neighborhood: String, long: Double, lat: Double, listBrew: String, listSpace: String, feature: UIImage?, newShop: Bool, igHandle: String) {
         
         
         
@@ -38,6 +39,7 @@ class CoffeeShop {
         self.listSpace = listSpace
         self.feature = feature
         self.newShop = newShop
+        self.igHandle = igHandle
         
     }
 

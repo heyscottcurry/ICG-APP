@@ -16,12 +16,45 @@ class ShopDetail: UIViewController {
    
     @IBOutlet weak var closeButton: UIButton!
 
+    @IBOutlet weak var brewText: UILabel!
     @IBOutlet weak var navTitle: UINavigationItem!
     @IBOutlet weak var shopNavTitle: UILabel!
     @IBOutlet weak var shopImage: UIImageView!
     @IBOutlet weak var borderMain: UIView!
+    @IBOutlet weak var spaceText: UILabel!
     
+    @IBOutlet weak var igButton: UIButton!
+    
+    
+    
+    @IBAction func igButt(_ sender: UIButton) {
+        
+        
+        let instagramHooks = "instagram://user?username=\(detailShop!.igHandle)"
+        let instagramUrl = NSURL(string: instagramHooks)
+        let fallbackURL = NSURL(string: "https://www.instagram.com")
+        if UIApplication.shared.canOpenURL(instagramUrl! as URL)
+        {
+            UIApplication.shared.open(instagramUrl! as URL, options: [:], completionHandler: nil)
+            
+            
+        } else {
+            //redirect to safari because the user doesn't have Instagram
+            
+            UIApplication.shared.open(fallbackURL! as URL, options: [:], completionHandler: nil)
+            
+        }
+        
+
+    }
+   
     @IBOutlet weak var shopDistance: UILabel!
+    
+    
+    
+ 
+    
+    
     
     var detailShop: CoffeeShop? {
         didSet {
@@ -30,7 +63,7 @@ class ShopDetail: UIViewController {
     }
     
 
-    
+
     
     func configureView() {
         if let detailShop = detailShop {
@@ -38,15 +71,32 @@ class ShopDetail: UIViewController {
                 shopNavTitle.text =  detailShop.name
             }
         }
+        
+        
+        
+        
     }
+    
+    
+    
+   
+    
+  
+ 
     
     override func viewDidLoad() {
         super.viewDidLoad()
         configureView()
         self.title = detailShop?.name
         self.shopImage.image = detailShop?.feature
-        /* self.shopImage.contentMode = .scaleAspectFit */
         self.shopDistance.text = detailShop?.neighborhood
+        self.spaceText.text = detailShop?.listSpace
+        self.brewText.text = detailShop?.listBrew
+        
+    
+        
+       igButton.setTitle("@\(detailShop!.igHandle)", for: UIControlState.normal)
+        
         
         self.borderMain.layer.borderWidth = 2
         self.borderMain.layer.borderColor = UIColor(red:255/255.0, green:225/255.0, blue:255/255.0, alpha: 1.0).cgColor
@@ -54,11 +104,17 @@ class ShopDetail: UIViewController {
         self.directionsButton.layer.borderColor = UIColor(red:255/255.0, green:225/255.0, blue:255/255.0, alpha: 1.0).cgColor
         self.closeButton.layer.borderWidth = 2
         self.closeButton.layer.borderColor = UIColor(red:255/255.0, green:225/255.0, blue:255/255.0, alpha: 1.0).cgColor
+        
+    
+        
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
+    
+    
+    @IBAction func unwindToShop(segue: UIStoryboardSegue) {}
     
 
 }
