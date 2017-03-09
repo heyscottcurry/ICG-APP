@@ -26,6 +26,7 @@ class ShopDetail: UIViewController {
     @IBOutlet weak var igButton: UIButton!
     
     
+
     
     @IBAction func igButt(_ sender: UIButton) {
         
@@ -93,7 +94,7 @@ class ShopDetail: UIViewController {
         self.spaceText.text = detailShop?.listSpace
         self.brewText.text = detailShop?.listBrew
         
-    
+        
         
        igButton.setTitle("@\(detailShop!.igHandle)", for: UIControlState.normal)
         
@@ -117,5 +118,9 @@ class ShopDetail: UIViewController {
     @IBAction func unwindToShop(segue: UIStoryboardSegue) {}
     
 
+
+    
+    
+    
 }
 

@@ -25,8 +25,9 @@ class ShopTableViewController: UITableViewController, CLLocationManagerDelegate 
     var userLatitude:CLLocationDegrees! = 0
     var userLongitude:CLLocationDegrees! = 0
     var locValue:CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: 1.0, longitude: 1.0)
+    var refresher: UIRefreshControl!
     
-    
+
     @IBOutlet weak var indyHandle: UIButton!
 
     
@@ -113,13 +114,18 @@ class ShopTableViewController: UITableViewController, CLLocationManagerDelegate 
         
         
         loadShops()
-        func sortList() { // should probably be called sort and not filter
-            shops.sort() { $0.neighborhood < $1.neighborhood } // sort the fruit by name
-            self.shopTable.reloadData(); // notify the table view the data has changed
+        func sortList() {
+            shops.sort() { $0.distance < $1.distance }
+            self.shopTable.reloadData();
         }
         sortList()
         print("\(locValue.latitude), \(locValue.longitude)")
-        // handleRefresh()
+        
+        refresher = UIRefreshControl()
+        refresher.addTarget(self, action: #selector(ShopTableViewController.handleRefresh), for: UIControlEvents.valueChanged)
+        shopTable.addSubview(refresher)
+        
+        
         
     }
     
@@ -159,19 +165,20 @@ class ShopTableViewController: UITableViewController, CLLocationManagerDelegate 
         // Fetches the appropriate coffee shop for the data source layout.
         let shop = shops[indexPath.row]
         
-        let shopLocale = CLLocation(latitude: shop.long, longitude: shop.lat)
+        /* let shopLocale = CLLocation(latitude: shop.long, longitude: shop.lat)
         let userLocale = CLLocation(latitude: userLatitude, longitude: userLongitude)
-        
         let distanceInMeters = userLocale.distance(from: shopLocale)
         let distanceinMiles = (distanceInMeters*0.000621371)
-        let distanceText = String(format: "%.1f", distanceinMiles)
+        let _   = String(format: "%.1f", distanceinMiles)
+         */
         
-        cell.shopDistance.text = String(" \(distanceText) miles away")
+        
+        // cell.shopDistance.text = String(" \(distanceText) miles away")
         cell.shopName.text = shop.name
         cell.shopNeighborhood.text = shop.neighborhood
         cell.featureThumbnail.image = shop.feature
-        
-        
+        cell.shopDistance.text = String(format: "%.1f", shop.distance)
+        cell.shopDistance.text!.append(" miles away")
         
         
         return cell
@@ -228,7 +235,7 @@ class ShopTableViewController: UITableViewController, CLLocationManagerDelegate 
     
     //MARK: Private Methods
     
-    private func loadShops() {
+        func loadShops() {
         
         let featCoatCheck = UIImage(named: "feat-coatcheck")
         let featGeorgiaStreet = UIImage(named: "feat-georgiastreet")
@@ -251,7 +258,7 @@ class ShopTableViewController: UITableViewController, CLLocationManagerDelegate 
         let featBeeRoaster = UIImage(named: "feat-beeroaster")
         let featMileSquare = UIImage(named: "feat-milesquare")
         
-        
+        let userLocale = CLLocation(latitude: userLatitude, longitude: userLongitude)
         
         
         let shop1 = CoffeeShop(
@@ -263,7 +270,8 @@ class ShopTableViewController: UITableViewController, CLLocationManagerDelegate 
             listSpace: " ",
             feature: featCoatCheck!,
             newShop: false,
-            igHandle: "coatcheckcoffee"
+            igHandle: "coatcheckcoffee",
+            distance: (userLocale.distance(from: CLLocation(latitude: 39.773747, longitude: -86.150272)))*0.000621371
         )
         
         let shop2 = CoffeeShop(
@@ -275,7 +283,8 @@ class ShopTableViewController: UITableViewController, CLLocationManagerDelegate 
             listSpace: " ",
             feature: featGeorgiaStreet!,
             newShop: false,
-            igHandle: "georgiastreetgrind"
+            igHandle: "georgiastreetgrind",
+            distance:  (userLocale.distance(from: CLLocation(latitude: 39.764130, longitude: -86.159038)))*0.000621371
         )
         
         let shop3 = CoffeeShop(
@@ -287,7 +296,8 @@ class ShopTableViewController: UITableViewController, CLLocationManagerDelegate 
             listSpace: " ",
             feature: featQuills!,
             newShop: false,
-            igHandle: "quillscoffee"
+            igHandle: "quillscoffee",
+            distance:  (userLocale.distance(from: CLLocation(latitude: 39.779333, longitude: -86.163894)))*0.000621371
         )
         
         let shop4 = CoffeeShop(
@@ -299,7 +309,8 @@ class ShopTableViewController: UITableViewController, CLLocationManagerDelegate 
             listSpace: " ",
             feature: featOpenSociety!,
             newShop: false,
-            igHandle: "opensocietyindy"
+            igHandle: "opensocietyindy",
+            distance: (userLocale.distance(from: CLLocation(latitude: 39.842720, longitude: -86.145911)))*0.000621371
         )
         
         let shop5 = CoffeeShop(
@@ -311,7 +322,8 @@ class ShopTableViewController: UITableViewController, CLLocationManagerDelegate 
             listSpace: " ",
             feature: featKaffeine!,
             newShop: false,
-            igHandle: "kaffeinecoffee"
+            igHandle: "kaffeinecoffee",
+            distance: (userLocale.distance(from: CLLocation(latitude: 39.776130, longitude: -86.143894)))*0.000621371
         )
         
         let shop6 = CoffeeShop(
@@ -323,7 +335,8 @@ class ShopTableViewController: UITableViewController, CLLocationManagerDelegate 
             listSpace: " ",
             feature: featGeneralAmerican!,
             newShop: false,
-            igHandle: "generalamericandonut"
+            igHandle: "generalamericandonut",
+            distance:  (userLocale.distance(from: CLLocation(latitude: 39.755642, longitude: -86.149328)))*0.000621371
         )
         
         let shop7 = CoffeeShop(
@@ -335,7 +348,8 @@ class ShopTableViewController: UITableViewController, CLLocationManagerDelegate 
             listSpace: " ",
             feature: featBee!,
             newShop: false,
-            igHandle: "beecoffeeroasters"
+            igHandle: "beecoffeeroasters",
+            distance:  (userLocale.distance(from: CLLocation(latitude: 39.763533, longitude: -86.161663)))*0.000621371
         )
         
         let shop8 = CoffeeShop(
@@ -347,7 +361,8 @@ class ShopTableViewController: UITableViewController, CLLocationManagerDelegate 
             listSpace: " ",
             feature: featThirstyScholar!,
             newShop: false,
-            igHandle: "thirstyscholarindy"
+            igHandle: "thirstyscholarindy",
+            distance:  (userLocale.distance(from: CLLocation(latitude: 39.788278, longitude: -86.155654)))*0.000621371
         )
         
         let shop9 = CoffeeShop(
@@ -359,7 +374,8 @@ class ShopTableViewController: UITableViewController, CLLocationManagerDelegate 
             listSpace: " ",
             feature: featFoundry!,
             newShop: false,
-            igHandle: "foundryindy"
+            igHandle: "foundryindy",
+            distance:  (userLocale.distance(from: CLLocation(latitude: 39.788586, longitude: -86.152519)))*0.000621371
         )
         
         let shop10 = CoffeeShop(
@@ -371,7 +387,8 @@ class ShopTableViewController: UITableViewController, CLLocationManagerDelegate 
             listSpace: " ",
             feature: featRabble!,
             newShop: false,
-            igHandle: "rabblecoffee"
+            igHandle: "rabblecoffee",
+            distance:  (userLocale.distance(from: CLLocation(latitude: 39.781211, longitude: -86.124265)))*0.000621371
         )
         
         
@@ -384,7 +401,8 @@ class ShopTableViewController: UITableViewController, CLLocationManagerDelegate 
             listSpace: " ",
             feature: featCoalYard!,
             newShop: false,
-            igHandle: "coalyardcoffee"
+            igHandle: "coalyardcoffee",
+            distance: (userLocale.distance(from: CLLocation(latitude: 39.767619, longitude: -86.071913)))*0.000621371
         )
         
         let shop12 = CoffeeShop(
@@ -396,7 +414,8 @@ class ShopTableViewController: UITableViewController, CLLocationManagerDelegate 
             listSpace: " ",
             feature: featNeidhammer!,
             newShop: false,
-            igHandle: "neidhammercoffee"
+            igHandle: "neidhammercoffee",
+            distance:  (userLocale.distance(from: CLLocation(latitude: 39.767844, longitude: -86.125346)))*0.000621371
         )
         
         let shop13 = CoffeeShop(
@@ -408,7 +427,8 @@ class ShopTableViewController: UITableViewController, CLLocationManagerDelegate 
             listSpace: " ",
             feature: featCalvinFletchers!,
             newShop: false,
-            igHandle: "calvinfletcherscoffeeco"
+            igHandle: "calvinfletcherscoffeeco",
+            distance:  (userLocale.distance(from: CLLocation(latitude: 39.757719, longitude: -86.145896)))*0.000621371
         )
         
         let shop14 = CoffeeShop(
@@ -420,7 +440,8 @@ class ShopTableViewController: UITableViewController, CLLocationManagerDelegate 
             listSpace: " ",
             feature: featVeloWorks!,
             newShop: false,
-            igHandle: "veloworksindy"
+            igHandle: "veloworksindy",
+            distance: (userLocale.distance(from: CLLocation(latitude: 39.748798, longitude: -86.139969)))*0.000621371
         )
         
         let shop15 = CoffeeShop(
@@ -432,7 +453,8 @@ class ShopTableViewController: UITableViewController, CLLocationManagerDelegate 
             listSpace: " ",
             feature: featQuirkyFeather!,
             newShop: false,
-            igHandle: "quirky_feather"
+            igHandle: "quirky_feather",
+            distance: (userLocale.distance(from: CLLocation(latitude: 39.956799, longitude: -86.141370)))*0.000621371
         )
         
         let shop16 = CoffeeShop(
@@ -444,7 +466,8 @@ class ShopTableViewController: UITableViewController, CLLocationManagerDelegate 
             listSpace: " ",
             feature: featHubbardCarmel!,
             newShop: false,
-            igHandle: "hubbardcravens"
+            igHandle: "hubbardcravens",
+            distance:  (userLocale.distance(from: CLLocation(latitude: 39.970128, longitude: -86.128349)))*0.000621371
         )
         
         let shop17 = CoffeeShop(
@@ -456,7 +479,8 @@ class ShopTableViewController: UITableViewController, CLLocationManagerDelegate 
             listSpace: " ",
             feature: featTheWell!,
             newShop: false,
-            igHandle: "wellcoffeehousefishers"
+            igHandle: "wellcoffeehousefishers",
+            distance:  (userLocale.distance(from: CLLocation(latitude: 39.957169, longitude: -86.013124)))*0.000621371
         )
         
         let shop18 = CoffeeShop(
@@ -468,7 +492,8 @@ class ShopTableViewController: UITableViewController, CLLocationManagerDelegate 
             listSpace: " ",
             feature: featSureShot!,
             newShop: false,
-            igHandle: "sureshotcoffee"
+            igHandle: "sureshotcoffee",
+            distance:  (userLocale.distance(from: CLLocation(latitude: 39.956860, longitude: -86.015739)))*0.000621371
         )
         
         let shop19 = CoffeeShop(
@@ -480,7 +505,8 @@ class ShopTableViewController: UITableViewController, CLLocationManagerDelegate 
             listSpace: " ",
             feature: featBeeRoaster!,
             newShop: false,
-            igHandle: "beecoffeeroasters"
+            igHandle: "beecoffeeroasters",
+            distance:  (userLocale.distance(from: CLLocation(latitude: 39.851262, longitude: -86.262768)))*0.000621371
         )
         
         let shop20 = CoffeeShop(
@@ -492,7 +518,8 @@ class ShopTableViewController: UITableViewController, CLLocationManagerDelegate 
             listSpace: " ",
             feature: featMileSquare!,
             newShop: false,
-            igHandle: "milesquareindy"
+            igHandle: "milesquareindy",
+            distance: (userLocale.distance(from: CLLocation(latitude: 39.768693, longitude: -86.153339)))*0.000621371
         )
         
         
@@ -533,20 +560,14 @@ class ShopTableViewController: UITableViewController, CLLocationManagerDelegate 
         // Do some reloading of data and update the table view's data source
         // Fetch more objects from a web service, for example...
         
-        refreshControl = UIRefreshControl()
-        
-        shopTable.addSubview(refreshControl!)
+       
         
         // Simply adding an object to the data source for this example
         
-        // shops.sort() { $0.neighborhood > $1.neighborhood }
-        
+        shops.sort() { $0.distance < $1.distance }
         self.shopTable.reloadData()
+        refresher.endRefreshing()
         
-        
-        refreshControl?.endRefreshing()
-        
-        return
     }
     
     

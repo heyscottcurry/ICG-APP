@@ -207,7 +207,7 @@
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
                                                 <connections>
-                                                    <segue destination="9o2-3R-Zbw" kind="presentation" id="slF-0l-N1x"/>
+                                                    <segue destination="pHt-Sn-xWM" kind="show" identifier="showDetail" action="showDetailViewController:sender:" id="ads-Bp-z35"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dRw-36-JnP">
@@ -346,6 +346,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="5Ts-Sb-zhG"/>
                     <nil key="simulatedStatusBarMetrics"/>
                     <nil key="simulatedTopBarMetrics"/>
                     <connections>
@@ -357,7 +358,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bpy-ts-YlP" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="BH0-CS-68t" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2471.0144927536235" y="347.28260869565219"/>
+            <point key="canvasLocation" x="3378.2608695652175" y="347.28260869565219"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="uQm-7x-dw3">
@@ -401,6 +402,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nh9-4M-OaD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1738" y="-374"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="JJO-ih-V7V">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="pHt-Sn-xWM" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="OBP-0v-8Q0">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="9o2-3R-Zbw" kind="relationship" relationship="rootViewController" id="ygu-Kh-MtA"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YHa-Vy-O6b" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2471.0144927536235" y="347.28260869565219"/>
         </scene>
     </scenes>
 </document>

@@ -8,6 +8,7 @@
 
 import UIKit
 import MapKit
+import CoreLocation
 
 class MapViewController: UIViewController {
     
@@ -16,10 +17,45 @@ class MapViewController: UIViewController {
     
     @IBOutlet weak var shopMap: MKMapView!
     
+    
+    
+    var array = CoffeeShopTableViewCell
+    
+    var detailShop: CoffeeShop!  {
+         didSet {
+            configureView()
+        }
+    }
+    
+    
+    
+    
+  func configureView() {
+         let detailShop = self.detailShop
+    }
+ 
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+          configureView()
+        
+        
+        // let location = CLLocationCoordinate2DMake((detailShop?.long)!, (detailShop?.lat)!)
+        let location = CLLocationCoordinate2DMake(39.970128, -86.128349)
+        
+        
+        let annotation = MKPointAnnotation()
+        /*   let shopName = String(detailShop.name)
+       
+      annotation.title = (shopName)*/
+       
+        shopMap.addAnnotation(annotation)
+        
+        print(detailShop?.name)
+        
+        
+        annotation.coordinate = location
         
         self.directButton.layer.borderWidth = 2
         self.directButton.layer.borderColor = UIColor.white.cgColor
