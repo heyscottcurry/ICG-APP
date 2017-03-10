@@ -32,6 +32,16 @@ class ShopTableViewController: UITableViewController, CLLocationManagerDelegate 
     @IBOutlet weak var indyHandle: UIButton!
 
     
+    func getLocale() {
+        locationManager.delegate = self
+        locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
+        locationManager.startMonitoringSignificantLocationChanges()
+        self.locationManager.startUpdatingLocation()
+        userLatitude  = locationManager.location!.coordinate.latitude
+        userLongitude = locationManager.location!.coordinate.longitude
+        print("\(userLatitude!), \(userLongitude!)")
+    }
+    
     @IBAction func igCoffee(_ sender: UIButton) {
         
         let instagramHooks = "instagram://user?username=indianapoliscoffee"
@@ -97,12 +107,7 @@ class ShopTableViewController: UITableViewController, CLLocationManagerDelegate 
         if CLLocationManager.locationServicesEnabled()
             
         {
-            locationManager.delegate = self
-            locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
-            locationManager.startMonitoringSignificantLocationChanges()
-            self.locationManager.startUpdatingLocation()
-            userLatitude  = locationManager.location!.coordinate.latitude
-            userLongitude = locationManager.location!.coordinate.longitude
+            getLocale()
             
         }
         /* userCoordinate = CLLocation(latitude: userLatitude, longitude: userLongitude) */
@@ -564,7 +569,7 @@ class ShopTableViewController: UITableViewController, CLLocationManagerDelegate 
        
         
         // Simply adding an object to the data source for this example
-        
+        getLocale()
         shops.sort() { $0.distance < $1.distance }
         self.shopTable.reloadData()
         refresher.endRefreshing()
