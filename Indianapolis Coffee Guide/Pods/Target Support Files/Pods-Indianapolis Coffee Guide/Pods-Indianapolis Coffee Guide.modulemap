@@ -1,0 +1,6 @@
+framework module Pods_Indianapolis_Coffee_Guide {
+  umbrella header "Pods-Indianapolis Coffee Guide-umbrella.h"
+
+  export *
+  module * { export * }
+}

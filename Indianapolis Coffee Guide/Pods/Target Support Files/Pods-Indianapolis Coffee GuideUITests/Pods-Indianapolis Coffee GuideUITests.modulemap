@@ -1,0 +1,6 @@
+framework module Pods_Indianapolis_Coffee_GuideUITests {
+  umbrella header "Pods-Indianapolis Coffee GuideUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
