@@ -26,7 +26,7 @@ class ShopDetail: UIViewController {
     @IBOutlet weak var igButton: UIButton!
     
     
-
+     var details = CoffeeShop.self
     
     @IBAction func igButt(_ sender: UIButton) {
         
@@ -117,7 +117,16 @@ class ShopDetail: UIViewController {
     
     @IBAction func unwindToShop(segue: UIStoryboardSegue) {}
     
-
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "mapSegue" {
+            
+            let thirdVC = (segue.destination as! UINavigationController).topViewController as! MapViewController
+            thirdVC.detailShop = detailShop
+            
+        }
+        
+    }
 
     
     

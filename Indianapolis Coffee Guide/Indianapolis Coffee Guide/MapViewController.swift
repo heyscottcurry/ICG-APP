@@ -19,7 +19,6 @@ class MapViewController: UIViewController {
     
     
     
-    var array = CoffeeShopTableViewCell
     
     var detailShop: CoffeeShop!  {
          didSet {
@@ -31,7 +30,7 @@ class MapViewController: UIViewController {
     
     
   func configureView() {
-         let detailShop = self.detailShop
+         // let detailShop = self.detailShop
     }
  
     
@@ -41,26 +40,30 @@ class MapViewController: UIViewController {
           configureView()
         
         
-        // let location = CLLocationCoordinate2DMake((detailShop?.long)!, (detailShop?.lat)!)
-        let location = CLLocationCoordinate2DMake(39.970128, -86.128349)
+         let location = CLLocationCoordinate2DMake(detailShop.long, detailShop.lat)
+       // let location = CLLocationCoordinate2DMake(39.970128, -86.128349)
         
+        let span = MKCoordinateSpanMake(0.002, 0.002)
+        let region = MKCoordinateRegion(center: location, span: span)
+        
+        shopMap.setRegion(region, animated: true)
         
         let annotation = MKPointAnnotation()
-        /*   let shopName = String(detailShop.name)
-       
-      annotation.title = (shopName)*/
+        let shopName = String(detailShop.name)
+        annotation.title = (shopName)
        
         shopMap.addAnnotation(annotation)
+        shopMap.selectAnnotation(annotation, animated: true)
         
-        print(detailShop?.name)
+        print(detailShop.name)
         
         
         annotation.coordinate = location
         
         self.directButton.layer.borderWidth = 2
-        self.directButton.layer.borderColor = UIColor.white.cgColor
+        self.directButton.layer.borderColor = UIColor.black.cgColor
         self.closeButton.layer.borderWidth = 2
-        self.closeButton.layer.borderColor = UIColor.white.cgColor
+        self.closeButton.layer.borderColor = UIColor.black.cgColor
         
         
         // Do any additional setup after loading the view.

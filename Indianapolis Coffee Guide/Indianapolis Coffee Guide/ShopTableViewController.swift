@@ -20,6 +20,7 @@ class ShopTableViewController: UITableViewController, CLLocationManagerDelegate 
     //MARK: Properties
     
     var shops = [CoffeeShop]()
+    var objects: [CoffeeShop] = []
     var locationManager: CLLocationManager!
     var currentLocation = CLLocation!.self
     var userLatitude:CLLocationDegrees! = 0
