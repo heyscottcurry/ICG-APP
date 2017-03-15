@@ -25,9 +25,11 @@ class CoffeeShop {
     var newShop: Bool
     var igHandle: String
     var distance: Double
+    var googleMap: String
+    var appleMap: String
     
     
-    init(name: String, neighborhood: String, long: Double, lat: Double, listBrew: String, listSpace: String, feature: UIImage?, newShop: Bool, igHandle: String, distance: Double) {
+    init(name: String, neighborhood: String, long: Double, lat: Double, listBrew: String, listSpace: String, feature: UIImage?, newShop: Bool, igHandle: String, distance: Double, googleMap: String, appleMap: String) {
         
         
         
@@ -42,6 +44,8 @@ class CoffeeShop {
         self.newShop = newShop
         self.igHandle = igHandle
         self.distance = distance
+        self.googleMap = googleMap
+        self.appleMap = appleMap
         
     }
 

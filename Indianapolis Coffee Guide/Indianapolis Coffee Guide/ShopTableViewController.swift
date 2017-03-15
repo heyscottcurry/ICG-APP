@@ -26,11 +26,11 @@ class ShopTableViewController: UITableViewController, CLLocationManagerDelegate 
     var userLatitude:CLLocationDegrees! = 0
     var userLongitude:CLLocationDegrees! = 0
     var locValue:CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: 1.0, longitude: 1.0)
-    var refresher: UIRefreshControl!
+    var refresher: UIRefreshControl! = UIRefreshControl()
     
-
+    
     @IBOutlet weak var indyHandle: UIButton!
-
+    
     
     func getLocale() {
         locationManager.delegate = self
@@ -40,6 +40,11 @@ class ShopTableViewController: UITableViewController, CLLocationManagerDelegate 
         userLatitude  = locationManager.location!.coordinate.latitude
         userLongitude = locationManager.location!.coordinate.longitude
         print("\(userLatitude!), \(userLongitude!)")
+    }
+    
+    func sortList() {
+        shops.sort() { $0.distance < $1.distance }
+        self.shopTable.reloadData();
     }
     
     @IBAction func igCoffee(_ sender: UIButton) {
@@ -58,10 +63,10 @@ class ShopTableViewController: UITableViewController, CLLocationManagerDelegate 
             UIApplication.shared.open(fallbackURL! as URL, options: [:], completionHandler: nil)
             
         }
-
+        
     }
-  
- 
+    
+    
     @IBAction func igHashtag(_ sender: UIButton) {
         
         
@@ -120,17 +125,19 @@ class ShopTableViewController: UITableViewController, CLLocationManagerDelegate 
         
         
         loadShops()
-        func sortList() {
-            shops.sort() { $0.distance < $1.distance }
-            self.shopTable.reloadData();
-        }
+        
         sortList()
         print("\(locValue.latitude), \(locValue.longitude)")
         
         refresher = UIRefreshControl()
         refresher.addTarget(self, action: #selector(ShopTableViewController.handleRefresh), for: UIControlEvents.valueChanged)
-        shopTable.addSubview(refresher)
         
+        
+        if #available(iOS 10, *) {
+            shopTable.refreshControl = refresher
+        } else {
+            shopTable.addSubview(refresher)
+        }
         
         
     }
@@ -171,21 +178,17 @@ class ShopTableViewController: UITableViewController, CLLocationManagerDelegate 
         // Fetches the appropriate coffee shop for the data source layout.
         let shop = shops[indexPath.row]
         
-        /* let shopLocale = CLLocation(latitude: shop.long, longitude: shop.lat)
-        let userLocale = CLLocation(latitude: userLatitude, longitude: userLongitude)
-        let distanceInMeters = userLocale.distance(from: shopLocale)
-        let distanceinMiles = (distanceInMeters*0.000621371)
-        let _   = String(format: "%.1f", distanceinMiles)
-         */
         
-        
-        // cell.shopDistance.text = String(" \(distanceText) miles away")
         cell.shopName.text = shop.name
         cell.shopNeighborhood.text = shop.neighborhood
         cell.featureThumbnail.image = shop.feature
-        cell.shopDistance.text = String(format: "%.1f", shop.distance)
-        cell.shopDistance.text!.append(" miles away")
         
+        if shop.distance < 0.05 {
+            cell.shopDistance.text = "You must be here!"
+        } else {
+            cell.shopDistance.text = String(format: "%.1f", shop.distance)
+            cell.shopDistance.text!.append(" miles away")
+        }
         
         return cell
         
@@ -241,7 +244,7 @@ class ShopTableViewController: UITableViewController, CLLocationManagerDelegate 
     
     //MARK: Private Methods
     
-        func loadShops() {
+    func loadShops() {
         
         let featCoatCheck = UIImage(named: "feat-coatcheck")
         let featGeorgiaStreet = UIImage(named: "feat-georgiastreet")
@@ -272,12 +275,14 @@ class ShopTableViewController: UITableViewController, CLLocationManagerDelegate 
             neighborhood: "Downtown",
             long: 39.773747,
             lat: -86.150272,
-            listBrew: " ",
-            listSpace: " ",
+            listBrew: "Tinker Coffee",
+            listSpace: "Located in the old Coat Check at the historic Athenæum on Mass Ave.",
             feature: featCoatCheck!,
             newShop: false,
             igHandle: "coatcheckcoffee",
-            distance: (userLocale.distance(from: CLLocation(latitude: 39.773747, longitude: -86.150272)))*0.000621371
+            distance: (userLocale.distance(from: CLLocation(latitude: 39.773747, longitude: -86.150272)))*0.000621371,
+            googleMap: "www.google.com/maps/place/Sure+Shot+Coffee/@39.9569398,-86.0179095,17z/data=!3m1!4b1!4m5!3m4!1s0x8814b3810c0e6621:0xb3ef597594be86fb!8m2!3d39.9569398!4d-86.0157208",
+            appleMap: "http://maps.apple.com/?daddr=8684+E+116th+St,Fishers,IN,46038&dirflg=d&t=h"
         )
         
         let shop2 = CoffeeShop(
@@ -285,12 +290,14 @@ class ShopTableViewController: UITableViewController, CLLocationManagerDelegate 
             neighborhood: "Downtown",
             long: 39.764130,
             lat: -86.159038,
-            listBrew: " ",
-            listSpace: " ",
+            listBrew: "In-House Blend of Local Roasts",
+            listSpace: "Efficient. To the point. Perfect.",
             feature: featGeorgiaStreet!,
             newShop: false,
             igHandle: "georgiastreetgrind",
-            distance:  (userLocale.distance(from: CLLocation(latitude: 39.764130, longitude: -86.159038)))*0.000621371
+            distance:  (userLocale.distance(from: CLLocation(latitude: 39.764130, longitude: -86.159038)))*0.000621371,
+            googleMap: "www.google.com/maps/place/Sure+Shot+Coffee/@39.9569398,-86.0179095,17z/data=!3m1!4b1!4m5!3m4!1s0x8814b3810c0e6621:0xb3ef597594be86fb!8m2!3d39.9569398!4d-86.0157208",
+            appleMap: "http://maps.apple.com/?daddr=8684+E+116th+St,Fishers,IN,46038&dirflg=d&t=h"
         )
         
         let shop3 = CoffeeShop(
@@ -298,12 +305,14 @@ class ShopTableViewController: UITableViewController, CLLocationManagerDelegate 
             neighborhood: "Downtown",
             long: 39.779333,
             lat: -86.163894,
-            listBrew: " ",
-            listSpace: " ",
+            listBrew: "Quills Coffee",
+            listSpace: "Not your average student union.",
             feature: featQuills!,
             newShop: false,
             igHandle: "quillscoffee",
-            distance:  (userLocale.distance(from: CLLocation(latitude: 39.779333, longitude: -86.163894)))*0.000621371
+            distance:  (userLocale.distance(from: CLLocation(latitude: 39.779333, longitude: -86.163894)))*0.000621371,
+            googleMap: "www.google.com/maps/place/Sure+Shot+Coffee/@39.9569398,-86.0179095,17z/data=!3m1!4b1!4m5!3m4!1s0x8814b3810c0e6621:0xb3ef597594be86fb!8m2!3d39.9569398!4d-86.0157208",
+            appleMap: "http://maps.apple.com/?daddr=8684+E+116th+St,Fishers,IN,46038&dirflg=d&t=h"
         )
         
         let shop4 = CoffeeShop(
@@ -311,12 +320,14 @@ class ShopTableViewController: UITableViewController, CLLocationManagerDelegate 
             neighborhood: "Broad Ripple",
             long: 39.842720,
             lat: -86.145911,
-            listBrew: " ",
-            listSpace: " ",
+            listBrew: "Tinker Coffee & Madcap Coffee (Grand Rapids)",
+            listSpace: "Half coffee shop, half restaurant & bar.",
             feature: featOpenSociety!,
             newShop: false,
             igHandle: "opensocietyindy",
-            distance: (userLocale.distance(from: CLLocation(latitude: 39.842720, longitude: -86.145911)))*0.000621371
+            distance: (userLocale.distance(from: CLLocation(latitude: 39.842720, longitude: -86.145911)))*0.000621371,
+            googleMap: "www.google.com/maps/place/Sure+Shot+Coffee/@39.9569398,-86.0179095,17z/data=!3m1!4b1!4m5!3m4!1s0x8814b3810c0e6621:0xb3ef597594be86fb!8m2!3d39.9569398!4d-86.0157208",
+            appleMap: "http://maps.apple.com/?daddr=8684+E+116th+St,Fishers,IN,46038&dirflg=d&t=h"
         )
         
         let shop5 = CoffeeShop(
@@ -324,12 +335,14 @@ class ShopTableViewController: UITableViewController, CLLocationManagerDelegate 
             neighborhood: "Downtown",
             long: 39.776130,
             lat: -86.143894,
-            listBrew: " ",
-            listSpace: " ",
+            listBrew: "Rotating",
+            listSpace: "Comfortable, Industrial, Americana Chic",
             feature: featKaffeine!,
             newShop: false,
             igHandle: "kaffeinecoffee",
-            distance: (userLocale.distance(from: CLLocation(latitude: 39.776130, longitude: -86.143894)))*0.000621371
+            distance: (userLocale.distance(from: CLLocation(latitude: 39.776130, longitude: -86.143894)))*0.000621371,
+            googleMap: "www.google.com/maps/place/Sure+Shot+Coffee/@39.9569398,-86.0179095,17z/data=!3m1!4b1!4m5!3m4!1s0x8814b3810c0e6621:0xb3ef597594be86fb!8m2!3d39.9569398!4d-86.0157208",
+            appleMap: "http://maps.apple.com/?daddr=8684+E+116th+St,Fishers,IN,46038&dirflg=d&t=h"
         )
         
         let shop6 = CoffeeShop(
@@ -337,12 +350,14 @@ class ShopTableViewController: UITableViewController, CLLocationManagerDelegate 
             neighborhood: "Fountain Square",
             long: 39.755642,
             lat: -86.149328,
-            listBrew: " ",
-            listSpace: " ",
+            listBrew: "Stumptown Coffee",
+            listSpace: "Pacific Northwest meets Industrial Indy",
             feature: featGeneralAmerican!,
             newShop: false,
             igHandle: "generalamericandonut",
-            distance:  (userLocale.distance(from: CLLocation(latitude: 39.755642, longitude: -86.149328)))*0.000621371
+            distance:  (userLocale.distance(from: CLLocation(latitude: 39.755642, longitude: -86.149328)))*0.000621371,
+            googleMap: "www.google.com/maps/place/Sure+Shot+Coffee/@39.9569398,-86.0179095,17z/data=!3m1!4b1!4m5!3m4!1s0x8814b3810c0e6621:0xb3ef597594be86fb!8m2!3d39.9569398!4d-86.0157208",
+            appleMap: "http://maps.apple.com/?daddr=8684+E+116th+St,Fishers,IN,46038&dirflg=d&t=h"
         )
         
         let shop7 = CoffeeShop(
@@ -350,12 +365,14 @@ class ShopTableViewController: UITableViewController, CLLocationManagerDelegate 
             neighborhood: "Downtown",
             long: 39.763533,
             lat: -86.161663,
-            listBrew: " ",
-            listSpace: " ",
+            listBrew: "Bee Coffee",
+            listSpace: "The epitome of downtown coffee shops.",
             feature: featBee!,
             newShop: false,
             igHandle: "beecoffeeroasters",
-            distance:  (userLocale.distance(from: CLLocation(latitude: 39.763533, longitude: -86.161663)))*0.000621371
+            distance:  (userLocale.distance(from: CLLocation(latitude: 39.763533, longitude: -86.161663)))*0.000621371,
+            googleMap: "www.google.com/maps/place/Bee+Coffee+Roasters/@39.7635239,-86.1636347,17z/data=!3m1!4b1!4m5!3m4!1s0x886b50a4cb935ecd:0xc62f7a0001032723!8m2!3d39.7635239!4d-86.161446",
+            appleMap: "http://maps.apple.com/?daddr=Bee+Coffee+201+S+Capitol+Ave,Indianapolis,IN,46225&dirflg=d&t=h"
         )
         
         let shop8 = CoffeeShop(
@@ -363,12 +380,14 @@ class ShopTableViewController: UITableViewController, CLLocationManagerDelegate 
             neighborhood: "Downtown",
             long: 39.788278,
             lat: -86.155654,
-            listBrew: " ",
-            listSpace: " ",
+            listBrew: "Intelligentsia",
+            listSpace: "Half coffee shop. Half bar. Open late.",
             feature: featThirstyScholar!,
             newShop: false,
             igHandle: "thirstyscholarindy",
-            distance:  (userLocale.distance(from: CLLocation(latitude: 39.788278, longitude: -86.155654)))*0.000621371
+            distance:  (userLocale.distance(from: CLLocation(latitude: 39.788278, longitude: -86.155654)))*0.000621371,
+            googleMap: "www.google.com/maps/place/Sure+Shot+Coffee/@39.9569398,-86.0179095,17z/data=!3m1!4b1!4m5!3m4!1s0x8814b3810c0e6621:0xb3ef597594be86fb!8m2!3d39.9569398!4d-86.0157208",
+            appleMap: "http://maps.apple.com/?daddr=8684+E+116th+St,Fishers,IN,46038&dirflg=d&t=h"
         )
         
         let shop9 = CoffeeShop(
@@ -376,12 +395,14 @@ class ShopTableViewController: UITableViewController, CLLocationManagerDelegate 
             neighborhood: "Downtown",
             long: 39.788586,
             lat: -86.152519,
-            listBrew: " ",
-            listSpace: " ",
+            listBrew: "Tinker Coffee",
+            listSpace: "Artsy & Hip. Great for work & pleasure.",
             feature: featFoundry!,
             newShop: false,
             igHandle: "foundryindy",
-            distance:  (userLocale.distance(from: CLLocation(latitude: 39.788586, longitude: -86.152519)))*0.000621371
+            distance:  (userLocale.distance(from: CLLocation(latitude: 39.788586, longitude: -86.152519)))*0.000621371,
+            googleMap: "www.google.com/maps/place/Sure+Shot+Coffee/@39.9569398,-86.0179095,17z/data=!3m1!4b1!4m5!3m4!1s0x8814b3810c0e6621:0xb3ef597594be86fb!8m2!3d39.9569398!4d-86.0157208",
+            appleMap: "http://maps.apple.com/?daddr=8684+E+116th+St,Fishers,IN,46038&dirflg=d&t=h"
         )
         
         let shop10 = CoffeeShop(
@@ -389,12 +410,14 @@ class ShopTableViewController: UITableViewController, CLLocationManagerDelegate 
             neighborhood: "Irvington",
             long: 39.781211,
             lat:  -86.124265,
-            listBrew: " ",
-            listSpace: " ",
+            listBrew: "Tinker Coffee",
+            listSpace: "The neighborhood shop of your dreams.",
             feature: featRabble!,
             newShop: false,
             igHandle: "rabblecoffee",
-            distance:  (userLocale.distance(from: CLLocation(latitude: 39.781211, longitude: -86.124265)))*0.000621371
+            distance:  (userLocale.distance(from: CLLocation(latitude: 39.781211, longitude: -86.124265)))*0.000621371,
+            googleMap: "www.google.com/maps/place/Sure+Shot+Coffee/@39.9569398,-86.0179095,17z/data=!3m1!4b1!4m5!3m4!1s0x8814b3810c0e6621:0xb3ef597594be86fb!8m2!3d39.9569398!4d-86.0157208",
+            appleMap: "http://maps.apple.com/?daddr=8684+E+116th+St,Fishers,IN,46038&dirflg=d&t=h"
         )
         
         
@@ -403,12 +426,14 @@ class ShopTableViewController: UITableViewController, CLLocationManagerDelegate 
             neighborhood: "Irvington",
             long: 39.767619,
             lat:  -86.071913,
-            listBrew: " ",
-            listSpace: " ",
+            listBrew: "Rotating Organic Blends",
+            listSpace: "Your favorite off-the-beaten-path shop and artist space.",
             feature: featCoalYard!,
             newShop: false,
             igHandle: "coalyardcoffee",
-            distance: (userLocale.distance(from: CLLocation(latitude: 39.767619, longitude: -86.071913)))*0.000621371
+            distance: (userLocale.distance(from: CLLocation(latitude: 39.767619, longitude: -86.071913)))*0.000621371,
+            googleMap: "www.google.com/maps/place/Sure+Shot+Coffee/@39.9569398,-86.0179095,17z/data=!3m1!4b1!4m5!3m4!1s0x8814b3810c0e6621:0xb3ef597594be86fb!8m2!3d39.9569398!4d-86.0157208",
+            appleMap: "http://maps.apple.com/?daddr=8684+E+116th+St,Fishers,IN,46038&dirflg=d&t=h"
         )
         
         let shop12 = CoffeeShop(
@@ -416,12 +441,14 @@ class ShopTableViewController: UITableViewController, CLLocationManagerDelegate 
             neighborhood: "Irvington",
             long: 39.767844,
             lat: -86.125346,
-            listBrew: " ",
-            listSpace: " ",
+            listBrew: "Carabello Coffee",
+            listSpace: "A chic, industrial space that will drive your Instagram crazy.",
             feature: featNeidhammer!,
             newShop: false,
             igHandle: "neidhammercoffee",
-            distance:  (userLocale.distance(from: CLLocation(latitude: 39.767844, longitude: -86.125346)))*0.000621371
+            distance:  (userLocale.distance(from: CLLocation(latitude: 39.767844, longitude: -86.125346)))*0.000621371,
+            googleMap: "www.google.com/maps/place/Sure+Shot+Coffee/@39.9569398,-86.0179095,17z/data=!3m1!4b1!4m5!3m4!1s0x8814b3810c0e6621:0xb3ef597594be86fb!8m2!3d39.9569398!4d-86.0157208",
+            appleMap: "http://maps.apple.com/?daddr=8684+E+116th+St,Fishers,IN,46038&dirflg=d&t=h"
         )
         
         let shop13 = CoffeeShop(
@@ -429,12 +456,14 @@ class ShopTableViewController: UITableViewController, CLLocationManagerDelegate 
             neighborhood: "Fountain Square",
             long: 39.757719,
             lat: -86.145896,
-            listBrew: " ",
-            listSpace: " ",
+            listBrew: "Roasted in house.",
+            listSpace: "Always busy. Always bright.",
             feature: featCalvinFletchers!,
             newShop: false,
             igHandle: "calvinfletcherscoffeeco",
-            distance:  (userLocale.distance(from: CLLocation(latitude: 39.757719, longitude: -86.145896)))*0.000621371
+            distance:  (userLocale.distance(from: CLLocation(latitude: 39.757719, longitude: -86.145896)))*0.000621371,
+            googleMap: "www.google.com/maps/place/Sure+Shot+Coffee/@39.9569398,-86.0179095,17z/data=!3m1!4b1!4m5!3m4!1s0x8814b3810c0e6621:0xb3ef597594be86fb!8m2!3d39.9569398!4d-86.0157208",
+            appleMap: "http://maps.apple.com/?daddr=8684+E+116th+St,Fishers,IN,46038&dirflg=d&t=h"
         )
         
         let shop14 = CoffeeShop(
@@ -442,12 +471,14 @@ class ShopTableViewController: UITableViewController, CLLocationManagerDelegate 
             neighborhood: "Fountain Square",
             long: 39.748798,
             lat:  -86.139969,
-            listBrew: " ",
-            listSpace: " ",
+            listBrew: "Liberation Roasting",
+            listSpace: "Cozy coffee & cycle shop hybrid with loads of space.",
             feature: featVeloWorks!,
             newShop: false,
             igHandle: "veloworksindy",
-            distance: (userLocale.distance(from: CLLocation(latitude: 39.748798, longitude: -86.139969)))*0.000621371
+            distance: (userLocale.distance(from: CLLocation(latitude: 39.748798, longitude: -86.139969)))*0.000621371,
+            googleMap: "www.google.com/maps/place/Sure+Shot+Coffee/@39.9569398,-86.0179095,17z/data=!3m1!4b1!4m5!3m4!1s0x8814b3810c0e6621:0xb3ef597594be86fb!8m2!3d39.9569398!4d-86.0157208",
+            appleMap: "http://maps.apple.com/?daddr=8684+E+116th+St,Fishers,IN,46038&dirflg=d&t=h"
         )
         
         let shop15 = CoffeeShop(
@@ -455,12 +486,14 @@ class ShopTableViewController: UITableViewController, CLLocationManagerDelegate 
             neighborhood: "Carmel",
             long: 39.956799,
             lat:  -86.141370,
-            listBrew: " ",
-            listSpace: " ",
+            listBrew: "Hubbard & Cravens",
+            listSpace: "Dr. Suess meets Willy Wonka.",
             feature: featQuirkyFeather!,
             newShop: false,
             igHandle: "quirky_feather",
-            distance: (userLocale.distance(from: CLLocation(latitude: 39.956799, longitude: -86.141370)))*0.000621371
+            distance: (userLocale.distance(from: CLLocation(latitude: 39.956799, longitude: -86.141370)))*0.000621371,
+            googleMap: "www.google.com/maps/place/Sure+Shot+Coffee/@39.9569398,-86.0179095,17z/data=!3m1!4b1!4m5!3m4!1s0x8814b3810c0e6621:0xb3ef597594be86fb!8m2!3d39.9569398!4d-86.0157208",
+            appleMap: "http://maps.apple.com/?daddr=8684+E+116th+St,Fishers,IN,46038&dirflg=d&t=h"
         )
         
         let shop16 = CoffeeShop(
@@ -468,12 +501,14 @@ class ShopTableViewController: UITableViewController, CLLocationManagerDelegate 
             neighborhood: "Carmel",
             long: 39.970128,
             lat:  -86.128349,
-            listBrew: " ",
-            listSpace: " ",
+            listBrew: "Hubbard & Cravens",
+            listSpace: "It's a coffee shop! It's a brunch place! It's both!",
             feature: featHubbardCarmel!,
             newShop: false,
             igHandle: "hubbardcravens",
-            distance:  (userLocale.distance(from: CLLocation(latitude: 39.970128, longitude: -86.128349)))*0.000621371
+            distance:  (userLocale.distance(from: CLLocation(latitude: 39.970128, longitude: -86.128349)))*0.000621371,
+            googleMap: "www.google.com/maps/place/Sure+Shot+Coffee/@39.9569398,-86.0179095,17z/data=!3m1!4b1!4m5!3m4!1s0x8814b3810c0e6621:0xb3ef597594be86fb!8m2!3d39.9569398!4d-86.0157208",
+            appleMap: "http://maps.apple.com/?daddr=8684+E+116th+St,Fishers,IN,46038&dirflg=d&t=h"
         )
         
         let shop17 = CoffeeShop(
@@ -481,12 +516,14 @@ class ShopTableViewController: UITableViewController, CLLocationManagerDelegate 
             neighborhood: "Fishers",
             long: 39.957169,
             lat:  -86.013124,
-            listBrew: " ",
-            listSpace: " ",
+            listBrew: "The Well Coffee",
+            listSpace: "You'll think you're in Nashville, TN.",
             feature: featTheWell!,
             newShop: false,
             igHandle: "wellcoffeehousefishers",
-            distance:  (userLocale.distance(from: CLLocation(latitude: 39.957169, longitude: -86.013124)))*0.000621371
+            distance:  (userLocale.distance(from: CLLocation(latitude: 39.957169, longitude: -86.013124)))*0.000621371,
+            googleMap: "www.google.com/maps/place/Sure+Shot+Coffee/@39.9569398,-86.0179095,17z/data=!3m1!4b1!4m5!3m4!1s0x8814b3810c0e6621:0xb3ef597594be86fb!8m2!3d39.9569398!4d-86.0157208",
+            appleMap: "http://maps.apple.com/?daddr=8684+E+116th+St,Fishers,IN,46038&dirflg=d&t=h"
         )
         
         let shop18 = CoffeeShop(
@@ -494,12 +531,14 @@ class ShopTableViewController: UITableViewController, CLLocationManagerDelegate 
             neighborhood: "Fishers",
             long: 39.956860,
             lat:  -86.015739,
-            listBrew: " ",
-            listSpace: " ",
+            listBrew: "Brickhouse Coffee Roasters",
+            listSpace: "The most kickass coffee counter in the most kickass t-shirt store.",
             feature: featSureShot!,
             newShop: false,
             igHandle: "sureshotcoffee",
-            distance:  (userLocale.distance(from: CLLocation(latitude: 39.956860, longitude: -86.015739)))*0.000621371
+            distance:  (userLocale.distance(from: CLLocation(latitude: 39.956860, longitude: -86.015739)))*0.000621371,
+            googleMap: "www.google.com/maps/place/Sure+Shot+Coffee/@39.9569398,-86.0179095,17z/data=!3m1!4b1!4m5!3m4!1s0x8814b3810c0e6621:0xb3ef597594be86fb!8m2!3d39.9569398!4d-86.0157208",
+            appleMap: "http://maps.apple.com/?daddr=8684+E+116th+St,Fishers,IN,46038&dirflg=d&t=h"
         )
         
         let shop19 = CoffeeShop(
@@ -507,12 +546,14 @@ class ShopTableViewController: UITableViewController, CLLocationManagerDelegate 
             neighborhood: "Eagle Creek",
             long: 39.851262,
             lat: -86.262768,
-            listBrew: " ",
-            listSpace: " ",
+            listBrew: "Bee Coffee (Roasted in house!)",
+            listSpace: "You feel like family.",
             feature: featBeeRoaster!,
             newShop: false,
             igHandle: "beecoffeeroasters",
-            distance:  (userLocale.distance(from: CLLocation(latitude: 39.851262, longitude: -86.262768)))*0.000621371
+            distance:  (userLocale.distance(from: CLLocation(latitude: 39.851262, longitude: -86.262768)))*0.000621371,
+            googleMap: "www.google.com/maps/place/Sure+Shot+Coffee/@39.9569398,-86.0179095,17z/data=!3m1!4b1!4m5!3m4!1s0x8814b3810c0e6621:0xb3ef597594be86fb!8m2!3d39.9569398!4d-86.0157208",
+            appleMap: "http://maps.apple.com/?daddr=8684+E+116th+St,Fishers,IN,46038&dirflg=d&t=h"
         )
         
         let shop20 = CoffeeShop(
@@ -520,12 +561,14 @@ class ShopTableViewController: UITableViewController, CLLocationManagerDelegate 
             neighborhood: "Downtown",
             long: 39.768693,
             lat: -86.153339,
-            listBrew: " ",
-            listSpace: " ",
+            listBrew: "Blue Mind & Tinker Coffee",
+            listSpace: "Located on the mezzanine of the City Market.",
             feature: featMileSquare!,
             newShop: false,
             igHandle: "milesquareindy",
-            distance: (userLocale.distance(from: CLLocation(latitude: 39.768693, longitude: -86.153339)))*0.000621371
+            distance: (userLocale.distance(from: CLLocation(latitude: 39.768693, longitude: -86.153339)))*0.000621371,
+            googleMap: "www.google.com/maps/place/Sure+Shot+Coffee/@39.9569398,-86.0179095,17z/data=!3m1!4b1!4m5!3m4!1s0x8814b3810c0e6621:0xb3ef597594be86fb!8m2!3d39.9569398!4d-86.0157208",
+            appleMap: "http://maps.apple.com/?daddr=8684+E+116th+St,Fishers,IN,46038&dirflg=d&t=h"
         )
         
         
@@ -566,12 +609,16 @@ class ShopTableViewController: UITableViewController, CLLocationManagerDelegate 
         // Do some reloading of data and update the table view's data source
         // Fetch more objects from a web service, for example...
         
-       
+        
         
         // Simply adding an object to the data source for this example
         getLocale()
+        
         shops.sort() { $0.distance < $1.distance }
-        self.shopTable.reloadData()
+        shops.removeAll()
+        loadShops()
+        sortList()
+        //self.shopTable.reloadData()
         refresher.endRefreshing()
         
     }

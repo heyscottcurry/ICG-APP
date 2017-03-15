@@ -10,17 +10,17 @@
 		132D375431B92C13CFA55E6836288FC8 /* Pods-Indianapolis Coffee Guide-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B2619E50DFB33B132C53D60A188F315 /* Pods-Indianapolis Coffee Guide-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3159D7CAFD56B809F40CA3330DA10889 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
 		3ADB357574A94050C53418AB8E8F0B33 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
-		541C5362289CC44D4F067D097F231250 /* GTMDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = F6D7B16721E888846204CBA21B058064 /* GTMDefines.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		541C5362289CC44D4F067D097F231250 /* GTMDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = E0E7AEA79B27BB2372F07958787A39E3 /* GTMDefines.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		72D554FCA12F0DB9D7CFD5B6154F7E7A /* Pods-Indianapolis Coffee GuideTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 32F6E0DB0DAC446B58054CC733E81F37 /* Pods-Indianapolis Coffee GuideTests-dummy.m */; };
-		81E4B6988FF26F9249B79C6C8CC667B4 /* GoogleToolboxForMac-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1BF6E1E29787F5CB39A8070C28D96016 /* GoogleToolboxForMac-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		81E4B6988FF26F9249B79C6C8CC667B4 /* GoogleToolboxForMac-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1988AAEAA95D090574159B2E1DB88516 /* GoogleToolboxForMac-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9DBEFEC8FA0AE8E3C2D83607E27F458A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
 		AF85F8196C39636241F0ED1075E315FA /* Pods-Indianapolis Coffee GuideUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = EFC27658B0C32B9CFABE8070EB8750AA /* Pods-Indianapolis Coffee GuideUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B459949320AF3429802188B19F37B266 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
-		DBFECCB0BBE3F11CC41A3C1A8C4879D3 /* GTMNSData+zlib.h in Headers */ = {isa = PBXBuildFile; fileRef = AFCDD21E7F88A39173EDAA6772C0A4F5 /* GTMNSData+zlib.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DBFECCB0BBE3F11CC41A3C1A8C4879D3 /* GTMNSData+zlib.h in Headers */ = {isa = PBXBuildFile; fileRef = 265BC960BD6B075EE36C1EF317263970 /* GTMNSData+zlib.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F603F0654835B9824E092D080F547479 /* Pods-Indianapolis Coffee GuideTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 06A56A84B5C885D446122DB994348ED4 /* Pods-Indianapolis Coffee GuideTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F629023249604ACD3852BFF3746D318B /* Pods-Indianapolis Coffee Guide-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 05727E6244BC9943DE25AF66D7B74012 /* Pods-Indianapolis Coffee Guide-dummy.m */; };
-		F7D889906DECB078EAAECB9D4A320E9C /* GTMNSData+zlib.m in Sources */ = {isa = PBXBuildFile; fileRef = 92C2DE2C83F22D19F1BCBF830F013496 /* GTMNSData+zlib.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		FAC3F3CAABA60EF76069431C5BB5032A /* GoogleToolboxForMac-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B2A7291714F1AFB288EBD6B7AD923825 /* GoogleToolboxForMac-dummy.m */; };
+		F7D889906DECB078EAAECB9D4A320E9C /* GTMNSData+zlib.m in Sources */ = {isa = PBXBuildFile; fileRef = 8822B7474563581E8EEF4D8EE3528906 /* GTMNSData+zlib.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		FAC3F3CAABA60EF76069431C5BB5032A /* GoogleToolboxForMac-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D2F89ABD6004208281A66F928B881348 /* GoogleToolboxForMac-dummy.m */; };
 		FBFBC47F822666223AA1F4D34BE33700 /* Pods-Indianapolis Coffee GuideUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 294CE78EB052DF99A040088019F355BA /* Pods-Indianapolis Coffee GuideUITests-dummy.m */; };
 /* End PBXBuildFile section */
 
@@ -42,47 +42,48 @@
 		0C50F5481CD04F3933DCB84574B517C1 /* Pods-Indianapolis Coffee GuideUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Indianapolis Coffee GuideUITests-acknowledgements.plist"; sourceTree = "<group>"; };
 		0CF7C0A959BC384BCE3D2494B15A4969 /* Pods-Indianapolis Coffee GuideUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Indianapolis Coffee GuideUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		103180B977F3D4C3D267DC5C67BF3AF0 /* Pods-Indianapolis Coffee GuideTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Indianapolis Coffee GuideTests.release.xcconfig"; sourceTree = "<group>"; };
-		1BF6E1E29787F5CB39A8070C28D96016 /* GoogleToolboxForMac-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GoogleToolboxForMac-umbrella.h"; sourceTree = "<group>"; };
-		20FCB9F370E6E0DF2829A71D3AC2637D /* GoogleToolboxForMac.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = GoogleToolboxForMac.modulemap; sourceTree = "<group>"; };
+		1988AAEAA95D090574159B2E1DB88516 /* GoogleToolboxForMac-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GoogleToolboxForMac-umbrella.h"; sourceTree = "<group>"; };
+		19AA95E138099045A68E22B5B0EAFA4C /* GoogleToolboxForMac.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GoogleToolboxForMac.xcconfig; sourceTree = "<group>"; };
+		265BC960BD6B075EE36C1EF317263970 /* GTMNSData+zlib.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "GTMNSData+zlib.h"; path = "Foundation/GTMNSData+zlib.h"; sourceTree = "<group>"; };
 		294CE78EB052DF99A040088019F355BA /* Pods-Indianapolis Coffee GuideUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Indianapolis Coffee GuideUITests-dummy.m"; sourceTree = "<group>"; };
 		2A15C9BDB85A3F73485619F8929CB59F /* Pods_Indianapolis_Coffee_Guide.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Indianapolis_Coffee_Guide.framework; path = "Pods-Indianapolis Coffee Guide.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B2619E50DFB33B132C53D60A188F315 /* Pods-Indianapolis Coffee Guide-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Indianapolis Coffee Guide-umbrella.h"; sourceTree = "<group>"; };
 		30CA60F99E93996B472144CDF236A504 /* Pods-Indianapolis Coffee GuideUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Indianapolis Coffee GuideUITests.release.xcconfig"; sourceTree = "<group>"; };
 		32F6E0DB0DAC446B58054CC733E81F37 /* Pods-Indianapolis Coffee GuideTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Indianapolis Coffee GuideTests-dummy.m"; sourceTree = "<group>"; };
+		4134255C026EA6825C7815506057D064 /* GoogleToolboxForMac-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GoogleToolboxForMac-prefix.pch"; sourceTree = "<group>"; };
 		42C932B5633BEA5C22CBF97522A18EEF /* Pods-Indianapolis Coffee Guide-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Indianapolis Coffee Guide-acknowledgements.markdown"; sourceTree = "<group>"; };
 		4A85A49F3F65E64614958BB4A9A651ED /* Pods-Indianapolis Coffee Guide.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Indianapolis Coffee Guide.release.xcconfig"; sourceTree = "<group>"; };
+		4F03AE5A2F62FE3FC7CEFBD6B2856E85 /* FirebaseDatabase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseDatabase.framework; path = Frameworks/FirebaseDatabase.framework; sourceTree = "<group>"; };
 		542C5034F79D8EAE41C85AA4C0BA566B /* GoogleToolboxForMac.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = GoogleToolboxForMac.framework; path = GoogleToolboxForMac.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		57784B23F1413C90A49CD9E55F7CF552 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		64F608513680445844A177940350C01C /* Pods-Indianapolis Coffee GuideTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Indianapolis Coffee GuideTests-resources.sh"; sourceTree = "<group>"; };
 		671F95D35A5BB77D96CC2AD966C32E14 /* Pods-Indianapolis Coffee GuideUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-Indianapolis Coffee GuideUITests.modulemap"; sourceTree = "<group>"; };
 		7038081E01C1AC280F53302F1808575F /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		89776470BE73F249FD8EEF3C350A54FC /* GoogleToolboxForMac.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GoogleToolboxForMac.xcconfig; sourceTree = "<group>"; };
+		8822B7474563581E8EEF4D8EE3528906 /* GTMNSData+zlib.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "GTMNSData+zlib.m"; path = "Foundation/GTMNSData+zlib.m"; sourceTree = "<group>"; };
 		8A25DA3AC108D16F2ABF9068A77136C9 /* Pods-Indianapolis Coffee Guide-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Indianapolis Coffee Guide-resources.sh"; sourceTree = "<group>"; };
 		8F716E2A36F16126084A4F0CB85B852C /* Pods-Indianapolis Coffee GuideTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Indianapolis Coffee GuideTests-acknowledgements.plist"; sourceTree = "<group>"; };
 		9019E2D439CD51F83EE22108F6A23237 /* Pods-Indianapolis Coffee GuideTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Indianapolis Coffee GuideTests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		92C2DE2C83F22D19F1BCBF830F013496 /* GTMNSData+zlib.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "GTMNSData+zlib.m"; path = "Foundation/GTMNSData+zlib.m"; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9750981D151A9C9C51134A45EEA1504B /* Pods-Indianapolis Coffee GuideTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Indianapolis Coffee GuideTests-frameworks.sh"; sourceTree = "<group>"; };
-		982C47675E0924A48DF4F9D326BE3114 /* Firebase.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Firebase.h; path = Core/Sources/Firebase.h; sourceTree = "<group>"; };
-		A21B846AC67CF7696C36BE2F0F0D83AB /* GoogleToolboxForMac-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GoogleToolboxForMac-prefix.pch"; sourceTree = "<group>"; };
+		9FE5794BB10FECD3DA65B25B0E79384E /* Firebase.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Firebase.h; path = Core/Sources/Firebase.h; sourceTree = "<group>"; };
+		AC4F1AD7A2D53A83EE7B729989A48FCF /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AD8CBBC488A2961E58E5559A65B41AB9 /* Pods-Indianapolis Coffee GuideTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Indianapolis Coffee GuideTests.debug.xcconfig"; sourceTree = "<group>"; };
-		AFCDD21E7F88A39173EDAA6772C0A4F5 /* GTMNSData+zlib.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "GTMNSData+zlib.h"; path = "Foundation/GTMNSData+zlib.h"; sourceTree = "<group>"; };
-		B2A7291714F1AFB288EBD6B7AD923825 /* GoogleToolboxForMac-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "GoogleToolboxForMac-dummy.m"; sourceTree = "<group>"; };
+		C1EB450B5C08E7F68D19A28C61D085DF /* FirebaseAnalytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseAnalytics.framework; path = Frameworks/FirebaseAnalytics.framework; sourceTree = "<group>"; };
 		C332E7E470C4A2F49B10550F341BB8D6 /* Pods-Indianapolis Coffee GuideTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-Indianapolis Coffee GuideTests.modulemap"; sourceTree = "<group>"; };
-		C7141B9842B6353055EFAB5E4B503153 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C86FA97B3A8E0273CC194D6FEF99A989 /* GoogleToolboxForMac.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = GoogleToolboxForMac.modulemap; sourceTree = "<group>"; };
 		CB9BEDCCFFE0BEB8195949C7588FCDC7 /* Pods-Indianapolis Coffee Guide-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Indianapolis Coffee Guide-acknowledgements.plist"; sourceTree = "<group>"; };
 		CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		D2F89ABD6004208281A66F928B881348 /* GoogleToolboxForMac-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "GoogleToolboxForMac-dummy.m"; sourceTree = "<group>"; };
 		D3FA5C9B4E51C853456BF2F167D5704A /* Pods-Indianapolis Coffee Guide.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-Indianapolis Coffee Guide.modulemap"; sourceTree = "<group>"; };
+		D5380AA3B3379F11E57739C9FFC93AC1 /* FirebaseCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseCore.framework; path = Frameworks/FirebaseCore.framework; sourceTree = "<group>"; };
 		D8F04503B7BD142F019032F1817EAA49 /* Pods-Indianapolis Coffee GuideUITests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Indianapolis Coffee GuideUITests-resources.sh"; sourceTree = "<group>"; };
-		DB970382F8889D98D165BDC71FD5F657 /* FirebaseInstanceID.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseInstanceID.framework; path = Frameworks/FirebaseInstanceID.framework; sourceTree = "<group>"; };
 		DEBCAAD3915102205CB443B65E33F2CB /* Pods_Indianapolis_Coffee_GuideUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Indianapolis_Coffee_GuideUITests.framework; path = "Pods-Indianapolis Coffee GuideUITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		E1AFD0DFA3094C10F9F3F60E4C8F935E /* FirebaseAnalytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseAnalytics.framework; path = Frameworks/FirebaseAnalytics.framework; sourceTree = "<group>"; };
+		E0E7AEA79B27BB2372F07958787A39E3 /* GTMDefines.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = GTMDefines.h; sourceTree = "<group>"; };
 		E5845246242D27A80EC01FDA70E983AB /* Pods-Indianapolis Coffee GuideUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Indianapolis Coffee GuideUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		E9EE1BE34F346A132E73987DFA30272A /* FirebaseInstanceID.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseInstanceID.framework; path = Frameworks/FirebaseInstanceID.framework; sourceTree = "<group>"; };
 		EC99A9103296F3A86C911078EC0337DD /* Pods-Indianapolis Coffee Guide.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Indianapolis Coffee Guide.debug.xcconfig"; sourceTree = "<group>"; };
 		EEC13D172A7AF758BF1D894472B29DBB /* Pods-Indianapolis Coffee Guide-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Indianapolis Coffee Guide-frameworks.sh"; sourceTree = "<group>"; };
 		EFC27658B0C32B9CFABE8070EB8750AA /* Pods-Indianapolis Coffee GuideUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Indianapolis Coffee GuideUITests-umbrella.h"; sourceTree = "<group>"; };
-		F3F0D356EF63ED688C223E1FB5744434 /* FirebaseCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseCore.framework; path = Frameworks/FirebaseCore.framework; sourceTree = "<group>"; };
-		F6D7B16721E888846204CBA21B058064 /* GTMDefines.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = GTMDefines.h; sourceTree = "<group>"; };
 		F78C7588D285AA59FFA8E0781E654E19 /* Pods_Indianapolis_Coffee_GuideTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Indianapolis_Coffee_GuideTests.framework; path = "Pods-Indianapolis Coffee GuideTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -122,48 +123,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		00B9DD195B2EB39875CE4F9DB0CA2B46 /* Frameworks */ = {
+		09F2FD44F2E6572057E224C2C73827E2 /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				E1AFD0DFA3094C10F9F3F60E4C8F935E /* FirebaseAnalytics.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		0F661C3C91B498281B0DD65BA7511AF1 /* Defines */ = {
-			isa = PBXGroup;
-			children = (
-				F6D7B16721E888846204CBA21B058064 /* GTMDefines.h */,
-			);
-			name = Defines;
-			sourceTree = "<group>";
-		};
-		1902584E8A324636B983CA3D69528EAC /* Core */ = {
-			isa = PBXGroup;
-			children = (
-				982C47675E0924A48DF4F9D326BE3114 /* Firebase.h */,
+				9FE5794BB10FECD3DA65B25B0E79384E /* Firebase.h */,
 			);
 			name = Core;
 			sourceTree = "<group>";
 		};
-		1BB83A55EE4F26A09FDEB7D8C4EFE9D4 /* FirebaseAnalytics */ = {
+		10E8685FAAD0C33170DE2D562037EF47 /* Defines */ = {
 			isa = PBXGroup;
 			children = (
-				00B9DD195B2EB39875CE4F9DB0CA2B46 /* Frameworks */,
+				E0E7AEA79B27BB2372F07958787A39E3 /* GTMDefines.h */,
 			);
-			name = FirebaseAnalytics;
-			path = FirebaseAnalytics;
-			sourceTree = "<group>";
-		};
-		1EE6C40DEAB56583720DC8110049EBAE /* GoogleToolboxForMac */ = {
-			isa = PBXGroup;
-			children = (
-				0F661C3C91B498281B0DD65BA7511AF1 /* Defines */,
-				993CE1B8349B2BD154287EDDE86393AF /* NSData+zlib */,
-				DD3A40A5414B21FDD8FC8F3258B79CED /* Support Files */,
-			);
-			name = GoogleToolboxForMac;
-			path = GoogleToolboxForMac;
+			name = Defines;
 			sourceTree = "<group>";
 		};
 		2165815A396E092DB099C0610871C1DF /* Pods-Indianapolis Coffee Guide */ = {
@@ -184,42 +157,20 @@
 			path = "Target Support Files/Pods-Indianapolis Coffee Guide";
 			sourceTree = "<group>";
 		};
-		2284E6854AEBDD17F420B24354609F96 /* Pods */ = {
+		22630EE6BE14930BD68DB3A410A789E9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				43C8441995161C3CDF44AADF5762D23F /* Firebase */,
-				1BB83A55EE4F26A09FDEB7D8C4EFE9D4 /* FirebaseAnalytics */,
-				258BB75673CE772971E44717A9FE161E /* FirebaseCore */,
-				E87A63BCF37F31D242208A3C2B333B8B /* FirebaseInstanceID */,
-				1EE6C40DEAB56583720DC8110049EBAE /* GoogleToolboxForMac */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		24449EE68F70D049F3E2D193CEF8486A /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				F3F0D356EF63ED688C223E1FB5744434 /* FirebaseCore.framework */,
+				4F03AE5A2F62FE3FC7CEFBD6B2856E85 /* FirebaseDatabase.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		258BB75673CE772971E44717A9FE161E /* FirebaseCore */ = {
+		3F2EBD8B64B5E30E2186A6FBD94C29CE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				24449EE68F70D049F3E2D193CEF8486A /* Frameworks */,
+				C1EB450B5C08E7F68D19A28C61D085DF /* FirebaseAnalytics.framework */,
 			);
-			name = FirebaseCore;
-			path = FirebaseCore;
-			sourceTree = "<group>";
-		};
-		43C8441995161C3CDF44AADF5762D23F /* Firebase */ = {
-			isa = PBXGroup;
-			children = (
-				1902584E8A324636B983CA3D69528EAC /* Core */,
-			);
-			name = Firebase;
-			path = Firebase;
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		479A73A4E18C83CD851AE6736ECC7158 /* Pods-Indianapolis Coffee GuideUITests */ = {
@@ -240,6 +191,19 @@
 			path = "Target Support Files/Pods-Indianapolis Coffee GuideUITests";
 			sourceTree = "<group>";
 		};
+		4BF342483D716869318887CB1B3AE375 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				68D9E6B7E092219B91D89716FD281070 /* Firebase */,
+				5B775B89F574A70CFB8D5F0DC67084A7 /* FirebaseAnalytics */,
+				99CECD2CF68A42C5FA7904C0696A3898 /* FirebaseCore */,
+				BB2D016D344B6687A72B1852DF2B72D1 /* FirebaseDatabase */,
+				8EA7290AE530824E4C7D00087C7D9AC8 /* FirebaseInstanceID */,
+				A787A628EADD646FA1A1D9C8E7A9248D /* GoogleToolboxForMac */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		54AE8FBF4E5399CCDE5499396C22F65D /* Pods-Indianapolis Coffee GuideTests */ = {
 			isa = PBXGroup;
 			children = (
@@ -258,6 +222,33 @@
 			path = "Target Support Files/Pods-Indianapolis Coffee GuideTests";
 			sourceTree = "<group>";
 		};
+		5B775B89F574A70CFB8D5F0DC67084A7 /* FirebaseAnalytics */ = {
+			isa = PBXGroup;
+			children = (
+				3F2EBD8B64B5E30E2186A6FBD94C29CE /* Frameworks */,
+			);
+			name = FirebaseAnalytics;
+			path = FirebaseAnalytics;
+			sourceTree = "<group>";
+		};
+		68D9E6B7E092219B91D89716FD281070 /* Firebase */ = {
+			isa = PBXGroup;
+			children = (
+				09F2FD44F2E6572057E224C2C73827E2 /* Core */,
+			);
+			name = Firebase;
+			path = Firebase;
+			sourceTree = "<group>";
+		};
+		6B68D45812C2C46C6A1D821AC37D544B /* NSData+zlib */ = {
+			isa = PBXGroup;
+			children = (
+				265BC960BD6B075EE36C1EF317263970 /* GTMNSData+zlib.h */,
+				8822B7474563581E8EEF4D8EE3528906 /* GTMNSData+zlib.m */,
+			);
+			name = "NSData+zlib";
+			sourceTree = "<group>";
+		};
 		7531C8F8DE19F1AA3C8A7AC97A91DC29 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
@@ -271,27 +262,70 @@
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
-				2284E6854AEBDD17F420B24354609F96 /* Pods */,
+				4BF342483D716869318887CB1B3AE375 /* Pods */,
 				DA3F733F49368296C2D79384348A03F2 /* Products */,
 				DB778F055DC4122D9B6A5C04459BE96B /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		993CE1B8349B2BD154287EDDE86393AF /* NSData+zlib */ = {
+		8EA7290AE530824E4C7D00087C7D9AC8 /* FirebaseInstanceID */ = {
 			isa = PBXGroup;
 			children = (
-				AFCDD21E7F88A39173EDAA6772C0A4F5 /* GTMNSData+zlib.h */,
-				92C2DE2C83F22D19F1BCBF830F013496 /* GTMNSData+zlib.m */,
+				F0F116DE54A3573FC3A328A5E6A5821D /* Frameworks */,
 			);
-			name = "NSData+zlib";
+			name = FirebaseInstanceID;
+			path = FirebaseInstanceID;
 			sourceTree = "<group>";
 		};
-		A74D88AB047B2B5C4DE5A5AA644ADCAB /* Frameworks */ = {
+		99CECD2CF68A42C5FA7904C0696A3898 /* FirebaseCore */ = {
 			isa = PBXGroup;
 			children = (
-				DB970382F8889D98D165BDC71FD5F657 /* FirebaseInstanceID.framework */,
+				AAA364C55C635CE93C4DFED4A993D325 /* Frameworks */,
+			);
+			name = FirebaseCore;
+			path = FirebaseCore;
+			sourceTree = "<group>";
+		};
+		A787A628EADD646FA1A1D9C8E7A9248D /* GoogleToolboxForMac */ = {
+			isa = PBXGroup;
+			children = (
+				10E8685FAAD0C33170DE2D562037EF47 /* Defines */,
+				6B68D45812C2C46C6A1D821AC37D544B /* NSData+zlib */,
+				A96AF31933F6210AC40D20C134635815 /* Support Files */,
+			);
+			name = GoogleToolboxForMac;
+			path = GoogleToolboxForMac;
+			sourceTree = "<group>";
+		};
+		A96AF31933F6210AC40D20C134635815 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				C86FA97B3A8E0273CC194D6FEF99A989 /* GoogleToolboxForMac.modulemap */,
+				19AA95E138099045A68E22B5B0EAFA4C /* GoogleToolboxForMac.xcconfig */,
+				D2F89ABD6004208281A66F928B881348 /* GoogleToolboxForMac-dummy.m */,
+				4134255C026EA6825C7815506057D064 /* GoogleToolboxForMac-prefix.pch */,
+				1988AAEAA95D090574159B2E1DB88516 /* GoogleToolboxForMac-umbrella.h */,
+				AC4F1AD7A2D53A83EE7B729989A48FCF /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/GoogleToolboxForMac";
+			sourceTree = "<group>";
+		};
+		AAA364C55C635CE93C4DFED4A993D325 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D5380AA3B3379F11E57739C9FFC93AC1 /* FirebaseCore.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BB2D016D344B6687A72B1852DF2B72D1 /* FirebaseDatabase */ = {
+			isa = PBXGroup;
+			children = (
+				22630EE6BE14930BD68DB3A410A789E9 /* Frameworks */,
+			);
+			name = FirebaseDatabase;
+			path = FirebaseDatabase;
 			sourceTree = "<group>";
 		};
 		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
@@ -323,27 +357,12 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		DD3A40A5414B21FDD8FC8F3258B79CED /* Support Files */ = {
+		F0F116DE54A3573FC3A328A5E6A5821D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				20FCB9F370E6E0DF2829A71D3AC2637D /* GoogleToolboxForMac.modulemap */,
-				89776470BE73F249FD8EEF3C350A54FC /* GoogleToolboxForMac.xcconfig */,
-				B2A7291714F1AFB288EBD6B7AD923825 /* GoogleToolboxForMac-dummy.m */,
-				A21B846AC67CF7696C36BE2F0F0D83AB /* GoogleToolboxForMac-prefix.pch */,
-				1BF6E1E29787F5CB39A8070C28D96016 /* GoogleToolboxForMac-umbrella.h */,
-				C7141B9842B6353055EFAB5E4B503153 /* Info.plist */,
+				E9EE1BE34F346A132E73987DFA30272A /* FirebaseInstanceID.framework */,
 			);
-			name = "Support Files";
-			path = "../Target Support Files/GoogleToolboxForMac";
-			sourceTree = "<group>";
-		};
-		E87A63BCF37F31D242208A3C2B333B8B /* FirebaseInstanceID */ = {
-			isa = PBXGroup;
-			children = (
-				A74D88AB047B2B5C4DE5A5AA644ADCAB /* Frameworks */,
-			);
-			name = FirebaseInstanceID;
-			path = FirebaseInstanceID;
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -530,254 +549,7 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		3E50CF7E26D0870790A34360C0686328 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = AD8CBBC488A2961E58E5559A65B41AB9 /* Pods-Indianapolis Coffee GuideTests.debug.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-Indianapolis Coffee GuideTests/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-Indianapolis Coffee GuideTests/Pods-Indianapolis Coffee GuideTests.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_Indianapolis_Coffee_GuideTests;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		4632552F9722DAE857E1A58F0E56D749 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4A85A49F3F65E64614958BB4A9A651ED /* Pods-Indianapolis Coffee Guide.release.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-Indianapolis Coffee Guide/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-Indianapolis Coffee Guide/Pods-Indianapolis Coffee Guide.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_Indianapolis_Coffee_Guide;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		673254EEAF0B5BF4596080C749645884 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGNING_REQUIRED = NO;
-				COPY_PHASE_STRIP = YES;
-				ENABLE_NS_ASSERTIONS = NO;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"POD_CONFIGURATION_RELEASE=1",
-					"$(inherited)",
-				);
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
-				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
-				STRIP_INSTALLED_PRODUCT = NO;
-				SYMROOT = "${SRCROOT}/../build";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		9475BB3CD97166535FFAA00C0588A106 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 103180B977F3D4C3D267DC5C67BF3AF0 /* Pods-Indianapolis Coffee GuideTests.release.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-Indianapolis Coffee GuideTests/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-Indianapolis Coffee GuideTests/Pods-Indianapolis Coffee GuideTests.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_Indianapolis_Coffee_GuideTests;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		B4588E6F6AF6CE79196505C3499E0C26 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = EC99A9103296F3A86C911078EC0337DD /* Pods-Indianapolis Coffee Guide.debug.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-Indianapolis Coffee Guide/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-Indianapolis Coffee Guide/Pods-Indianapolis Coffee Guide.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_Indianapolis_Coffee_Guide;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		D60CD877A708870E2BE96B83BA32F883 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 89776470BE73F249FD8EEF3C350A54FC /* GoogleToolboxForMac.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/GoogleToolboxForMac/GoogleToolboxForMac-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/GoogleToolboxForMac/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/GoogleToolboxForMac/GoogleToolboxForMac.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = GoogleToolboxForMac;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		E38DFDD7B3AAE67E45C84C51A60D7541 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = E5845246242D27A80EC01FDA70E983AB /* Pods-Indianapolis Coffee GuideUITests.debug.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-Indianapolis Coffee GuideUITests/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-Indianapolis Coffee GuideUITests/Pods-Indianapolis Coffee GuideUITests.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_Indianapolis_Coffee_GuideUITests;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		E4F26E6EB105713A6A7E7E2E283AC2DF /* Debug */ = {
+		015A368F878AC3E2CEAE21DDE8026304 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -813,7 +585,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				ONLY_ACTIVE_ARCH = YES;
 				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
 				STRIP_INSTALLED_PRODUCT = NO;
@@ -821,9 +593,291 @@
 			};
 			name = Debug;
 		};
+		2053AB2FB28597124D98E3C191737679 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AD8CBBC488A2961E58E5559A65B41AB9 /* Pods-Indianapolis Coffee GuideTests.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-Indianapolis Coffee GuideTests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Indianapolis Coffee GuideTests/Pods-Indianapolis Coffee GuideTests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_Indianapolis_Coffee_GuideTests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		2AB597DBD3FEF2DED9CE35D657C3190E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E5845246242D27A80EC01FDA70E983AB /* Pods-Indianapolis Coffee GuideUITests.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-Indianapolis Coffee GuideUITests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Indianapolis Coffee GuideUITests/Pods-Indianapolis Coffee GuideUITests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_Indianapolis_Coffee_GuideUITests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		44CDBB6D11DE06DB64D6268622BDC47E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		572068285D010D1DA832510EB87FC576 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4A85A49F3F65E64614958BB4A9A651ED /* Pods-Indianapolis Coffee Guide.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-Indianapolis Coffee Guide/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Indianapolis Coffee Guide/Pods-Indianapolis Coffee Guide.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_Indianapolis_Coffee_Guide;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		A94EAF64DFFBB8755E9DD1AE56E8116E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 30CA60F99E93996B472144CDF236A504 /* Pods-Indianapolis Coffee GuideUITests.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-Indianapolis Coffee GuideUITests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Indianapolis Coffee GuideUITests/Pods-Indianapolis Coffee GuideUITests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_Indianapolis_Coffee_GuideUITests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		D60CD877A708870E2BE96B83BA32F883 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 19AA95E138099045A68E22B5B0EAFA4C /* GoogleToolboxForMac.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/GoogleToolboxForMac/GoogleToolboxForMac-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/GoogleToolboxForMac/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/GoogleToolboxForMac/GoogleToolboxForMac.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = GoogleToolboxForMac;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		DC7334CEE5F5336CF6EA8BB8E96D9BA8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 103180B977F3D4C3D267DC5C67BF3AF0 /* Pods-Indianapolis Coffee GuideTests.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-Indianapolis Coffee GuideTests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Indianapolis Coffee GuideTests/Pods-Indianapolis Coffee GuideTests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_Indianapolis_Coffee_GuideTests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		F04F5B997DC0BDBBAC6E80949B472031 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EC99A9103296F3A86C911078EC0337DD /* Pods-Indianapolis Coffee Guide.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-Indianapolis Coffee Guide/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Indianapolis Coffee Guide/Pods-Indianapolis Coffee Guide.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_Indianapolis_Coffee_Guide;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 		F066921CBDBDB5F45795E50FBC5AC972 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 89776470BE73F249FD8EEF3C350A54FC /* GoogleToolboxForMac.xcconfig */;
+			baseConfigurationReference = 19AA95E138099045A68E22B5B0EAFA4C /* GoogleToolboxForMac.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -853,49 +907,14 @@
 			};
 			name = Release;
 		};
-		F8098E841424D870931F0543AE0B6F3E /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 30CA60F99E93996B472144CDF236A504 /* Pods-Indianapolis Coffee GuideUITests.release.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-Indianapolis Coffee GuideUITests/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-Indianapolis Coffee GuideUITests/Pods-Indianapolis Coffee GuideUITests.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_Indianapolis_Coffee_GuideUITests;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
 		1BBD67ABA8CAE78D2E34FA153771999C /* Build configuration list for PBXNativeTarget "Pods-Indianapolis Coffee GuideUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				E38DFDD7B3AAE67E45C84C51A60D7541 /* Debug */,
-				F8098E841424D870931F0543AE0B6F3E /* Release */,
+				2AB597DBD3FEF2DED9CE35D657C3190E /* Debug */,
+				A94EAF64DFFBB8755E9DD1AE56E8116E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -903,8 +922,8 @@
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				E4F26E6EB105713A6A7E7E2E283AC2DF /* Debug */,
-				673254EEAF0B5BF4596080C749645884 /* Release */,
+				015A368F878AC3E2CEAE21DDE8026304 /* Debug */,
+				44CDBB6D11DE06DB64D6268622BDC47E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -912,8 +931,8 @@
 		458E2F9A69FE8095F449EB5DD45F9C02 /* Build configuration list for PBXNativeTarget "Pods-Indianapolis Coffee Guide" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				B4588E6F6AF6CE79196505C3499E0C26 /* Debug */,
-				4632552F9722DAE857E1A58F0E56D749 /* Release */,
+				F04F5B997DC0BDBBAC6E80949B472031 /* Debug */,
+				572068285D010D1DA832510EB87FC576 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -921,8 +940,8 @@
 		614590B73B79D20075626C81029043A7 /* Build configuration list for PBXNativeTarget "Pods-Indianapolis Coffee GuideTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				3E50CF7E26D0870790A34360C0686328 /* Debug */,
-				9475BB3CD97166535FFAA00C0588A106 /* Release */,
+				2053AB2FB28597124D98E3C191737679 /* Debug */,
+				DC7334CEE5F5336CF6EA8BB8E96D9BA8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

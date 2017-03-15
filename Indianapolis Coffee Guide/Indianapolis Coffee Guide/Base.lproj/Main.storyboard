@@ -10,6 +10,347 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--View Controller-->
+        <scene sceneID="CNh-oH-8uB">
+            <objects>
+                <viewController storyboardIdentifier="ContentView Controller" modalTransitionStyle="crossDissolve" id="TZp-rF-24Q" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="IYx-nL-SDM"/>
+                        <viewControllerLayoutGuide type="bottom" id="8JS-Uw-1SR"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="2Ur-jy-gr2">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="feat-opensociety" translatesAutoresizingMaskIntoConstraints="NO" id="sjS-6h-i1u">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9Et-9j-BTr">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" id="Ebt-EI-p1L">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                </view>
+                                <blurEffect style="extraLight"/>
+                            </visualEffectView>
+                            <view alpha="0.75" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QUT-rz-wOh">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gm2-GR-eyW">
+                                        <rect key="frame" x="184" y="627" width="46" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Button"/>
+                                        <connections>
+                                            <segue destination="8RH-zW-P6R" kind="showDetail" id="9A9-GP-42f"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="UBw-Ez-olN">
+                                <rect key="frame" x="20" y="65" width="374" height="339"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eX9-H5-Pej">
+                                <rect key="frame" x="20" y="445" width="374" height="43"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="43" id="eqP-52-j3I"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Georgia-Bold" family="Georgia" pointSize="19"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" delaysContentTouches="NO" canCancelContentTouches="NO" bouncesZoom="NO" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MyD-22-Imb">
+                                <rect key="frame" x="54" y="496" width="307" height="110"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="110" id="Jya-aS-08m"/>
+                                </constraints>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </string>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="UBw-Ez-olN" firstAttribute="top" secondItem="IYx-nL-SDM" secondAttribute="bottom" constant="45" id="2bO-5B-hOo"/>
+                            <constraint firstItem="MyD-22-Imb" firstAttribute="leading" secondItem="2Ur-jy-gr2" secondAttribute="leadingMargin" constant="34" id="52S-tM-FKk"/>
+                            <constraint firstItem="eX9-H5-Pej" firstAttribute="centerX" secondItem="MyD-22-Imb" secondAttribute="centerX" id="JXW-HW-ch7"/>
+                            <constraint firstItem="UBw-Ez-olN" firstAttribute="leading" secondItem="eX9-H5-Pej" secondAttribute="leading" id="Osm-G0-PrX"/>
+                            <constraint firstItem="UBw-Ez-olN" firstAttribute="trailing" secondItem="2Ur-jy-gr2" secondAttribute="trailingMargin" id="UWN-mE-QXk"/>
+                            <constraint firstItem="eX9-H5-Pej" firstAttribute="top" secondItem="UBw-Ez-olN" secondAttribute="bottom" constant="41" id="UYO-N5-Srx"/>
+                            <constraint firstItem="8JS-Uw-1SR" firstAttribute="top" secondItem="MyD-22-Imb" secondAttribute="bottom" constant="130" id="eRs-Sr-fvA"/>
+                            <constraint firstItem="MyD-22-Imb" firstAttribute="top" secondItem="eX9-H5-Pej" secondAttribute="bottom" constant="8" symbolic="YES" id="jbX-cY-pMH"/>
+                            <constraint firstItem="UBw-Ez-olN" firstAttribute="trailing" secondItem="eX9-H5-Pej" secondAttribute="trailing" id="kXg-Ie-MAj"/>
+                            <constraint firstItem="UBw-Ez-olN" firstAttribute="leading" secondItem="2Ur-jy-gr2" secondAttribute="leadingMargin" id="mNf-VA-rar"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Y6a-2F-jXa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-630.43478260869574" y="-1115.217391304348"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Ppb-ml-JLI">
+            <objects>
+                <viewController modalTransitionStyle="crossDissolve" id="8RH-zW-P6R" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="svA-vN-XYX"/>
+                        <viewControllerLayoutGuide type="bottom" id="h1M-WT-zpB"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="fzJ-ST-ghl">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="feat-kaffeine" translatesAutoresizingMaskIntoConstraints="NO" id="nMq-Xe-oZL">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KI8-xT-eWk">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" id="Rus-VP-pwc">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                </view>
+                                <blurEffect style="extraLight"/>
+                            </visualEffectView>
+                            <view alpha="0.75" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gc7-9y-6Ew">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jyG-nJ-Eiy">
+                                        <rect key="frame" x="184" y="633" width="46" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Button"/>
+                                        <connections>
+                                            <segue destination="zHK-t4-eRe" kind="show" id="6yb-2Q-E9C"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5dw-nW-8Mn">
+                                <rect key="frame" x="20" y="65" width="374" height="339"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zta-zb-l9M">
+                                <rect key="frame" x="20" y="445" width="374" height="43"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="43" id="iAs-ZS-je6"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Georgia-Bold" family="Georgia" pointSize="19"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" delaysContentTouches="NO" canCancelContentTouches="NO" bouncesZoom="NO" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BA7-ON-VaD">
+                                <rect key="frame" x="54" y="496" width="307" height="110"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="110" id="48r-KE-ZLQ"/>
+                                </constraints>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </string>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="5dw-nW-8Mn" firstAttribute="leading" secondItem="zta-zb-l9M" secondAttribute="leading" id="EhA-sJ-GI7"/>
+                            <constraint firstItem="BA7-ON-VaD" firstAttribute="top" secondItem="zta-zb-l9M" secondAttribute="bottom" constant="8" symbolic="YES" id="H9V-Xy-vns"/>
+                            <constraint firstItem="zta-zb-l9M" firstAttribute="top" secondItem="5dw-nW-8Mn" secondAttribute="bottom" constant="41" id="PYQ-nG-EtL"/>
+                            <constraint firstItem="5dw-nW-8Mn" firstAttribute="trailing" secondItem="zta-zb-l9M" secondAttribute="trailing" id="S8a-6Y-QZb"/>
+                            <constraint firstItem="5dw-nW-8Mn" firstAttribute="leading" secondItem="fzJ-ST-ghl" secondAttribute="leadingMargin" id="Y7U-j8-Vas"/>
+                            <constraint firstItem="5dw-nW-8Mn" firstAttribute="top" secondItem="svA-vN-XYX" secondAttribute="bottom" constant="45" id="kr2-VO-Xd3"/>
+                            <constraint firstItem="BA7-ON-VaD" firstAttribute="leading" secondItem="fzJ-ST-ghl" secondAttribute="leadingMargin" constant="34" id="o5w-96-H9H"/>
+                            <constraint firstItem="h1M-WT-zpB" firstAttribute="top" secondItem="BA7-ON-VaD" secondAttribute="bottom" constant="130" id="qlV-ce-rXN"/>
+                            <constraint firstItem="zta-zb-l9M" firstAttribute="centerX" secondItem="BA7-ON-VaD" secondAttribute="centerX" id="xkJ-YF-InP"/>
+                            <constraint firstItem="5dw-nW-8Mn" firstAttribute="trailing" secondItem="fzJ-ST-ghl" secondAttribute="trailingMargin" id="yaX-CV-zO7"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jAe-jc-iYf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="69.565217391304358" y="-1115.217391304348"/>
+        </scene>
+        <!--LaunchVC-->
+        <scene sceneID="12I-oa-O9Q">
+            <objects>
+                <viewController modalTransitionStyle="crossDissolve" id="zHK-t4-eRe" customClass="LaunchVC" customModule="Indianapolis_Coffee_Guide" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="DHG-3w-edE"/>
+                        <viewControllerLayoutGuide type="bottom" id="Ff8-by-Fo2"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="RWa-qg-wDI">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="feat-quirkyfeather" translatesAutoresizingMaskIntoConstraints="NO" id="5WY-yl-IqT">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BYn-NJ-RDg">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" id="03g-t1-No4">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                </view>
+                                <blurEffect style="extraLight"/>
+                            </visualEffectView>
+                            <view alpha="0.75" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3RK-OG-T7z">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hzv-4I-yEK">
+                                        <rect key="frame" x="54" y="296" width="115" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="Georgia-Italic" family="Georgia" pointSize="17"/>
+                                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UG4-xg-IxX">
+                                        <rect key="frame" x="53" y="325" width="308" height="3"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="se4-9R-0os">
+                                        <rect key="frame" x="53" y="292" width="308" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="Georgia-Italic" family="Georgia" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jDV-8e-Ss1">
+                                        <rect key="frame" x="53" y="353" width="308" height="55"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="18"/>
+                                        <state key="normal" title="Let's Go">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="getStarted:" destination="zHK-t4-eRe" eventType="touchUpInside" id="Pwb-ga-wMj"/>
+                                            <segue destination="RbH-SZ-QX5" kind="show" id="bge-MT-Kj6"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="3RK-OG-T7z" firstAttribute="leading" secondItem="RWa-qg-wDI" secondAttribute="leading" id="1N8-Nd-sNf"/>
+                            <constraint firstItem="3RK-OG-T7z" firstAttribute="top" secondItem="RWa-qg-wDI" secondAttribute="top" id="4Vo-Df-2qr"/>
+                            <constraint firstAttribute="trailing" secondItem="3RK-OG-T7z" secondAttribute="trailing" id="b6h-l2-OzX"/>
+                            <constraint firstItem="Ff8-by-Fo2" firstAttribute="top" secondItem="3RK-OG-T7z" secondAttribute="bottom" id="t0v-iw-Yk1"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="getStartedBtn" destination="jDV-8e-Ss1" id="Fqi-LG-SE1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MNl-7v-TqN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="805.79710144927537" y="-1115.217391304348"/>
+        </scene>
+        <!--Shop NavVC-->
+        <scene sceneID="mpc-LW-BUH">
+            <objects>
+                <viewController modalTransitionStyle="crossDissolve" modalPresentationStyle="overCurrentContext" id="5ea-Vg-Jf4" customClass="shopNavVC" customModule="Indianapolis_Coffee_Guide" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="S6q-UO-Ny5"/>
+                        <viewControllerLayoutGuide type="bottom" id="yOd-6h-c0w"/>
+                    </layoutGuides>
+                    <view key="view" clipsSubviews="YES" contentMode="scaleToFill" id="OB4-fR-RJO">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="adc-Yp-Krq">
+                                <rect key="frame" x="36" y="103" width="342" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="24"/>
+                                <state key="normal" title="Downtown">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ivk-hD-hXF">
+                                <rect key="frame" x="36" y="171" width="342" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="24"/>
+                                <state key="normal" title="Fountain Square">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lOf-lu-89H">
+                                <rect key="frame" x="36" y="239" width="342" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="24"/>
+                                <state key="normal" title="Broad Ripple">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1oa-2X-qYC">
+                                <rect key="frame" x="36" y="307" width="342" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="24"/>
+                                <state key="normal" title="Irvington / East Side">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L8Y-lr-uE3">
+                                <rect key="frame" x="36" y="375" width="342" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="24"/>
+                                <state key="normal" title="Carmel">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lq2-eF-F9f">
+                                <rect key="frame" x="36" y="443" width="342" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="24"/>
+                                <state key="normal" title="Fishers">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DWf-Gm-Vzj">
+                                <rect key="frame" x="36" y="511" width="342" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="24"/>
+                                <state key="normal" title="Eagle Creek">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uy2-nK-xax">
+                                <rect key="frame" x="364" y="10" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="X">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="shopnavClose:" destination="5ea-Vg-Jf4" eventType="touchUpInside" id="eqk-VV-2rQ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kcL-MQ-mNB">
+                                <rect key="frame" x="36" y="579" width="342" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="24"/>
+                                <state key="normal" title="View All">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="RbH-SZ-QX5" kind="show" id="QKD-Yv-Pml"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.35618397887323944" colorSpace="calibratedWhite"/>
+                    </view>
+                    <nil key="simulatedStatusBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qdo-Qt-g3L" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1737.68115942029" y="-1115.217391304348"/>
+        </scene>
         <!--Coffee Shops-->
         <scene sceneID="kp9-U9-VJq">
             <objects>
@@ -148,7 +489,16 @@
                             <outlet property="delegate" destination="LG2-a3-Iyb" id="zv5-q4-KYh"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Coffee Shops" id="T5R-NM-pc0"/>
+                    <navigationItem key="navigationItem" title="Coffee Shops" id="T5R-NM-pc0">
+                        <barButtonItem key="rightBarButtonItem" systemItem="search" id="WrW-1Q-j5f">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <segue destination="5ea-Vg-Jf4" kind="popoverPresentation" popoverAnchorBarButtonItem="WrW-1Q-j5f" id="vXQ-Cg-hH2">
+                                    <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                </segue>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <nil key="simulatedStatusBarMetrics"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <connections>
@@ -185,7 +535,7 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dG6-VF-s8h">
-                                                <rect key="frame" x="21" y="58" width="291" height="80"/>
+                                                <rect key="frame" x="21" y="66" width="291" height="80"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="30"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -221,34 +571,6 @@
                                                     <segue destination="ZyE-3v-hFQ" kind="unwind" unwindAction="unwindToMenuWithSegue:" id="XwU-Ge-Zxc"/>
                                                 </connections>
                                             </button>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Brewing" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6g9-6m-ZEu">
-                                                <rect key="frame" x="21" y="206" width="142" height="21"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" name="Georgia-Italic" family="Georgia" pointSize="16"/>
-                                                <color key="textColor" red="0.92537645725388606" green="0.92537645725388606" blue="0.92537645725388606" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Space" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e10-ge-pLH">
-                                                <rect key="frame" x="21" y="323" width="142" height="21"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" name="Georgia-Italic" family="Georgia" pointSize="16"/>
-                                                <color key="textColor" red="0.92537645729999995" green="0.92537645729999995" blue="0.92537645729999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="TEXT" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LDb-VS-zDD">
-                                                <rect key="frame" x="21" y="352" width="337" height="74"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="25"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="TEXT" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tAh-9c-qQ7">
-                                                <rect key="frame" x="21" y="235" width="337" height="74"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="25"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K9I-iW-hFL">
                                                 <rect key="frame" x="8" y="539" width="363" height="30"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -260,6 +582,48 @@
                                                     <action selector="igButt:" destination="QRW-iw-vCy" eventType="touchUpInside" id="ZTX-V8-aEE"/>
                                                 </connections>
                                             </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Brewing" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6g9-6m-ZEu">
+                                                <rect key="frame" x="21" y="194" width="142" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="Georgia-Italic" family="Georgia" pointSize="16"/>
+                                                <color key="textColor" red="0.92537645725388606" green="0.92537645725388606" blue="0.92537645725388606" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Space" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e10-ge-pLH">
+                                                <rect key="frame" x="21" y="315" width="142" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="Georgia-Italic" family="Georgia" pointSize="16"/>
+                                                <color key="textColor" red="0.92537645729999995" green="0.92537645729999995" blue="0.92537645729999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fjf-ii-LT9">
+                                                <rect key="frame" x="14" y="219" width="342" height="80"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </string>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="25"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                            <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bHh-8g-ejS">
+                                                <rect key="frame" x="14" y="344" width="342" height="174"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </string>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="25"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AE0-JO-Adh">
+                                                <rect key="frame" x="0.0" y="172" width="371" height="2"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            </view>
+                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ygF-ia-PBG">
+                                                <rect key="frame" x="0.0" y="44" width="371" height="2"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            </view>
                                         </subviews>
                                     </view>
                                 </subviews>
@@ -286,7 +650,7 @@
                     <nil key="simulatedStatusBarMetrics"/>
                     <connections>
                         <outlet property="borderMain" destination="h8b-cS-7AI" id="hqJ-RX-ZHz"/>
-                        <outlet property="brewText" destination="tAh-9c-qQ7" id="Mqw-KF-J80"/>
+                        <outlet property="brewText" destination="Fjf-ii-LT9" id="jHC-c0-KQk"/>
                         <outlet property="closeButton" destination="dRw-36-JnP" id="val-3U-unb"/>
                         <outlet property="directionsButton" destination="5Bj-0L-2DK" id="ddL-9g-j2S"/>
                         <outlet property="igButton" destination="K9I-iW-hFL" id="x04-ig-ox5"/>
@@ -294,7 +658,7 @@
                         <outlet property="shopDistance" destination="Pcv-Y1-eZn" id="Afd-kh-5BQ"/>
                         <outlet property="shopImage" destination="Fus-zy-Xh1" id="zSX-79-FtU"/>
                         <outlet property="shopNavTitle" destination="dG6-VF-s8h" id="Hfn-kh-z0i"/>
-                        <outlet property="spaceText" destination="LDb-VS-zDD" id="5Xe-FD-tK7"/>
+                        <outlet property="shopText" destination="bHh-8g-ejS" id="GCs-a5-5S4"/>
                         <segue destination="ZyE-3v-hFQ" kind="unwind" identifier="unwindToMenu" unwindAction="unwindToMenuWithSegue:" id="2R6-D8-Dys"/>
                     </connections>
                 </viewController>
@@ -306,7 +670,7 @@
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1722" y="341"/>
+            <point key="canvasLocation" x="1721.7391304347827" y="340.76086956521743"/>
         </scene>
         <!--Map View Controller-->
         <scene sceneID="XWw-o0-SOH">
@@ -324,14 +688,6 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </mapView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="efT-JU-k6W">
-                                <rect key="frame" x="22" y="618" width="371" height="75"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="20"/>
-                                <state key="normal" title="Get Directions">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="073-3p-bIL">
                                 <rect key="frame" x="348" y="34" width="46" height="46"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -341,6 +697,17 @@
                                 </state>
                                 <connections>
                                     <segue destination="BH0-CS-68t" kind="unwind" unwindAction="unwindToShopWithSegue:" id="AJ1-EN-Zfg"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="efT-JU-k6W">
+                                <rect key="frame" x="22" y="616" width="371" height="75"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="20"/>
+                                <state key="normal" title="Get Directions">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="Foa-JP-mMd" kind="presentation" identifier="directSegue" modalTransitionStyle="crossDissolve" id="cyA-R8-VA3"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -359,6 +726,69 @@
                 <exit id="BH0-CS-68t" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2522" y="341"/>
+        </scene>
+        <!--Map PopoverVC-->
+        <scene sceneID="yPP-I6-ans">
+            <objects>
+                <viewController modalTransitionStyle="crossDissolve" modalPresentationStyle="overCurrentContext" id="Foa-JP-mMd" customClass="MapPopoverVC" customModule="Indianapolis_Coffee_Guide" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="3wb-YK-9bB"/>
+                        <viewControllerLayoutGuide type="bottom" id="0VX-6I-f2U"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="97A-dt-IPT">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="he4-uD-3N1">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="dismissMapVC:" destination="Foa-JP-mMd" eventType="touchUpInside" id="OTk-67-H3C"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sfU-at-Iwk">
+                                <rect key="frame" x="0.0" y="450" width="414" height="160"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a4z-q6-Zvt">
+                                        <rect key="frame" x="22" y="12" width="371" height="75"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="1" alpha="0.5" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="17"/>
+                                        <state key="normal" title="Apple Maps">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="appleMapButton:" destination="Foa-JP-mMd" eventType="touchUpInside" id="j4r-gR-8Gs"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kzn-V5-hge">
+                                        <rect key="frame" x="22" y="85" width="371" height="75"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="1" alpha="0.5" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="17"/>
+                                        <state key="normal" title="Google Maps">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="mapButtons:" destination="Foa-JP-mMd" eventType="touchUpInside" id="bh0-ho-JmV"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <connections>
+                        <outlet property="appleMapButton" destination="a4z-q6-Zvt" id="8jd-ch-INu"/>
+                        <outlet property="mapButtons" destination="Kzn-V5-hge" id="FSd-US-6lV"/>
+                        <outlet property="popoverVC" destination="sfU-at-Iwk" id="gby-0a-1Ae"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vzj-yA-966" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3213.04347826087" y="340.76086956521743"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="uQm-7x-dw3">
@@ -424,4 +854,12 @@
             <point key="canvasLocation" x="2523" y="-374"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="feat-kaffeine" width="360" height="449"/>
+        <image name="feat-opensociety" width="466" height="366"/>
+        <image name="feat-quirkyfeather" width="266" height="400"/>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="QKD-Yv-Pml"/>
+    </inferredMetricsTieBreakers>
 </document>

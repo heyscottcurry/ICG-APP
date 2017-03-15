@@ -85,4 +85,20 @@ class MapViewController: UIViewController {
     }
     */
 
+    
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "directSegue" {
+            
+            let thirdVC = segue.destination as! MapPopoverVC
+            thirdVC.detailShop = detailShop
+            
+        }
+        
+    }
+
+    
+    
 }

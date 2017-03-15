@@ -14,10 +14,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
+    
+    
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        FIRApp.configure()
+       FIRApp.configure()
+        
+        
+        let pageController = UIPageControl.appearance()
+        pageController.pageIndicatorTintColor = UIColor.lightGray
+        pageController.currentPageIndicatorTintColor = UIColor.blue
+        pageController.backgroundColor = UIColor.white
+        
+        
         return true
     }
 

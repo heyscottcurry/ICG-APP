@@ -1,5 +1,5 @@
 # Uncomment the next line to define a global platform for your project
-# platform :ios, '9.0'
+ platform :ios, ‘8.0’
 
 target 'Indianapolis Coffee Guide' do
   # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
@@ -8,6 +8,8 @@ target 'Indianapolis Coffee Guide' do
   # Pods for Indianapolis Coffee Guide
 
   pod 'Firebase/Core'
+  pod 'Firebase/Database'
+
   target 'Indianapolis Coffee GuideTests' do
     inherit! :search_paths
     # Pods for testing

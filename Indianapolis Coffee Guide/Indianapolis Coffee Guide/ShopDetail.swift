@@ -16,12 +16,14 @@ class ShopDetail: UIViewController {
    
     @IBOutlet weak var closeButton: UIButton!
 
-    @IBOutlet weak var brewText: UILabel!
+    @IBOutlet weak var shopText: UITextView!
+
+    @IBOutlet weak var brewText: UITextView!
     @IBOutlet weak var navTitle: UINavigationItem!
     @IBOutlet weak var shopNavTitle: UILabel!
     @IBOutlet weak var shopImage: UIImageView!
     @IBOutlet weak var borderMain: UIView!
-    @IBOutlet weak var spaceText: UILabel!
+
     
     @IBOutlet weak var igButton: UIButton!
     
@@ -33,7 +35,7 @@ class ShopDetail: UIViewController {
         
         let instagramHooks = "instagram://user?username=\(detailShop!.igHandle)"
         let instagramUrl = NSURL(string: instagramHooks)
-        let fallbackURL = NSURL(string: "https://www.instagram.com")
+        let fallbackURL = NSURL(string: "https://www.instagram.com/\(detailShop!.igHandle)")
         if UIApplication.shared.canOpenURL(instagramUrl! as URL)
         {
             UIApplication.shared.open(instagramUrl! as URL, options: [:], completionHandler: nil)
@@ -91,7 +93,7 @@ class ShopDetail: UIViewController {
         self.title = detailShop?.name
         self.shopImage.image = detailShop?.feature
         self.shopDistance.text = detailShop?.neighborhood
-        self.spaceText.text = detailShop?.listSpace
+        self.shopText.text = detailShop?.listSpace
         self.brewText.text = detailShop?.listBrew
         
         

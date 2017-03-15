@@ -49,6 +49,9 @@
 	<key>LSApplicationQueriesSchemes</key>
 	<array>
 		<string>instagram</string>
+		<string>googlechromes</string>
+		<string>comgooglemaps</string>
+		<string>comgooglemapsurl</string>
 	</array>
 </dict>
 </plist>
