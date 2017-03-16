@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="RbH-SZ-QX5">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="TZp-rF-24Q">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--First OnboardVC-->
         <scene sceneID="CNh-oH-8uB">
             <objects>
-                <viewController storyboardIdentifier="ContentView Controller" modalTransitionStyle="crossDissolve" id="TZp-rF-24Q" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ContentView Controller" modalTransitionStyle="crossDissolve" id="TZp-rF-24Q" customClass="firstOnboardVC" customModule="Indianapolis_Coffee_Guide" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="IYx-nL-SDM"/>
                         <viewControllerLayoutGuide type="bottom" id="8JS-Uw-1SR"/>
@@ -40,21 +40,35 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gm2-GR-eyW">
-                                        <rect key="frame" x="184" y="627" width="46" height="30"/>
+                                        <rect key="frame" x="57" y="600" width="300" height="75"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" title="Button"/>
+                                        <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="20"/>
+                                        <state key="normal" title="Next">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
                                         <connections>
                                             <segue destination="8RH-zW-P6R" kind="showDetail" id="9A9-GP-42f"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="auD-c6-2Fz">
+                                        <rect key="frame" x="150" y="678" width="114" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="Georgia-Italic" family="Georgia" pointSize="17"/>
+                                        <state key="normal" title="skip">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="RbH-SZ-QX5" kind="showDetail" id="RtZ-lR-iem"/>
                                         </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="UBw-Ez-olN">
-                                <rect key="frame" x="20" y="65" width="374" height="339"/>
+                                <rect key="frame" x="20" y="50" width="374" height="339"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eX9-H5-Pej">
-                                <rect key="frame" x="20" y="445" width="374" height="43"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Explore" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eX9-H5-Pej">
+                                <rect key="frame" x="20" y="430" width="374" height="43"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="43" id="eqP-52-j3I"/>
                                 </constraints>
@@ -63,7 +77,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" delaysContentTouches="NO" canCancelContentTouches="NO" bouncesZoom="NO" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MyD-22-Imb">
-                                <rect key="frame" x="54" y="496" width="307" height="110"/>
+                                <rect key="frame" x="54" y="481" width="307" height="110"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="110" id="Jya-aS-08m"/>
                                 </constraints>
@@ -75,27 +89,30 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="UBw-Ez-olN" firstAttribute="top" secondItem="IYx-nL-SDM" secondAttribute="bottom" constant="45" id="2bO-5B-hOo"/>
+                            <constraint firstItem="UBw-Ez-olN" firstAttribute="top" secondItem="IYx-nL-SDM" secondAttribute="bottom" constant="30" id="2bO-5B-hOo"/>
                             <constraint firstItem="MyD-22-Imb" firstAttribute="leading" secondItem="2Ur-jy-gr2" secondAttribute="leadingMargin" constant="34" id="52S-tM-FKk"/>
                             <constraint firstItem="eX9-H5-Pej" firstAttribute="centerX" secondItem="MyD-22-Imb" secondAttribute="centerX" id="JXW-HW-ch7"/>
                             <constraint firstItem="UBw-Ez-olN" firstAttribute="leading" secondItem="eX9-H5-Pej" secondAttribute="leading" id="Osm-G0-PrX"/>
                             <constraint firstItem="UBw-Ez-olN" firstAttribute="trailing" secondItem="2Ur-jy-gr2" secondAttribute="trailingMargin" id="UWN-mE-QXk"/>
                             <constraint firstItem="eX9-H5-Pej" firstAttribute="top" secondItem="UBw-Ez-olN" secondAttribute="bottom" constant="41" id="UYO-N5-Srx"/>
-                            <constraint firstItem="8JS-Uw-1SR" firstAttribute="top" secondItem="MyD-22-Imb" secondAttribute="bottom" constant="130" id="eRs-Sr-fvA"/>
+                            <constraint firstItem="8JS-Uw-1SR" firstAttribute="top" secondItem="MyD-22-Imb" secondAttribute="bottom" constant="145" id="eRs-Sr-fvA"/>
                             <constraint firstItem="MyD-22-Imb" firstAttribute="top" secondItem="eX9-H5-Pej" secondAttribute="bottom" constant="8" symbolic="YES" id="jbX-cY-pMH"/>
                             <constraint firstItem="UBw-Ez-olN" firstAttribute="trailing" secondItem="eX9-H5-Pej" secondAttribute="trailing" id="kXg-Ie-MAj"/>
                             <constraint firstItem="UBw-Ez-olN" firstAttribute="leading" secondItem="2Ur-jy-gr2" secondAttribute="leadingMargin" id="mNf-VA-rar"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="nextButton" destination="Gm2-GR-eyW" id="9DS-RS-Syi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Y6a-2F-jXa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-630.43478260869574" y="-1115.217391304348"/>
+            <point key="canvasLocation" x="-1332" y="-1115"/>
         </scene>
-        <!--View Controller-->
+        <!--Second OnboardVC-->
         <scene sceneID="Ppb-ml-JLI">
             <objects>
-                <viewController modalTransitionStyle="crossDissolve" id="8RH-zW-P6R" sceneMemberID="viewController">
+                <viewController modalTransitionStyle="crossDissolve" id="8RH-zW-P6R" customClass="secondOnboardVC" customModule="Indianapolis_Coffee_Guide" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="svA-vN-XYX"/>
                         <viewControllerLayoutGuide type="bottom" id="h1M-WT-zpB"/>
@@ -122,21 +139,35 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jyG-nJ-Eiy">
-                                        <rect key="frame" x="184" y="633" width="46" height="30"/>
+                                        <rect key="frame" x="57" y="600" width="300" height="75"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" title="Button"/>
+                                        <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="20"/>
+                                        <state key="normal" title="Next">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
                                         <connections>
-                                            <segue destination="zHK-t4-eRe" kind="show" id="6yb-2Q-E9C"/>
+                                            <segue destination="2eb-9A-P6F" kind="showDetail" id="YlH-hO-pFW"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VFz-GK-GdQ">
+                                        <rect key="frame" x="150" y="678" width="114" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="Georgia-Italic" family="Georgia" pointSize="17"/>
+                                        <state key="normal" title="skip">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="RbH-SZ-QX5" kind="showDetail" id="46u-ef-2xg"/>
                                         </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5dw-nW-8Mn">
-                                <rect key="frame" x="20" y="65" width="374" height="339"/>
+                                <rect key="frame" x="20" y="50" width="374" height="339"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zta-zb-l9M">
-                                <rect key="frame" x="20" y="445" width="374" height="43"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Discover" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zta-zb-l9M">
+                                <rect key="frame" x="20" y="430" width="374" height="43"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="43" id="iAs-ZS-je6"/>
                                 </constraints>
@@ -145,7 +176,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" delaysContentTouches="NO" canCancelContentTouches="NO" bouncesZoom="NO" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BA7-ON-VaD">
-                                <rect key="frame" x="54" y="496" width="307" height="110"/>
+                                <rect key="frame" x="54" y="481" width="307" height="110"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="110" id="48r-KE-ZLQ"/>
                                 </constraints>
@@ -162,17 +193,111 @@
                             <constraint firstItem="zta-zb-l9M" firstAttribute="top" secondItem="5dw-nW-8Mn" secondAttribute="bottom" constant="41" id="PYQ-nG-EtL"/>
                             <constraint firstItem="5dw-nW-8Mn" firstAttribute="trailing" secondItem="zta-zb-l9M" secondAttribute="trailing" id="S8a-6Y-QZb"/>
                             <constraint firstItem="5dw-nW-8Mn" firstAttribute="leading" secondItem="fzJ-ST-ghl" secondAttribute="leadingMargin" id="Y7U-j8-Vas"/>
-                            <constraint firstItem="5dw-nW-8Mn" firstAttribute="top" secondItem="svA-vN-XYX" secondAttribute="bottom" constant="45" id="kr2-VO-Xd3"/>
+                            <constraint firstItem="5dw-nW-8Mn" firstAttribute="top" secondItem="svA-vN-XYX" secondAttribute="bottom" constant="30" id="kr2-VO-Xd3"/>
                             <constraint firstItem="BA7-ON-VaD" firstAttribute="leading" secondItem="fzJ-ST-ghl" secondAttribute="leadingMargin" constant="34" id="o5w-96-H9H"/>
-                            <constraint firstItem="h1M-WT-zpB" firstAttribute="top" secondItem="BA7-ON-VaD" secondAttribute="bottom" constant="130" id="qlV-ce-rXN"/>
+                            <constraint firstItem="h1M-WT-zpB" firstAttribute="top" secondItem="BA7-ON-VaD" secondAttribute="bottom" constant="145" id="qlV-ce-rXN"/>
                             <constraint firstItem="zta-zb-l9M" firstAttribute="centerX" secondItem="BA7-ON-VaD" secondAttribute="centerX" id="xkJ-YF-InP"/>
                             <constraint firstItem="5dw-nW-8Mn" firstAttribute="trailing" secondItem="fzJ-ST-ghl" secondAttribute="trailingMargin" id="yaX-CV-zO7"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="nextButton" destination="jyG-nJ-Eiy" id="mYq-1J-gE3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jAe-jc-iYf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="69.565217391304358" y="-1115.217391304348"/>
+            <point key="canvasLocation" x="-584" y="-1115"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="oKo-q1-1iG">
+            <objects>
+                <viewController id="2eb-9A-P6F" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="4YP-d6-rIl"/>
+                        <viewControllerLayoutGuide type="bottom" id="LxW-7u-zGV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Xpr-xL-MHb">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="feat-quirkyfeather" translatesAutoresizingMaskIntoConstraints="NO" id="zqj-vL-G02">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <visualEffectView opaque="NO" contentMode="scaleAspectFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UEX-gD-5yA">
+                                <rect key="frame" x="0.0" y="0.0" width="415" height="736"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" id="Mva-s4-5Hi">
+                                    <rect key="frame" x="0.0" y="0.0" width="415" height="736"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <view alpha="0.75" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ca5-TU-6j3">
+                                            <rect key="frame" x="0.0" y="0.0" width="415" height="736"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="He1-li-mTy">
+                                                    <rect key="frame" x="20" y="46" width="374" height="339"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Discover" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HlC-wU-oDe">
+                                                    <rect key="frame" x="20" y="433" width="374" height="43"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="43" id="rM3-LN-Tya"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="Georgia-Bold" family="Georgia" pointSize="19"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" delaysContentTouches="NO" canCancelContentTouches="NO" bouncesZoom="NO" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9uJ-UA-z9H">
+                                                    <rect key="frame" x="54" y="484" width="307" height="110"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="110" id="yCD-Kr-iIr"/>
+                                                    </constraints>
+                                                    <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </string>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                </textView>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jdE-1k-Nvd">
+                                                    <rect key="frame" x="57" y="588" width="300" height="75"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="20"/>
+                                                    <state key="normal" title="Next">
+                                                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <connections>
+                                                        <segue destination="zHK-t4-eRe" kind="showDetail" id="E5j-gp-WIb"/>
+                                                    </connections>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Egt-dj-e2J">
+                                                    <rect key="frame" x="150" y="671" width="114" height="30"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="Georgia-Italic" family="Georgia" pointSize="17"/>
+                                                    <state key="normal" title="skip">
+                                                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <connections>
+                                                        <segue destination="RbH-SZ-QX5" kind="showDetail" id="ag4-cX-y2X"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                            <constraints>
+                                                <constraint firstItem="HlC-wU-oDe" firstAttribute="centerX" secondItem="9uJ-UA-z9H" secondAttribute="centerX" id="9lF-mo-yKy"/>
+                                                <constraint firstItem="9uJ-UA-z9H" firstAttribute="top" secondItem="HlC-wU-oDe" secondAttribute="bottom" constant="8" symbolic="YES" id="kym-DL-4yf"/>
+                                            </constraints>
+                                        </view>
+                                    </subviews>
+                                </view>
+                                <blurEffect style="extraLight"/>
+                            </visualEffectView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Qsq-xu-KJf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="118.84057971014494" y="-1115.217391304348"/>
         </scene>
         <!--LaunchVC-->
         <scene sceneID="12I-oa-O9Q">
@@ -218,8 +343,11 @@
                                         <rect key="frame" x="53" y="292" width="308" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" name="Georgia-Italic" family="Georgia" pointSize="17"/>
-                                        <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                        <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="20"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="emailAddress" keyboardAppearance="alert"/>
+                                        <connections>
+                                            <action selector="fieldEdit:" destination="zHK-t4-eRe" eventType="editingDidBegin" id="Qg2-17-TKf"/>
+                                        </connections>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jDV-8e-Ss1">
                                         <rect key="frame" x="53" y="353" width="308" height="55"/>
@@ -230,7 +358,24 @@
                                         </state>
                                         <connections>
                                             <action selector="getStarted:" destination="zHK-t4-eRe" eventType="touchUpInside" id="Pwb-ga-wMj"/>
-                                            <segue destination="RbH-SZ-QX5" kind="show" id="bge-MT-Kj6"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sign Up" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Gv-Ah-3ze">
+                                        <rect key="frame" x="39" y="98" width="337" height="72"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="30"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3YY-PP-WTm">
+                                        <rect key="frame" x="150" y="678" width="114" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="Georgia-Italic" family="Georgia" pointSize="17"/>
+                                        <state key="normal" title="skip">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="RbH-SZ-QX5" kind="showDetail" id="310-Ut-KGX"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -246,7 +391,10 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="emailLabel" destination="hzv-4I-yEK" id="VZE-a5-ggt"/>
+                        <outlet property="emailTextField" destination="se4-9R-0os" id="SzN-Kh-jIN"/>
                         <outlet property="getStartedBtn" destination="jDV-8e-Ss1" id="Fqi-LG-SE1"/>
+                        <outlet property="underLine" destination="UG4-xg-IxX" id="fQT-29-mQd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MNl-7v-TqN" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -402,7 +550,7 @@
                                 <rect key="frame" x="0.0" y="28" width="414" height="155"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="OoH-oK-giB" id="d2k-eK-UpB">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="154"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="154.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ns6-hM-K7p">
@@ -790,10 +938,10 @@
             </objects>
             <point key="canvasLocation" x="3213.04347826087" y="340.76086956521743"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Main NavVC View Controller-->
         <scene sceneID="uQm-7x-dw3">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" modalTransitionStyle="crossDissolve" hidesBarsOnSwipe="YES" id="RbH-SZ-QX5" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="mainNavVCViewController" automaticallyAdjustsScrollViewInsets="NO" modalTransitionStyle="crossDissolve" hidesBarsOnSwipe="YES" id="RbH-SZ-QX5" customClass="mainNavVCViewController" customModule="Indianapolis_Coffee_Guide" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="414" height="736"/>
@@ -860,6 +1008,6 @@
         <image name="feat-quirkyfeather" width="266" height="400"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="QKD-Yv-Pml"/>
+        <segue reference="RtZ-lR-iem"/>
     </inferredMetricsTieBreakers>
 </document>
