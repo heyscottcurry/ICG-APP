@@ -16,9 +16,9 @@ class ShopDetail: UIViewController {
    
     @IBOutlet weak var closeButton: UIButton!
 
-    @IBOutlet weak var shopText: UITextView!
+    @IBOutlet weak var brewText: UILabel!
 
-    @IBOutlet weak var brewText: UITextView!
+    @IBOutlet weak var shopText: UILabel!
     @IBOutlet weak var navTitle: UINavigationItem!
     @IBOutlet weak var shopNavTitle: UILabel!
     @IBOutlet weak var shopImage: UIImageView!
@@ -76,7 +76,7 @@ class ShopDetail: UIViewController {
             }
         }
         
-
+        
         
     }
     
@@ -96,7 +96,8 @@ class ShopDetail: UIViewController {
         self.shopText.text = detailShop?.listSpace
         self.brewText.text = detailShop?.listBrew
         
-        
+        self.brewText.sizeToFit()
+        self.shopText.sizeToFit()
         
        igButton.setTitle("@\(detailShop!.igHandle)", for: UIControlState.normal)
         
