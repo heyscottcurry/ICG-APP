@@ -20,10 +20,13 @@ class CoffeeShopTableViewCell: UITableViewCell {
     @IBOutlet weak var shopDistance: UILabel!
     @IBOutlet weak var shopName: UILabel!
     
+    @IBOutlet weak var cellBack: UIView!
+  
+ 
     
+   /* func viewDidLoad() {
+        self.cellBack.backgroundColor = UIColor.blue
     
- /*   func viewDidLoad() {
-        featureThumbnail.contentMode = .scaleAspectFit
     } */
     
     
@@ -35,7 +38,10 @@ class CoffeeShopTableViewCell: UITableViewCell {
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
+        
+           // self.cellBack.backgroundColor = UIColor.red
+            
+    
         // Configure the view for the selected state
     }
 

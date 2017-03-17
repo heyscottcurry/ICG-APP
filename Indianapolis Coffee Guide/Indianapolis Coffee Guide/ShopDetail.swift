@@ -102,11 +102,11 @@ class ShopDetail: UIViewController {
         
         
         self.borderMain.layer.borderWidth = 2
-        self.borderMain.layer.borderColor = UIColor(red:255/255.0, green:225/255.0, blue:255/255.0, alpha: 1.0).cgColor
+        self.borderMain.layer.borderColor = UIColor.white.cgColor
         self.directionsButton.layer.borderWidth = 2
-        self.directionsButton.layer.borderColor = UIColor(red:255/255.0, green:225/255.0, blue:255/255.0, alpha: 1.0).cgColor
+        self.directionsButton.layer.borderColor = UIColor.white.cgColor
         self.closeButton.layer.borderWidth = 2
-        self.closeButton.layer.borderColor = UIColor(red:255/255.0, green:225/255.0, blue:255/255.0, alpha: 1.0).cgColor
+        self.closeButton.layer.borderColor = UIColor.white.cgColor
         
     
         
