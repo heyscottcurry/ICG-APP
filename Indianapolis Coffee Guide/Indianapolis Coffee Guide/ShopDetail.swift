@@ -28,6 +28,7 @@ class ShopDetail: UIViewController {
     @IBOutlet weak var igButton: UIButton!
     
     
+    
      var details = CoffeeShop.self
     
     @IBAction func igButt(_ sender: UIButton) {
@@ -75,8 +76,7 @@ class ShopDetail: UIViewController {
             }
         }
         
-        
-        
+
         
     }
     

@@ -20,6 +20,7 @@ class ShopTableViewController: UITableViewController, CLLocationManagerDelegate 
     //MARK: Properties
     
     var shops = [CoffeeShop]()
+    var filteredShops = [CoffeeShop]()
     var objects: [CoffeeShop] = []
     var locationManager: CLLocationManager!
     var currentLocation = CLLocation!.self
@@ -634,22 +635,138 @@ class ShopTableViewController: UITableViewController, CLLocationManagerDelegate 
     
     
     func handleRefresh() {
-        // Do some reloading of data and update the table view's data source
-        // Fetch more objects from a web service, for example...
-        
-        
-        
-        // Simply adding an object to the data source for this example
+
         getLocale()
-        
         shops.sort() { $0.distance < $1.distance }
         shops.removeAll()
         loadShops()
         sortList()
-        //self.shopTable.reloadData()
+        
         refresher.endRefreshing()
         
     }
+    
+    func filterBR() {
+         filteredShops = shops.filter { shops in
+            return shops.neighborhood.contains("Broad Ripple")
+        }
+        shops = filteredShops
+        self.shopTable.reloadData()
+        
+    }
+    
+    
+    
+    func filterCarmel() {
+        filteredShops = shops.filter { shops in
+            return shops.neighborhood.contains("Carmel")
+        }
+        shops = filteredShops
+        self.shopTable.reloadData()
+        
+    }
+    
+    func filterDT() {
+        filteredShops = shops.filter { shops in
+            return shops.neighborhood.contains("Downtown")
+        }
+        shops = filteredShops
+        self.shopTable.reloadData()
+        
+    }
+    
+    func filterFishers() {
+        filteredShops = shops.filter { shops in
+            return shops.neighborhood.contains("Fishers")
+        }
+        shops = filteredShops
+        self.shopTable.reloadData()
+        
+    }
+    
+    
+    func filterEC() {
+        filteredShops = shops.filter { shops in
+            return shops.neighborhood.contains("Eagle Creek")
+        }
+        shops = filteredShops
+        self.shopTable.reloadData()
+        
+    }
+    
+    func filterIrvington() {
+        filteredShops = shops.filter { shops in
+            return shops.neighborhood.contains("Irvington")
+        }
+        shops = filteredShops
+        self.shopTable.reloadData()
+        
+    }
+    
+    func filterFS() {
+        filteredShops = shops.filter { shops in
+            return shops.neighborhood.contains("Fountain Square")
+        }
+        shops = filteredShops
+        self.shopTable.reloadData()
+        
+    }
+    
+    
+    
+    @IBAction func unwindFilterNav(segue: UIStoryboardSegue) {
+        getLocale()
+        shops.sort() { $0.distance < $1.distance }
+        shops.removeAll()
+        loadShops()
+        sortList()
+        
+    }
+    
+    @IBAction func unwindBR(_ segue: UIStoryboardSegue) {
+        shops.removeAll()
+        loadShops()
+        filterBR()
+    }
+    
+    
+    @IBAction func unwindCarmel(_ segue: UIStoryboardSegue) {
+        shops.removeAll()
+        loadShops()
+        filterCarmel()
+    }
+    
+    
+    @IBAction func unwindFishers(_ segue: UIStoryboardSegue) {
+        shops.removeAll()
+        loadShops()
+        filterFishers()
+    }
+    
+    @IBAction func unwindIrvington(_ segue: UIStoryboardSegue) {
+        shops.removeAll()
+        loadShops()
+        filterIrvington()
+    }
+    
+    @IBAction func unwindFS(_ segue: UIStoryboardSegue) {
+        shops.removeAll()
+        loadShops()
+        filterFS()
+    }
+    
+    @IBAction func unwindEC(_ segue: UIStoryboardSegue) {
+        shops.removeAll()
+        loadShops()
+        filterEC()
+    }
+    
+    @IBAction func unwindDT(_ segue: UIStoryboardSegue) {
+        shops.removeAll()
+        loadShops()
+        filterDT()
+    }
+    
     
     
     
