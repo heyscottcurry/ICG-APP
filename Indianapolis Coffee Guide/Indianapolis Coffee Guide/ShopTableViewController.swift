@@ -48,6 +48,7 @@ class ShopTableViewController: UITableViewController, CLLocationManagerDelegate 
         self.shopTable.reloadData();
     }
     
+    @IBOutlet weak var newLabel: UILabel!
     @IBAction func igCoffee(_ sender: UIButton) {
         
         let instagramHooks = "instagram://user?username=indianapoliscoffee"
@@ -73,7 +74,7 @@ class ShopTableViewController: UITableViewController, CLLocationManagerDelegate 
         
         let instagramHooks = "instagram://tag?name=nomorebadcoffee"
         let instagramUrl = NSURL(string: instagramHooks)
-        let fallbackURL = NSURL(string: "https://www.instagram.com/indianapoliscoffee")
+        let fallbackURL = NSURL(string: "https://www.instagram.com/explore/tags/nomorebadcoffee/")
         if UIApplication.shared.canOpenURL(instagramUrl! as URL)
         {
             UIApplication.shared.open(instagramUrl! as URL, options: [:], completionHandler: nil)
@@ -93,13 +94,35 @@ class ShopTableViewController: UITableViewController, CLLocationManagerDelegate 
         
     }
     
+    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+   /* override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+     
+    } */
+    
+    override func tableView(_ tableView: UITableView, editActionsForRowAt: IndexPath) -> [UITableViewRowAction]? {
+        let more = UITableViewRowAction(style: .normal, title: "              ") { action, index in
+            print("more button tapped")
+        }
+       // more.backgroundColor = UIColor(displayP3Red: 0.1, green: 0.1, blue: 0.1, alpha: 1)
+
+        if let image = UIImage(named: "mapmarker.png"){
+            more.backgroundColor = UIColor(patternImage: image)
+            
+        }
+        
+        return [more]
+    }
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+       
         
-        
+        shopTable.allowsMultipleSelectionDuringEditing = true
         
         
         
@@ -186,7 +209,14 @@ class ShopTableViewController: UITableViewController, CLLocationManagerDelegate 
         cell.shopName.text = shop.name
         cell.shopNeighborhood.text = shop.neighborhood
         cell.featureThumbnail.image = shop.feature
+        cell.newLabel.transform = CGAffineTransform(rotationAngle: CGFloat((M_PI_2) * -1))
+        cell.newLabel.center.x = 15
+        cell.newLabel.center.y = 76.5
+        cell.newLabel.alpha = 0
         
+        if shop.newShop == true {
+            cell.newLabel.alpha = 1
+        }
         if shop.distance < 0.05 {
             cell.shopDistance.text = "You must be here!"
         } else {
@@ -295,7 +325,7 @@ class ShopTableViewController: UITableViewController, CLLocationManagerDelegate 
             newShop: true,
             igHandle: "coatcheckcoffee",
             distance: (userLocale.distance(from: CLLocation(latitude: 39.773747, longitude: -86.150272)))*0.000621371,
-            googleMap: "www.google.com/maps/place/Coat+Check+Coffee/@39.7737512,-86.1524",
+            googleMap: "www.google.com/maps/place/Coat+Check+Coffee/@39.7737512,-86.1524706,17z/data=!3m1!4b1!4m5!3m4!1s0x886b50eb52c11055:0x23e6a534e092ec1f!8m2!3d39.7737471!4d-86.1502819",
             appleMap: "http://maps.apple.com/?daddr=407+E+Michigan+St,Indianapolis,IN,46204&dirflg=d&t=h"
         )
         
@@ -307,7 +337,7 @@ class ShopTableViewController: UITableViewController, CLLocationManagerDelegate 
             listBrew: "In-House Blend of Local Roasts",
             listSpace: "Efficient. To the point. Perfect.",
             feature: featGeorgiaStreet!,
-            newShop: false,
+            newShop: true,
             igHandle: "georgiastreetgrind",
             distance:  (userLocale.distance(from: CLLocation(latitude: 39.764130, longitude: -86.159038)))*0.000621371,
             googleMap: "www.google.com/maps/place/Georgia+Street+Grind/@39.7640001,-86.1611735,17z/data=!3m1!4b1!4m5!3m4!1s0x886b50bcb3fdc199:0xa114759614410341!8m2!3d39.763996!4d-86.1589848",

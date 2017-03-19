@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0A4C0FBAC2F9F7C11BE3733D /* Pods_Indianapolis_Coffee_GuideUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7C103978D2C05F24919FE3C /* Pods_Indianapolis_Coffee_GuideUITests.framework */; };
 		153EAE1EADA5394A0D31DF04 /* Pods_Indianapolis_Coffee_Guide.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 362E0310DCB6354060DE1265 /* Pods_Indianapolis_Coffee_Guide.framework */; };
+		177DFE85A5F97ECDD7648B13 /* Pods_Indianapolis_Coffee_GuideTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E524B72FD296E7254263B80 /* Pods_Indianapolis_Coffee_GuideTests.framework */; };
 		AB01AE5B1E75D1B40055ABF2 /* LaunchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB01AE5A1E75D1B40055ABF2 /* LaunchVC.swift */; };
 		AB01AE611E7830BC0055ABF2 /* MapPopoverVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB01AE601E7830BB0055ABF2 /* MapPopoverVC.swift */; };
 		AB01AE631E783A290055ABF2 /* shopNavVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB01AE621E783A290055ABF2 /* shopNavVC.swift */; };
@@ -31,7 +32,6 @@
 		ABC09A391E75CA43009D533F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = ABC09A381E75CA43009D533F /* GoogleService-Info.plist */; };
 		ABCA8C3E1E70AAEE0058EB21 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABCA8C3C1E70AAEE0058EB21 /* MapViewController.swift */; };
 		ABCA8C3F1E70AAEE0058EB21 /* MapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = ABCA8C3D1E70AAEE0058EB21 /* MapViewController.xib */; };
-		D1609B0C95CA9F281F30D07B /* Pods_Indianapolis_Coffee_GuideTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E524B72FD296E7254263B80 /* Pods_Indianapolis_Coffee_GuideTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,12 +52,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0298696343EBA243D59D7C2F /* Pods-Indianapolis Coffee GuideTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Indianapolis Coffee GuideTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Indianapolis Coffee GuideTests/Pods-Indianapolis Coffee GuideTests.release.xcconfig"; sourceTree = "<group>"; };
 		2E524B72FD296E7254263B80 /* Pods_Indianapolis_Coffee_GuideTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Indianapolis_Coffee_GuideTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		362E0310DCB6354060DE1265 /* Pods_Indianapolis_Coffee_Guide.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Indianapolis_Coffee_Guide.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		42A6BD49E060A8AC361B30E9 /* Pods-Indianapolis Coffee Guide.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Indianapolis Coffee Guide.release.xcconfig"; path = "Pods/Target Support Files/Pods-Indianapolis Coffee Guide/Pods-Indianapolis Coffee Guide.release.xcconfig"; sourceTree = "<group>"; };
-		6273286AFCFD3291A1A0BEC7 /* Pods-Indianapolis Coffee GuideTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Indianapolis Coffee GuideTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Indianapolis Coffee GuideTests/Pods-Indianapolis Coffee GuideTests.debug.xcconfig"; sourceTree = "<group>"; };
 		68068F581AD65DA8F0ED7D53 /* Pods-Indianapolis Coffee GuideUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Indianapolis Coffee GuideUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Indianapolis Coffee GuideUITests/Pods-Indianapolis Coffee GuideUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		7ED67F294D84B6F72268F2A6 /* Pods-Indianapolis Coffee GuideTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Indianapolis Coffee GuideTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Indianapolis Coffee GuideTests/Pods-Indianapolis Coffee GuideTests.debug.xcconfig"; sourceTree = "<group>"; };
 		AB01AE5A1E75D1B40055ABF2 /* LaunchVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaunchVC.swift; sourceTree = "<group>"; };
 		AB01AE601E7830BB0055ABF2 /* MapPopoverVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapPopoverVC.swift; sourceTree = "<group>"; };
 		AB01AE621E783A290055ABF2 /* shopNavVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = shopNavVC.swift; sourceTree = "<group>"; };
@@ -87,6 +86,7 @@
 		ABC09A381E75CA43009D533F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		ABCA8C3C1E70AAEE0058EB21 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		ABCA8C3D1E70AAEE0058EB21 /* MapViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MapViewController.xib; sourceTree = "<group>"; };
+		C26EC91363BE1F8163079A41 /* Pods-Indianapolis Coffee GuideTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Indianapolis Coffee GuideTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Indianapolis Coffee GuideTests/Pods-Indianapolis Coffee GuideTests.release.xcconfig"; sourceTree = "<group>"; };
 		C7C103978D2C05F24919FE3C /* Pods_Indianapolis_Coffee_GuideUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Indianapolis_Coffee_GuideUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED884433DEC1E37C7E1ABC02 /* Pods-Indianapolis Coffee GuideUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Indianapolis Coffee GuideUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Indianapolis Coffee GuideUITests/Pods-Indianapolis Coffee GuideUITests.release.xcconfig"; sourceTree = "<group>"; };
 		FBC7D6B1C225328FAA7977AD /* Pods-Indianapolis Coffee Guide.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Indianapolis Coffee Guide.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Indianapolis Coffee Guide/Pods-Indianapolis Coffee Guide.debug.xcconfig"; sourceTree = "<group>"; };
@@ -106,7 +106,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D1609B0C95CA9F281F30D07B /* Pods_Indianapolis_Coffee_GuideTests.framework in Frameworks */,
+				177DFE85A5F97ECDD7648B13 /* Pods_Indianapolis_Coffee_GuideTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -126,10 +126,10 @@
 			children = (
 				FBC7D6B1C225328FAA7977AD /* Pods-Indianapolis Coffee Guide.debug.xcconfig */,
 				42A6BD49E060A8AC361B30E9 /* Pods-Indianapolis Coffee Guide.release.xcconfig */,
-				6273286AFCFD3291A1A0BEC7 /* Pods-Indianapolis Coffee GuideTests.debug.xcconfig */,
-				0298696343EBA243D59D7C2F /* Pods-Indianapolis Coffee GuideTests.release.xcconfig */,
 				68068F581AD65DA8F0ED7D53 /* Pods-Indianapolis Coffee GuideUITests.debug.xcconfig */,
 				ED884433DEC1E37C7E1ABC02 /* Pods-Indianapolis Coffee GuideUITests.release.xcconfig */,
+				7ED67F294D84B6F72268F2A6 /* Pods-Indianapolis Coffee GuideTests.debug.xcconfig */,
+				C26EC91363BE1F8163079A41 /* Pods-Indianapolis Coffee GuideTests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -240,12 +240,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AB07EE521E6BA9E0009A9948 /* Build configuration list for PBXNativeTarget "Indianapolis Coffee GuideTests" */;
 			buildPhases = (
-				D0A58939481D18F603FC441F /* [CP] Check Pods Manifest.lock */,
+				85DA96951E96C0A66EB82D07 /* [CP] Check Pods Manifest.lock */,
 				AB07EE371E6BA9E0009A9948 /* Sources */,
 				AB07EE381E6BA9E0009A9948 /* Frameworks */,
 				AB07EE391E6BA9E0009A9948 /* Resources */,
-				8AB9936A5B76A2C6FB16E48E /* [CP] Embed Pods Frameworks */,
-				6FF46069F98487289BD80486 /* [CP] Copy Pods Resources */,
+				FF6BF53B6FD6E26BEFD6BB2B /* [CP] Embed Pods Frameworks */,
+				01E31267011819CE448B682F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -365,6 +365,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		01E31267011819CE448B682F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Indianapolis Coffee GuideTests/Pods-Indianapolis Coffee GuideTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		02E3A84222E6B3931E44FBE3 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -407,7 +422,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		6DB1609B5579566A40FA100C /* [CP] Copy Pods Resources */ = {
@@ -425,34 +440,19 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Indianapolis Coffee GuideUITests/Pods-Indianapolis Coffee GuideUITests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		6FF46069F98487289BD80486 /* [CP] Copy Pods Resources */ = {
+		85DA96951E96C0A66EB82D07 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "[CP] Copy Pods Resources";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Indianapolis Coffee GuideTests/Pods-Indianapolis Coffee GuideTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		8AB9936A5B76A2C6FB16E48E /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Indianapolis Coffee GuideTests/Pods-Indianapolis Coffee GuideTests-frameworks.sh\"\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		CE11B7808FEFEAA273D4CC81 /* [CP] Check Pods Manifest.lock */ = {
@@ -467,22 +467,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		D0A58939481D18F603FC441F /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		F09AB2E3A29DD72A20DCCCE6 /* [CP] Embed Pods Frameworks */ = {
@@ -498,6 +483,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Indianapolis Coffee GuideUITests/Pods-Indianapolis Coffee GuideUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FF6BF53B6FD6E26BEFD6BB2B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Indianapolis Coffee GuideTests/Pods-Indianapolis Coffee GuideTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -691,7 +691,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "Indianapolis Coffee Guide/Indianapolis Coffee Guide.entitlements";
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 6T3Q5NH7AD;
 				ENABLE_TESTABILITY = YES;
 				INFOPLIST_FILE = "Indianapolis Coffee Guide/Info.plist";
@@ -705,7 +706,7 @@
 		};
 		AB07EE531E6BA9E0009A9948 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6273286AFCFD3291A1A0BEC7 /* Pods-Indianapolis Coffee GuideTests.debug.xcconfig */;
+			baseConfigurationReference = 7ED67F294D84B6F72268F2A6 /* Pods-Indianapolis Coffee GuideTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -721,7 +722,7 @@
 		};
 		AB07EE541E6BA9E0009A9948 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0298696343EBA243D59D7C2F /* Pods-Indianapolis Coffee GuideTests.release.xcconfig */;
+			baseConfigurationReference = C26EC91363BE1F8163079A41 /* Pods-Indianapolis Coffee GuideTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";

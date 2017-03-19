@@ -22,12 +22,13 @@ class CoffeeShopTableViewCell: UITableViewCell {
     
     @IBOutlet weak var cellBack: UIView!
   
+    @IBOutlet weak var newLabel: UILabel!
  
     
-   /* func viewDidLoad() {
+    func viewDidLoad() {
         self.cellBack.backgroundColor = UIColor.blue
-    
-    } */
+        
+    }
     
     
     
