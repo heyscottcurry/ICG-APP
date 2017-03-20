@@ -20,14 +20,28 @@ class ShopDetail: UIViewController {
     @IBOutlet weak var shopNavTitle: UILabel!
     @IBOutlet weak var shopImage: UIImageView!
     @IBOutlet weak var borderMain: UIView!
-    @IBOutlet weak var igButton: UIButton!
+    
     
     @IBOutlet weak var centerPopupConstraint: NSLayoutConstraint!
     
     @IBOutlet weak var modalDismiss: UIButton!
     
     
-    
+  /*  @IBAction func igIconButton(_ sender: Any) {
+        
+        let instagramHooks = "instagram://user?username=\(detailShop!.igHandle)"
+        let instagramUrl = NSURL(string: instagramHooks)
+        let fallbackURL = NSURL(string: "https://www.instagram.com/\(detailShop!.igHandle)")
+        if UIApplication.shared.canOpenURL(instagramUrl! as URL)
+        {
+            UIApplication.shared.open(instagramUrl! as URL, options: [:], completionHandler: nil)
+        } else {
+            //redirect to safari because the user doesn't have Instagram
+            UIApplication.shared.open(fallbackURL! as URL, options: [:], completionHandler: nil)
+        }
+
+    }
+    */
     
     @IBAction func closeModal(_ sender: Any) {
     self.hidePopup()
@@ -75,19 +89,6 @@ class ShopDetail: UIViewController {
     
     var details = CoffeeShop.self
     
-    @IBAction func igButt(_ sender: UIButton) {
-        let instagramHooks = "instagram://user?username=\(detailShop!.igHandle)"
-        let instagramUrl = NSURL(string: instagramHooks)
-        let fallbackURL = NSURL(string: "https://www.instagram.com/\(detailShop!.igHandle)")
-        if UIApplication.shared.canOpenURL(instagramUrl! as URL)
-        {
-            UIApplication.shared.open(instagramUrl! as URL, options: [:], completionHandler: nil)
-        } else {
-            //redirect to safari because the user doesn't have Instagram
-            UIApplication.shared.open(fallbackURL! as URL, options: [:], completionHandler: nil)
-        }
-    }
-   
     @IBOutlet weak var shopDistance: UILabel!
     
     
@@ -127,7 +128,7 @@ class ShopDetail: UIViewController {
         
         
         
-        igButton.setTitle("@\(detailShop!.igHandle)", for: UIControlState.normal)
+   
         
         self.borderMain.layer.borderWidth = 2
         self.borderMain.layer.borderColor = UIColor.white.cgColor
