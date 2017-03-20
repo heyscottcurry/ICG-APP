@@ -28,6 +28,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         pageController.backgroundColor = UIColor.white
         
         
+
         return true
     }
 

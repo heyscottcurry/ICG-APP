@@ -93,18 +93,31 @@ class ShopTableViewController: UITableViewController, CLLocationManagerDelegate 
         
         
     }
-    
+    /* delete start here
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         return true
     }
     
-   /* override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-     
-    } */
     
     override func tableView(_ tableView: UITableView, editActionsForRowAt: IndexPath) -> [UITableViewRowAction]? {
         let more = UITableViewRowAction(style: .normal, title: "              ") { action, index in
             print("more button tapped")
+            
+            /* let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            let newViewController = storyBoard.instantiateViewController(withIdentifier: "MapViewController") as! MapViewController
+            self.present(newViewController, animated: true, completion: nil) */
+            
+            
+                let indexPath = tableView.indexPathForSelectedRow
+                let shop = self.shops[(indexPath?.row)!]
+                let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+                let newViewController = storyBoard.instantiateViewController(withIdentifier: "MapViewController") as! MapViewController
+                self.present(newViewController, animated: true, completion: nil)
+                newViewController.detailShop = shop
+            
+
+            
+ 
         }
        // more.backgroundColor = UIColor(displayP3Red: 0.1, green: 0.1, blue: 0.1, alpha: 1)
 
@@ -115,6 +128,8 @@ class ShopTableViewController: UITableViewController, CLLocationManagerDelegate 
         
         return [more]
     }
+     
+     delete this */
     
     
     override func viewDidLoad() {

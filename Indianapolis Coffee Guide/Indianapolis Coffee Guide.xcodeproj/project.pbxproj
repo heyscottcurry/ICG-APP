@@ -26,6 +26,8 @@
 		AB07EE631E6BBE54009A9948 /* ShopTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB07EE621E6BBE54009A9948 /* ShopTableViewController.swift */; };
 		AB07EE651E6BCB47009A9948 /* ShopDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB07EE641E6BCB47009A9948 /* ShopDetail.swift */; };
 		AB1103211E7AD75900EC3CB1 /* thidOnboardVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB1103201E7AD75900EC3CB1 /* thidOnboardVC.swift */; };
+		AB7B4E641E7F16A50011C128 /* BounceButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB7B4E631E7F16A50011C128 /* BounceButton.swift */; };
+		AB7B4E661E7F25B30011C128 /* BorderButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB7B4E651E7F25B30011C128 /* BorderButton.swift */; };
 		AB9F2A091E79B53E00C09929 /* mainNavVCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB9F2A081E79B53E00C09929 /* mainNavVCViewController.swift */; };
 		AB9F2A0D1E79BD3A00C09929 /* firstOnboardVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB9F2A0C1E79BD3A00C09929 /* firstOnboardVC.swift */; };
 		AB9F2A0F1E79BD4B00C09929 /* secondOnboardVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB9F2A0E1E79BD4B00C09929 /* secondOnboardVC.swift */; };
@@ -80,6 +82,8 @@
 		AB07EE621E6BBE54009A9948 /* ShopTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShopTableViewController.swift; sourceTree = "<group>"; };
 		AB07EE641E6BCB47009A9948 /* ShopDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShopDetail.swift; sourceTree = "<group>"; };
 		AB1103201E7AD75900EC3CB1 /* thidOnboardVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = thidOnboardVC.swift; sourceTree = "<group>"; };
+		AB7B4E631E7F16A50011C128 /* BounceButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BounceButton.swift; sourceTree = "<group>"; };
+		AB7B4E651E7F25B30011C128 /* BorderButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BorderButton.swift; path = "Indianapolis Coffee Guide/BorderButton.swift"; sourceTree = SOURCE_ROOT; };
 		AB9F2A081E79B53E00C09929 /* mainNavVCViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = mainNavVCViewController.swift; sourceTree = "<group>"; };
 		AB9F2A0C1E79BD3A00C09929 /* firstOnboardVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = firstOnboardVC.swift; sourceTree = "<group>"; };
 		AB9F2A0E1E79BD4B00C09929 /* secondOnboardVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = secondOnboardVC.swift; sourceTree = "<group>"; };
@@ -159,12 +163,14 @@
 		AB07EE291E6BA9E0009A9948 /* Indianapolis Coffee Guide */ = {
 			isa = PBXGroup;
 			children = (
+				AB7B4E671E7F2D7A0011C128 /* IBDesignables */,
 				AB07EE621E6BBE54009A9948 /* ShopTableViewController.swift */,
 				AB07EE601E6BBB80009A9948 /* CoffeeShop.swift */,
 				AB07EE581E6BA9FD009A9948 /* Indianapolis Coffee Guide.entitlements */,
 				AB07EE2A1E6BA9E0009A9948 /* AppDelegate.swift */,
 				AB07EE2C1E6BA9E0009A9948 /* ViewController.swift */,
 				AB07EE2E1E6BA9E0009A9948 /* Main.storyboard */,
+				AB7B4E631E7F16A50011C128 /* BounceButton.swift */,
 				AB9F2A081E79B53E00C09929 /* mainNavVCViewController.swift */,
 				AB01AE5A1E75D1B40055ABF2 /* LaunchVC.swift */,
 				ABCA8C3C1E70AAEE0058EB21 /* MapViewController.swift */,
@@ -211,6 +217,14 @@
 				C7C103978D2C05F24919FE3C /* Pods_Indianapolis_Coffee_GuideUITests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AB7B4E671E7F2D7A0011C128 /* IBDesignables */ = {
+			isa = PBXGroup;
+			children = (
+				AB7B4E651E7F25B30011C128 /* BorderButton.swift */,
+			);
+			name = IBDesignables;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -514,10 +528,12 @@
 				AB07EE2B1E6BA9E0009A9948 /* AppDelegate.swift in Sources */,
 				AB9F2A091E79B53E00C09929 /* mainNavVCViewController.swift in Sources */,
 				AB07EE5D1E6BABC6009A9948 /* CoffeeShopTableViewCell.swift in Sources */,
+				AB7B4E661E7F25B30011C128 /* BorderButton.swift in Sources */,
 				AB1103211E7AD75900EC3CB1 /* thidOnboardVC.swift in Sources */,
 				AB01AE5B1E75D1B40055ABF2 /* LaunchVC.swift in Sources */,
 				AB07EE631E6BBE54009A9948 /* ShopTableViewController.swift in Sources */,
 				AB9F2A0D1E79BD3A00C09929 /* firstOnboardVC.swift in Sources */,
+				AB7B4E641E7F16A50011C128 /* BounceButton.swift in Sources */,
 				ABCA8C3E1E70AAEE0058EB21 /* MapViewController.swift in Sources */,
 				AB9F2A0F1E79BD4B00C09929 /* secondOnboardVC.swift in Sources */,
 				AB01AE611E7830BC0055ABF2 /* MapPopoverVC.swift in Sources */,

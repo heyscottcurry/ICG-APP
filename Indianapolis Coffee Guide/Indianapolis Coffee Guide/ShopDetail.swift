@@ -13,51 +13,82 @@ import CoreLocation
 class ShopDetail: UIViewController {
 
     @IBOutlet weak var directionsButton: UIButton!
-   
     @IBOutlet weak var closeButton: UIButton!
-
     @IBOutlet weak var brewText: UILabel!
-
     @IBOutlet weak var shopText: UILabel!
     @IBOutlet weak var navTitle: UINavigationItem!
     @IBOutlet weak var shopNavTitle: UILabel!
     @IBOutlet weak var shopImage: UIImageView!
     @IBOutlet weak var borderMain: UIView!
-
-    
     @IBOutlet weak var igButton: UIButton!
     
+    @IBOutlet weak var centerPopupConstraint: NSLayoutConstraint!
+    
+    @IBOutlet weak var modalDismiss: UIButton!
     
     
-     var details = CoffeeShop.self
+    
+    
+    @IBAction func closeModal(_ sender: Any) {
+    self.hidePopup()
+    }
+
+    
+    @IBAction func openIGCamera(_ sender: UIButton) {
+        
+        
+        
+        
+        let instagramHooks = "instagram://camera"
+        let instagramUrl = NSURL(string: instagramHooks)
+        let fallbackURL = NSURL(string: "https://www.instagram.com/\(detailShop!.igHandle)")
+        if UIApplication.shared.canOpenURL(instagramUrl! as URL)
+        {
+            UIApplication.shared.open(instagramUrl! as URL, options: [:], completionHandler: nil)
+        } else {
+            //redirect to safari because the user doesn't have Instagram
+            UIApplication.shared.open(fallbackURL! as URL, options: [:], completionHandler: nil)
+        }
+        
+        
+    }
+    
+    func showPopup() {
+        centerPopupConstraint.constant = 0
+        self.modalDismiss.alpha = 0.75
+        
+        UIView.animate(withDuration: 0.6, animations: {
+            self.view.layoutIfNeeded()
+        }, completion: nil)
+        
+    }
+    
+    func hidePopup() {
+        centerPopupConstraint.constant = 800
+        self.modalDismiss.alpha = 0.0
+        
+        UIView.animate(withDuration: 0.6, animations: {
+            self.view.layoutIfNeeded()
+        }, completion: nil)
+    }
+    
+    
+    var details = CoffeeShop.self
     
     @IBAction func igButt(_ sender: UIButton) {
-        
-        
         let instagramHooks = "instagram://user?username=\(detailShop!.igHandle)"
         let instagramUrl = NSURL(string: instagramHooks)
         let fallbackURL = NSURL(string: "https://www.instagram.com/\(detailShop!.igHandle)")
         if UIApplication.shared.canOpenURL(instagramUrl! as URL)
         {
             UIApplication.shared.open(instagramUrl! as URL, options: [:], completionHandler: nil)
-            
-            
         } else {
             //redirect to safari because the user doesn't have Instagram
-            
             UIApplication.shared.open(fallbackURL! as URL, options: [:], completionHandler: nil)
-            
         }
-        
-
     }
    
     @IBOutlet weak var shopDistance: UILabel!
-    
-    
-    
- 
-    
     
     
     var detailShop: CoffeeShop? {
@@ -66,8 +97,6 @@ class ShopDetail: UIViewController {
         }
     }
     
-
-
     
     func configureView() {
         if let detailShop = detailShop {
@@ -75,9 +104,6 @@ class ShopDetail: UIViewController {
                 shopNavTitle.text =  detailShop.name
             }
         }
-        
-        
-        
     }
     
     
@@ -95,12 +121,13 @@ class ShopDetail: UIViewController {
         self.shopDistance.text = detailShop?.neighborhood
         self.shopText.text = detailShop?.listSpace
         self.brewText.text = detailShop?.listBrew
-        
         self.brewText.sizeToFit()
         self.shopText.sizeToFit()
+    
         
-       igButton.setTitle("@\(detailShop!.igHandle)", for: UIControlState.normal)
         
+        
+        igButton.setTitle("@\(detailShop!.igHandle)", for: UIControlState.normal)
         
         self.borderMain.layer.borderWidth = 2
         self.borderMain.layer.borderColor = UIColor.white.cgColor
@@ -108,9 +135,6 @@ class ShopDetail: UIViewController {
         self.directionsButton.layer.borderColor = UIColor.white.cgColor
         self.closeButton.layer.borderWidth = 2
         self.closeButton.layer.borderColor = UIColor.white.cgColor
-        
-    
-        
     }
     
     override func didReceiveMemoryWarning() {
@@ -123,16 +147,20 @@ class ShopDetail: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if segue.identifier == "mapSegue" {
-            
             let thirdVC = (segue.destination as! UINavigationController).topViewController as! MapViewController
             thirdVC.detailShop = detailShop
-            
         }
+    }
+    
+    
+    override func viewDidAppear(_ animated: Bool) {
         
+        
+        let shopDistance = Float((detailShop?.distance)!)
+        if shopDistance < 0.05  {
+            self.showPopup()
+        }
     }
 
-    
-    
-    
 }
 

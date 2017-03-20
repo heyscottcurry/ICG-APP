@@ -39,7 +39,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gm2-GR-eyW">
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gm2-GR-eyW" customClass="BounceButton" customModule="Indianapolis_Coffee_Guide" customModuleProvider="target">
                                         <rect key="frame" x="57" y="600" width="300" height="75"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="20"/>
@@ -111,7 +111,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jyG-nJ-Eiy">
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jyG-nJ-Eiy" customClass="BounceButton" customModule="Indianapolis_Coffee_Guide" customModuleProvider="target">
                                         <rect key="frame" x="57" y="600" width="300" height="75"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="20"/>
@@ -201,7 +201,7 @@
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                 </textView>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jdE-1k-Nvd">
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jdE-1k-Nvd" customClass="BounceButton" customModule="Indianapolis_Coffee_Guide" customModuleProvider="target">
                                                     <rect key="frame" x="57" y="588" width="300" height="75"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="20"/>
@@ -444,7 +444,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kcL-MQ-mNB">
-                                <rect key="frame" x="36" y="494" width="342" height="40"/>
+                                <rect key="frame" x="36" y="494" width="342" height="55"/>
                                 <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="24"/>
                                 <state key="normal" title="View All">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -468,20 +468,21 @@
                             <constraint firstItem="adc-Yp-Krq" firstAttribute="leading" secondItem="Ivk-hD-hXF" secondAttribute="leading" id="TF6-9W-97g"/>
                             <constraint firstItem="1oa-2X-qYC" firstAttribute="trailing" secondItem="L8Y-lr-uE3" secondAttribute="trailing" id="Uau-Wc-Y1F"/>
                             <constraint firstItem="Ivk-hD-hXF" firstAttribute="top" secondItem="adc-Yp-Krq" secondAttribute="bottom" constant="8" symbolic="YES" id="aQN-pY-0HT"/>
-                            <constraint firstItem="DWf-Gm-Vzj" firstAttribute="leading" secondItem="kcL-MQ-mNB" secondAttribute="leading" id="aQj-rP-lgq"/>
-                            <constraint firstItem="kcL-MQ-mNB" firstAttribute="top" secondItem="DWf-Gm-Vzj" secondAttribute="bottom" constant="8" symbolic="YES" id="adk-AO-OtS"/>
                             <constraint firstItem="lOf-lu-89H" firstAttribute="leading" secondItem="1oa-2X-qYC" secondAttribute="leading" id="bPX-6Q-4OE"/>
                             <constraint firstItem="Ivk-hD-hXF" firstAttribute="trailing" secondItem="lOf-lu-89H" secondAttribute="trailing" id="g0v-hl-mMh"/>
+                            <constraint firstItem="kcL-MQ-mNB" firstAttribute="leading" secondItem="DWf-Gm-Vzj" secondAttribute="leading" id="hGD-8p-UE5"/>
                             <constraint firstItem="Lq2-eF-F9f" firstAttribute="leading" secondItem="DWf-Gm-Vzj" secondAttribute="leading" id="hzf-JJ-3ib"/>
                             <constraint firstItem="adc-Yp-Krq" firstAttribute="centerX" secondItem="OB4-fR-RJO" secondAttribute="centerX" id="i9E-xA-ajG"/>
                             <constraint firstItem="Ivk-hD-hXF" firstAttribute="leading" secondItem="lOf-lu-89H" secondAttribute="leading" id="lwu-by-Mlq"/>
-                            <constraint firstItem="DWf-Gm-Vzj" firstAttribute="trailing" secondItem="kcL-MQ-mNB" secondAttribute="trailing" id="mNe-tw-Oom"/>
                             <constraint firstItem="lOf-lu-89H" firstAttribute="trailing" secondItem="1oa-2X-qYC" secondAttribute="trailing" id="nVP-cx-yzn"/>
                             <constraint firstItem="DWf-Gm-Vzj" firstAttribute="top" secondItem="Lq2-eF-F9f" secondAttribute="bottom" constant="8" symbolic="YES" id="ngk-O4-TdH"/>
                             <constraint firstItem="adc-Yp-Krq" firstAttribute="leading" secondItem="OB4-fR-RJO" secondAttribute="leadingMargin" constant="16" id="pcE-Xg-yJV"/>
                             <constraint firstItem="Uy2-nK-xax" firstAttribute="top" secondItem="S6q-UO-Ny5" secondAttribute="bottom" constant="10" id="qps-T9-khE"/>
                             <constraint firstItem="L8Y-lr-uE3" firstAttribute="leading" secondItem="Lq2-eF-F9f" secondAttribute="leading" id="r9q-Ge-OZJ"/>
+                            <constraint firstItem="kcL-MQ-mNB" firstAttribute="trailing" secondItem="DWf-Gm-Vzj" secondAttribute="trailing" id="t1I-xv-Hqc"/>
+                            <constraint firstItem="kcL-MQ-mNB" firstAttribute="top" secondItem="DWf-Gm-Vzj" secondAttribute="bottom" constant="8" symbolic="YES" id="vtm-Uk-ss7"/>
                             <constraint firstItem="Lq2-eF-F9f" firstAttribute="top" secondItem="L8Y-lr-uE3" secondAttribute="bottom" constant="8" symbolic="YES" id="zDn-Aj-xls"/>
+                            <constraint firstItem="yOd-6h-c0w" firstAttribute="top" secondItem="kcL-MQ-mNB" secondAttribute="bottom" constant="187" id="zQk-gK-m6h"/>
                         </constraints>
                     </view>
                     <nil key="simulatedStatusBarMetrics"/>
@@ -796,9 +797,79 @@
                                     <outletCollection property="gestureRecognizers" destination="y0I-dN-RwX" appends="YES" id="Tmp-e4-HLi"/>
                                 </connections>
                             </view>
+                            <button opaque="NO" alpha="0.0" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PBQ-p5-XG3">
+                                <rect key="frame" x="0.0" y="-1" width="414" height="737"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <action selector="closeModal:" destination="QRW-iw-vCy" eventType="touchUpInside" id="6pG-Gk-mGp"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8KE-iN-cpx">
+                                <rect key="frame" x="57" y="800" width="300" height="214"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Hey!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vJC-iq-iXK">
+                                        <rect key="frame" x="43" y="12" width="214" height="33"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="24"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Are you here right now? Snap a picture &amp; tag @indianapoliscoffee      to be featured!" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="4" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xtk-Qa-oAU">
+                                        <rect key="frame" x="56" y="40" width="189" height="112"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ig-icon" translatesAutoresizingMaskIntoConstraints="NO" id="ocx-Gz-PaP">
+                                        <rect key="frame" x="44" y="178" width="27" height="23"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y3N-LN-ApS" customClass="BorderButton" customModule="Indianapolis_Coffee_Guide" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="158" width="301" height="56"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="Georgia-Bold" family="Georgia" pointSize="17"/>
+                                        <state key="normal" title="   Take a Picture!">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="2"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="openIGCamera:" destination="QRW-iw-vCy" eventType="touchUpInside" id="F8t-S8-Z2h"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" alpha="0.65000000000000002" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jv0-pH-LrI">
+                                        <rect key="frame" x="-1" y="223" width="301" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="Georgia-Italic" family="Georgia" pointSize="15"/>
+                                        <state key="normal" title="Skip for now...">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="closeModal:" destination="QRW-iw-vCy" eventType="touchUpInside" id="mPB-ec-tUf"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.85098039219999999" green="0.32549019610000002" blue="0.30980392159999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="FsC-TG-0I1"/>
+                                    <constraint firstAttribute="height" constant="214" id="JiJ-7D-sGm"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="8KE-iN-cpx" firstAttribute="centerX" secondItem="8cD-ex-b3R" secondAttribute="centerX" id="FV0-st-1QY"/>
+                            <constraint firstItem="8KE-iN-cpx" firstAttribute="centerY" secondItem="8cD-ex-b3R" secondAttribute="centerY" constant="539" id="clW-Nq-1Hw"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Shop Name" id="WQT-hS-lmR">
                         <barButtonItem key="leftBarButtonItem" title="Back" id="qAr-JG-A1i">
@@ -814,9 +885,11 @@
                     <connections>
                         <outlet property="borderMain" destination="h8b-cS-7AI" id="hqJ-RX-ZHz"/>
                         <outlet property="brewText" destination="R2L-ed-BY3" id="Mo7-7k-N4B"/>
+                        <outlet property="centerPopupConstraint" destination="clW-Nq-1Hw" id="jRU-3b-T7E"/>
                         <outlet property="closeButton" destination="dRw-36-JnP" id="val-3U-unb"/>
                         <outlet property="directionsButton" destination="5Bj-0L-2DK" id="ddL-9g-j2S"/>
                         <outlet property="igButton" destination="K9I-iW-hFL" id="x04-ig-ox5"/>
+                        <outlet property="modalDismiss" destination="PBQ-p5-XG3" id="Mik-CJ-4p6"/>
                         <outlet property="navTitle" destination="WQT-hS-lmR" id="70F-XW-yhf"/>
                         <outlet property="shopDistance" destination="Pcv-Y1-eZn" id="Afd-kh-5BQ"/>
                         <outlet property="shopImage" destination="Fus-zy-Xh1" id="zSX-79-FtU"/>
@@ -929,7 +1002,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sfU-at-Iwk">
                                 <rect key="frame" x="0.0" y="450" width="414" height="160"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a4z-q6-Zvt">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a4z-q6-Zvt" customClass="BorderButton" customModule="Indianapolis_Coffee_Guide" customModuleProvider="target">
                                         <rect key="frame" x="21" y="12" width="371" height="75"/>
                                         <color key="backgroundColor" white="1" alpha="0.5" colorSpace="calibratedWhite"/>
                                         <constraints>
@@ -1065,5 +1138,6 @@
         <image name="feat-kaffeine" width="360" height="449"/>
         <image name="feat-opensociety" width="466" height="366"/>
         <image name="feat-quirkyfeather" width="266" height="400"/>
+        <image name="ig-icon" width="193" height="193"/>
     </resources>
 </document>
