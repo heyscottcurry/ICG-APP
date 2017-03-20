@@ -339,12 +339,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uy2-nK-xax">
-                                <rect key="frame" x="364" y="10" width="46" height="15"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="46" id="QZj-p6-HqD"/>
-                                    <constraint firstAttribute="height" constant="15" id="ewQ-E3-XAY"/>
-                                </constraints>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uy2-nK-xax">
+                                <rect key="frame" x="367" y="8" width="37" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <state key="normal" title="X">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -352,11 +350,28 @@
                                     <action selector="shopnavClose:" destination="5ea-Vg-Jf4" eventType="touchUpInside" id="eqk-VV-2rQ"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="adc-Yp-Krq">
-                                <rect key="frame" x="36" y="53" width="342" height="55"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="55" id="zd8-9M-64C"/>
-                                </constraints>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kcL-MQ-mNB" customClass="BorderButton" customModule="Indianapolis_Coffee_Guide" customModuleProvider="target">
+                                <rect key="frame" x="36" y="640" width="342" height="76"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="24"/>
+                                <state key="normal" title="View All">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="bXl-Zp-z5j" kind="unwind" unwindAction="unwindFilterNavWithSegue:" id="Q0g-7g-YHF"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="adc-Yp-Krq">
+                                <rect key="frame" x="36" y="20" width="342" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES"/>
                                 <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="24"/>
                                 <state key="normal" title="Downtown">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -365,11 +380,9 @@
                                     <segue destination="bXl-Zp-z5j" kind="unwind" unwindAction="unwindDT:" id="XoT-jw-Ws6"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ivk-hD-hXF">
-                                <rect key="frame" x="36" y="116" width="342" height="55"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="55" id="g5a-w3-1LC"/>
-                                </constraints>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ivk-hD-hXF">
+                                <rect key="frame" x="36" y="78" width="342" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES"/>
                                 <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="24"/>
                                 <state key="normal" title="Fountain Square">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -378,11 +391,9 @@
                                     <segue destination="bXl-Zp-z5j" kind="unwind" unwindAction="unwindFS:" id="Y0d-Fw-w3m"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lOf-lu-89H">
-                                <rect key="frame" x="36" y="179" width="342" height="55"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="55" id="EBt-Co-gXx"/>
-                                </constraints>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lOf-lu-89H">
+                                <rect key="frame" x="36" y="194" width="342" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES"/>
                                 <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="24"/>
                                 <state key="normal" title="Broad Ripple">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -391,11 +402,9 @@
                                     <segue destination="bXl-Zp-z5j" kind="unwind" unwindAction="unwindBR:" id="s3Q-SN-AVp"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1oa-2X-qYC">
-                                <rect key="frame" x="36" y="242" width="342" height="55"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="55" id="851-eM-VZv"/>
-                                </constraints>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1oa-2X-qYC">
+                                <rect key="frame" x="36" y="136" width="342" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES"/>
                                 <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="24"/>
                                 <state key="normal" title="Irvington / East Side">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -404,11 +413,9 @@
                                     <segue destination="bXl-Zp-z5j" kind="unwind" unwindAction="unwindIrvington:" id="z0e-Ln-tbV"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L8Y-lr-uE3">
-                                <rect key="frame" x="36" y="305" width="342" height="55"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="55" id="NuL-tX-Cpq"/>
-                                </constraints>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L8Y-lr-uE3">
+                                <rect key="frame" x="36" y="252" width="342" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES"/>
                                 <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="24"/>
                                 <state key="normal" title="Carmel">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -417,11 +424,9 @@
                                     <segue destination="bXl-Zp-z5j" kind="unwind" unwindAction="unwindCarmel:" id="Lq7-CB-thO"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lq2-eF-F9f">
-                                <rect key="frame" x="36" y="368" width="342" height="55"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="55" id="0u3-Fq-KNr"/>
-                                </constraints>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lq2-eF-F9f">
+                                <rect key="frame" x="36" y="310" width="342" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES"/>
                                 <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="24"/>
                                 <state key="normal" title="Fishers">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -430,11 +435,9 @@
                                     <segue destination="bXl-Zp-z5j" kind="unwind" unwindAction="unwindFishers:" id="gkT-E1-3po"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DWf-Gm-Vzj">
-                                <rect key="frame" x="36" y="431" width="342" height="55"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="55" id="WW1-gm-9y3"/>
-                                </constraints>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DWf-Gm-Vzj">
+                                <rect key="frame" x="36" y="368" width="342" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES"/>
                                 <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="24"/>
                                 <state key="normal" title="Eagle Creek">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -443,47 +446,8 @@
                                     <segue destination="bXl-Zp-z5j" kind="unwind" unwindAction="unwindEC:" id="Wod-Ur-xj9"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kcL-MQ-mNB">
-                                <rect key="frame" x="36" y="494" width="342" height="55"/>
-                                <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="24"/>
-                                <state key="normal" title="View All">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="bXl-Zp-z5j" kind="unwind" unwindAction="unwindFilterNavWithSegue:" id="Q0g-7g-YHF"/>
-                                </connections>
-                            </button>
                         </subviews>
-                        <color key="backgroundColor" white="0.0" alpha="0.84999999999999998" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="L8Y-lr-uE3" firstAttribute="top" secondItem="1oa-2X-qYC" secondAttribute="bottom" constant="8" symbolic="YES" id="12N-Xb-xos"/>
-                            <constraint firstItem="1oa-2X-qYC" firstAttribute="top" secondItem="lOf-lu-89H" secondAttribute="bottom" constant="8" symbolic="YES" id="44b-9s-i0E"/>
-                            <constraint firstItem="lOf-lu-89H" firstAttribute="top" secondItem="Ivk-hD-hXF" secondAttribute="bottom" constant="8" symbolic="YES" id="8la-z5-7NJ"/>
-                            <constraint firstItem="adc-Yp-Krq" firstAttribute="top" secondItem="Uy2-nK-xax" secondAttribute="bottom" constant="28" id="9zQ-lp-M47"/>
-                            <constraint firstItem="1oa-2X-qYC" firstAttribute="leading" secondItem="L8Y-lr-uE3" secondAttribute="leading" id="CkY-fa-W53"/>
-                            <constraint firstItem="Lq2-eF-F9f" firstAttribute="trailing" secondItem="DWf-Gm-Vzj" secondAttribute="trailing" id="DRQ-Lx-g0N"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Uy2-nK-xax" secondAttribute="trailing" constant="-16" id="JmC-9F-pmX"/>
-                            <constraint firstItem="L8Y-lr-uE3" firstAttribute="trailing" secondItem="Lq2-eF-F9f" secondAttribute="trailing" id="KaF-hM-lk7"/>
-                            <constraint firstItem="adc-Yp-Krq" firstAttribute="trailing" secondItem="Ivk-hD-hXF" secondAttribute="trailing" id="L5B-Zy-9r5"/>
-                            <constraint firstItem="adc-Yp-Krq" firstAttribute="leading" secondItem="Ivk-hD-hXF" secondAttribute="leading" id="TF6-9W-97g"/>
-                            <constraint firstItem="1oa-2X-qYC" firstAttribute="trailing" secondItem="L8Y-lr-uE3" secondAttribute="trailing" id="Uau-Wc-Y1F"/>
-                            <constraint firstItem="Ivk-hD-hXF" firstAttribute="top" secondItem="adc-Yp-Krq" secondAttribute="bottom" constant="8" symbolic="YES" id="aQN-pY-0HT"/>
-                            <constraint firstItem="lOf-lu-89H" firstAttribute="leading" secondItem="1oa-2X-qYC" secondAttribute="leading" id="bPX-6Q-4OE"/>
-                            <constraint firstItem="Ivk-hD-hXF" firstAttribute="trailing" secondItem="lOf-lu-89H" secondAttribute="trailing" id="g0v-hl-mMh"/>
-                            <constraint firstItem="kcL-MQ-mNB" firstAttribute="leading" secondItem="DWf-Gm-Vzj" secondAttribute="leading" id="hGD-8p-UE5"/>
-                            <constraint firstItem="Lq2-eF-F9f" firstAttribute="leading" secondItem="DWf-Gm-Vzj" secondAttribute="leading" id="hzf-JJ-3ib"/>
-                            <constraint firstItem="adc-Yp-Krq" firstAttribute="centerX" secondItem="OB4-fR-RJO" secondAttribute="centerX" id="i9E-xA-ajG"/>
-                            <constraint firstItem="Ivk-hD-hXF" firstAttribute="leading" secondItem="lOf-lu-89H" secondAttribute="leading" id="lwu-by-Mlq"/>
-                            <constraint firstItem="lOf-lu-89H" firstAttribute="trailing" secondItem="1oa-2X-qYC" secondAttribute="trailing" id="nVP-cx-yzn"/>
-                            <constraint firstItem="DWf-Gm-Vzj" firstAttribute="top" secondItem="Lq2-eF-F9f" secondAttribute="bottom" constant="8" symbolic="YES" id="ngk-O4-TdH"/>
-                            <constraint firstItem="adc-Yp-Krq" firstAttribute="leading" secondItem="OB4-fR-RJO" secondAttribute="leadingMargin" constant="16" id="pcE-Xg-yJV"/>
-                            <constraint firstItem="Uy2-nK-xax" firstAttribute="top" secondItem="S6q-UO-Ny5" secondAttribute="bottom" constant="10" id="qps-T9-khE"/>
-                            <constraint firstItem="L8Y-lr-uE3" firstAttribute="leading" secondItem="Lq2-eF-F9f" secondAttribute="leading" id="r9q-Ge-OZJ"/>
-                            <constraint firstItem="kcL-MQ-mNB" firstAttribute="trailing" secondItem="DWf-Gm-Vzj" secondAttribute="trailing" id="t1I-xv-Hqc"/>
-                            <constraint firstItem="kcL-MQ-mNB" firstAttribute="top" secondItem="DWf-Gm-Vzj" secondAttribute="bottom" constant="8" symbolic="YES" id="vtm-Uk-ss7"/>
-                            <constraint firstItem="Lq2-eF-F9f" firstAttribute="top" secondItem="L8Y-lr-uE3" secondAttribute="bottom" constant="8" symbolic="YES" id="zDn-Aj-xls"/>
-                            <constraint firstItem="yOd-6h-c0w" firstAttribute="top" secondItem="kcL-MQ-mNB" secondAttribute="bottom" constant="187" id="zQk-gK-m6h"/>
-                        </constraints>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.94999999999999996" colorSpace="calibratedRGB"/>
                     </view>
                     <nil key="simulatedStatusBarMetrics"/>
                 </viewController>
@@ -937,12 +901,9 @@
                                     <segue destination="BH0-CS-68t" kind="unwind" unwindAction="unwindToShopWithSegue:" id="AJ1-EN-Zfg"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="efT-JU-k6W">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="efT-JU-k6W">
                                 <rect key="frame" x="21" y="616" width="371" height="75"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="75" id="98d-Uz-6NQ"/>
-                                    <constraint firstAttribute="width" constant="371" id="uJD-bY-Kbq"/>
-                                </constraints>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="20"/>
                                 <state key="normal" title="Get Directions">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
@@ -954,7 +915,6 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="bbw-Oh-VL9" firstAttribute="top" secondItem="efT-JU-k6W" secondAttribute="bottom" constant="45" id="7vw-ml-WR9"/>
                             <constraint firstItem="073-3p-bIL" firstAttribute="top" secondItem="EOm-ft-6Sd" secondAttribute="bottom" constant="34" id="RnG-c9-bZM"/>
                             <constraint firstItem="073-3p-bIL" firstAttribute="trailing" secondItem="5M4-Yl-4fg" secondAttribute="trailingMargin" id="VmN-zF-xXq"/>
                             <constraint firstItem="8xT-Mw-ArC" firstAttribute="leading" secondItem="5M4-Yl-4fg" secondAttribute="leading" id="dqV-Pr-g1k"/>
@@ -962,7 +922,6 @@
                             <constraint firstItem="073-3p-bIL" firstAttribute="top" secondItem="EOm-ft-6Sd" secondAttribute="bottom" constant="34" id="gRD-jc-cqb"/>
                             <constraint firstAttribute="trailing" secondItem="8xT-Mw-ArC" secondAttribute="trailing" id="h89-b4-CT2"/>
                             <constraint firstItem="8xT-Mw-ArC" firstAttribute="top" secondItem="EOm-ft-6Sd" secondAttribute="bottom" id="jYJ-ET-fnu"/>
-                            <constraint firstItem="efT-JU-k6W" firstAttribute="leading" secondItem="5M4-Yl-4fg" secondAttribute="leadingMargin" constant="1" id="nrF-VY-HbU"/>
                             <constraint firstItem="bbw-Oh-VL9" firstAttribute="top" secondItem="8xT-Mw-ArC" secondAttribute="bottom" id="wCC-E6-MFS"/>
                         </constraints>
                     </view>
@@ -992,23 +951,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="he4-uD-3N1">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="he4-uD-3N1">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.81999999999999995" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
                                     <action selector="dismissMapVC:" destination="Foa-JP-mMd" eventType="touchUpInside" id="OTk-67-H3C"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sfU-at-Iwk">
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sfU-at-Iwk">
                                 <rect key="frame" x="0.0" y="450" width="414" height="160"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a4z-q6-Zvt" customClass="BorderButton" customModule="Indianapolis_Coffee_Guide" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a4z-q6-Zvt" customClass="BorderButton" customModule="Indianapolis_Coffee_Guide" customModuleProvider="target">
                                         <rect key="frame" x="21" y="12" width="371" height="75"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="1" alpha="0.5" colorSpace="calibratedWhite"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="371" id="8jH-Hv-8JC"/>
-                                            <constraint firstAttribute="height" constant="75" id="S8Q-mC-3YN"/>
-                                        </constraints>
                                         <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="17"/>
                                         <state key="normal" title="Apple Maps">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
@@ -1017,13 +975,10 @@
                                             <action selector="appleMapButton:" destination="Foa-JP-mMd" eventType="touchUpInside" id="j4r-gR-8Gs"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kzn-V5-hge">
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kzn-V5-hge">
                                         <rect key="frame" x="21" y="85" width="371" height="75"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="1" alpha="0.5" colorSpace="calibratedWhite"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="75" id="W7z-dw-hau"/>
-                                            <constraint firstAttribute="width" constant="371" id="nhS-Px-8I0"/>
-                                        </constraints>
                                         <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="17"/>
                                         <state key="normal" title="Google Maps">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
@@ -1034,29 +989,9 @@
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstItem="Kzn-V5-hge" firstAttribute="leading" secondItem="sfU-at-Iwk" secondAttribute="leading" constant="21" id="DfP-Dd-sbT"/>
-                                    <constraint firstAttribute="bottom" secondItem="Kzn-V5-hge" secondAttribute="bottom" id="MQ5-89-Ev0"/>
-                                    <constraint firstItem="Kzn-V5-hge" firstAttribute="width" secondItem="a4z-q6-Zvt" secondAttribute="width" id="SR2-uw-sgO"/>
-                                    <constraint firstAttribute="trailing" secondItem="a4z-q6-Zvt" secondAttribute="trailing" constant="22" id="dPv-bN-Lsu"/>
-                                    <constraint firstItem="a4z-q6-Zvt" firstAttribute="leading" secondItem="sfU-at-Iwk" secondAttribute="leading" constant="21" id="fe8-ad-opT"/>
-                                    <constraint firstItem="Kzn-V5-hge" firstAttribute="height" secondItem="a4z-q6-Zvt" secondAttribute="height" id="gER-sv-FXH"/>
-                                    <constraint firstAttribute="trailing" secondItem="Kzn-V5-hge" secondAttribute="trailing" constant="22" id="kjb-eE-hEn"/>
-                                    <constraint firstItem="a4z-q6-Zvt" firstAttribute="top" secondItem="sfU-at-Iwk" secondAttribute="top" constant="12" id="u2Q-Xh-y4S"/>
-                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="he4-uD-3N1" firstAttribute="leading" secondItem="sfU-at-Iwk" secondAttribute="leading" id="Eve-Ew-lSS"/>
-                            <constraint firstItem="0VX-6I-f2U" firstAttribute="top" secondItem="sfU-at-Iwk" secondAttribute="bottom" constant="126" id="Kah-fe-3v3"/>
-                            <constraint firstItem="sfU-at-Iwk" firstAttribute="leading" secondItem="97A-dt-IPT" secondAttribute="leading" id="Ktc-mD-35k"/>
-                            <constraint firstItem="he4-uD-3N1" firstAttribute="trailing" secondItem="sfU-at-Iwk" secondAttribute="trailing" id="cRP-BO-f5R"/>
-                            <constraint firstAttribute="trailing" secondItem="sfU-at-Iwk" secondAttribute="trailing" id="ejm-OQ-Ltq"/>
-                            <constraint firstItem="he4-uD-3N1" firstAttribute="bottom" secondItem="0VX-6I-f2U" secondAttribute="top" id="gYU-ZJ-l4p"/>
-                            <constraint firstItem="he4-uD-3N1" firstAttribute="top" secondItem="3wb-YK-9bB" secondAttribute="bottom" id="whR-hS-96H"/>
-                            <constraint firstItem="sfU-at-Iwk" firstAttribute="top" secondItem="3wb-YK-9bB" secondAttribute="bottom" constant="450" id="y3f-M8-jZb"/>
-                        </constraints>
                     </view>
                     <connections>
                         <outlet property="appleMapButton" destination="a4z-q6-Zvt" id="8jd-ch-INu"/>
@@ -1075,7 +1010,7 @@
                     <toolbarItems/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="414" height="736"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" barStyle="black" id="iXQ-iX-WOA">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="iXQ-iX-WOA">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
@@ -1119,7 +1054,7 @@
                     <toolbarItems/>
                     <nil key="simulatedStatusBarMetrics"/>
                     <nil key="simulatedTopBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="OBP-0v-8Q0">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="OBP-0v-8Q0">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

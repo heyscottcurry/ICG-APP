@@ -31,8 +31,6 @@
 	<true/>
 	<key>NSLocationAlwaysUsageDescription</key>
 	<string>Let us know where you are so we can tell you where the coffee is.</string>
-	<key>NSLocationUsageDescription</key>
-	<string>There's coffee nearby!</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>Let us know where you are so we can tell you where the coffee is.</string>
 	<key>UILaunchStoryboardName</key>
