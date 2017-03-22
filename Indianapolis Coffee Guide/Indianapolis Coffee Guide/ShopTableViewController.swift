@@ -16,6 +16,17 @@ class ShopTableViewController: UITableViewController, CLLocationManagerDelegate 
     @IBOutlet var shopTable: UITableView!
 
     
+    @IBOutlet weak var headerView: UIView!
+
+    @IBAction func filterBack(_ sender: Any) {
+            getLocale()
+            shops.sort() { $0.distance < $1.distance }
+            shops.removeAll()
+            loadShops()
+            sortList()
+        
+    }
+    
     
     //MARK: Properties
     
@@ -28,7 +39,9 @@ class ShopTableViewController: UITableViewController, CLLocationManagerDelegate 
     var userLongitude:CLLocationDegrees! = 0
     var locValue:CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: 1.0, longitude: 1.0)
     var refresher: UIRefreshControl! = UIRefreshControl()
+
     
+    @IBOutlet weak var backButton: UIButton!
     
     @IBOutlet weak var indyHandle: UIButton!
     
@@ -48,6 +61,7 @@ class ShopTableViewController: UITableViewController, CLLocationManagerDelegate 
         self.shopTable.reloadData();
     }
     
+   
     @IBOutlet weak var newLabel: UILabel!
     @IBAction func igCoffee(_ sender: UIButton) {
         
@@ -131,16 +145,30 @@ class ShopTableViewController: UITableViewController, CLLocationManagerDelegate 
      
      delete this */
     
+    func noHeight() {
+        self.headerView.frame = CGRect(x: 0, y: 0, width: view.frame.width, height: 0)
+        self.backButton.alpha = 0
+    }
+    
+    func fullHeight() {
+       self.headerView.frame = CGRect(x: 0, y: 0, width: view.frame.width, height: 60)
+        self.backButton.alpha = 1
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-       
+    
+        
+        
+        
         
         shopTable.allowsMultipleSelectionDuringEditing = true
+        shopTable.tableHeaderView = headerView
         
         
-        
+    
         
         self.locationManager = CLLocationManager()
         self.locationManager.requestAlwaysAuthorization()
@@ -157,14 +185,8 @@ class ShopTableViewController: UITableViewController, CLLocationManagerDelegate 
         /* userCoordinate = CLLocation(latitude: userLatitude, longitude: userLongitude) */
         locValue = locationManager.location!.coordinate
         
-        
-        
-        
-        
-        
-        
+        noHeight()
         loadShops()
-        
         sortList()
         print("\(locValue.latitude), \(locValue.longitude)")
         
@@ -683,11 +705,12 @@ class ShopTableViewController: UITableViewController, CLLocationManagerDelegate 
 
         getLocale()
         shops.sort() { $0.distance < $1.distance }
+        noHeight()
         shops.removeAll()
         loadShops()
         sortList()
-        
         refresher.endRefreshing()
+        
         
     }
     
@@ -697,7 +720,8 @@ class ShopTableViewController: UITableViewController, CLLocationManagerDelegate 
         }
         shops = filteredShops
         self.shopTable.reloadData()
-        
+        fullHeight()
+
     }
     
     
@@ -708,6 +732,7 @@ class ShopTableViewController: UITableViewController, CLLocationManagerDelegate 
         }
         shops = filteredShops
         self.shopTable.reloadData()
+        fullHeight()
         
     }
     
@@ -717,6 +742,7 @@ class ShopTableViewController: UITableViewController, CLLocationManagerDelegate 
         }
         shops = filteredShops
         self.shopTable.reloadData()
+        fullHeight()
         
     }
     
@@ -726,6 +752,7 @@ class ShopTableViewController: UITableViewController, CLLocationManagerDelegate 
         }
         shops = filteredShops
         self.shopTable.reloadData()
+        fullHeight()
         
     }
     
@@ -736,6 +763,7 @@ class ShopTableViewController: UITableViewController, CLLocationManagerDelegate 
         }
         shops = filteredShops
         self.shopTable.reloadData()
+     fullHeight()
         
     }
     
@@ -745,7 +773,7 @@ class ShopTableViewController: UITableViewController, CLLocationManagerDelegate 
         }
         shops = filteredShops
         self.shopTable.reloadData()
-        
+        fullHeight()
     }
     
     func filterFS() {
@@ -754,24 +782,38 @@ class ShopTableViewController: UITableViewController, CLLocationManagerDelegate 
         }
         shops = filteredShops
         self.shopTable.reloadData()
+        fullHeight()
         
     }
     
-    
-    
-    @IBAction func unwindFilterNav(segue: UIStoryboardSegue) {
+    func getAll() {
         getLocale()
         shops.sort() { $0.distance < $1.distance }
         shops.removeAll()
         loadShops()
         sortList()
+    }
+    
+    
+    @IBAction func unwindFilterNav(segue: UIStoryboardSegue) {
+       getAll()
         
     }
+    
+    
+    @IBAction func backButton(_ sender: UIButton) {
+        noHeight()
+        getAll()
+    }
+    
+    
+    
     
     @IBAction func unwindBR(_ segue: UIStoryboardSegue) {
         shops.removeAll()
         loadShops()
         filterBR()
+        sortList()
     }
     
     
@@ -779,6 +821,7 @@ class ShopTableViewController: UITableViewController, CLLocationManagerDelegate 
         shops.removeAll()
         loadShops()
         filterCarmel()
+        sortList()
     }
     
     
@@ -786,30 +829,39 @@ class ShopTableViewController: UITableViewController, CLLocationManagerDelegate 
         shops.removeAll()
         loadShops()
         filterFishers()
+        sortList()
     }
     
     @IBAction func unwindIrvington(_ segue: UIStoryboardSegue) {
         shops.removeAll()
         loadShops()
         filterIrvington()
+        sortList()
+        
     }
     
     @IBAction func unwindFS(_ segue: UIStoryboardSegue) {
         shops.removeAll()
         loadShops()
         filterFS()
+        sortList()
+        
     }
     
     @IBAction func unwindEC(_ segue: UIStoryboardSegue) {
         shops.removeAll()
         loadShops()
         filterEC()
+        sortList()
+        
     }
     
     @IBAction func unwindDT(_ segue: UIStoryboardSegue) {
         shops.removeAll()
         loadShops()
         filterDT()
+        sortList()
+        
     }
     
     
