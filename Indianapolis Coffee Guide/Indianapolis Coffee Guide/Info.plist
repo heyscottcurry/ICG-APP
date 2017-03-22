@@ -19,7 +19,7 @@
 	<key>CFBundleShortVersionString</key>
 	<string>1.0</string>
 	<key>CFBundleVersion</key>
-	<string>2.3</string>
+	<string>2.5</string>
 	<key>LSApplicationQueriesSchemes</key>
 	<array>
 		<string>instagram</string>
@@ -29,8 +29,6 @@
 	</array>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
-	<key>NSLocationAlwaysUsageDescription</key>
-	<string>Let us know where you are so we can tell you where the coffee is.</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>Let us know where you are so we can tell you where the coffee is.</string>
 	<key>UILaunchStoryboardName</key>

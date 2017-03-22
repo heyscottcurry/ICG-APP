@@ -33,7 +33,12 @@ class ShopTableViewController: UITableViewController, CLLocationManagerDelegate 
     var shops = [CoffeeShop]()
     var filteredShops = [CoffeeShop]()
     var objects: [CoffeeShop] = []
-    var locationManager: CLLocationManager!
+    var locationManager = CLLocationManager()
+   /* func checkLocationAuthorizationStatus() {
+        if CLLocationManager.authorizationStatus() == .authorizedWhenInUse {
+            locationManager.requestWhenInUseAuthorization()
+        }
+    } */
     var currentLocation = CLLocation!.self
     var userLatitude:CLLocationDegrees! = 0
     var userLongitude:CLLocationDegrees! = 0
@@ -47,13 +52,13 @@ class ShopTableViewController: UITableViewController, CLLocationManagerDelegate 
     
     
     func getLocale() {
-        locationManager.delegate = self
-        locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
-        locationManager.startMonitoringSignificantLocationChanges()
-        self.locationManager.startUpdatingLocation()
-        userLatitude  = locationManager.location!.coordinate.latitude
-        userLongitude = locationManager.location!.coordinate.longitude
-        print("\(userLatitude!), \(userLongitude!)")
+       
+        self.locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
+        self.locationManager.startMonitoringSignificantLocationChanges()
+        
+        userLatitude  = self.locationManager.location?.coordinate.latitude
+        userLongitude = self.locationManager.location?.coordinate.longitude
+        print("\(userLatitude), \(userLongitude)")
     }
     
     func sortList() {
@@ -159,36 +164,29 @@ class ShopTableViewController: UITableViewController, CLLocationManagerDelegate 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-    
-        
-        
-        
         
         shopTable.allowsMultipleSelectionDuringEditing = true
         shopTable.tableHeaderView = headerView
         
         
-    
-        
         self.locationManager = CLLocationManager()
-        self.locationManager.requestAlwaysAuthorization()
-        self.locationManager.requestWhenInUseAuthorization()
+        self.locationManager.delegate = self
+        if CLLocationManager.authorizationStatus() == .notDetermined {
+            locationManager.requestWhenInUseAuthorization()
+        } else if CLLocationManager.authorizationStatus() == . authorizedWhenInUse {
+            shops.removeAll()
+            startTrackingLocation()
+        }
         
         view.backgroundColor = UIColor.black
         
-        if CLLocationManager.locationServicesEnabled()
-            
-        {
-            getLocale()
-            
-        }
         /* userCoordinate = CLLocation(latitude: userLatitude, longitude: userLongitude) */
-        locValue = locationManager.location!.coordinate
         
-        noHeight()
-        loadShops()
-        sortList()
-        print("\(locValue.latitude), \(locValue.longitude)")
+        let locValue = self.locationManager.location?.coordinate
+        //noHeight()
+        //loadShops()
+        // sortList()
+        print("\(locValue?.latitude), \(locValue?.longitude)")
         
         refresher = UIRefreshControl()
         refresher.addTarget(self, action: #selector(ShopTableViewController.handleRefresh), for: UIControlEvents.valueChanged)
@@ -204,7 +202,23 @@ class ShopTableViewController: UITableViewController, CLLocationManagerDelegate 
     }
     
     
+    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+        if status == .authorizedAlways || status == .authorizedWhenInUse {
+            shops.removeAll()
+            startTrackingLocation()
+            // ...
+        }
+    }
     
+    func startTrackingLocation() {
+        locationManager.startUpdatingLocation()
+        getLocale()
+        let locValue = self.locationManager.location?.coordinate
+        noHeight()
+        loadShops()
+        sortList()
+        print("\(locValue?.latitude), \(locValue?.longitude)")
+    }
     
     
     override func didReceiveMemoryWarning() {
@@ -348,7 +362,7 @@ class ShopTableViewController: UITableViewController, CLLocationManagerDelegate 
         let featMileSquare = UIImage(named: "feat-milesquare")
         let featMononBR = UIImage(named: "feat-mononbroadripple")
         
-        let userLocale = CLLocation(latitude: userLatitude, longitude: userLongitude)
+        let userLocale = CLLocation(latitude: self.userLatitude, longitude: self.userLongitude)
         
         
         let shop1 = CoffeeShop(
