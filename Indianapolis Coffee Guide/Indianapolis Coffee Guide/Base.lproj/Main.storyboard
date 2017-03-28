@@ -456,7 +456,7 @@
             </objects>
             <point key="canvasLocation" x="1737.68115942029" y="-1115.217391304348"/>
         </scene>
-        <!--Coffee Shops-->
+        <!--Indianapolis Coffee Guide-->
         <scene sceneID="kp9-U9-VJq">
             <objects>
                 <tableViewController modalTransitionStyle="flipHorizontal" id="LG2-a3-Iyb" customClass="ShopTableViewController" customModule="Indianapolis_Coffee_Guide" customModuleProvider="target" sceneMemberID="viewController">
@@ -514,7 +514,7 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="155"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="OoH-oK-giB" id="d2k-eK-UpB">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="154.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="155"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.25" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="feat-beeroaster" translatesAutoresizingMaskIntoConstraints="NO" id="Ns6-hM-K7p">
@@ -575,7 +575,7 @@
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="New!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s4P-ha-PKi">
                                             <rect key="frame" x="129" y="58" width="155" height="38"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <color key="backgroundColor" red="0.85098039215686272" green="0.32549019607843138" blue="0.30980392156862746" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.70320752639999995" colorSpace="calibratedWhite"/>
                                             <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="17"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
@@ -611,7 +611,7 @@
                             <outlet property="delegate" destination="LG2-a3-Iyb" id="zv5-q4-KYh"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Coffee Shops" id="T5R-NM-pc0">
+                    <navigationItem key="navigationItem" title="Indianapolis Coffee Guide" id="T5R-NM-pc0">
                         <barButtonItem key="rightBarButtonItem" systemItem="search" id="WrW-1Q-j5f">
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>

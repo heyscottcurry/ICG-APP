@@ -135,7 +135,7 @@ class ShopTableViewController: UITableViewController, CLLocationManagerDelegate 
                 newViewController.detailShop = shop */
             
         }
-       // more.backgroundColor = UIColor(displayP3Red: 0.1, green: 0.1, blue: 0.1, alpha: 1)
+        // more.backgroundColor = UIColor(displayP3Red: 217/255, green: 83/255, blue: 79/255, alpha: 1)
 
         if let image = UIImage(named: "mapmarker.png"){
             more.backgroundColor = UIColor(patternImage: image)
@@ -176,6 +176,8 @@ class ShopTableViewController: UITableViewController, CLLocationManagerDelegate 
         }
         
         view.backgroundColor = UIColor.black
+//        shopTable.backgroundColor = UIColor(displayP3Red: 217/255, green: 83/255, blue: 79/255, alpha: 1)
+        shopTable.backgroundColor = UIColor.black
         
         /* userCoordinate = CLLocation(latitude: userLatitude, longitude: userLongitude) */
         
@@ -186,13 +188,17 @@ class ShopTableViewController: UITableViewController, CLLocationManagerDelegate 
         print("\(locValue?.latitude), \(locValue?.longitude)")
         
         refresher = UIRefreshControl()
+        
         refresher.addTarget(self, action: #selector(ShopTableViewController.handleRefresh), for: UIControlEvents.valueChanged)
         
         
         if #available(iOS 10, *) {
             shopTable.refreshControl = refresher
+            shopTable.refreshControl?.backgroundColor = UIColor.black
+            
         } else {
             shopTable.addSubview(refresher)
+            shopTable.refreshControl?.backgroundColor = UIColor.black
         }
         
         
