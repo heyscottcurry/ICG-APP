@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="RbH-SZ-QX5">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="RbH-SZ-QX5">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -339,11 +339,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uy2-nK-xax">
-                                <rect key="frame" x="367" y="8" width="37" height="31"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uy2-nK-xax">
+                                <rect key="frame" x="377" y="16" width="18" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                <state key="normal" title="X">
+                                <state key="normal" image="close-icon">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -456,6 +455,156 @@
             </objects>
             <point key="canvasLocation" x="1737.68115942029" y="-1115.217391304348"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="tmj-P0-2wG">
+            <objects>
+                <navigationController hidesBarsWhenKeyboardAppears="YES" id="kus-64-VBm" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="YZb-Gf-hh3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="htD-Cl-A4l" kind="relationship" relationship="rootViewController" id="YH1-R2-hi9"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eKM-LP-x7M" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1375" y="232"/>
+        </scene>
+        <!--ContactVC-->
+        <scene sceneID="9Hf-AS-0MQ">
+            <objects>
+                <viewController id="htD-Cl-A4l" customClass="contactVC" customModule="Indianapolis_Coffee_Guide" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="DEQ-HC-efq"/>
+                        <viewControllerLayoutGuide type="bottom" id="tx2-7a-Obq"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="zb6-24-l6o">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="p7h-g4-M0j">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Mhw-69-Rjn">
+                        <barButtonItem key="backBarButtonItem" title="&lt;" id="C7B-eU-Aur"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="contactWebView" destination="p7h-g4-M0j" id="2hP-DY-2k4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Jum-Oc-Ynp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-525" y="233"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="YtY-N8-0Mp">
+            <objects>
+                <navigationController hidesBarsWhenKeyboardAppears="YES" id="Jp0-Rc-8Ts" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="JuY-CQ-DD8">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="j8D-gq-gNI" kind="relationship" relationship="rootViewController" id="9cU-Aj-Qff"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eaq-3A-L5l" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1333" y="949"/>
+        </scene>
+        <!--SupportVC-->
+        <scene sceneID="tv9-5C-FsO">
+            <objects>
+                <viewController id="j8D-gq-gNI" customClass="supportVC" customModule="Indianapolis_Coffee_Guide" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="XxR-6b-2gG"/>
+                        <viewControllerLayoutGuide type="bottom" id="ElA-eh-5Fb"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="eSb-oB-3WK">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3we-co-RY6">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="d9n-dz-NyV">
+                        <barButtonItem key="backBarButtonItem" title="&lt;" id="JVD-Xs-dOO"/>
+                    </navigationItem>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="supportWebView" destination="3we-co-RY6" id="7f8-w6-LI2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UGA-8R-sAm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-584" y="1058"/>
+        </scene>
+        <!--Menu View-->
+        <scene sceneID="VGy-uX-az9">
+            <objects>
+                <viewController id="Ivo-2A-8Wf" customClass="menuView" customModule="Indianapolis_Coffee_Guide" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="a44-Jf-WJf"/>
+                        <viewControllerLayoutGuide type="bottom" id="WhU-Ou-8zU"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="fkD-2A-RbF">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view alpha="0.80000000000000004" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Wxd-D3-7BK">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LR1-8P-gc6">
+                                        <rect key="frame" x="388" y="8" width="18" height="22"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" image="close-icon"/>
+                                        <connections>
+                                            <action selector="closeMenu:" destination="Ivo-2A-8Wf" eventType="touchUpInside" id="s9y-Xq-M33"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dvc-U9-9fV">
+                                        <rect key="frame" x="8" y="424" width="398" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Button"/>
+                                        <connections>
+                                            <segue destination="kus-64-VBm" kind="presentation" id="Lyu-Cm-by5"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1EY-M7-t6n">
+                                        <rect key="frame" x="8" y="502" width="398" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Button"/>
+                                        <connections>
+                                            <segue destination="Jp0-Rc-8Ts" kind="presentation" id="Wcl-01-gaW"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="1Yp-fM-Caq"/>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Gk8-rd-Hkb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="237.68115942028987" y="340.76086956521743"/>
+        </scene>
         <!--Indianapolis Coffee Guide-->
         <scene sceneID="kp9-U9-VJq">
             <objects>
@@ -524,7 +673,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="155"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Neighborhood" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mjc-lR-nta">
-                                                    <rect key="frame" x="124.66666666666669" y="84" width="164" height="23"/>
+                                                    <rect key="frame" x="125" y="84" width="164" height="23"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="164" id="ftm-vW-MZK"/>
                                                     </constraints>
@@ -533,7 +682,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Shop Name" textAlignment="center" lineBreakMode="clip" baselineAdjustment="alignBaselines" minimumFontSize="9" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3Sq-1C-rVz">
-                                                    <rect key="frame" x="42.666666666666657" y="25" width="325" height="33"/>
+                                                    <rect key="frame" x="43" y="25" width="325" height="33"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="33" id="bfR-kW-9GW"/>
                                                     </constraints>
@@ -543,7 +692,7 @@
                                                     <size key="shadowOffset" width="0.0" height="0.0"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.0 miles" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aA3-fr-1Ez">
-                                                    <rect key="frame" x="-0.33333333333334281" y="108" width="414" height="21"/>
+                                                    <rect key="frame" x="0.0" y="108" width="414" height="21"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="21" id="mD1-en-OuZ"/>
                                                     </constraints>
@@ -612,8 +761,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Indianapolis Coffee Guide" id="T5R-NM-pc0">
-                        <barButtonItem key="leftBarButtonItem" enabled="NO" title="menu" id="cUi-3W-Z2Q">
+                        <barButtonItem key="leftBarButtonItem" image="menu-icon" id="cUi-3W-Z2Q">
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <segue destination="Ivo-2A-8Wf" kind="presentation" modalTransitionStyle="crossDissolve" id="Tpl-N1-jwu"/>
+                            </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="search" id="WrW-1Q-j5f">
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1062,10 +1214,12 @@
         </scene>
     </scenes>
     <resources>
+        <image name="close-icon" width="18" height="19"/>
         <image name="feat-beeroaster" width="533" height="400"/>
         <image name="feat-kaffeine" width="360" height="449"/>
         <image name="feat-opensociety" width="466" height="366"/>
         <image name="feat-quirkyfeather" width="266" height="400"/>
         <image name="ig-icon" width="193" height="193"/>
+        <image name="menu-icon" width="25" height="16"/>
     </resources>
 </document>
