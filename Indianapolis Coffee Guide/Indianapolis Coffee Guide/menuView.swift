@@ -10,9 +10,78 @@ import UIKit
 
 class menuView: UIViewController {
 
-    @IBAction func closeMenu(_ sender: UIButton) {
-        dismiss(animated: true, completion: nil)
-    }
    
-
+    @IBOutlet weak var shopsButton: UIButton!
+    @IBOutlet weak var roastersButton: UIButton!
+    @IBOutlet weak var roasterComingSoon: UIButton!
+    @IBOutlet weak var aboutButton: UIButton!
+    @IBOutlet weak var aboutComingSoon: UIButton!
+    @IBOutlet weak var sponsorButton: UIButton!
+    @IBOutlet weak var contactButton: UIButton!
+    @IBOutlet weak var appsupportButton: UIButton!
+    
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        shopsButton.alpha = 0
+        roastersButton.alpha = 0
+        roasterComingSoon.alpha = 0
+        aboutButton.alpha = 0
+        aboutComingSoon.alpha = 0
+        sponsorButton.alpha = 0
+        contactButton.alpha = 0
+        appsupportButton.alpha = 0
+        
+        self.sponsorButton.layer.borderWidth = 2
+        self.sponsorButton.layer.borderColor = UIColor.white.cgColor
+        
+    }
+    
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        UIView.animate(withDuration: 0.0, animations: {
+            self.shopsButton.alpha = 1
+        }) { (true) in
+            self.showRoasters()
+        }
+    }
+    
+    func showRoasters() {
+        UIView.animate(withDuration: 0.2, animations: {
+            self.roastersButton.alpha = 0.55
+            self.roasterComingSoon.alpha = 0.55
+        }) { (true) in
+            self.showAbout()
+        }
+    }
+    
+    
+    func showAbout() {
+        
+        UIView.animate(withDuration: 0.2, animations: {
+            self.aboutButton.alpha = 0.55
+            self.aboutComingSoon.alpha = 0.55
+        }) { (true) in
+            self.showContact()
+        }
+    }
+    
+    func showContact() {
+        UIView.animate(withDuration: 0.2, animations: {
+            self.contactButton.alpha = 1
+        }) { (true) in
+            self.showFooter()
+        }
+    }
+    
+    func showFooter() {
+        UIView.animate(withDuration: 0.2, animations: {
+            self.sponsorButton.alpha = 1
+            self.appsupportButton.alpha = 0.4
+        })
+    }
+    
 }
