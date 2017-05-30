@@ -42,15 +42,58 @@ class shopNavVC: UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(<#T##animated: Bool##Bool#>)
+        super.viewDidAppear(animated)
         
-        UIView.animate(withDuration: 0.25, animations: {
-            code
-        }) { (true) in
-            
+        
+            UIView.animate(withDuration: 0.25, animations: {
+                self.downtownButton.alpha = 1
+            })
+        
+
+        UIView.animate(withDuration: 0.5, delay: 0.1, animations: {
+                self.fsButton.alpha = 1
+            })
+        
+        
+
+            UIView.animate(withDuration: 0.5, delay: 0.2, animations: {
+                self.irvingtonButton.alpha = 1
+            })
+        
+        
+
+            UIView.animate(withDuration: 0.5, delay: 0.3, animations: {
+                self.brButton.alpha = 1
+            })
+        
+        
+
+            UIView.animate(withDuration: 0.5, delay: 0.4, animations: {
+                self.carmelButton.alpha = 1
+            })
+        
+
+            UIView.animate(withDuration: 0.5, delay: 0.5, animations: {
+                self.fishersButton.alpha = 1
+            })
+        
+        
+ 
+            UIView.animate(withDuration: 0.5, delay: 0.6, animations: {
+                self.eaglecreekButton.alpha = 1
+            })
+    
+        
+   
+            UIView.animate(withDuration: 0.5, delay: 0.7, animations: {
+                self.viewallButton.alpha = 1
+            })
+        
+        
+    
         }
         
-    }
+    
     
     
     
