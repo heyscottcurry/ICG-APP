@@ -16,6 +16,10 @@ class menuView: UIViewController {
     @IBOutlet weak var roasterComingSoon: UIButton!
     @IBOutlet weak var aboutButton: UIButton!
     @IBOutlet weak var aboutComingSoon: UIButton!
+    @IBOutlet weak var eventsButton: UIButton!
+    @IBOutlet weak var eventsComingSoon: UIButton!
+    @IBOutlet weak var blogButton: UIButton!
+    @IBOutlet weak var blogComingSoon: UIButton!
     @IBOutlet weak var sponsorButton: UIButton!
     @IBOutlet weak var contactButton: UIButton!
     @IBOutlet weak var appsupportButton: UIButton!
@@ -29,9 +33,14 @@ class menuView: UIViewController {
         roasterComingSoon.alpha = 0
         aboutButton.alpha = 0
         aboutComingSoon.alpha = 0
+        eventsButton.alpha = 0
+        eventsComingSoon.alpha = 0
+        blogButton.alpha = 0
+        blogComingSoon.alpha = 0
         sponsorButton.alpha = 0
         contactButton.alpha = 0
         appsupportButton.alpha = 0
+        
         
         self.sponsorButton.layer.borderWidth = 2
         self.sponsorButton.layer.borderColor = UIColor.white.cgColor
@@ -58,14 +67,26 @@ class menuView: UIViewController {
             self.aboutButton.alpha = 0.55
             self.aboutComingSoon.alpha = 0.55
         })
-    
-
+        
+        
         UIView.animate(withDuration: 0.5, delay: 0.6, animations: {
+            self.eventsButton.alpha = 0.55
+            self.eventsComingSoon.alpha = 0.55
+        })
+        
+        
+        UIView.animate(withDuration: 0.5, delay: 0.8, animations: {
+            self.blogButton.alpha = 0.55
+            self.blogComingSoon.alpha = 0.55
+        })
+        
+
+        UIView.animate(withDuration: 0.5, delay: 1.0, animations: {
             self.contactButton.alpha = 1
         })
     
 
-        UIView.animate(withDuration: 0.5, delay: 0.8, animations: {
+        UIView.animate(withDuration: 0.5, delay: 1.2, animations: {
             self.sponsorButton.alpha = 1
             self.appsupportButton.alpha = 0.4
         })

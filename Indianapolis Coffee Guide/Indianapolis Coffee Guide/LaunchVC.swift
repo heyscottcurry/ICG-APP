@@ -32,9 +32,10 @@ class LaunchVC: UIViewController {
             })
             
             DispatchQueue.main.asyncAfter(deadline: .now() + 2.0, execute: {
-                let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-                let newViewController = storyBoard.instantiateViewController(withIdentifier: "mainNavVCViewController") as! mainNavVCViewController
-                self.present(newViewController, animated: true, completion: nil)
+                /* let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+               let newViewController = storyBoard.instantiateViewController(withIdentifier: "mainNavVCViewController") as! mainNavVCViewController */
+               // self.present(newViewController, animated: true, completion: nil)
+                self.performSegue(withIdentifier: "showNotify", sender: self)
             })
             
             

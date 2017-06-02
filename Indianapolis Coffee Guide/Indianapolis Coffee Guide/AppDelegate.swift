@@ -20,13 +20,20 @@ import Firebase
         // Override point for customization after application launch.
        FIRApp.configure()
         
+        self.window = UIWindow(frame: UIScreen.main.bounds)
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        var vc: UIViewController
         
-        let pageController = UIPageControl.appearance()
-        pageController.pageIndicatorTintColor = UIColor.lightGray
-        pageController.currentPageIndicatorTintColor = UIColor.blue
-        pageController.backgroundColor = UIColor.white
+        if (UserDefaults.standard.value(forKey: "email") as? String) == nil {
+            // show the onboarding screem
+            vc = storyboard.instantiateViewController(withIdentifier: "welcomeScreen")
+        } else {
+            //show the main screen
+            vc = storyboard.instantiateInitialViewController()!
+        }
         
-        
+        self.window?.rootViewController = vc
+        self.window?.makeKeyAndVisible()
 
         return true
     }
