@@ -12,20 +12,26 @@ class testVC: UIViewController, BWWalkthroughViewControllerDelegate  {
 
     @IBOutlet weak var titleImage: UIImageView!
     @IBOutlet weak var getstartedBtn: BorderButton!
+    @IBOutlet weak var sloganView: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         titleImage.center = self.view.center
         getstartedBtn.alpha = 0
+        sloganView.alpha = 0
     }
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        UIView.animate(withDuration: 2.0, delay: 2.0, animations: {
+        
+        UIView.animate(withDuration: 2.0, delay: 1.0, animations: {
             self.titleImage.frame.origin.y = self.view.frame.minY
         }) { (true) in
-            UIView.animate(withDuration: 2.0, animations: { 
+            UIView.animate(withDuration: 2.0, animations: {
+                self.sloganView.alpha = 1
+            })
+            UIView.animate(withDuration: 2.0, delay: 2.0, animations: {
             self.getstartedBtn.alpha = 1
             })
         }

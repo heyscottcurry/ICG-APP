@@ -26,28 +26,30 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="title" translatesAutoresizingMaskIntoConstraints="NO" id="mk2-9S-Kag">
+                                <rect key="frame" x="16" y="28" width="343" height="128"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lDy-jH-xBh" customClass="BorderButton" customModule="Indianapolis_Coffee_Guide" customModuleProvider="target">
-                                <rect key="frame" x="16" y="562" width="343" height="63"/>
+                                <rect key="frame" x="0.0" y="579" width="375" height="88"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                                <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="17"/>
+                                <color key="backgroundColor" red="0.85098039219999999" green="0.32549019610000002" blue="0.30980392159999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="24"/>
                                 <state key="normal" title="Get Started">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                        <real key="value" value="2"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                        <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <real key="value" value="0.0"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="startBtn" destination="ezB-WZ-wUa" eventType="touchUpInside" id="si9-GQ-zSG"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="title" translatesAutoresizingMaskIntoConstraints="NO" id="mk2-9S-Kag">
-                                <rect key="frame" x="16" y="28" width="343" height="128"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="slogan-white" translatesAutoresizingMaskIntoConstraints="NO" id="QWI-6v-kaQ">
+                                <rect key="frame" x="23" y="224" width="329" height="133"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
@@ -56,6 +58,7 @@
                     <size key="freeformSize" width="375" height="667"/>
                     <connections>
                         <outlet property="getstartedBtn" destination="lDy-jH-xBh" id="a9X-aO-FRZ"/>
+                        <outlet property="sloganView" destination="QWI-6v-kaQ" id="nI2-ZV-n3d"/>
                         <outlet property="titleImage" destination="mk2-9S-Kag" id="u04-ay-tuL"/>
                     </connections>
                 </viewController>
@@ -80,7 +83,7 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vag-84-T9P">
-                                        <rect key="frame" x="20" y="24" width="372" height="40"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="88"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMinY="YES"/>
                                         <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="24"/>
                                         <state key="normal" title="Explore the Guide">
@@ -124,35 +127,45 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="feat-opensociety" translatesAutoresizingMaskIntoConstraints="NO" id="sjS-6h-i1u">
+                            <imageView userInteractionEnabled="NO" alpha="0.20000000000000001" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="feat-opensociety" translatesAutoresizingMaskIntoConstraints="NO" id="sjS-6h-i1u">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
-                            <view alpha="0.75" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QUT-rz-wOh">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UBw-Ez-olN">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pourovers" translatesAutoresizingMaskIntoConstraints="NO" id="UBw-Ez-olN">
                                 <rect key="frame" x="20" y="50" width="374" height="339"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Explore" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eX9-H5-Pej">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Explore" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eX9-H5-Pej">
                                 <rect key="frame" x="20" y="430" width="374" height="43"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="43" id="eHb-VU-zh0"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="Georgia-Bold" family="Georgia" pointSize="19"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" delaysContentTouches="NO" canCancelContentTouches="NO" bouncesZoom="NO" editable="NO" text="Explore Indy's local coffee scene" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MyD-22-Imb">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" delaysContentTouches="NO" canCancelContentTouches="NO" bouncesZoom="NO" editable="NO" text="Experience the local coffee scene and the amazing people who run it. " textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MyD-22-Imb">
                                 <rect key="frame" x="54" y="481" width="307" height="110"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="110" id="gmT-QE-BNj"/>
+                                </constraints>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="8JS-Uw-1SR" firstAttribute="top" secondItem="MyD-22-Imb" secondAttribute="bottom" constant="145" id="4DU-YR-QeK"/>
+                            <constraint firstItem="UBw-Ez-olN" firstAttribute="leading" secondItem="2Ur-jy-gr2" secondAttribute="leadingMargin" id="7Id-nx-H1d"/>
+                            <constraint firstItem="MyD-22-Imb" firstAttribute="leading" secondItem="2Ur-jy-gr2" secondAttribute="leadingMargin" constant="34" id="Bg7-es-9jV"/>
+                            <constraint firstItem="eX9-H5-Pej" firstAttribute="centerX" secondItem="MyD-22-Imb" secondAttribute="centerX" id="KNG-Ok-vIN"/>
+                            <constraint firstItem="MyD-22-Imb" firstAttribute="top" secondItem="eX9-H5-Pej" secondAttribute="bottom" constant="8" symbolic="YES" id="SWg-tG-PcQ"/>
+                            <constraint firstItem="UBw-Ez-olN" firstAttribute="leading" secondItem="eX9-H5-Pej" secondAttribute="leading" id="e7Q-u2-Rtv"/>
+                            <constraint firstItem="UBw-Ez-olN" firstAttribute="trailing" secondItem="2Ur-jy-gr2" secondAttribute="trailingMargin" id="g3U-WY-4hj"/>
+                            <constraint firstItem="eX9-H5-Pej" firstAttribute="top" secondItem="UBw-Ez-olN" secondAttribute="bottom" constant="41" id="jhC-rI-0gQ"/>
+                            <constraint firstItem="UBw-Ez-olN" firstAttribute="trailing" secondItem="eX9-H5-Pej" secondAttribute="trailing" id="wgH-ww-pTN"/>
+                            <constraint firstItem="UBw-Ez-olN" firstAttribute="top" secondItem="IYx-nL-SDM" secondAttribute="bottom" constant="30" id="zZ4-Ag-aVd"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Y6a-2F-jXa" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -171,36 +184,46 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="feat-kaffeine" translatesAutoresizingMaskIntoConstraints="NO" id="nMq-Xe-oZL">
+                            <imageView userInteractionEnabled="NO" alpha="0.25" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="feat-kaffeine" translatesAutoresizingMaskIntoConstraints="NO" id="nMq-Xe-oZL">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
-                            <view alpha="0.75" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gc7-9y-6Ew">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5dw-nW-8Mn">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="aeropress-tyler" translatesAutoresizingMaskIntoConstraints="NO" id="5dw-nW-8Mn">
                                 <rect key="frame" x="20" y="50" width="374" height="339"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Discover" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zta-zb-l9M">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Discover" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zta-zb-l9M">
                                 <rect key="frame" x="20" y="430" width="374" height="43"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="43" id="VSQ-Xj-CIl"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="Georgia-Bold" family="Georgia" pointSize="19"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" delaysContentTouches="NO" canCancelContentTouches="NO" bouncesZoom="NO" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BA7-ON-VaD">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" delaysContentTouches="NO" canCancelContentTouches="NO" bouncesZoom="NO" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BA7-ON-VaD">
                                 <rect key="frame" x="54" y="481" width="307" height="110"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="110" id="0Hf-XE-eW8"/>
+                                </constraints>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </string>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="5dw-nW-8Mn" firstAttribute="trailing" secondItem="fzJ-ST-ghl" secondAttribute="trailingMargin" id="1lR-zK-c4M"/>
+                            <constraint firstItem="5dw-nW-8Mn" firstAttribute="leading" secondItem="zta-zb-l9M" secondAttribute="leading" id="1tp-ff-3r7"/>
+                            <constraint firstItem="BA7-ON-VaD" firstAttribute="top" secondItem="zta-zb-l9M" secondAttribute="bottom" constant="8" symbolic="YES" id="8p0-6J-5Oy"/>
+                            <constraint firstItem="5dw-nW-8Mn" firstAttribute="top" secondItem="svA-vN-XYX" secondAttribute="bottom" constant="30" id="IBt-S2-uZ5"/>
+                            <constraint firstItem="zta-zb-l9M" firstAttribute="centerX" secondItem="BA7-ON-VaD" secondAttribute="centerX" id="NOi-1L-4Hz"/>
+                            <constraint firstItem="5dw-nW-8Mn" firstAttribute="leading" secondItem="fzJ-ST-ghl" secondAttribute="leadingMargin" id="NZr-dF-oYE"/>
+                            <constraint firstItem="5dw-nW-8Mn" firstAttribute="trailing" secondItem="zta-zb-l9M" secondAttribute="trailing" id="Q4s-S7-wPY"/>
+                            <constraint firstItem="h1M-WT-zpB" firstAttribute="top" secondItem="BA7-ON-VaD" secondAttribute="bottom" constant="145" id="STT-gc-Oeu"/>
+                            <constraint firstItem="zta-zb-l9M" firstAttribute="top" secondItem="5dw-nW-8Mn" secondAttribute="bottom" constant="41" id="d9R-s2-za4"/>
+                            <constraint firstItem="BA7-ON-VaD" firstAttribute="leading" secondItem="fzJ-ST-ghl" secondAttribute="leadingMargin" constant="34" id="qaV-cF-xYr"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jAe-jc-iYf" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -219,47 +242,50 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="feat-quirkyfeather" translatesAutoresizingMaskIntoConstraints="NO" id="zqj-vL-G02">
+                            <imageView userInteractionEnabled="NO" alpha="0.25" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="feat-quirkyfeather" translatesAutoresizingMaskIntoConstraints="NO" id="zqj-vL-G02">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <view opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WYy-WJ-u6O">
-                                <rect key="frame" x="-1" y="0.0" width="415" height="736"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                            </view>
-                            <view alpha="0.75" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ca5-TU-6j3">
-                                <rect key="frame" x="-1" y="0.0" width="415" height="736"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="He1-li-mTy">
-                                        <rect key="frame" x="20" y="46" width="374" height="339"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Share" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HlC-wU-oDe">
-                                        <rect key="frame" x="20" y="433" width="374" height="43"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="Georgia-Bold" family="Georgia" pointSize="19"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" delaysContentTouches="NO" canCancelContentTouches="NO" bouncesZoom="NO" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9uJ-UA-z9H">
-                                        <rect key="frame" x="54" y="484" width="307" height="110"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </string>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                    </textView>
-                                </subviews>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ross-pouring" translatesAutoresizingMaskIntoConstraints="NO" id="KEn-o8-HA5">
+                                <rect key="frame" x="20" y="53" width="374" height="339"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Come Along" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jKv-bx-eD4">
+                                <rect key="frame" x="20" y="433" width="374" height="43"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="43" id="fYn-8U-6vC"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Georgia-Bold" family="Georgia" pointSize="19"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" delaysContentTouches="NO" canCancelContentTouches="NO" bouncesZoom="NO" editable="NO" text="Fall in love with the coffee, the community, and the conversations. It’s all waiting to be discovered, right inside this app." textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vhv-CW-fId">
+                                <rect key="frame" x="54" y="484" width="307" height="110"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="110" id="CCb-JJ-k0O"/>
+                                </constraints>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="jKv-bx-eD4" firstAttribute="top" secondItem="KEn-o8-HA5" secondAttribute="bottom" constant="41" id="4NC-5f-Deh"/>
+                            <constraint firstItem="jKv-bx-eD4" firstAttribute="centerX" secondItem="vhv-CW-fId" secondAttribute="centerX" id="9QL-cu-KRD"/>
+                            <constraint firstItem="KEn-o8-HA5" firstAttribute="leading" secondItem="Xpr-xL-MHb" secondAttribute="leadingMargin" id="LdN-Dh-S52"/>
+                            <constraint firstItem="KEn-o8-HA5" firstAttribute="leading" secondItem="jKv-bx-eD4" secondAttribute="leading" id="Ldv-Lh-4Gy"/>
+                            <constraint firstItem="LxW-7u-zGV" firstAttribute="top" secondItem="vhv-CW-fId" secondAttribute="bottom" constant="142" id="Saz-e3-d6c"/>
+                            <constraint firstItem="vhv-CW-fId" firstAttribute="leading" secondItem="Xpr-xL-MHb" secondAttribute="leadingMargin" constant="34" id="Tps-6n-XtQ"/>
+                            <constraint firstItem="KEn-o8-HA5" firstAttribute="trailing" secondItem="jKv-bx-eD4" secondAttribute="trailing" id="ZdV-ef-6JF"/>
+                            <constraint firstItem="vhv-CW-fId" firstAttribute="top" secondItem="jKv-bx-eD4" secondAttribute="bottom" constant="8" symbolic="YES" id="d24-5A-aHM"/>
+                            <constraint firstItem="KEn-o8-HA5" firstAttribute="trailing" secondItem="Xpr-xL-MHb" secondAttribute="trailingMargin" id="dPl-ez-Lku"/>
+                            <constraint firstItem="KEn-o8-HA5" firstAttribute="top" secondItem="4YP-d6-rIl" secondAttribute="bottom" constant="33" id="e4a-Rt-eND"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qsq-xu-KJf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1848" y="-1842"/>
+            <point key="canvasLocation" x="1847.826086956522" y="-1842.3913043478262"/>
         </scene>
         <!--LaunchVC-->
         <scene sceneID="12I-oa-O9Q">
@@ -362,23 +388,27 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" alpha="0.25" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="feat-opensociety" translatesAutoresizingMaskIntoConstraints="NO" id="cqM-Uk-xcW">
+                                <rect key="frame" x="0.0" y="44" width="414" height="692"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Y8O-5e-KTd">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                <rect key="frame" x="0.0" y="167" width="414" height="427"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="TopLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="One last thing: let us know where in the world you are so we can show you to the nearest (and best) local coffee shops." lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="906" translatesAutoresizingMaskIntoConstraints="NO" id="baP-SL-I57">
-                                        <rect key="frame" x="26" y="348" width="362" height="118"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="TopLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="One last thing: let us know where in the world you are so we can show you to the nearest (and best) local coffee." lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="16" adjustsLetterSpacingToFitWidth="YES" adjustsFontForContentSizeCategory="YES" preferredMaxLayoutWidth="906" translatesAutoresizingMaskIntoConstraints="NO" id="baP-SL-I57">
+                                        <rect key="frame" x="26" y="160" width="362" height="105"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="22"/>
+                                        <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="19"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="r1U-eh-OUw">
-                                        <rect key="frame" x="0.0" y="648" width="414" height="88"/>
+                                        <rect key="frame" x="0.0" y="339" width="414" height="88"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gTs-ah-G04">
-                                                <rect key="frame" x="20" y="0.0" width="372" height="88"/>
+                                                <rect key="frame" x="0.0" y="-1" width="414" height="89"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMinY="YES"/>
                                                 <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="24"/>
                                                 <state key="normal" title="Allow">
@@ -391,14 +421,10 @@
                                         </subviews>
                                         <color key="backgroundColor" red="0.85098039219999999" green="0.32549019610000002" blue="0.30980392159999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </view>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icon-shop" translatesAutoresizingMaskIntoConstraints="NO" id="lqf-ou-yKQ">
-                                        <rect key="frame" x="130" y="95" width="155" height="142"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                                    </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Location" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="11" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OEd-Hd-8Qm">
-                                        <rect key="frame" x="22" y="278" width="371" height="49"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Location" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OEd-Hd-8Qm">
+                                        <rect key="frame" x="99" y="59" width="217" height="69"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="32"/>
+                                        <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="30"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -416,6 +442,10 @@
                                     <navigationItem title="Indianapolis Coffee Guide" id="Cqj-Ea-Rdg"/>
                                 </items>
                             </navigationBar>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icon-shop" translatesAutoresizingMaskIntoConstraints="NO" id="lqf-ou-yKQ">
+                                <rect key="frame" x="137" y="77" width="141" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -797,6 +827,7 @@
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eCz-zj-5zJ">
                                                 <rect key="frame" x="36" y="623" width="342" height="60"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                                <color key="backgroundColor" red="0.85098039219999999" green="0.32549019610000002" blue="0.30980392159999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="24"/>
                                                 <state key="normal" title="Support the Guide">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1448,6 +1479,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="aeropress-tyler" width="360" height="252"/>
         <image name="close-icon" width="18" height="19"/>
         <image name="feat-beeroaster" width="533" height="400"/>
         <image name="feat-kaffeine" width="360" height="449"/>
@@ -1456,13 +1488,16 @@
         <image name="icon-shop" width="78" height="80"/>
         <image name="ig-icon" width="193" height="193"/>
         <image name="menu-icon" width="25" height="16"/>
+        <image name="pourovers" width="360" height="449"/>
+        <image name="ross-pouring" width="360" height="450"/>
+        <image name="slogan-white" width="692" height="312"/>
         <image name="title" width="370" height="47"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="bBq-ZO-vK7"/>
-        <segue reference="yDw-WZ-P6P"/>
+        <segue reference="dqa-5O-oXb"/>
         <segue reference="iHd-2L-sPs"/>
         <segue reference="b8H-pT-ZYu"/>
         <segue reference="bhh-IA-c3n"/>
+        <segue reference="yDw-WZ-P6P"/>
     </inferredMetricsTieBreakers>
 </document>

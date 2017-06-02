@@ -40,11 +40,6 @@ class menuView: UIViewController {
         sponsorButton.alpha = 0
         contactButton.alpha = 0
         appsupportButton.alpha = 0
-        
-        
-        self.sponsorButton.layer.borderWidth = 2
-        self.sponsorButton.layer.borderColor = UIColor.white.cgColor
-        
     }
     
     
