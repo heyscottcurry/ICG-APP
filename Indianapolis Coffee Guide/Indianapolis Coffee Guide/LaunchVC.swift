@@ -22,14 +22,17 @@ class LaunchVC: UIViewController {
         
         let providedEmailAddress = emailTextField.text
         let isEmailAddressValid = isValidEmailAddress(emailAddressString: providedEmailAddress!)
-        
+
         
         if isEmailAddressValid
         {
             handleRegister()
             UIView.animate(withDuration: 0.3, animations: {
                 self.underLine.backgroundColor = UIColor.green
+                
             })
+            self.emailLabel.text = "Sweet! You're in!"
+            self.emailLabel.textColor = UIColor.green
             
             DispatchQueue.main.asyncAfter(deadline: .now() + 2.0, execute: {
                 /* let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
@@ -37,18 +40,11 @@ class LaunchVC: UIViewController {
                // self.present(newViewController, animated: true, completion: nil)
                 self.performSegue(withIdentifier: "showNotify", sender: self)
             })
-            
-            
-            
-            
-            
         } else {
+                  self.emailLabel.text = "Whoops! Invalid email!"
+                self.emailLabel.textColor = UIColor.yellow
             print("Email address is not valid")
         }
-        
-       
-        
-        
     }
 
     @IBOutlet weak var emailTextField: UITextField!
@@ -57,25 +53,23 @@ class LaunchVC: UIViewController {
     @IBOutlet weak var underLine: UIView!
     @IBOutlet weak var emailLabel: UILabel!
     
+
+
    
     @IBAction func fieldEdit(_ sender: UITextField) {
-        
-        
-        
-        
+        let labelOrigin = self.emailLabel.frame.origin.y
         UIView.animate(withDuration: 0.3, animations: {
-            self.emailLabel.frame.origin.y = 266
+            self.emailLabel.frame.origin.y = labelOrigin - 30
             self.underLine.backgroundColor = UIColor(displayP3Red: 217/255, green: 83/255, blue: 79/255, alpha: 1)
             self.getStartedBtn.layer.backgroundColor = UIColor(displayP3Red: 217/255, green: 83/255, blue: 79/255, alpha: 1).cgColor
             self.getStartedBtn.setTitleColor(UIColor.white, for: UIControlState.normal)
             self.getStartedBtn.layer.borderColor = UIColor(displayP3Red: 217/255, green: 83/255, blue: 79/255, alpha: 1).cgColor
+            // self.view.frame.origin.y -= self.view.frame.origin.y + 100
         })
-        
-        
-       
     }
     
     
+
     
     
     func isValidEmailAddress(emailAddressString: String) -> Bool {
@@ -110,8 +104,6 @@ class LaunchVC: UIViewController {
         
         
         
-        
-        
         self.getStartedBtn.layer.borderWidth = 2
         self.getStartedBtn.layer.borderColor = UIColor.white.cgColor
         
@@ -120,6 +112,14 @@ class LaunchVC: UIViewController {
         tap.cancelsTouchesInView = false
         self.view.addGestureRecognizer(tap)
     
+        if self.view.endEditing(true) {
+            UIView.animate(withDuration: 0.3, animations: {
+                self.view.frame.origin.y = self.view.frame.origin.y - 100
+            })
+            
+        }
+        
+        
     }
     
     
@@ -143,7 +143,7 @@ class LaunchVC: UIViewController {
             let ref = FIRDatabase.database().reference(fromURL: "https://icg-app.firebaseio.com/")
             let usersReference = ref.child("emails").child((user?.uid)!)
             let values = ["email": self.emailTextField.text]
-            usersReference.updateChildValues(values, withCompletionBlock: { (err, ref) in
+            usersReference.updateChildValues(values as Any as! [AnyHashable : Any], withCompletionBlock: { (err, ref) in
                 if err != nil {
                     print("Something went wrong with updated the variables")
                     return
