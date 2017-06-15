@@ -13,6 +13,7 @@ class testVC: UIViewController, BWWalkthroughViewControllerDelegate  {
     @IBOutlet weak var titleImage: UIImageView!
     @IBOutlet weak var getstartedBtn: BorderButton!
     @IBOutlet weak var sloganView: UIImageView!
+    @IBOutlet weak var growBar: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,6 +21,8 @@ class testVC: UIViewController, BWWalkthroughViewControllerDelegate  {
         titleImage.center = self.view.center
         getstartedBtn.alpha = 0
         sloganView.alpha = 0
+        growBar.alpha = 0
+        
     }
 
     override func viewDidAppear(_ animated: Bool) {
@@ -39,19 +42,32 @@ class testVC: UIViewController, BWWalkthroughViewControllerDelegate  {
 
     @IBAction func startBtn() {
         
-        
-        let stb = UIStoryboard(name: "Main", bundle: nil)
-        let walkthrough = stb.instantiateViewController(withIdentifier: "walk0") as! BWWalkthroughViewController
-        let page_one = stb.instantiateViewController(withIdentifier: "walk1") as UIViewController
-        let page_two = stb.instantiateViewController(withIdentifier: "walk2") as UIViewController
-        let page_three = stb.instantiateViewController(withIdentifier: "walk3") as UIViewController
-        
-        walkthrough.delegate = self
-        walkthrough.add(viewController: page_one)
-        walkthrough.add(viewController: page_two)
-        walkthrough.add(viewController: page_three)
-        
-        present(walkthrough, animated: true, completion: nil)
+        self.growBar.alpha = 1
+        UIView.animate(withDuration: 1.25, animations: {
+            self.titleImage.alpha = 0
+            self.sloganView.alpha = 0
+            self.getstartedBtn.alpha = 0
+            self.getstartedBtn.frame.origin.y = self.getstartedBtn.frame.origin.y + 100
+            self.growBar.frame.size.height  = self.view.frame.size.height
+            self.growBar.frame.origin.y = 0
+            
+            
+        }) { (true) in
+            
+            let stb = UIStoryboard(name: "Main", bundle: nil)
+            let walkthrough = stb.instantiateViewController(withIdentifier: "walk0") as! BWWalkthroughViewController
+            let page_one = stb.instantiateViewController(withIdentifier: "walk1") as UIViewController
+            let page_two = stb.instantiateViewController(withIdentifier: "walk2") as UIViewController
+            let page_three = stb.instantiateViewController(withIdentifier: "walk3") as UIViewController
+            
+            walkthrough.delegate = self
+            walkthrough.add(viewController: page_one)
+            walkthrough.add(viewController: page_two)
+            walkthrough.add(viewController: page_three)
+            
+            self.present(walkthrough, animated: true, completion: nil)
+        }
+
         
         
         

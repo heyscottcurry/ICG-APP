@@ -56,6 +56,7 @@ import UIKit
     // If you need a page control, next or prev buttons, add them via IB and connect with these Outlets
     @IBOutlet open var pageControl:UIPageControl?
 
+    @IBOutlet weak var redLoader: UIView!
     
     open var currentPage: Int {    // The index of the current page (readonly)
         get{
@@ -126,6 +127,19 @@ import UIKit
         
         
     }
+    
+    
+    override open func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        
+        UIView.animate(withDuration: 1.25, delay: 1.0, animations: {
+            self.redLoader.frame.origin.y = self.view.frame.origin.y + self.view.frame.size.height
+        })
+        
+    
+    }
+    
     
     override open func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated);
