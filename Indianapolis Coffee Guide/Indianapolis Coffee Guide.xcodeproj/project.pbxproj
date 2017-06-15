@@ -180,7 +180,6 @@
 				AB07EE2A1E6BA9E0009A9948 /* AppDelegate.swift */,
 				AB07EE2C1E6BA9E0009A9948 /* ViewController.swift */,
 				AB07EE2E1E6BA9E0009A9948 /* Main.storyboard */,
-				AB7B4E631E7F16A50011C128 /* BounceButton.swift */,
 				AB1D0A061EDDDF1800130D1D /* testVC.swift */,
 				AB9F2A081E79B53E00C09929 /* mainNavVCViewController.swift */,
 				AB01AE5A1E75D1B40055ABF2 /* LaunchVC.swift */,
@@ -237,6 +236,7 @@
 		AB7B4E671E7F2D7A0011C128 /* IBDesignables */ = {
 			isa = PBXGroup;
 			children = (
+				AB7B4E631E7F16A50011C128 /* BounceButton.swift */,
 				AB7B4E651E7F25B30011C128 /* BorderButton.swift */,
 			);
 			name = IBDesignables;
