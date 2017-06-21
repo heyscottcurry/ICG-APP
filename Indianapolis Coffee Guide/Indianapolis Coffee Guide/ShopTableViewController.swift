@@ -205,16 +205,16 @@ class ShopTableViewController: UITableViewController, CLLocationManagerDelegate 
     }
     
     
-   
-        
+    
+    
     let day = NSDateComponents().day
     let time = Double(Calendar.current.component(.hour, from: Date()) * 100 + Calendar.current.component(.minute, from: Date()))
     
-        
-
     
     
-  
+    
+    
+    
     
     
     
@@ -242,7 +242,7 @@ class ShopTableViewController: UITableViewController, CLLocationManagerDelegate 
         print("\(locValue?.latitude), \(locValue?.longitude)")
     }
     
-  
+    
     
     
     override func didReceiveMemoryWarning() {
@@ -431,19 +431,19 @@ class ShopTableViewController: UITableViewController, CLLocationManagerDelegate 
             googleMap: "www.google.com/maps/place/Coat+Check+Coffee/@39.7737512,-86.1524706,17z/data=!3m1!4b1!4m5!3m4!1s0x886b50eb52c11055:0x23e6a534e092ec1f!8m2!3d39.7737471!4d-86.1502819",
             appleMap: "http://maps.apple.com/?daddr=407+E+Michigan+St,Indianapolis,IN,46204&dirflg=d&t=h",
             mondayOpen: 0700,
-            mondayClose: 0700,
+            mondayClose: 1600,
             tuesdayOpen: 0700,
-            tuesdayClose: 0700,
+            tuesdayClose: 1600,
             wednesdayOpen: 0700,
-            wednesdayClose: 0700,
+            wednesdayClose: 1600,
             thursdayOpen: 0700,
-            thursdayClose: 0700,
+            thursdayClose: 1600,
             fridayOpen: 0700,
-            fridayClose: 0700,
-            saturdayOpen: 0700,
-            saturdayClose: 0700,
+            fridayClose: 1600,
+            saturdayOpen: 0800,
+            saturdayClose: 1500,
             sundayOpen: 0700,
-            sundayClose: 0700
+            sundayClose: 1500
         )
         
         let shop2 = CoffeeShop(
@@ -459,20 +459,20 @@ class ShopTableViewController: UITableViewController, CLLocationManagerDelegate 
             distance:  (userLocale.distance(from: CLLocation(latitude: 39.764130, longitude: -86.159038)))*0.000621371,
             googleMap: "www.google.com/maps/place/Georgia+Street+Grind/@39.7640001,-86.1611735,17z/data=!3m1!4b1!4m5!3m4!1s0x886b50bcb3fdc199:0xa114759614410341!8m2!3d39.763996!4d-86.1589848",
             appleMap: "http://maps.apple.com/?daddr=25+W+Georgia+St,Indianapolis,IN,46225&dirflg=d&t=h",
-            mondayOpen: 0700,
-            mondayClose: 0700,
-            tuesdayOpen: 0700,
-            tuesdayClose: 0700,
-            wednesdayOpen: 0700,
-            wednesdayClose: 0700,
-            thursdayOpen: 0700,
-            thursdayClose: 0700,
-            fridayOpen: 0700,
-            fridayClose: 0700,
-            saturdayOpen: 0700,
-            saturdayClose: 0700,
-            sundayOpen: 0700,
-            sundayClose: 0700
+            mondayOpen: 0730,
+            mondayClose: 1730,
+            tuesdayOpen: 0730,
+            tuesdayClose: 1730,
+            wednesdayOpen: 0730,
+            wednesdayClose: 1730,
+            thursdayOpen: 0730,
+            thursdayClose: 1730,
+            fridayOpen: 0730,
+            fridayClose: 1730,
+            saturdayOpen: 000,
+            saturdayClose: 000,
+            sundayOpen: 000,
+            sundayClose: 000
         )
         
         let shop3 = CoffeeShop(
@@ -488,20 +488,20 @@ class ShopTableViewController: UITableViewController, CLLocationManagerDelegate 
             distance:  (userLocale.distance(from: CLLocation(latitude: 39.779333, longitude: -86.163894)))*0.000621371,
             googleMap: "www.google.com/maps/place/Quills+Coffee/@39.7791461,-86.1665537,17z/data=!3m1!4b1!4m5!3m4!1s0x886b50c6067115d9:0x70e71dcb0856775!8m2!3d39.779142!4d-86.164365",
             appleMap: "http://maps.apple.com/?daddr=335+W+9th+St,Indianapolis,IN,46202&dirflg=d&t=h",
-            mondayOpen: 0700,
-            mondayClose: 0700,
-            tuesdayOpen: 0700,
-            tuesdayClose: 0700,
-            wednesdayOpen: 0700,
-            wednesdayClose: 0700,
-            thursdayOpen: 0700,
-            thursdayClose: 0700,
-            fridayOpen: 0700,
-            fridayClose: 0700,
-            saturdayOpen: 0700,
-            saturdayClose: 0700,
-            sundayOpen: 0700,
-            sundayClose: 0700
+            mondayOpen: 0630,
+            mondayClose: 1800,
+            tuesdayOpen: 0630,
+            tuesdayClose: 1800,
+            wednesdayOpen: 0630,
+            wednesdayClose: 1800,
+            thursdayOpen: 0630,
+            thursdayClose: 1800,
+            fridayOpen: 0630,
+            fridayClose: 1900,
+            saturdayOpen: 0800,
+            saturdayClose: 1900,
+            sundayOpen: 0800,
+            sundayClose: 900
         )
         
         let shop4 = CoffeeShop(
@@ -518,19 +518,19 @@ class ShopTableViewController: UITableViewController, CLLocationManagerDelegate 
             googleMap: "www.google.com/maps/place/Open+Society/@39.8427236,-86.1480762,17z/data=!3m1!4b1!4m5!3m4!1s0x886b53da608f8529:0x3adc303cfa1dbd02!8m2!3d39.8427195!4d-86.1458875",
             appleMap: "http://maps.apple.com/?daddr=4850+N+College+Ave,Indianapolis,IN,46205&dirflg=d&t=h",
             mondayOpen: 0700,
-            mondayClose: 0700,
+            mondayClose: 1900,
             tuesdayOpen: 0700,
-            tuesdayClose: 0700,
+            tuesdayClose: 2200,
             wednesdayOpen: 0700,
-            wednesdayClose: 0700,
+            wednesdayClose: 2200,
             thursdayOpen: 0700,
-            thursdayClose: 0700,
+            thursdayClose: 2200,
             fridayOpen: 0700,
-            fridayClose: 0700,
+            fridayClose: 2300,
             saturdayOpen: 0700,
-            saturdayClose: 0700,
+            saturdayClose: 2300,
             sundayOpen: 0700,
-            sundayClose: 0700
+            sundayClose: 1700
         )
         
         let shop5 = CoffeeShop(
@@ -546,20 +546,20 @@ class ShopTableViewController: UITableViewController, CLLocationManagerDelegate 
             distance: (userLocale.distance(from: CLLocation(latitude: 39.776130, longitude: -86.143894)))*0.000621371,
             googleMap: "www.google.com/maps/place/Kaffeine+Coffee/@39.7761737,-86.1458907,17z/data=!3m1!4b1!4m5!3m4!1s0x886b572f6159e05d:0xd50f5e67c0ae3ce2!8m2!3d39.7761696!4d-86.143702",
             appleMap: "http://maps.apple.com/?daddr=707+Fulton+St+B,Indianapolis,IN,46202&dirflg=d&t=h",
-            mondayOpen: 0700,
-            mondayClose: 0700,
-            tuesdayOpen: 0700,
-            tuesdayClose: 0700,
-            wednesdayOpen: 0700,
-            wednesdayClose: 0700,
-            thursdayOpen: 0700,
-            thursdayClose: 0700,
-            fridayOpen: 0700,
-            fridayClose: 0700,
-            saturdayOpen: 0700,
-            saturdayClose: 0700,
-            sundayOpen: 0700,
-            sundayClose: 0700
+            mondayOpen: 0600,
+            mondayClose: 1800,
+            tuesdayOpen: 0600,
+            tuesdayClose: 1800,
+            wednesdayOpen: 0600,
+            wednesdayClose: 1800,
+            thursdayOpen: 0600,
+            thursdayClose: 1800,
+            fridayOpen: 0600,
+            fridayClose: 1800,
+            saturdayOpen: 0600,
+            saturdayClose: 1800,
+            sundayOpen: 000,
+            sundayClose: 000
         )
         
         let shop6 = CoffeeShop(
@@ -575,20 +575,20 @@ class ShopTableViewController: UITableViewController, CLLocationManagerDelegate 
             distance:  (userLocale.distance(from: CLLocation(latitude: 39.755642, longitude: -86.149328)))*0.000621371,
             googleMap: "www.google.com/maps/place/Sure+Shot+Coffee/@39.9569398,-86.0179095,17z/data=!3m1!4b1!4m5!3m4!1s0x8814b3810c0e6621:0xb3ef597594be86fb!8m2!3d39.9569398!4d-86.0157208",
             appleMap: "http://maps.apple.com/?daddr=827+S+East+St,Indianapolis,IN,46225&dirflg=d&t=h",
-            mondayOpen: 0700,
-            mondayClose: 0700,
-            tuesdayOpen: 0700,
-            tuesdayClose: 0700,
-            wednesdayOpen: 0700,
-            wednesdayClose: 0700,
-            thursdayOpen: 0700,
-            thursdayClose: 0700,
-            fridayOpen: 0700,
-            fridayClose: 0700,
-            saturdayOpen: 0700,
-            saturdayClose: 0700,
-            sundayOpen: 0700,
-            sundayClose: 0700
+            mondayOpen: 000,
+            mondayClose: 000,
+            tuesdayOpen: 0630,
+            tuesdayClose: 1400,
+            wednesdayOpen: 0630,
+            wednesdayClose: 1400,
+            thursdayOpen: 0630,
+            thursdayClose: 1400,
+            fridayOpen: 0630,
+            fridayClose: 1400,
+            saturdayOpen: 0730,
+            saturdayClose: 1400,
+            sundayOpen: 0730,
+            sundayClose: 1400
         )
         
         let shop7 = CoffeeShop(
@@ -604,20 +604,20 @@ class ShopTableViewController: UITableViewController, CLLocationManagerDelegate 
             distance:  (userLocale.distance(from: CLLocation(latitude: 39.763533, longitude: -86.161663)))*0.000621371,
             googleMap: "www.google.com/maps/place/Bee+Coffee+Roasters/@39.7635239,-86.1636347,17z/data=!3m1!4b1!4m5!3m4!1s0x886b50a4cb935ecd:0xc62f7a0001032723!8m2!3d39.7635239!4d-86.161446",
             appleMap: "http://maps.apple.com/?daddr=Bee+Coffee+201+S+Capitol+Ave,Indianapolis,IN,46225&dirflg=d&t=h",
-            mondayOpen: 0700,
-            mondayClose: 0700,
-            tuesdayOpen: 0700,
-            tuesdayClose: 0700,
-            wednesdayOpen: 0700,
-            wednesdayClose: 0700,
-            thursdayOpen: 0700,
-            thursdayClose: 0700,
-            fridayOpen: 0700,
-            fridayClose: 0700,
+            mondayOpen: 630,
+            mondayClose: 1750,
+            tuesdayOpen: 630,
+            tuesdayClose: 1750,
+            wednesdayOpen: 630,
+            wednesdayClose: 1750,
+            thursdayOpen: 630,
+            thursdayClose: 1750,
+            fridayOpen: 630,
+            fridayClose: 1750,
             saturdayOpen: 0700,
-            saturdayClose: 0700,
-            sundayOpen: 0700,
-            sundayClose: 0700
+            saturdayClose: 1500,
+            sundayOpen: 000,
+            sundayClose: 000
         )
         
         let shop8 = CoffeeShop(
@@ -633,20 +633,20 @@ class ShopTableViewController: UITableViewController, CLLocationManagerDelegate 
             distance:  (userLocale.distance(from: CLLocation(latitude: 39.788278, longitude: -86.155654)))*0.000621371,
             googleMap: "www.google.com/maps/place/Thirsty+Scholar/@39.7882027,-86.1577709,17z/data=!3m1!4b1!4m5!3m4!1s0x886b50ddede32ac9:0x704a683e30b7e0b!8m2!3d39.7881986!4d-86.1555822",
             appleMap: "http://maps.apple.com/?daddr=111+E+16th+St,Indianapolis,IN,46202&dirflg=d&t=h",
-            mondayOpen: 0700,
-            mondayClose: 0700,
-            tuesdayOpen: 0700,
-            tuesdayClose: 0700,
-            wednesdayOpen: 0700,
-            wednesdayClose: 0700,
-            thursdayOpen: 0700,
-            thursdayClose: 0700,
-            fridayOpen: 0700,
-            fridayClose: 0700,
-            saturdayOpen: 0700,
-            saturdayClose: 0700,
-            sundayOpen: 0700,
-            sundayClose: 0700
+            mondayOpen: 0800,
+            mondayClose: 2359,
+            tuesdayOpen: 0800,
+            tuesdayClose: 2359,
+            wednesdayOpen: 0800,
+            wednesdayClose: 2359,
+            thursdayOpen: 0800,
+            thursdayClose: 2359,
+            fridayOpen: 0800,
+            fridayClose: 2359,
+            saturdayOpen: 0900,
+            saturdayClose: 2359,
+            sundayOpen: 0900,
+            sundayClose: 2359
         )
         
         let shop9 = CoffeeShop(
@@ -663,19 +663,19 @@ class ShopTableViewController: UITableViewController, CLLocationManagerDelegate 
             googleMap: "www.google.com/maps/place/Foundry+Provisions/@39.7886279,-86.1547222,17z/data=!3m1!4b1!4m5!3m4!1s0x886b50e73986b37b:0xf89b775345e15c6a!8m2!3d39.7886238!4d-86.1525335",
             appleMap: "http://maps.apple.com/?daddr=236+E+16th+St,Indianapolis,IN,46202&dirflg=d&t=h",
             mondayOpen: 0700,
-            mondayClose: 0700,
+            mondayClose: 1800,
             tuesdayOpen: 0700,
-            tuesdayClose: 0700,
+            tuesdayClose: 1800,
             wednesdayOpen: 0700,
-            wednesdayClose: 0700,
+            wednesdayClose: 1800,
             thursdayOpen: 0700,
-            thursdayClose: 0700,
+            thursdayClose: 1800,
             fridayOpen: 0700,
-            fridayClose: 0700,
-            saturdayOpen: 0700,
-            saturdayClose: 0700,
-            sundayOpen: 0700,
-            sundayClose: 0700
+            fridayClose: 1800,
+            saturdayOpen: 0800,
+            saturdayClose: 1600,
+            sundayOpen: 0800,
+            sundayClose: 1500
         )
         
         let shop10 = CoffeeShop(
@@ -692,19 +692,19 @@ class ShopTableViewController: UITableViewController, CLLocationManagerDelegate 
             googleMap: "www.google.com/maps/place/Rabble+Coffee/@39.7811751,-86.1264487,17z/data=!3m1!4b1!4m5!3m4!1s0x886b50452d562e3b:0x63b393cf690b13d7!8m2!3d39.781171!4d-86.12426",
             appleMap: "http://maps.apple.com/?daddr=2119+E+10th+St,Indianapolis,IN,46201&dirflg=d&t=h",
             mondayOpen: 0700,
-            mondayClose: 0700,
+            mondayClose: 1800,
             tuesdayOpen: 0700,
-            tuesdayClose: 0700,
+            tuesdayClose: 1800,
             wednesdayOpen: 0700,
-            wednesdayClose: 0700,
+            wednesdayClose: 1800,
             thursdayOpen: 0700,
-            thursdayClose: 0700,
+            thursdayClose: 1800,
             fridayOpen: 0700,
-            fridayClose: 0700,
-            saturdayOpen: 0700,
-            saturdayClose: 0700,
-            sundayOpen: 0700,
-            sundayClose: 0700
+            fridayClose: 1800,
+            saturdayOpen: 0800,
+            saturdayClose: 1800,
+            sundayOpen: 0800,
+            sundayClose: 1500
         )
         
         
@@ -721,20 +721,20 @@ class ShopTableViewController: UITableViewController, CLLocationManagerDelegate 
             distance: (userLocale.distance(from: CLLocation(latitude: 39.767619, longitude: -86.071913)))*0.000621371,
             googleMap: "www.google.com/maps/place/Coal+Yard+Coffee/@39.7675747,-86.0740922,17z/data=!3m1!4b1!4m5!3m4!1s0x886b4f94e9752bf1:0x3989df023a70c42e!8m2!3d39.7675706!4d-86.0719035",
             appleMap: "http://maps.apple.com/?daddr=5547+Bonna+Ave,Indianapolis,IN,46219&dirflg=d&t=h",
-            mondayOpen: 0700,
-            mondayClose: 0700,
-            tuesdayOpen: 0700,
-            tuesdayClose: 0700,
-            wednesdayOpen: 0700,
-            wednesdayClose: 0700,
-            thursdayOpen: 0700,
-            thursdayClose: 0700,
-            fridayOpen: 0700,
-            fridayClose: 0700,
-            saturdayOpen: 0700,
-            saturdayClose: 0700,
-            sundayOpen: 0700,
-            sundayClose: 0700
+            mondayOpen: 0800,
+            mondayClose: 2000,
+            tuesdayOpen: 0800,
+            tuesdayClose: 2100,
+            wednesdayOpen: 0800,
+            wednesdayClose: 2000,
+            thursdayOpen: 0800,
+            thursdayClose: 2000,
+            fridayOpen: 0800,
+            fridayClose: 2000,
+            saturdayOpen: 0800,
+            saturdayClose: 2000,
+            sundayOpen: 1100,
+            sundayClose: 1800
         )
         
         let shop12 = CoffeeShop(
@@ -751,19 +751,19 @@ class ShopTableViewController: UITableViewController, CLLocationManagerDelegate 
             googleMap: "www.google.com/maps/place/Neidhammer+Coffee+Co./@39.7678376,-86.1274716,17z/data=!3m1!4b1!4m5!3m4!1s0x886b506609742c2f:0x81ee299e0d466329!8m2!3d39.7678335!4d-86.1252829",
             appleMap: "http://maps.apple.com/?daddr=8684+E+116th+St,Fishers,IN,46038&dirflg=d&t=h",
             mondayOpen: 0700,
-            mondayClose: 0700,
+            mondayClose: 1800,
             tuesdayOpen: 0700,
-            tuesdayClose: 0700,
+            tuesdayClose: 1800,
             wednesdayOpen: 0700,
-            wednesdayClose: 0700,
+            wednesdayClose: 1800,
             thursdayOpen: 0700,
-            thursdayClose: 0700,
+            thursdayClose: 1800,
             fridayOpen: 0700,
-            fridayClose: 0700,
-            saturdayOpen: 0700,
-            saturdayClose: 0700,
-            sundayOpen: 0700,
-            sundayClose: 0700
+            fridayClose: 1800,
+            saturdayOpen: 0800,
+            saturdayClose: 1800,
+            sundayOpen: 000,
+            sundayClose: 000
         )
         
         let shop13 = CoffeeShop(
@@ -777,22 +777,22 @@ class ShopTableViewController: UITableViewController, CLLocationManagerDelegate 
             newShop: false,
             igHandle: "calvinfletcherscoffeeco",
             distance:  (userLocale.distance(from: CLLocation(latitude: 39.757719, longitude: -86.145896)))*0.000621371,
-            googleMap: "www.google.com/maps/place/Sure+Shot+Coffee/@39.9569398,-86.0179095,17z/data=!3m1!4b1!4m5!3m4!1s0x8814b3810c0e6621:0xb3ef597594be86fb!8m2!3d39.9569398!4d-86.0157208",
+            googleMap: "www.google.com/maps/place/Calvin+Fletcher's+Coffee+Company/@39.7577079,-86.1482352,17z/data=!3m1!4b1!4m5!3m4!1s0x886b509b7cf4ec23:0xf1f239676978fc6e!8m2!3d39.7577079!4d-86.1460465",
             appleMap: "http://maps.apple.com/?daddr=2102+E+Washington+St,Indianapolis,IN,46201&dirflg=d&t=h",
             mondayOpen: 0700,
-            mondayClose: 0700,
+            mondayClose: 1800,
             tuesdayOpen: 0700,
-            tuesdayClose: 0700,
+            tuesdayClose: 1800,
             wednesdayOpen: 0700,
-            wednesdayClose: 0700,
+            wednesdayClose: 1800,
             thursdayOpen: 0700,
-            thursdayClose: 0700,
+            thursdayClose: 1800,
             fridayOpen: 0700,
-            fridayClose: 0700,
+            fridayClose: 1800,
             saturdayOpen: 0700,
-            saturdayClose: 0700,
-            sundayOpen: 0700,
-            sundayClose: 0700
+            saturdayClose: 1800,
+            sundayOpen: 000,
+            sundayClose: 000
         )
         
         let shop14 = CoffeeShop(
@@ -808,20 +808,20 @@ class ShopTableViewController: UITableViewController, CLLocationManagerDelegate 
             distance: (userLocale.distance(from: CLLocation(latitude: 39.748798, longitude: -86.139969)))*0.000621371,
             googleMap: "www.google.com/maps/place/Veloworks+Urban+Cyclery+and+Coffee+Shop/@39.7487718,-86.142163,17z/data=!3m1!4b1!4m5!3m4!1s0x886b5a7949a392f9:0x508f0436a992c522!8m2!3d39.7487677!4d-86.1399743",
             appleMap: "http://maps.apple.com/?daddr=1354+Shelby+St,Indianapolis,IN,46203&dirflg=d&t=h",
-            mondayOpen: 0700,
-            mondayClose: 0700,
-            tuesdayOpen: 0700,
-            tuesdayClose: 0700,
-            wednesdayOpen: 0700,
-            wednesdayClose: 0700,
-            thursdayOpen: 0700,
-            thursdayClose: 0700,
-            fridayOpen: 0700,
-            fridayClose: 0700,
-            saturdayOpen: 0700,
-            saturdayClose: 0700,
-            sundayOpen: 0700,
-            sundayClose: 0700
+            mondayOpen: 000,
+            mondayClose: 000,
+            tuesdayOpen: 1100,
+            tuesdayClose: 1800,
+            wednesdayOpen: 1100,
+            wednesdayClose: 1800,
+            thursdayOpen: 1100,
+            thursdayClose: 1800,
+            fridayOpen: 1100,
+            fridayClose: 1800,
+            saturdayOpen: 1100,
+            saturdayClose: 1600,
+            sundayOpen: 000,
+            sundayClose: 000
         )
         
         let shop15 = CoffeeShop(
