@@ -288,6 +288,7 @@ class ShopTableViewController: UITableViewController, CLLocationManagerDelegate 
         cell.newLabel.center.x = 15
         cell.newLabel.center.y = 76.5
         cell.newLabel.alpha = 0
+        cell.shopName.alpha = 0.4
         
         if shop.newShop == true {
             cell.newLabel.alpha = 1
@@ -313,19 +314,19 @@ class ShopTableViewController: UITableViewController, CLLocationManagerDelegate 
         let time = self.time
         
         if day == 1 && shop.sundayOpen > time && shop.sundayClose < time {
-            
+            cell.shopName.alpha = 1
         } else if day == 2 && shop.mondayOpen > time && shop.mondayClose < time {
-            
+           cell.shopName.alpha = 1
         } else if day == 3 && shop.tuesdayOpen > time && shop.tuesdayClose < time {
-            
+            cell.shopName.alpha = 1
         } else if day == 4 && shop.wednesdayOpen > time && shop.wednesdayClose < time {
-            
+            cell.shopName.alpha = 1
         } else if day == 5 && shop.thursdayOpen > time && shop.thursdayClose < time {
-            
+            cell.shopName.alpha = 1
         } else if day == 6 && shop.fridayOpen > time && shop.fridayClose < time {
-            
+            cell.shopName.alpha = 1
         } else if day == 7 && shop.saturdayOpen > time && shop.saturdayClose < time {
-            
+            cell.shopName.alpha = 1
         }
         
         
