@@ -75,11 +75,7 @@
         <!--Walkthrough View Controller-->
         <scene sceneID="a8z-xu-g2Y">
             <objects>
-<<<<<<< HEAD
-                <viewController storyboardIdentifier="walk0" modalTransitionStyle="crossDissolve" id="Xr7-9P-7g8" customClass="BWWalkthroughViewController" customModule="Indianapolis_Coffee_Guide" sceneMemberID="viewController">
-=======
                 <viewController storyboardIdentifier="walk0" modalPresentationStyle="currentContext" id="Xr7-9P-7g8" customClass="BWWalkthroughViewController" customModule="Indianapolis_Coffee_Guide" sceneMemberID="viewController">
->>>>>>> 429ab13aff7206cd9129ef7d6ede193f15318c87
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Xu2-FD-V9Y"/>
                         <viewControllerLayoutGuide type="bottom" id="NoL-hF-PxN"/>
