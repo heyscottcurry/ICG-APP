@@ -53,18 +53,24 @@ class LaunchVC: UIViewController {
     var passwordText = "password"
     @IBOutlet weak var underLine: UIView!
     @IBOutlet weak var emailLabel: UILabel!
-    
+    var comLine = false
 
 
    
     @IBAction func fieldEdit(_ sender: UITextField) {
         let labelOrigin = self.emailLabel.frame.origin.y
+        
+        
         UIView.animate(withDuration: 0.3, animations: {
+            if self.comLine == false {
             self.emailLabel.frame.origin.y = labelOrigin - 30
+            self.comLine = true
+            }
             self.underLine.backgroundColor = UIColor(displayP3Red: 217/255, green: 83/255, blue: 79/255, alpha: 1)
             self.getStartedBtn.layer.backgroundColor = UIColor(displayP3Red: 217/255, green: 83/255, blue: 79/255, alpha: 1).cgColor
             self.getStartedBtn.setTitleColor(UIColor.white, for: UIControlState.normal)
             self.getStartedBtn.layer.borderColor = UIColor(displayP3Red: 217/255, green: 83/255, blue: 79/255, alpha: 1).cgColor
+          
             // self.view.frame.origin.y -= self.view.frame.origin.y + 100
         })
     }
@@ -158,9 +164,44 @@ class LaunchVC: UIViewController {
         print("123")
     }
     
-
+    /*
+    var keyboardAdjusted = false
+    var lastKeyboardOffset: CGFloat = 0.0
     
-
+    
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        NotificationCenter.default.addObserver(self, selector: Selector(("keyboardWillShow:")), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
+        NotificationCenter.default.addObserver(self, selector: Selector(("keyboardWillHide:")), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        NotificationCenter.default.removeObserver(self, name: NSNotification.Name.UIKeyboardWillShow, object: nil)
+        NotificationCenter.default.removeObserver(self, name: NSNotification.Name.UIKeyboardWillHide, object: nil)
+    }
+    
+    func keyboardWillShow(notification: NSNotification) {
+        if keyboardAdjusted == false {
+            lastKeyboardOffset = getKeyboardHeight(notification: notification)
+            view.frame.origin.y -= lastKeyboardOffset
+            keyboardAdjusted = true
+        }
+    }
+    
+    func keyboardWillHide(notification: NSNotification) {
+        if keyboardAdjusted == true {
+            view.frame.origin.y += lastKeyboardOffset
+            keyboardAdjusted = false
+        }
+    }
+    
+    func getKeyboardHeight(notification: NSNotification) -> CGFloat {
+        let userInfo = notification.userInfo
+        let keyboardSize = userInfo![UIKeyboardFrameEndUserInfoKey] as! NSValue
+        return keyboardSize.cgRectValue.height
+    } */
 
     
     

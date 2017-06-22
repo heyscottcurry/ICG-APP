@@ -24,6 +24,7 @@ class CoffeeShopTableViewCell: UITableViewCell {
   
     @IBOutlet weak var newLabel: UILabel!
  
+    @IBOutlet weak var openImage: UIImageView!
     
     func viewDidLoad() {
         self.cellBack.backgroundColor = UIColor.blue

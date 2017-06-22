@@ -28,13 +28,13 @@ class testVC: UIViewController, BWWalkthroughViewControllerDelegate  {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        UIView.animate(withDuration: 2.0, delay: 1.0, animations: {
+        UIView.animate(withDuration: 1.5, delay: 1.0, animations: {
             self.titleImage.frame.origin.y = self.view.frame.minY
         }) { (true) in
-            UIView.animate(withDuration: 2.0, animations: {
+            UIView.animate(withDuration: 1.5, animations: {
                 self.sloganView.alpha = 1
             })
-            UIView.animate(withDuration: 2.0, delay: 2.0, animations: {
+            UIView.animate(withDuration: 1.5, delay: 1.0, animations: {
             self.getstartedBtn.alpha = 1
             })
         }
@@ -43,7 +43,7 @@ class testVC: UIViewController, BWWalkthroughViewControllerDelegate  {
     @IBAction func startBtn() {
         
         self.growBar.alpha = 1
-        UIView.animate(withDuration: 1.25, animations: {
+        UIView.animate(withDuration: 0.5, animations: {
             self.titleImage.alpha = 0
             self.sloganView.alpha = 0
             self.getstartedBtn.alpha = 0
@@ -59,11 +59,13 @@ class testVC: UIViewController, BWWalkthroughViewControllerDelegate  {
             let page_one = stb.instantiateViewController(withIdentifier: "walk1") as UIViewController
             let page_two = stb.instantiateViewController(withIdentifier: "walk2") as UIViewController
             let page_three = stb.instantiateViewController(withIdentifier: "walk3") as UIViewController
+            let page_four = stb.instantiateViewController(withIdentifier: "walk4") as UIViewController
             
             walkthrough.delegate = self
             walkthrough.add(viewController: page_one)
             walkthrough.add(viewController: page_two)
             walkthrough.add(viewController: page_three)
+            walkthrough.add(viewController: page_four)
             
             self.present(walkthrough, animated: true, completion: nil)
         }

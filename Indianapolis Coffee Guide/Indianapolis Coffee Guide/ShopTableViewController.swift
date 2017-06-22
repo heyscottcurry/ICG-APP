@@ -14,8 +14,6 @@ class ShopTableViewController: UITableViewController, CLLocationManagerDelegate 
     
     
     @IBOutlet var shopTable: UITableView!
-    
-    
     @IBOutlet weak var headerView: UIView!
     
     @IBAction func filterBack(_ sender: Any) {
@@ -285,6 +283,8 @@ class ShopTableViewController: UITableViewController, CLLocationManagerDelegate 
         cell.newLabel.center.x = 15
         cell.newLabel.center.y = 76.5
         cell.newLabel.alpha = 0
+        cell.openImage.alpha = 0.25
+        cell.openImage.image = UIImage(named: "clock-off")
         
         if shop.newShop == true {
             cell.newLabel.alpha = 1
@@ -304,7 +304,7 @@ class ShopTableViewController: UITableViewController, CLLocationManagerDelegate 
         }
         
         
-        cell.shopName.alpha = 0.4
+        // cell.shopName.alpha = 0.4
         
         
         
@@ -329,7 +329,9 @@ class ShopTableViewController: UITableViewController, CLLocationManagerDelegate 
         }
         
         if shop.isOpen == true {
-            cell.shopName.alpha = 1
+           // cell.shopName.alpha = 1
+            cell.openImage.alpha = 1
+            cell.openImage.image = UIImage(named: "clock-on")
         }
         
         print(self.day)
@@ -882,15 +884,15 @@ class ShopTableViewController: UITableViewController, CLLocationManagerDelegate 
             distance:  (userLocale.distance(from: CLLocation(latitude: 39.970128, longitude: -86.128349)))*0.000621371,
             googleMap: "www.google.com/maps/place/Hubbard+%26+Cravens/@39.9701379,-86.13042,17z/data=!3m1!4b1!4m5!3m4!1s0x8814adb19b0fd041:0xfe65e9eee5ad0e9a!8m2!3d39.9701338!4d-86.1282313",
             appleMap: "http://maps.apple.com/?daddr=703+Veterans+Way,Carmel,IN,46032&dirflg=d&t=h",
-            mondayOpen: 0730,
+            mondayOpen: 0600,
             mondayClose: 1630,
-            tuesdayOpen: 0730,
+            tuesdayOpen: 0600,
             tuesdayClose: 1630,
-            wednesdayOpen: 0730,
+            wednesdayOpen: 0600,
             wednesdayClose: 1630,
-            thursdayOpen: 0730,
+            thursdayOpen: 0600,
             thursdayClose: 1630,
-            fridayOpen: 0730,
+            fridayOpen: 0600,
             fridayClose: 1630,
             saturdayOpen: 0730,
             saturdayClose: 1630,
