@@ -214,6 +214,10 @@ class ShopTableViewController: UITableViewController, CLLocationManagerDelegate 
     var time = (Double(Calendar.current.component(.hour, from: Date()) * 100) + Double(Calendar.current.component(.minute, from: Date())))
     
     
+    func roundDown(_ value: Double, toNearest: Double) -> Double {
+        return floor(value / toNearest) * toNearest
+    }
+    
     
     
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
@@ -285,6 +289,7 @@ class ShopTableViewController: UITableViewController, CLLocationManagerDelegate 
         cell.newLabel.alpha = 0
         cell.openImage.alpha = 0.25
         cell.openImage.image = UIImage(named: "clock-off")
+        cell.soonText.alpha = 0
         
         if shop.newShop == true {
             cell.newLabel.alpha = 1
@@ -333,6 +338,163 @@ class ShopTableViewController: UITableViewController, CLLocationManagerDelegate 
             cell.openImage.alpha = 1
             cell.openImage.image = UIImage(named: "clock-on")
         }
+
+        
+        if shop.isOpen != true && day == 1 && (shop.sundayOpen - time) < 100 && (shop.sundayOpen - time) > 0 {
+            let hour = roundDown(shop.sundayOpen, toNearest: 100)
+            var twelveHour = hour / 100
+            if twelveHour > 12 {
+                twelveHour = twelveHour - 12
+            }
+            let minutes = Int(shop.sundayOpen - hour)
+            cell.soonText.text = "Opens at \(Int(twelveHour)):\(String(format: "%02d", minutes))"
+
+            cell.soonText.alpha = 1
+            cell.openImage.alpha = 0
+        } else if shop.isOpen != true && day == 2 && (shop.mondayOpen - time) < 100 && (shop.mondayOpen - time) > 0 {
+            let hour = roundDown(shop.mondayOpen, toNearest: 100)
+            var twelveHour = hour / 100
+            if twelveHour > 12 {
+                twelveHour = twelveHour - 12
+            }
+            let minutes = Int(shop.mondayOpen - hour)
+            cell.soonText.text = "Opens at \(Int(twelveHour)):\(String(format: "%02d", minutes))"
+            cell.soonText.alpha = 1
+            cell.openImage.alpha = 0
+        } else if shop.isOpen != true && day == 3 && (shop.tuesdayOpen  - time) < 100 && (shop.tuesdayOpen - time) > 0 {
+            let hour = roundDown(shop.tuesdayOpen, toNearest: 100)
+            var twelveHour = hour / 100
+            if twelveHour > 12 {
+                twelveHour = twelveHour - 12
+            }
+            let minutes = Int(shop.tuesdayOpen - hour)
+            cell.soonText.text = "Opens at \(Int(twelveHour)):\(String(format: "%02d", minutes))"
+            cell.soonText.alpha = 1
+            cell.openImage.alpha = 0
+        } else if shop.isOpen != true && day == 4 && (shop.wednesdayOpen - time) < 100  && (shop.wednesdayOpen - time) > 0 {
+            let hour = roundDown(shop.wednesdayOpen, toNearest: 100)
+            var twelveHour = hour / 100
+            if twelveHour > 12 {
+                twelveHour = twelveHour - 12
+            }
+            let minutes = Int(shop.wednesdayOpen - hour)
+            cell.soonText.text = "Opens at \(Int(twelveHour)):\(String(format: "%02d", minutes))"
+            cell.soonText.alpha = 1
+            cell.openImage.alpha = 0
+        } else if shop.isOpen != true && day == 5 && (shop.thursdayOpen - time) < 100  && (shop.thursdayOpen - time) > 0 {
+            let hour = roundDown(shop.thursdayOpen, toNearest: 100)
+            var twelveHour = hour / 100
+            if twelveHour > 12 {
+                twelveHour = twelveHour - 12
+            }
+            let minutes = Int(shop.thursdayOpen - hour)
+            cell.soonText.text = "Opens at \(Int(twelveHour)):\(String(format: "%02d", minutes))"
+            cell.soonText.alpha = 1
+            cell.openImage.alpha = 0
+        } else if shop.isOpen != true && day == 6 && (shop.fridayOpen - time) < 100 && (shop.fridayOpen - time) > 0  {
+            let hour = roundDown(shop.fridayOpen, toNearest: 100)
+            var twelveHour = hour / 100
+            if twelveHour > 12 {
+                twelveHour = twelveHour - 12
+            }
+            let minutes = Int(shop.fridayOpen - hour)
+            cell.soonText.text = "Opens at \(Int(twelveHour)):\(String(format: "%02d", minutes))"
+            cell.soonText.alpha = 1
+            cell.openImage.alpha = 0
+        } else if shop.isOpen != true && day == 7 && (shop.saturdayOpen  - time) < 100 && (shop.saturdayOpen - time) > 0  {
+            let hour = roundDown(shop.saturdayOpen, toNearest: 100)
+            var twelveHour = hour / 100
+            if twelveHour > 12 {
+                twelveHour = twelveHour - 12
+            }
+            let minutes = Int(shop.saturdayOpen - hour)
+            cell.soonText.text = "Opens at \(Int(twelveHour)):\(String(format: "%02d", minutes))"
+            cell.soonText.alpha = 1
+            cell.openImage.alpha = 0
+        }
+        
+        
+        
+        if shop.isOpen == true && day == 1 && (shop.sundayClose - time) < 100 && (shop.sundayClose - time) > 0 {
+            let hour = roundDown(shop.sundayClose, toNearest: 100)
+            var twelveHour = hour / 100
+            if twelveHour > 12 {
+                twelveHour = twelveHour - 12
+            }
+            let minutes = Int(shop.sundayClose - hour)
+            cell.soonText.text = "Closes at \(Int(twelveHour)):\(String(format: "%02d", minutes))"
+            
+            cell.soonText.alpha = 1
+            cell.openImage.alpha = 0
+            
+        } else if shop.isOpen == true && day == 2 && (shop.mondayClose - time) < 100 && (shop.mondayClose - time) > 0 {
+            let hour = roundDown(shop.mondayClose, toNearest: 100)
+            var twelveHour = hour / 100
+            if twelveHour > 12 {
+                twelveHour = twelveHour - 12
+            }
+            let minutes = Int(shop.mondayClose - hour)
+            cell.soonText.text = "Closes at \(Int(twelveHour)):\(String(format: "%02d", minutes))"
+            cell.soonText.alpha = 1
+            cell.openImage.alpha = 0
+            
+        } else if shop.isOpen == true && day == 3 && (shop.tuesdayClose  - time) < 100  && (shop.tuesdayClose - time) > 0 {
+            let hour = roundDown(shop.tuesdayClose, toNearest: 100)
+            var twelveHour = hour / 100
+            if twelveHour > 12 {
+                twelveHour = twelveHour - 12
+            }
+            let minutes = Int(shop.tuesdayClose - hour)
+            cell.soonText.text = "Closes at \(Int(twelveHour)):\(String(format: "%02d", minutes))"
+            cell.soonText.alpha = 1
+            cell.openImage.alpha = 0
+            
+        } else if shop.isOpen == true && day == 4 && (shop.wednesdayClose - time) < 100  && (shop.wednesdayClose - time) > 0 {
+            let hour = roundDown(shop.wednesdayClose, toNearest: 100)
+            var twelveHour = hour / 100
+            if twelveHour > 12 {
+                twelveHour = twelveHour - 12
+            }
+            let minutes = Int(shop.wednesdayClose - hour)
+            cell.soonText.text = "Closes at \(Int(twelveHour)):\(String(format: "%02d", minutes))"
+            cell.soonText.alpha = 1
+            cell.openImage.alpha = 0
+            
+        } else if shop.isOpen == true && day == 5 && (shop.thursdayClose - time) < 100  && (shop.thursdayClose - time) > 0 {
+            let hour = roundDown(shop.thursdayClose, toNearest: 100)
+            var twelveHour = hour / 100
+            if twelveHour > 12 {
+                twelveHour = twelveHour - 12
+            }
+            let minutes = Int(shop.thursdayClose - hour)
+            cell.soonText.text = "Closes at \(Int(twelveHour)):\(String(format: "%02d", minutes))"
+            cell.soonText.alpha = 1
+            cell.openImage.alpha = 0
+            
+        } else if shop.isOpen == true && day == 6 && (shop.fridayClose - time) < 100 && (shop.fridayClose - time) > 0  {
+            let hour = roundDown(shop.fridayClose, toNearest: 100)
+            var twelveHour = hour / 100
+            if twelveHour > 12 {
+                twelveHour = twelveHour - 12
+            }
+            let minutes = Int(shop.fridayClose - hour)
+            cell.soonText.text = "Closes at \(Int(twelveHour)):\(String(format: "%02d", minutes))"
+            cell.soonText.alpha = 1
+            cell.openImage.alpha = 0
+            
+        } else if shop.isOpen == true && day == 7 && (shop.saturdayClose  - time) < 100 && (shop.saturdayClose - time) > 0  {
+            let hour = roundDown(shop.saturdayClose, toNearest: 100)
+            var twelveHour = hour / 100
+            if twelveHour > 12 {
+                twelveHour = twelveHour - 12
+            }
+            let minutes = Int(shop.saturdayClose - hour)
+            cell.soonText.text = "Closes at \(Int(twelveHour)):\(String(format: "%02d", minutes))"
+            cell.soonText.alpha = 1
+            cell.openImage.alpha = 0
+        }
+        
+        
         
         print(self.day)
         print(self.time)

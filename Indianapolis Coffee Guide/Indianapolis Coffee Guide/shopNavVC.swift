@@ -50,42 +50,42 @@ class shopNavVC: UIViewController {
             })
         
 
-        UIView.animate(withDuration: 0.5, delay: 0.1, animations: {
+        UIView.animate(withDuration: 0.3, delay: 0.05, animations: {
                 self.fsButton.alpha = 1
             })
         
         
 
-            UIView.animate(withDuration: 0.5, delay: 0.2, animations: {
+            UIView.animate(withDuration: 0.3, delay: 0.1, animations: {
                 self.irvingtonButton.alpha = 1
             })
         
         
 
-            UIView.animate(withDuration: 0.5, delay: 0.3, animations: {
+            UIView.animate(withDuration: 0.3, delay: 0.15, animations: {
                 self.brButton.alpha = 1
             })
         
         
 
-            UIView.animate(withDuration: 0.5, delay: 0.4, animations: {
+            UIView.animate(withDuration: 0.3, delay: 0.2, animations: {
                 self.carmelButton.alpha = 1
             })
         
 
-            UIView.animate(withDuration: 0.5, delay: 0.5, animations: {
+            UIView.animate(withDuration: 0.3, delay: 0.25, animations: {
                 self.fishersButton.alpha = 1
             })
         
         
  
-            UIView.animate(withDuration: 0.5, delay: 0.6, animations: {
+            UIView.animate(withDuration: 0.3, delay: 0.3, animations: {
                 self.eaglecreekButton.alpha = 1
             })
     
         
    
-            UIView.animate(withDuration: 0.5, delay: 0.7, animations: {
+            UIView.animate(withDuration: 0.3, delay: 0.35, animations: {
                 self.viewallButton.alpha = 1
             })
         

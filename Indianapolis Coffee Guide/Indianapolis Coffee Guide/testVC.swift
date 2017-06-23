@@ -59,13 +59,13 @@ class testVC: UIViewController, BWWalkthroughViewControllerDelegate  {
             let page_one = stb.instantiateViewController(withIdentifier: "walk1") as UIViewController
             let page_two = stb.instantiateViewController(withIdentifier: "walk2") as UIViewController
             let page_three = stb.instantiateViewController(withIdentifier: "walk3") as UIViewController
-            let page_four = stb.instantiateViewController(withIdentifier: "walk4") as UIViewController
+
             
             walkthrough.delegate = self
             walkthrough.add(viewController: page_one)
             walkthrough.add(viewController: page_two)
             walkthrough.add(viewController: page_three)
-            walkthrough.add(viewController: page_four)
+     
             
             self.present(walkthrough, animated: true, completion: nil)
         }

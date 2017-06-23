@@ -21,6 +21,7 @@ class CoffeeShopTableViewCell: UITableViewCell {
     @IBOutlet weak var shopName: UILabel!
     
     @IBOutlet weak var cellBack: UIView!
+    @IBOutlet weak var soonText: UILabel!
   
     @IBOutlet weak var newLabel: UILabel!
  

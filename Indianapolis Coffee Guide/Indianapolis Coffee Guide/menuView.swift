@@ -46,42 +46,42 @@ class menuView: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        UIView.animate(withDuration: 0.5, animations: {
+        UIView.animate(withDuration: 0.25, animations: {
             self.shopsButton.alpha = 1
         }) 
    
 
-        UIView.animate(withDuration: 0.5, delay: 0.2, animations: {
+        UIView.animate(withDuration: 0.3, delay: 0.05, animations: {
             self.roastersButton.alpha = 0.55
             self.roasterComingSoon.alpha = 0.55
         })
     
 
         
-        UIView.animate(withDuration: 0.5, delay: 0.4, animations: {
+        UIView.animate(withDuration: 0.3, delay: 0.1, animations: {
             self.aboutButton.alpha = 0.55
             self.aboutComingSoon.alpha = 0.55
         })
         
         
-        UIView.animate(withDuration: 0.5, delay: 0.6, animations: {
+        UIView.animate(withDuration: 0.3, delay: 0.15, animations: {
             self.eventsButton.alpha = 0.55
             self.eventsComingSoon.alpha = 0.55
         })
         
         
-        UIView.animate(withDuration: 0.5, delay: 0.8, animations: {
+        UIView.animate(withDuration: 0.3, delay: 0.2, animations: {
             self.blogButton.alpha = 0.55
             self.blogComingSoon.alpha = 0.55
         })
         
 
-        UIView.animate(withDuration: 0.5, delay: 1.0, animations: {
+        UIView.animate(withDuration: 0.3, delay: 0.25, animations: {
             self.contactButton.alpha = 1
         })
     
 
-        UIView.animate(withDuration: 0.5, delay: 1.2, animations: {
+        UIView.animate(withDuration: 0.3, delay: 0.3, animations: {
             self.sponsorButton.alpha = 1
             self.appsupportButton.alpha = 0.4
         })

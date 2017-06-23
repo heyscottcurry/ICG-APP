@@ -133,7 +133,7 @@ import UIKit
         super.viewDidAppear(animated)
         
         
-        UIView.animate(withDuration: 1.0, delay: 0.5, animations: {
+        UIView.animate(withDuration: 0.75, delay: 0.25, animations: {
             self.redLoader.frame.origin.y = self.view.frame.origin.y + self.view.frame.size.height
         })
         
