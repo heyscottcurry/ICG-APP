@@ -337,9 +337,8 @@
                                         <rect key="frame" x="53" y="306" width="307" height="29"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="20"/>
-                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress" keyboardAppearance="alert"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress" keyboardAppearance="alert" returnKeyType="go"/>
                                         <connections>
-                                            <action selector="DismissKeyboardWithSender:" destination="zHK-t4-eRe" eventType="editingDidEnd" id="Rxz-Rw-79T"/>
                                             <action selector="fieldEdit:" destination="zHK-t4-eRe" eventType="editingDidBegin" id="Qg2-17-TKf"/>
                                         </connections>
                                     </textField>
@@ -356,6 +355,15 @@
                                             <action selector="getStarted:" destination="zHK-t4-eRe" eventType="touchUpInside" id="Pwb-ga-wMj"/>
                                         </connections>
                                     </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="this one’s for you." textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" minimumFontSize="20" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gVn-tB-k1u">
+                                        <rect key="frame" x="8" y="89" width="398" height="37"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="37" id="yST-gy-H0d"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="31"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3YY-PP-WTm">
                                         <rect key="frame" x="54" y="455" width="306" height="30"/>
                                         <constraints>
@@ -366,7 +374,7 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <segue destination="shL-Nj-3h5" kind="showDetail" id="yDw-WZ-P6P"/>
+                                            <segue destination="shL-Nj-3h5" kind="showDetail" identifier="maybeLater" id="yDw-WZ-P6P"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="12" adjustsLetterSpacingToFitWidth="YES" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="To4-FU-hIa">
@@ -380,18 +388,9 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Coffee lovers," textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" minimumFontSize="26" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8Gv-Ah-3ze">
-                                        <rect key="frame" x="44" y="32" width="325" height="72"/>
+                                        <rect key="frame" x="44" y="50" width="325" height="44"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="72" id="G4U-eT-r2g"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="31"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="this one’s for you." textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" minimumFontSize="26" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gVn-tB-k1u">
-                                        <rect key="frame" x="44" y="68" width="325" height="72"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="72" id="yST-gy-H0d"/>
+                                            <constraint firstAttribute="height" constant="44" id="G4U-eT-r2g"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="31"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -401,12 +400,12 @@
                                 <constraints>
                                     <constraint firstItem="jDV-8e-Ss1" firstAttribute="top" secondItem="3RK-OG-T7z" secondAttribute="top" constant="367" id="7rD-fN-qbD"/>
                                     <constraint firstItem="se4-9R-0os" firstAttribute="leading" secondItem="3RK-OG-T7z" secondAttribute="leading" constant="53" id="8hE-F4-ZhK"/>
-                                    <constraint firstItem="gVn-tB-k1u" firstAttribute="leading" secondItem="8Gv-Ah-3ze" secondAttribute="leading" id="BBn-Wo-weX"/>
+                                    <constraint firstItem="gVn-tB-k1u" firstAttribute="leading" secondItem="8Gv-Ah-3ze" secondAttribute="leading" constant="-36" id="BBn-Wo-weX"/>
                                     <constraint firstItem="To4-FU-hIa" firstAttribute="trailing" secondItem="hzv-4I-yEK" secondAttribute="trailing" id="Bw6-Oo-QRt"/>
                                     <constraint firstItem="se4-9R-0os" firstAttribute="leading" secondItem="UG4-xg-IxX" secondAttribute="leading" id="C7Q-we-Vk1"/>
-                                    <constraint firstItem="gVn-tB-k1u" firstAttribute="trailing" secondItem="8Gv-Ah-3ze" secondAttribute="trailing" id="CQ4-0n-0PQ"/>
+                                    <constraint firstItem="gVn-tB-k1u" firstAttribute="trailing" secondItem="8Gv-Ah-3ze" secondAttribute="trailing" constant="37" id="CQ4-0n-0PQ"/>
                                     <constraint firstItem="jDV-8e-Ss1" firstAttribute="top" secondItem="UG4-xg-IxX" secondAttribute="bottom" constant="25" id="DtH-uP-SDX"/>
-                                    <constraint firstItem="gVn-tB-k1u" firstAttribute="top" secondItem="3RK-OG-T7z" secondAttribute="top" constant="68" id="Fui-6p-Ahx"/>
+                                    <constraint firstItem="gVn-tB-k1u" firstAttribute="top" secondItem="3RK-OG-T7z" secondAttribute="top" constant="89" id="Fui-6p-Ahx"/>
                                     <constraint firstItem="hzv-4I-yEK" firstAttribute="leading" secondItem="3YY-PP-WTm" secondAttribute="leading" id="I7d-1n-k61"/>
                                     <constraint firstItem="UG4-xg-IxX" firstAttribute="trailing" secondItem="jDV-8e-Ss1" secondAttribute="trailing" id="Ism-LB-TOT"/>
                                     <constraint firstItem="UG4-xg-IxX" firstAttribute="top" secondItem="se4-9R-0os" secondAttribute="bottom" constant="3" id="KIc-7Q-a7j"/>
@@ -415,13 +414,13 @@
                                     <constraint firstItem="se4-9R-0os" firstAttribute="top" secondItem="To4-FU-hIa" secondAttribute="bottom" constant="60" id="RL9-dg-9QN"/>
                                     <constraint firstItem="8Gv-Ah-3ze" firstAttribute="leading" secondItem="3RK-OG-T7z" secondAttribute="leading" constant="44" id="TER-I5-7Y6"/>
                                     <constraint firstItem="UG4-xg-IxX" firstAttribute="top" secondItem="hzv-4I-yEK" secondAttribute="bottom" constant="8" symbolic="YES" id="UfN-le-5KV"/>
-                                    <constraint firstItem="8Gv-Ah-3ze" firstAttribute="top" secondItem="3RK-OG-T7z" secondAttribute="top" constant="32" id="VVU-xm-APT"/>
+                                    <constraint firstItem="8Gv-Ah-3ze" firstAttribute="top" secondItem="3RK-OG-T7z" secondAttribute="top" constant="50" id="VVU-xm-APT"/>
                                     <constraint firstItem="hzv-4I-yEK" firstAttribute="trailing" secondItem="UG4-xg-IxX" secondAttribute="trailing" id="Xus-WX-9FK"/>
                                     <constraint firstItem="jDV-8e-Ss1" firstAttribute="trailing" secondItem="3YY-PP-WTm" secondAttribute="trailing" id="Zd3-pl-evo"/>
                                     <constraint firstItem="8Gv-Ah-3ze" firstAttribute="centerX" secondItem="To4-FU-hIa" secondAttribute="centerX" id="Zqu-3Z-5Md"/>
                                     <constraint firstItem="UG4-xg-IxX" firstAttribute="leading" secondItem="jDV-8e-Ss1" secondAttribute="leading" id="amd-5x-cHY"/>
                                     <constraint firstItem="8Gv-Ah-3ze" firstAttribute="centerX" secondItem="3RK-OG-T7z" secondAttribute="centerX" id="jLJ-p3-Sso"/>
-                                    <constraint firstItem="To4-FU-hIa" firstAttribute="top" secondItem="8Gv-Ah-3ze" secondAttribute="bottom" constant="30" id="jXR-td-0CE"/>
+                                    <constraint firstItem="To4-FU-hIa" firstAttribute="top" secondItem="8Gv-Ah-3ze" secondAttribute="bottom" constant="40" id="jXR-td-0CE"/>
                                     <constraint firstItem="se4-9R-0os" firstAttribute="centerY" secondItem="hzv-4I-yEK" secondAttribute="centerY" id="m4n-Mi-Id6"/>
                                     <constraint firstItem="se4-9R-0os" firstAttribute="trailing" secondItem="hzv-4I-yEK" secondAttribute="trailing" id="mMY-lX-Xke"/>
                                     <constraint firstItem="3YY-PP-WTm" firstAttribute="top" secondItem="jDV-8e-Ss1" secondAttribute="bottom" constant="33" id="oao-Ne-o2x"/>
@@ -1585,9 +1584,9 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="dqa-5O-oXb"/>
-        <segue reference="bhh-IA-c3n"/>
         <segue reference="iHd-2L-sPs"/>
+        <segue reference="bhh-IA-c3n"/>
         <segue reference="b8H-pT-ZYu"/>
-        <segue reference="H6g-3L-ZC2"/>
+        <segue reference="yDw-WZ-P6P"/>
     </inferredMetricsTieBreakers>
 </document>

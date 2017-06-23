@@ -9,20 +9,19 @@
 import UIKit
 import Firebase
 
-class LaunchVC: UIViewController {
+class LaunchVC: UIViewController, UITextFieldDelegate {
 
     
-    @IBAction func getStarted(_ sender: UIButton) {
-       
+    func letsGo() {
         if emailTextField.text == "" {
             print("Oops!")
         } else {
-           // handleRegister()
+            // handleRegister()
         }
         
         let providedEmailAddress = emailTextField.text
         let isEmailAddressValid = isValidEmailAddress(emailAddressString: providedEmailAddress!)
-
+        
         
         if isEmailAddressValid
         {
@@ -36,17 +35,22 @@ class LaunchVC: UIViewController {
             
             DispatchQueue.main.asyncAfter(deadline: .now() + 2.0, execute: {
                 /* let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-               let newViewController = storyBoard.instantiateViewController(withIdentifier: "mainNavVCViewController") as! mainNavVCViewController */
-               // self.present(newViewController, animated: true, completion: nil)
+                 let newViewController = storyBoard.instantiateViewController(withIdentifier: "mainNavVCViewController") as! mainNavVCViewController */
+                // self.present(newViewController, animated: true, completion: nil)
                 
                 self.performSegue(withIdentifier: "showNotify", sender: self)
             })
         } else {
-                  self.emailLabel.text = "Whoops! Invalid email!"
-                self.emailLabel.textColor = UIColor.yellow
+            self.emailLabel.text = "Whoops! Invalid email!"
+            self.emailLabel.textColor = UIColor.yellow
             print("Email address is not valid")
         }
+
     }
+    
+    @IBAction func getStarted(_ sender: UIButton) {
+        letsGo()
+            }
 
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var getStartedBtn: UIButton!
@@ -71,7 +75,10 @@ class LaunchVC: UIViewController {
             self.getStartedBtn.setTitleColor(UIColor.white, for: UIControlState.normal)
             self.getStartedBtn.layer.borderColor = UIColor(displayP3Red: 217/255, green: 83/255, blue: 79/255, alpha: 1).cgColor
           
-            // self.view.frame.origin.y -= self.view.frame.origin.y + 100
+            
+            if self.view.frame.size.height < 600 {
+             self.view.frame.origin.y -= self.view.frame.origin.y + 100
+            }
         })
     }
     
@@ -110,7 +117,7 @@ class LaunchVC: UIViewController {
         // Do any additional setup after loading the view.
         
         
-        
+        self.emailTextField.delegate = self
         self.getStartedBtn.layer.borderWidth = 2
         self.getStartedBtn.layer.borderColor = UIColor.white.cgColor
         
@@ -163,46 +170,28 @@ class LaunchVC: UIViewController {
         })
         print("123")
     }
-    
-    /*
-    var keyboardAdjusted = false
-    var lastKeyboardOffset: CGFloat = 0.0
+ 
     
     
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        NotificationCenter.default.addObserver(self, selector: Selector(("keyboardWillShow:")), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
-        NotificationCenter.default.addObserver(self, selector: Selector(("keyboardWillHide:")), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
-    }
-    
-    override func viewDidDisappear(_ animated: Bool) {
-        super.viewDidDisappear(animated)
-        NotificationCenter.default.removeObserver(self, name: NSNotification.Name.UIKeyboardWillShow, object: nil)
-        NotificationCenter.default.removeObserver(self, name: NSNotification.Name.UIKeyboardWillHide, object: nil)
-    }
-    
-    func keyboardWillShow(notification: NSNotification) {
-        if keyboardAdjusted == false {
-            lastKeyboardOffset = getKeyboardHeight(notification: notification)
-            view.frame.origin.y -= lastKeyboardOffset
-            keyboardAdjusted = true
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+        if self.view.frame.size.height < 600 {
+            UIView.animate(withDuration: 0.3, animations: {
+            self.view.frame.origin.y -= self.view.frame.origin.y
+            })
         }
     }
     
-    func keyboardWillHide(notification: NSNotification) {
-        if keyboardAdjusted == true {
-            view.frame.origin.y += lastKeyboardOffset
-            keyboardAdjusted = false
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        emailTextField.resignFirstResponder()
+        letsGo()
+        if self.view.frame.size.height < 600 {
+            UIView.animate(withDuration: 0.3, animations: {
+            self.view.frame.origin.y -= self.view.frame.origin.y
+            })
         }
+        return(true)
     }
-    
-    func getKeyboardHeight(notification: NSNotification) -> CGFloat {
-        let userInfo = notification.userInfo
-        let keyboardSize = userInfo![UIKeyboardFrameEndUserInfoKey] as! NSValue
-        return keyboardSize.cgRectValue.height
-    } */
-
     
     
 
