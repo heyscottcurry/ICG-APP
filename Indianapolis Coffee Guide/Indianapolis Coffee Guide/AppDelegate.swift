@@ -23,11 +23,10 @@ import Firebase
         self.window = UIWindow(frame: UIScreen.main.bounds)
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         var vc: UIViewController
-        // if (UserDefaults.standard.value(forKey: "email") as? String) != "bananas" 
-        if (UserDefaults.standard.value(forKey: "email") as? String) == nil {
+        if (UserDefaults.standard.value(forKey: "email") as? String) == nil && UserDefaults.standard.value(forKey: "skipped") == nil {
             // show the onboarding screem
             vc = storyboard.instantiateViewController(withIdentifier: "welcomeScreen")
-        } else {
+        }  else {
             //show the main screen
             vc = storyboard.instantiateInitialViewController()!
         }

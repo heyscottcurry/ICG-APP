@@ -168,6 +168,7 @@ class LaunchVC: UIViewController, UITextFieldDelegate {
             
         
         })
+        UserDefaults.standard.set(email, forKey: "email")
         print("123")
     }
  
@@ -200,6 +201,10 @@ class LaunchVC: UIViewController, UITextFieldDelegate {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func maybeLater(_ sender: UIButton) {
+        
+        UserDefaults.standard.set("true", forKey: "skipped")
+    }
     
     /*
     // MARK: - Navigation
