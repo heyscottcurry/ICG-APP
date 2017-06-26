@@ -263,7 +263,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fall in love with the coffee, the community, and the conversations. It’s all waiting to be discovered, right inside this app." textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="17" adjustsLetterSpacingToFitWidth="YES" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="54H-hh-uqL">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fall in love with the coffee, the community, and the conversations. It’s all waiting to be discovered, right inside this app." textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="17" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="54H-hh-uqL">
                                 <rect key="frame" x="54" y="464" width="307" height="122"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="307" id="b9k-aZ-Vf1"/>
@@ -378,7 +378,7 @@
                                             <segue destination="shL-Nj-3h5" kind="showDetail" identifier="maybeLater" id="yDw-WZ-P6P"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="12" adjustsLetterSpacingToFitWidth="YES" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="To4-FU-hIa">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="12" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="To4-FU-hIa">
                                         <rect key="frame" x="54" y="134" width="306" height="112"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="112" id="RAE-0k-ekA"/>
@@ -472,7 +472,7 @@
                                 <rect key="frame" x="0.0" y="167" width="414" height="427"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="TopLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="One last thing: let us know where in the world you are so we can show you to the nearest (and best) local coffee." lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="16" adjustsLetterSpacingToFitWidth="YES" adjustsFontForContentSizeCategory="YES" preferredMaxLayoutWidth="906" translatesAutoresizingMaskIntoConstraints="NO" id="baP-SL-I57">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="TopLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="One last thing: let us know where in the world you are so we can show you to the nearest (and best) local coffee." lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="16" adjustsLetterSpacingToFitWidth="YES" preferredMaxLayoutWidth="906" translatesAutoresizingMaskIntoConstraints="NO" id="baP-SL-I57">
                                         <rect key="frame" x="26" y="160" width="362" height="105"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="19"/>
@@ -491,7 +491,7 @@
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
                                                 <connections>
-                                                    <segue destination="RbH-SZ-QX5" kind="showDetail" id="bBq-ZO-vK7"/>
+                                                    <segue destination="RbH-SZ-QX5" kind="showDetail" identifier="allow" id="bBq-ZO-vK7"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -807,7 +807,7 @@
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
                                                 <connections>
-                                                    <segue destination="RbH-SZ-QX5" kind="show" id="dqa-5O-oXb"/>
+                                                    <segue destination="RbH-SZ-QX5" kind="show" identifier="closeMenu" id="dqa-5O-oXb"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" alpha="0.55000000000000004" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mra-77-U1S">
@@ -937,9 +937,6 @@
                         <outlet property="roastersButton" destination="OD3-f2-inm" id="tG3-V1-UQN"/>
                         <outlet property="shopsButton" destination="Cjw-fP-rQQ" id="2jR-aD-a6R"/>
                         <outlet property="sponsorButton" destination="eCz-zj-5zJ" id="Pho-TO-ZCv"/>
-                        <segue destination="htD-Cl-A4l" kind="show" id="MIa-wa-PwU"/>
-                        <segue destination="j8D-gq-gNI" kind="show" id="Hch-sM-GoF"/>
-                        <segue destination="Nse-Nc-nup" kind="showDetail" id="QX5-0G-q51"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gk8-rd-Hkb" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1118,13 +1115,13 @@
                         <barButtonItem key="leftBarButtonItem" image="menu-icon" id="cUi-3W-Z2Q">
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
-                                <segue destination="NKx-95-zal" kind="show" id="4ep-bV-6Fc"/>
+                                <segue destination="NKx-95-zal" kind="show" identifier="showMenu" id="4ep-bV-6Fc"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="search" id="WrW-1Q-j5f">
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
-                                <segue destination="5ea-Vg-Jf4" kind="presentation" id="glc-47-Wbb"/>
+                                <segue destination="5ea-Vg-Jf4" kind="presentation" identifier="showSort" id="glc-47-Wbb"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -1524,7 +1521,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h4K-Dd-cWG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="969" y="-373"/>
+            <point key="canvasLocation" x="966" y="-492"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="JLb-7c-ohb">
@@ -1585,9 +1582,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="dqa-5O-oXb"/>
-        <segue reference="iHd-2L-sPs"/>
-        <segue reference="bhh-IA-c3n"/>
-        <segue reference="b8H-pT-ZYu"/>
         <segue reference="yDw-WZ-P6P"/>
     </inferredMetricsTieBreakers>
 </document>
