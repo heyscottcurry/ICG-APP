@@ -18,12 +18,13 @@ class menuView: UIViewController {
     @IBOutlet weak var aboutComingSoon: UIButton!
     @IBOutlet weak var eventsButton: UIButton!
     @IBOutlet weak var eventsComingSoon: UIButton!
-    @IBOutlet weak var blogButton: UIButton!
-    @IBOutlet weak var blogComingSoon: UIButton!
     @IBOutlet weak var sponsorButton: UIButton!
     @IBOutlet weak var contactButton: UIButton!
     @IBOutlet weak var appsupportButton: UIButton!
     
+    @IBAction func launchSafari(_ sender: UIButton) {
+        UIApplication.shared.open(URL(string: "https://www.google.com")!, options: [:])
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,8 +36,6 @@ class menuView: UIViewController {
         aboutComingSoon.alpha = 0
         eventsButton.alpha = 0
         eventsComingSoon.alpha = 0
-        blogButton.alpha = 0
-        blogComingSoon.alpha = 0
         sponsorButton.alpha = 0
         contactButton.alpha = 0
         appsupportButton.alpha = 0
@@ -69,10 +68,9 @@ class menuView: UIViewController {
             self.eventsComingSoon.alpha = 0.55
         })
         
-        
         UIView.animate(withDuration: 0.3, delay: 0.2, animations: {
-            self.blogButton.alpha = 0.55
-            self.blogComingSoon.alpha = 0.55
+            self.sponsorButton.alpha = 1
+            self.appsupportButton.alpha = 0.4
         })
         
 
@@ -81,10 +79,7 @@ class menuView: UIViewController {
         })
     
 
-        UIView.animate(withDuration: 0.3, delay: 0.3, animations: {
-            self.sponsorButton.alpha = 1
-            self.appsupportButton.alpha = 0.4
-        })
+       
         
     }
         

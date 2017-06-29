@@ -833,17 +833,6 @@
                                                 <rect key="frame" x="36" y="0.0" width="342" height="73"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                             </imageView>
-                                            <button opaque="NO" alpha="0.90000000000000002" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zta-Xb-hRY">
-                                                <rect key="frame" x="60" y="341" width="295" height="44"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES"/>
-                                                <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="24"/>
-                                                <state key="normal" title="Contact Us">
-                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                </state>
-                                                <connections>
-                                                    <segue destination="htD-Cl-A4l" kind="show" id="bhh-IA-c3n"/>
-                                                </connections>
-                                            </button>
                                             <button opaque="NO" alpha="0.55000000000000004" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OD3-f2-inm">
                                                 <rect key="frame" x="60" y="133" width="295" height="44"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES"/>
@@ -884,32 +873,26 @@
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
                                             </button>
-                                            <button opaque="NO" alpha="0.55000001192092896" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LCO-8c-4HY">
-                                                <rect key="frame" x="60" y="289" width="295" height="44"/>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eCz-zj-5zJ">
+                                                <rect key="frame" x="60" y="289" width="342" height="44"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES"/>
                                                 <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="24"/>
-                                                <state key="normal" title="Blog">
-                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                </state>
-                                            </button>
-                                            <button opaque="NO" alpha="0.55000001192092896" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g29-BB-0qr">
-                                                <rect key="frame" x="164" y="289" width="164" height="44"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES"/>
-                                                <fontDescription key="fontDescription" name="Georgia-Italic" family="Georgia" pointSize="14"/>
-                                                <state key="normal" title="Coming Soon">
-                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                </state>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eCz-zj-5zJ">
-                                                <rect key="frame" x="36" y="610" width="342" height="73"/>
-                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                                                <color key="backgroundColor" red="0.85098039219999999" green="0.32549019610000002" blue="0.30980392159999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="24"/>
-                                                <state key="normal" title="Support the Guide">
+                                                <state key="normal" title="Partnerships">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
                                                 <connections>
                                                     <segue destination="Nse-Nc-nup" kind="show" id="b8H-pT-ZYu"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" alpha="0.90000000000000002" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zta-Xb-hRY">
+                                                <rect key="frame" x="60" y="341" width="295" height="44"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES"/>
+                                                <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="24"/>
+                                                <state key="normal" title="Contact Us">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <segue destination="htD-Cl-A4l" kind="show" id="bhh-IA-c3n"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -928,8 +911,6 @@
                         <outlet property="aboutButton" destination="mra-77-U1S" id="i56-ue-XHa"/>
                         <outlet property="aboutComingSoon" destination="1e7-Tt-NLP" id="owl-C8-VDu"/>
                         <outlet property="appsupportButton" destination="l0q-cE-EWw" id="Xgo-ch-tNg"/>
-                        <outlet property="blogButton" destination="LCO-8c-4HY" id="gSb-Jd-NZK"/>
-                        <outlet property="blogComingSoon" destination="g29-BB-0qr" id="72T-2N-9UR"/>
                         <outlet property="contactButton" destination="zta-Xb-hRY" id="7yy-VV-9Ca"/>
                         <outlet property="eventsButton" destination="n3i-fB-Ylz" id="zEg-Wn-G3R"/>
                         <outlet property="eventsComingSoon" destination="unW-RV-eO7" id="UMk-cU-3Tx"/>

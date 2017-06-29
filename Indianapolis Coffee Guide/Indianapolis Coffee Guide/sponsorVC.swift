@@ -30,7 +30,7 @@ class sponsorVC: UIViewController{
         sponsorWebView.load(URLRequest(url: url!))
     }
     
-    
+
     override func viewDidAppear(_ animated: Bool) {
         
         let when = DispatchTime.now() + 1 // change 2 to desired number of seconds

@@ -570,7 +570,6 @@ class ShopTableViewController: UITableViewController, CLLocationManagerDelegate 
         let featCoalYard = UIImage(named: "feat-coalyard")
         let featNeidhammer = UIImage(named: "feat-neidhammer")
         let featCalvinFletchers = UIImage(named: "feat-calvinfletcher")
-        let featVeloWorks = UIImage(named: "feat-veloworks")
         let featQuirkyFeather = UIImage(named: "feat-quirkyfeather")
         let featHubbardCarmel = UIImage(named: "feat-hubbardcarmel")
         let featTheWell = UIImage(named: "feat-thewell")
@@ -973,35 +972,6 @@ class ShopTableViewController: UITableViewController, CLLocationManagerDelegate 
             isOpen: false
         )
         
-        let shop14 = CoffeeShop(
-            name: "VeloWorks Urban Cyclery & Coffee Shop",
-            neighborhood: "Fountain Square",
-            long: 39.748798,
-            lat:  -86.139969,
-            listBrew: "Liberation Roasting",
-            listSpace: "Cozy coffee & cycle shop hybrid with loads of space.",
-            feature: featVeloWorks!,
-            newShop: false,
-            igHandle: "veloworksindy",
-            distance: (userLocale.distance(from: CLLocation(latitude: 39.748798, longitude: -86.139969)))*0.000621371,
-            googleMap: "www.google.com/maps/place/Veloworks+Urban+Cyclery+and+Coffee+Shop/@39.7487718,-86.142163,17z/data=!3m1!4b1!4m5!3m4!1s0x886b5a7949a392f9:0x508f0436a992c522!8m2!3d39.7487677!4d-86.1399743",
-            appleMap: "http://maps.apple.com/?daddr=1354+Shelby+St,Indianapolis,IN,46203&dirflg=d&t=h",
-            mondayOpen: 000,
-            mondayClose: 000,
-            tuesdayOpen: 1100,
-            tuesdayClose: 1800,
-            wednesdayOpen: 1100,
-            wednesdayClose: 1800,
-            thursdayOpen: 1100,
-            thursdayClose: 1800,
-            fridayOpen: 1100,
-            fridayClose: 1800,
-            saturdayOpen: 1100,
-            saturdayClose: 1600,
-            sundayOpen: 000,
-            sundayClose: 000,
-            isOpen: false
-        )
         
         let shop15 = CoffeeShop(
             name: "The Quirky Feather Confectionary",
@@ -1218,7 +1188,7 @@ class ShopTableViewController: UITableViewController, CLLocationManagerDelegate 
         
         
         
-        shops += [shop1, shop2, shop3, shop4, shop5, shop6, shop7, shop8, shop9, shop10, shop11, shop12, shop13, shop14, shop15, shop16, shop17, shop18, shop19, shop20, shop21]
+        shops += [shop1, shop2, shop3, shop4, shop5, shop6, shop7, shop8, shop9, shop10, shop11, shop12, shop13, shop15, shop16, shop17, shop18, shop19, shop20, shop21]
         
         
         

@@ -33,6 +33,8 @@ import Firebase
         
         self.window?.rootViewController = vc
         self.window?.makeKeyAndVisible()
+       
+        
 
         return true
     }
