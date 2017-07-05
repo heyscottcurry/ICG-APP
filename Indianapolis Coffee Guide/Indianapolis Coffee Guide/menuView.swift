@@ -12,31 +12,14 @@ class menuView: UIViewController {
 
    
     @IBOutlet weak var shopsButton: UIButton!
-    @IBOutlet weak var roastersButton: UIButton!
-    @IBOutlet weak var roasterComingSoon: UIButton!
-    @IBOutlet weak var aboutButton: UIButton!
-    @IBOutlet weak var aboutComingSoon: UIButton!
-    @IBOutlet weak var eventsButton: UIButton!
-    @IBOutlet weak var eventsComingSoon: UIButton!
-    @IBOutlet weak var sponsorButton: UIButton!
     @IBOutlet weak var contactButton: UIButton!
     @IBOutlet weak var appsupportButton: UIButton!
-    
-    @IBAction func launchSafari(_ sender: UIButton) {
-        UIApplication.shared.open(URL(string: "https://www.google.com")!, options: [:])
-    }
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         shopsButton.alpha = 0
-        roastersButton.alpha = 0
-        roasterComingSoon.alpha = 0
-        aboutButton.alpha = 0
-        aboutComingSoon.alpha = 0
-        eventsButton.alpha = 0
-        eventsComingSoon.alpha = 0
-        sponsorButton.alpha = 0
         contactButton.alpha = 0
         appsupportButton.alpha = 0
     }
@@ -50,31 +33,7 @@ class menuView: UIViewController {
         }) 
    
 
-        UIView.animate(withDuration: 0.3, delay: 0.05, animations: {
-            self.roastersButton.alpha = 0.55
-            self.roasterComingSoon.alpha = 0.55
-        })
-    
-
-        
         UIView.animate(withDuration: 0.3, delay: 0.1, animations: {
-            self.aboutButton.alpha = 0.55
-            self.aboutComingSoon.alpha = 0.55
-        })
-        
-        
-        UIView.animate(withDuration: 0.3, delay: 0.15, animations: {
-            self.eventsButton.alpha = 0.55
-            self.eventsComingSoon.alpha = 0.55
-        })
-        
-        UIView.animate(withDuration: 0.3, delay: 0.2, animations: {
-            self.sponsorButton.alpha = 1
-            self.appsupportButton.alpha = 0.4
-        })
-        
-
-        UIView.animate(withDuration: 0.3, delay: 0.25, animations: {
             self.contactButton.alpha = 1
         })
     
