@@ -126,16 +126,18 @@ class ShopDetail: UIViewController {
         self.shopText.sizeToFit()
     
         
-        
+        navigationItem.title = detailShop?.name
         
    
-        
         self.borderMain.layer.borderWidth = 2
         self.borderMain.layer.borderColor = UIColor.white.cgColor
         self.directionsButton.layer.borderWidth = 2
         self.directionsButton.layer.borderColor = UIColor.white.cgColor
         self.closeButton.layer.borderWidth = 2
         self.closeButton.layer.borderColor = UIColor.white.cgColor
+        
+        self.navigationController?.setNavigationBarHidden(true, animated: false)
+        UINavigationBar.appearance().tintColor = UIColor.white
     }
     
     override func didReceiveMemoryWarning() {
@@ -155,7 +157,8 @@ class ShopDetail: UIViewController {
     
     
     override func viewDidAppear(_ animated: Bool) {
-        
+        self.navigationController?.setNavigationBarHidden(true, animated: false)
+
         
         let shopDistance = Float((detailShop?.distance)!)
         if shopDistance < 0.05  {

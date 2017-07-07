@@ -25,6 +25,7 @@
 		AB07EE611E6BBB80009A9948 /* CoffeeShop.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB07EE601E6BBB80009A9948 /* CoffeeShop.swift */; };
 		AB07EE631E6BBE54009A9948 /* ShopTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB07EE621E6BBE54009A9948 /* ShopTableViewController.swift */; };
 		AB07EE651E6BCB47009A9948 /* ShopDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB07EE641E6BCB47009A9948 /* ShopDetail.swift */; };
+		AB14A9BF1F0FF697006FB390 /* noLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB14A9BE1F0FF697006FB390 /* noLocation.swift */; };
 		AB1D0A041EDDDB2600130D1D /* BWWalkthroughViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB1D0A021EDDDB2600130D1D /* BWWalkthroughViewController.swift */; };
 		AB1D0A051EDDDB2600130D1D /* BWWalkthroughPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB1D0A031EDDDB2600130D1D /* BWWalkthroughPageViewController.swift */; };
 		AB1D0A071EDDDF1800130D1D /* testVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB1D0A061EDDDF1800130D1D /* testVC.swift */; };
@@ -86,6 +87,7 @@
 		AB07EE601E6BBB80009A9948 /* CoffeeShop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoffeeShop.swift; sourceTree = "<group>"; };
 		AB07EE621E6BBE54009A9948 /* ShopTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShopTableViewController.swift; sourceTree = "<group>"; };
 		AB07EE641E6BCB47009A9948 /* ShopDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShopDetail.swift; sourceTree = "<group>"; };
+		AB14A9BE1F0FF697006FB390 /* noLocation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = noLocation.swift; sourceTree = "<group>"; };
 		AB1D0A021EDDDB2600130D1D /* BWWalkthroughViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BWWalkthroughViewController.swift; sourceTree = "<group>"; };
 		AB1D0A031EDDDB2600130D1D /* BWWalkthroughPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BWWalkthroughPageViewController.swift; sourceTree = "<group>"; };
 		AB1D0A061EDDDF1800130D1D /* testVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = testVC.swift; sourceTree = "<group>"; };
@@ -175,6 +177,7 @@
 			children = (
 				AB7B4E671E7F2D7A0011C128 /* IBDesignables */,
 				AB07EE621E6BBE54009A9948 /* ShopTableViewController.swift */,
+				AB14A9BE1F0FF697006FB390 /* noLocation.swift */,
 				AB07EE601E6BBB80009A9948 /* CoffeeShop.swift */,
 				AB07EE581E6BA9FD009A9948 /* Indianapolis Coffee Guide.entitlements */,
 				AB07EE2A1E6BA9E0009A9948 /* AppDelegate.swift */,
@@ -539,6 +542,7 @@
 				AB01AE631E783A290055ABF2 /* shopNavVC.swift in Sources */,
 				AB607D6E1ED8820600C73943 /* contactVC.swift in Sources */,
 				AB607D701ED88A5400C73943 /* supportVC.swift in Sources */,
+				AB14A9BF1F0FF697006FB390 /* noLocation.swift in Sources */,
 				AB607D6C1ED87B3A00C73943 /* menuView.swift in Sources */,
 				AB07EE651E6BCB47009A9948 /* ShopDetail.swift in Sources */,
 				AB07EE2D1E6BA9E0009A9948 /* ViewController.swift in Sources */,

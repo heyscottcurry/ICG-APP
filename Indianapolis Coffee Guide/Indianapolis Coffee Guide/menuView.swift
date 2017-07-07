@@ -37,6 +37,9 @@ class menuView: UIViewController {
             self.contactButton.alpha = 1
         })
     
+        UIView.animate(withDuration: 0.3, delay: 0.1, animations: {
+            self.appsupportButton.alpha = 1
+        })
 
        
         

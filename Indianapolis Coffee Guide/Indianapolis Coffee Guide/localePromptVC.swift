@@ -7,9 +7,31 @@
 //
 
 import UIKit
+import CoreLocation
 
-class localePromptVC: UIViewController {
+class localePromptVC: UIViewController, CLLocationManagerDelegate {
+    
+    
+    var locationManager = CLLocationManager()
 
+    @IBAction func allowLocale(_ sender: UIButton) {
+        
+       
+        self.locationManager = CLLocationManager()
+        self.locationManager.delegate = self
+        locationManager.requestWhenInUseAuthorization()
+    }
+
+    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+        if status == .authorizedWhenInUse {
+            self.performSegue(withIdentifier: "allowLocale", sender: self)
+        } else if status == .denied {
+            self.performSegue(withIdentifier: "updateLocale", sender: self)
+        }
+    }
+ 
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -21,15 +43,9 @@ class localePromptVC: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    
+  
 
-    /*
-    // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

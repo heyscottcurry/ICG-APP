@@ -158,6 +158,8 @@ class ShopTableViewController: UITableViewController, CLLocationManagerDelegate 
     }
     
     
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -170,9 +172,13 @@ class ShopTableViewController: UITableViewController, CLLocationManagerDelegate 
         self.locationManager.delegate = self
         if CLLocationManager.authorizationStatus() == .notDetermined {
             locationManager.requestWhenInUseAuthorization()
-        } else if CLLocationManager.authorizationStatus() == . authorizedWhenInUse {
+        } else if CLLocationManager.authorizationStatus() == .authorizedWhenInUse {
             shops.removeAll()
             startTrackingLocation()
+        } else if CLLocationManager.authorizationStatus() == .denied {
+            let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            let newViewController = storyBoard.instantiateViewController(withIdentifier: "noLocation")
+            self.present(newViewController, animated: true, completion: nil)
         }
         
         view.backgroundColor = UIColor.black
@@ -224,8 +230,7 @@ class ShopTableViewController: UITableViewController, CLLocationManagerDelegate 
         if status == .authorizedAlways || status == .authorizedWhenInUse {
             shops.removeAll()
             startTrackingLocation()
-            // ...
-        }
+        } 
     }
     
     func startTrackingLocation() {
@@ -1201,15 +1206,27 @@ class ShopTableViewController: UITableViewController, CLLocationManagerDelegate 
     
     // MARK: - Segues
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    
+        
+            
         if segue.identifier == "showDetail" {
-            if let indexPath = tableView.indexPathForSelectedRow {
-                let shop = shops[indexPath.row]
-                let controller = (segue.destination as! UINavigationController).topViewController as! ShopDetail
-                controller.detailShop = shop
-                
-                
+            guard let shopDetailViewController = segue.destination as? ShopDetail
+                else {
+                fatalError("Unexpected destination: \(segue.destination)")
             }
+            
+            guard let selectedShopCell = sender as? CoffeeShopTableViewCell else {
+                fatalError("Unexpected sender: \(String(describing: sender))")
+            }
+            
+            guard let indexPath = tableView.indexPath(for: selectedShopCell) else {
+                fatalError("The selected cell is not being displayed by the table")
+            }
+            
+            let shop = shops[indexPath.row]
+            shopDetailViewController.detailShop = shop
         }
+        
     }
     
     
