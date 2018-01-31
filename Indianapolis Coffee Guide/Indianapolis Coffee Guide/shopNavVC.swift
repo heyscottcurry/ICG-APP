@@ -19,8 +19,7 @@ class shopNavVC: UIViewController {
     @IBOutlet weak var fishersButton: UIButton!
     @IBOutlet weak var eaglecreekButton: UIButton!
     @IBOutlet weak var viewallButton: BorderButton!
-    
-    
+   
     
     @IBAction func shopnavClose(_ sender: Any) {
         dismiss(animated: true, completion: nil)
@@ -44,22 +43,20 @@ class shopNavVC: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        
+       
             UIView.animate(withDuration: 0.25, animations: {
                 self.downtownButton.alpha = 1
             })
-        
 
-        UIView.animate(withDuration: 0.3, delay: 0.05, animations: {
+
+            UIView.animate(withDuration: 0.3, delay: 0.05, animations: {
                 self.fsButton.alpha = 1
             })
-        
         
 
             UIView.animate(withDuration: 0.3, delay: 0.1, animations: {
                 self.irvingtonButton.alpha = 1
             })
-        
         
 
             UIView.animate(withDuration: 0.3, delay: 0.15, animations: {
@@ -78,19 +75,15 @@ class shopNavVC: UIViewController {
             })
         
         
- 
             UIView.animate(withDuration: 0.3, delay: 0.3, animations: {
                 self.eaglecreekButton.alpha = 1
             })
     
-        
    
             UIView.animate(withDuration: 0.3, delay: 0.35, animations: {
                 self.viewallButton.alpha = 1
             })
         
-        
-    
         }
         
     

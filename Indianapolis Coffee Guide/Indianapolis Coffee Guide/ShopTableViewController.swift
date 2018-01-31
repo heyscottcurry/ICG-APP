@@ -22,7 +22,6 @@ class ShopTableViewController: UITableViewController, CLLocationManagerDelegate 
         shops.removeAll()
         loadShops()
         sortList()
-        
     }
     
     
