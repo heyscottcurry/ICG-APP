@@ -160,7 +160,7 @@ import UIKit
     /// connect the button to this IBAction and implement the delegate with the skipWalkthrough
 
     
-    func pageControlDidTouch(){
+    @objc func pageControlDidTouch(){
         if let pc = pageControl{
             gotoPage(pc.currentPage)
         }
