@@ -586,6 +586,7 @@ class ShopTableViewController: UITableViewController, CLLocationManagerDelegate 
         let featSmashSocial = UIImage(named: "feat-smashsocial")
         let featHaverstick = UIImage(named: "feat-haverstick")
         let featDellaLava = UIImage(named: "feat-dellalava")
+        let featSoHo = UIImage(named: "feat-soho")
         
         let userLocale = CLLocation(latitude: self.userLatitude, longitude: self.userLongitude)
         
@@ -1313,9 +1314,39 @@ class ShopTableViewController: UITableViewController, CLLocationManagerDelegate 
             isOpen: false
         )
         
+        let shop27 = CoffeeShop(
+            name: "SoHo Cafe & Gallery",
+            neighborhood: "Carmel",
+            long: 39.972286,
+            lat: -86.129280,
+            listBrew: "Counter Culture",
+            listSpace: "Local coffee shop with plenty of space and local food & gifts.",
+            feature: featSoHo!,
+            newShop: false,
+            igHandle: "soho_cafe",
+            distance: (userLocale.distance(from: CLLocation(latitude: 39.972286, longitude: -86.129280)))*0.000621371,
+            googleMap: "www.google.com/maps/place/SoHo+Cafe+%26+Gallery/@39.972265,-86.1314685,17z/data=!3m1!4b1!4m5!3m4!1s0x8814adb141e2ac75:0x52ac3a039af8d0ea!8m2!3d39.9722609!4d-86.1292798",
+            appleMap: "http://maps.apple.com/?daddr=620+S+Rangeline+Rd,Carmel,IN,46032&dirflg=d&t=h",
+            mondayOpen: 0700,
+            mondayClose: 1700,
+            tuesdayOpen: 0700,
+            tuesdayClose: 1700,
+            wednesdayOpen: 0700,
+            wednesdayClose: 1700,
+            thursdayOpen: 0700,
+            thursdayClose: 1700,
+            fridayOpen: 0700,
+            fridayClose: 1700,
+            saturdayOpen: 0700,
+            saturdayClose: 1700,
+            sundayOpen: 1000,
+            sundayClose: 1600,
+            isOpen: false
+        )
         
         
-        shops += [shop1, shop2, shop3, shop4, shop5, shop6, shop7, shop8, shop9, shop10, shop11, shop12, shop13, shop16, shop17, shop18, shop19, shop20, shop21, shop22, shop23, shop24, shop25, shop26]
+        
+        shops += [shop1, shop2, shop3, shop4, shop5, shop6, shop7, shop8, shop9, shop10, shop11, shop12, shop13, shop16, shop17, shop18, shop19, shop20, shop21, shop22, shop23, shop24, shop25, shop26, shop27]
         
         
         
