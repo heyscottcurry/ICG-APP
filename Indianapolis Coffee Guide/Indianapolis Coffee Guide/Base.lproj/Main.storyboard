@@ -1,31 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="RbH-SZ-QX5">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="RbH-SZ-QX5">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="Georgia.ttf">
-            <string>Georgia</string>
-        </array>
-        <array key="GeorgiaBold.ttf">
-            <string>Georgia-Bold</string>
-        </array>
-        <array key="GeorgiaBoldItalic.ttf">
-            <string>Georgia-BoldItalic</string>
-        </array>
-        <array key="GeorgiaItalic.ttf">
-            <string>Georgia-Italic</string>
-        </array>
-        <array key="HelveticaNeue.ttc">
-            <string>HelveticaNeue-Italic</string>
-        </array>
-    </customFonts>
     <scenes>
         <!--TestVC-->
         <scene sceneID="jNc-NY-qqq">
@@ -1303,7 +1286,7 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
-                                                    <segue destination="pHt-Sn-xWM" kind="show" identifier="mapSegue" action="showDetailViewController:sender:" id="ads-Bp-z35"/>
+                                                    <segue destination="pHt-Sn-xWM" kind="show" identifier="mapSegue" id="ads-Bp-z35"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -1602,7 +1585,7 @@
         <image name="title" width="370" height="47"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="LrM-fj-eHc"/>
+        <segue reference="dqa-5O-oXb"/>
         <segue reference="Gdb-xI-sYI"/>
         <segue reference="H6g-3L-ZC2"/>
     </inferredMetricsTieBreakers>

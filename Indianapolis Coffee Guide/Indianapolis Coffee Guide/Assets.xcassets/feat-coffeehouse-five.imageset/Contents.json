@@ -2,17 +2,17 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "feat-indiecoffee.jpg",
+      "filename" : "feat-coffeehouse-five.jpg",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "feat-indiecoffee-1.jpg",
+      "filename" : "feat-coffeehouse-five-1.jpg",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
-      "filename" : "feat-indiecoffee-2.jpg",
+      "filename" : "feat-coffeehouse-five-2.jpg",
       "scale" : "3x"
     }
   ],

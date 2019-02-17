@@ -2,15 +2,17 @@
   "images" : [
     {
       "idiom" : "universal",
+      "filename" : "feat-generalamerican-2.jpg",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
+      "filename" : "feat-generalamerican-1.jpg",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
-      "filename" : "feat-generalamerican.jpeg",
+      "filename" : "feat-generalamerican.jpg",
       "scale" : "3x"
     }
   ],

@@ -2,17 +2,17 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "feat-soho.JPG",
+      "filename" : "feat-soho.jpg",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "feat-soho-1.JPG",
+      "filename" : "feat-soho-1.jpg",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
-      "filename" : "feat-soho-2.JPG",
+      "filename" : "feat-soho-2.jpg",
       "scale" : "3x"
     }
   ],

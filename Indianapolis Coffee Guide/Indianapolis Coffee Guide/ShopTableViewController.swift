@@ -288,7 +288,7 @@ class ShopTableViewController: UITableViewController, CLLocationManagerDelegate 
         cell.shopNeighborhood.text = shop.neighborhood
         cell.featureThumbnail.image = shop.feature
         cell.newLabel.transform = CGAffineTransform(rotationAngle: CGFloat((Double.pi / 2) * -1))
-        cell.newLabel.center.x = 15
+        cell.newLabel.center.x = 0
         cell.newLabel.center.y = 76.5
         cell.newLabel.alpha = 0
         cell.openImage.alpha = 0.25
@@ -564,11 +564,11 @@ class ShopTableViewController: UITableViewController, CLLocationManagerDelegate 
         let featCoatCheck = UIImage(named: "feat-coatcheck")
         let featGeorgiaStreet = UIImage(named: "feat-georgiastreet")
         let featQuills = UIImage(named: "feat-quills")
-        let featOpenSociety = UIImage(named: "feat-opensociety")
+        let featCommissary = UIImage(named: "feat-commissary")
         let featKaffeine = UIImage(named: "feat-kaffeine")
         let featGeneralAmerican = UIImage(named: "feat-generalamerican")
         let featBee = UIImage(named: "feat-bee")
-        let featThirstyScholar = UIImage(named: "feat-thirstyscholar")
+        let featMansion = UIImage(named: "feat-mansion")
         let featFoundry = UIImage(named: "feat-foundry")
         let featRabble = UIImage(named: "feat-rabble")
         let featCoalYard = UIImage(named: "feat-coalyard")
@@ -577,7 +577,7 @@ class ShopTableViewController: UITableViewController, CLLocationManagerDelegate 
         // let featQuirkyFeather = UIImage(named: "feat-quirkyfeather")
         let featHubbardCarmel = UIImage(named: "feat-hubbardcarmel")
         let featTheWell = UIImage(named: "feat-thewell")
-        let featSureShot = UIImage(named: "feat-sureshot")
+       //  let featSureShot = UIImage(named: "feat-sureshot")
         let featBeeRoaster = UIImage(named: "feat-beeroaster")
         let featMileSquare = UIImage(named: "feat-milesquare")
         let featMononBR = UIImage(named: "feat-mononbroadripple")
@@ -587,6 +587,11 @@ class ShopTableViewController: UITableViewController, CLLocationManagerDelegate 
         let featHaverstick = UIImage(named: "feat-haverstick")
         let featDellaLava = UIImage(named: "feat-dellalava")
         let featSoHo = UIImage(named: "feat-soho")
+        let featHubbardBroad = UIImage(named: "feat-hubbard-br")
+        let featCoffeehouseFive = UIImage(named: "feat-coffeehouse-five")
+        let featProvider = UIImage(named: "feat-provider")
+        let featSquareCat = UIImage(named: "feat-square-cat")
+        let featPorter = UIImage(named: "feat-porter")
         
         let userLocale = CLLocation(latitude: self.userLatitude, longitude: self.userLongitude)
         
@@ -616,9 +621,10 @@ class ShopTableViewController: UITableViewController, CLLocationManagerDelegate 
             fridayClose: 1900,
             saturdayOpen: 0800,
             saturdayClose: 1800,
-            sundayOpen: 0700,
+            sundayOpen: 0800,
             sundayClose: 1800,
-            isOpen: false
+            isOpen: false,
+            isFave: false
         )
         
         let shop2 = CoffeeShop(
@@ -648,7 +654,8 @@ class ShopTableViewController: UITableViewController, CLLocationManagerDelegate 
             saturdayClose: 000,
             sundayOpen: 000,
             sundayClose: 000,
-            isOpen: false
+            isOpen: false,
+            isFave: false
         )
         
         let shop3 = CoffeeShop(
@@ -677,10 +684,11 @@ class ShopTableViewController: UITableViewController, CLLocationManagerDelegate 
             saturdayOpen: 0800,
             saturdayClose: 1900,
             sundayOpen: 0800,
-            sundayClose: 900,
-            isOpen: false
+            sundayClose: 1900,
+            isOpen: false,
+            isFave: false
         )
-        
+       /*
         let shop4 = CoffeeShop(
             name: "Open Society Public House",
             neighborhood: "Broad Ripple",
@@ -708,8 +716,10 @@ class ShopTableViewController: UITableViewController, CLLocationManagerDelegate 
             saturdayClose: 2300,
             sundayOpen: 0700,
             sundayClose: 1700,
-            isOpen: false
+         isOpen: false,
+         isFave: false
         )
+ */
         
         let shop5 = CoffeeShop(
             name: "Kaffeine Coffee",
@@ -738,7 +748,8 @@ class ShopTableViewController: UITableViewController, CLLocationManagerDelegate 
             saturdayClose: 1800,
             sundayOpen: 000,
             sundayClose: 000,
-            isOpen: false
+            isOpen: false,
+            isFave: false
         )
         
         let shop6 = CoffeeShop(
@@ -768,7 +779,8 @@ class ShopTableViewController: UITableViewController, CLLocationManagerDelegate 
             saturdayClose: 1400,
             sundayOpen: 0730,
             sundayClose: 1400,
-            isOpen: false
+            isOpen: false,
+            isFave: false
         )
         
         let shop7 = CoffeeShop(
@@ -785,23 +797,24 @@ class ShopTableViewController: UITableViewController, CLLocationManagerDelegate 
             googleMap: "www.google.com/maps/place/Bee+Coffee+Roasters/@39.7635239,-86.1636347,17z/data=!3m1!4b1!4m5!3m4!1s0x886b50a4cb935ecd:0xc62f7a0001032723!8m2!3d39.7635239!4d-86.161446",
             appleMap: "http://maps.apple.com/?daddr=Bee+Coffee+201+S+Capitol+Ave,Indianapolis,IN,46225&dirflg=d&t=h",
             mondayOpen: 630,
-            mondayClose: 1750,
+            mondayClose: 1800,
             tuesdayOpen: 630,
-            tuesdayClose: 1750,
+            tuesdayClose: 1800,
             wednesdayOpen: 630,
-            wednesdayClose: 1750,
+            wednesdayClose: 1800,
             thursdayOpen: 630,
-            thursdayClose: 1750,
+            thursdayClose: 1800,
             fridayOpen: 630,
-            fridayClose: 1750,
+            fridayClose: 1800,
             saturdayOpen: 0700,
             saturdayClose: 1500,
             sundayOpen: 000,
             sundayClose: 000,
-            isOpen: false
+            isOpen: false,
+            isFave: false
         )
         
-        let shop8 = CoffeeShop(
+     /*   let shop8 = CoffeeShop(
             name: "Thirsty Scholar",
             neighborhood: "Downtown",
             long: 39.788278,
@@ -828,8 +841,9 @@ class ShopTableViewController: UITableViewController, CLLocationManagerDelegate 
             saturdayClose: 2359,
             sundayOpen: 0900,
             sundayClose: 2359,
-            isOpen: false
-        )
+         isOpen: false,
+         isFave: false
+        ) */
         
         let shop9 = CoffeeShop(
             name: "Foundry Provisions",
@@ -858,12 +872,13 @@ class ShopTableViewController: UITableViewController, CLLocationManagerDelegate 
             saturdayClose: 1600,
             sundayOpen: 0800,
             sundayClose: 1500,
-            isOpen: false
+            isOpen: false,
+            isFave: false
         )
         
         let shop10 = CoffeeShop(
             name: "Rabble Coffee",
-            neighborhood: "Irvington",
+            neighborhood: "Near Eastside",
             long: 39.781211,
             lat:  -86.124265,
             listBrew: "Tinker Coffee",
@@ -874,21 +889,22 @@ class ShopTableViewController: UITableViewController, CLLocationManagerDelegate 
             distance:  (userLocale.distance(from: CLLocation(latitude: 39.781211, longitude: -86.124265)))*0.000621371,
             googleMap: "www.google.com/maps/place/Rabble+Coffee/@39.7811751,-86.1264487,17z/data=!3m1!4b1!4m5!3m4!1s0x886b50452d562e3b:0x63b393cf690b13d7!8m2!3d39.781171!4d-86.12426",
             appleMap: "http://maps.apple.com/?daddr=2119+E+10th+St,Indianapolis,IN,46201&dirflg=d&t=h",
-            mondayOpen: 0700,
+            mondayOpen: 0600,
             mondayClose: 1800,
-            tuesdayOpen: 0700,
+            tuesdayOpen: 0600,
             tuesdayClose: 1800,
-            wednesdayOpen: 0700,
+            wednesdayOpen: 0600,
             wednesdayClose: 1800,
-            thursdayOpen: 0700,
+            thursdayOpen: 0600,
             thursdayClose: 1800,
-            fridayOpen: 0700,
+            fridayOpen: 0600,
             fridayClose: 1800,
             saturdayOpen: 0800,
             saturdayClose: 1800,
             sundayOpen: 0800,
             sundayClose: 1500,
-            isOpen: false
+            isOpen: false,
+            isFave: false
         )
         
         
@@ -906,20 +922,21 @@ class ShopTableViewController: UITableViewController, CLLocationManagerDelegate 
             googleMap: "www.google.com/maps/place/Coal+Yard+Coffee/@39.7675747,-86.0740922,17z/data=!3m1!4b1!4m5!3m4!1s0x886b4f94e9752bf1:0x3989df023a70c42e!8m2!3d39.7675706!4d-86.0719035",
             appleMap: "http://maps.apple.com/?daddr=5547+Bonna+Ave,Indianapolis,IN,46219&dirflg=d&t=h",
             mondayOpen: 0800,
-            mondayClose: 2000,
+            mondayClose: 1400,
             tuesdayOpen: 0800,
-            tuesdayClose: 2100,
+            tuesdayClose: 1400,
             wednesdayOpen: 0800,
-            wednesdayClose: 2000,
+            wednesdayClose: 1400,
             thursdayOpen: 0800,
             thursdayClose: 2000,
             fridayOpen: 0800,
             fridayClose: 2000,
             saturdayOpen: 0800,
             saturdayClose: 2000,
-            sundayOpen: 1100,
+            sundayOpen: 0900,
             sundayClose: 1800,
-            isOpen: false
+            isOpen: false,
+            isFave: false
         )
         
         let shop12 = CoffeeShop(
@@ -949,7 +966,8 @@ class ShopTableViewController: UITableViewController, CLLocationManagerDelegate 
             saturdayClose: 1800,
             sundayOpen: 000,
             sundayClose: 000,
-            isOpen: false
+            isOpen: false,
+            isFave: false
         )
         
         let shop13 = CoffeeShop(
@@ -979,7 +997,8 @@ class ShopTableViewController: UITableViewController, CLLocationManagerDelegate 
             saturdayClose: 1800,
             sundayOpen: 000,
             sundayClose: 000,
-            isOpen: false
+            isOpen: false,
+            isFave: false
         )
     
         
@@ -1010,7 +1029,8 @@ class ShopTableViewController: UITableViewController, CLLocationManagerDelegate 
             saturdayClose: 1900,
             sundayOpen: 0730,
             sundayClose: 1900,
-            isOpen: false
+            isOpen: false,
+            isFave: false
         )
         
         let shop17 = CoffeeShop(
@@ -1040,10 +1060,11 @@ class ShopTableViewController: UITableViewController, CLLocationManagerDelegate 
             saturdayClose: 2100,
             sundayOpen: 0900,
             sundayClose: 1800,
-            isOpen: false
+            isOpen: false,
+            isFave: false
         )
         
-        let shop18 = CoffeeShop(
+      /*   let shop18 = CoffeeShop(
             name: "Sure Shot Coffee",
             neighborhood: "Fishers",
             long: 39.956860,
@@ -1066,12 +1087,13 @@ class ShopTableViewController: UITableViewController, CLLocationManagerDelegate 
             thursdayClose: 2000,
             fridayOpen: 0700,
             fridayClose: 2000,
-            saturdayOpen: 0700,
+            saturdayOpen: 0800,
             saturdayClose: 2000,
-            sundayOpen: 1200,
+            sundayOpen: 0900,
             sundayClose: 1600,
-            isOpen: false
-        )
+         isOpen: false,
+         isFave: false
+        ) */
         
         let shop19 = CoffeeShop(
             name: "Bee Coffee Roasters : Roastery",
@@ -1100,7 +1122,8 @@ class ShopTableViewController: UITableViewController, CLLocationManagerDelegate 
             saturdayClose: 1500,
             sundayOpen: 000,
             sundayClose: 000,
-            isOpen: false
+            isOpen: false,
+            isFave: false
         )
         
         let shop20 = CoffeeShop(
@@ -1130,7 +1153,8 @@ class ShopTableViewController: UITableViewController, CLLocationManagerDelegate 
             saturdayClose: 1500,
             sundayOpen: 000,
             sundayClose: 000,
-            isOpen: false
+            isOpen: false,
+            isFave: false
         )
         
         
@@ -1161,7 +1185,8 @@ class ShopTableViewController: UITableViewController, CLLocationManagerDelegate 
             saturdayClose: 2100,
             sundayOpen: 0800,
             sundayClose: 2000,
-            isOpen: false
+            isOpen: false,
+            isFave: false
         )
         
         let shop22 = CoffeeShop(
@@ -1172,13 +1197,13 @@ class ShopTableViewController: UITableViewController, CLLocationManagerDelegate 
             listBrew: "Roasted in house!",
             listSpace: "Bright, polished, on-brand. ",
             feature: featIndieCoffee!,
-            newShop: true,
+            newShop: false,
             igHandle: "indiecoffeeroasters",
             distance: (userLocale.distance(from: CLLocation(latitude: 39.978650, longitude: -86.124047)))*0.000621371,
             googleMap: "www.google.com/maps/place/Indie+Coffee+Roasters/@39.9786489,-86.1262371,17z/data=!3m1!4b1!4m5!3m4!1s0x8814adc7fc677f39:0xf94beb2652d288d5!8m2!3d39.9786448!4d-86.1240484",
             appleMap: "http://maps.apple.com/?daddr=220+E+Main+Street,Carmel,IN,46032&dirflg=d&t=h",
-            mondayOpen: 000,
-            mondayClose: 000,
+            mondayOpen: 700,
+            mondayClose: 1800,
             tuesdayOpen: 0700,
             tuesdayClose: 1800,
             wednesdayOpen: 0700,
@@ -1186,12 +1211,13 @@ class ShopTableViewController: UITableViewController, CLLocationManagerDelegate 
             thursdayOpen: 0700,
             thursdayClose: 1800,
             fridayOpen: 0700,
-            fridayClose: 2100,
+            fridayClose: 1800,
             saturdayOpen: 0700,
-            saturdayClose: 2100,
+            saturdayClose: 1800,
             sundayOpen: 000,
             sundayClose: 000,
-            isOpen: false
+            isOpen: false,
+            isFave: false
         )
         
         let shop23 = CoffeeShop(
@@ -1221,7 +1247,8 @@ class ShopTableViewController: UITableViewController, CLLocationManagerDelegate 
             saturdayClose: 1900,
             sundayOpen: 0700,
             sundayClose: 1700,
-            isOpen: false
+            isOpen: false,
+            isFave: false
         )
         
         let shop24 = CoffeeShop(
@@ -1232,26 +1259,27 @@ class ShopTableViewController: UITableViewController, CLLocationManagerDelegate 
             listBrew: "Tinker Coffee",
             listSpace: "Coffee + Beer + Ping Pong.",
             feature: featSmashSocial!,
-            newShop: true,
+            newShop: false,
             igHandle: "smashsocialhq",
             distance: (userLocale.distance(from: CLLocation(latitude: 39.770072, longitude: -86.146946)))*0.000621371,
             googleMap: "www.google.com/maps/place/Smash+Social/@39.7700614,-86.1491555,17z/data=!3m1!4b1!4m5!3m4!1s0x886b50924c739b9f:0x867c52b50624198d!8m2!3d39.7700573!4d-86.1469668",
             appleMap: "http://maps.apple.com/?daddr=600+E+Ohio+Street,Indianapolis,IN,46202&dirflg=d&t=h",
-            mondayOpen: 0800,
+            mondayOpen: 1600,
             mondayClose: 2200,
-            tuesdayOpen: 0800,
+            tuesdayOpen: 1600,
             tuesdayClose: 2200,
-            wednesdayOpen: 0800,
+            wednesdayOpen: 1600,
             wednesdayClose: 2200,
-            thursdayOpen: 0800,
+            thursdayOpen: 1600,
             thursdayClose: 2200,
-            fridayOpen: 0800,
+            fridayOpen: 1600,
             fridayClose: 2359,
-            saturdayOpen: 0800,
+            saturdayOpen: 1200,
             saturdayClose: 2359,
-            sundayOpen: 0800,
-            sundayClose: 2200,
-            isOpen: false
+            sundayOpen: 1200,
+            sundayClose: 2000,
+            isOpen: false,
+            isFave: false
         )
         
         let shop25 = CoffeeShop(
@@ -1262,7 +1290,7 @@ class ShopTableViewController: UITableViewController, CLLocationManagerDelegate 
             listBrew: "Brickhouse Coffee",
             listSpace: "The biggest, most comfortable space inside Church at the Crossing.",
             feature: featHaverstick!,
-            newShop: true,
+            newShop: false,
             igHandle: "thehaverstick",
             distance: (userLocale.distance(from: CLLocation(latitude: 39.920388, longitude: -86.114904)))*0.000621371,
             googleMap: "www.google.com/maps/place/The+Haverstick/@39.9203427,-86.1171034,17z/data=!3m1!4b1!4m5!3m4!1s0x8814ad35c12ab891:0xb9d2095505a01201!8m2!3d39.9203386!4d-86.1149147",
@@ -1281,18 +1309,19 @@ class ShopTableViewController: UITableViewController, CLLocationManagerDelegate 
             saturdayClose: 000,
             sundayOpen: 000,
             sundayClose: 000,
-            isOpen: false
+            isOpen: false,
+            isFave: false
         )
         
         let shop26 = CoffeeShop(
-            name: "Della Lava",
+            name: "Della Leva",
             neighborhood: "Fishers",
             long: 39.941175,
             lat: -86.022955,
-            listBrew: "Della Lava Blends",
+            listBrew: "Della Leva Blends",
             listSpace: "Europe meets Chicago meets Indy.",
             feature: featDellaLava!,
-            newShop: true,
+            newShop: false,
             igHandle: "dellalava",
             distance: (userLocale.distance(from: CLLocation(latitude: 39.941175, longitude: -86.022955)))*0.000621371,
             googleMap: "www.google.com/maps/place/Della+Leva+Espresso+Bar/@39.9411734,-86.025146,17z/data=!3m1!4b1!4m5!3m4!1s0x8814b36e54179c1f:0xfdacbb5e1c64606a!8m2!3d39.9411693!4d-86.0229573",
@@ -1311,7 +1340,8 @@ class ShopTableViewController: UITableViewController, CLLocationManagerDelegate 
             saturdayClose: 1700,
             sundayOpen: 0900,
             sundayClose: 1500,
-            isOpen: false
+            isOpen: false,
+            isFave: false
         )
         
         let shop27 = CoffeeShop(
@@ -1341,12 +1371,233 @@ class ShopTableViewController: UITableViewController, CLLocationManagerDelegate 
             saturdayClose: 1700,
             sundayOpen: 1000,
             sundayClose: 1600,
-            isOpen: false
+            isOpen: false,
+            isFave: false
+        )
+        
+        let shop28 = CoffeeShop(
+            name: "Hubbard & Cravens - Broad Ripple",
+            neighborhood: "Broad Ripple",
+            long: 39.868740,
+            lat: -86.144594,
+            listBrew: "Hubbard & Cravens Coffee",
+            listSpace: "When you think 'coffee house,' this is the place that comes to mind. FRIENDS vibes with great coffee.",
+            feature: featHubbardBroad!,
+            newShop: false,
+            igHandle: "hubbardandcravens",
+            distance: (userLocale.distance(from: CLLocation(latitude: 39.868740, longitude: -86.144594)))*0.000621371,
+            googleMap: "www.google.com/maps/place/Hubbard+%26+Cravens+Coffee/@39.8687379,-86.1467892,17z/data=!3m1!4b1!4m5!3m4!1s0x886b53af7e2dd9f7:0xe30c306672c9f3db!8m2!3d39.8687379!4d-86.1445952",
+            appleMap: "http://maps.apple.com/?daddr=6229+Carrollton+Ave,Indianapolis,IN,46220&dirflg=d&t=h",
+            mondayOpen: 0630,
+            mondayClose: 1800,
+            tuesdayOpen: 0630,
+            tuesdayClose: 1800,
+            wednesdayOpen: 0630,
+            wednesdayClose: 1800,
+            thursdayOpen: 0630,
+            thursdayClose: 1800,
+            fridayOpen: 0630,
+            fridayClose: 1800,
+            saturdayOpen: 0630,
+            saturdayClose: 1800,
+            sundayOpen: 0700,
+            sundayClose: 1500,
+            isOpen: false,
+            isFave: false
+        )
+        
+        let shop29 = CoffeeShop(
+            name: "Coffeehouse Five",
+            neighborhood: "Greenwood",
+            long: 39.612217,
+            lat: -86.110510,
+            listBrew: "Coffeehouse Five Coffee",
+            listSpace: "Greenwood's best kept secret. The coffee is great, the food is amazing, and the community is compassionate.",
+            feature: featCoffeehouseFive!,
+            newShop: false,
+            igHandle: "coffeehouse_five",
+            distance: (userLocale.distance(from: CLLocation(latitude: 39.612217, longitude: -86.110510)))*0.000621371,
+            googleMap: "www.google.com/maps/place/Coffeehouse+Five/@39.6122108,-86.112704,17z/data=!3m1!4b1!4m5!3m4!1s0x886b5dbca29b7c4f:0x75f2589f7b27edd7!8m2!3d39.6122108!4d-86.11051",
+            appleMap: "http://maps.apple.com/?daddr=323+Market+Plaza,Greenwood,IN,46142&dirflg=d&t=h",
+            mondayOpen: 0730,
+            mondayClose: 1630,
+            tuesdayOpen: 0730,
+            tuesdayClose: 1630,
+            wednesdayOpen: 0730,
+            wednesdayClose: 1630,
+            thursdayOpen: 0730,
+            thursdayClose: 1630,
+            fridayOpen: 0730,
+            fridayClose: 1630,
+            saturdayOpen: 0730,
+            saturdayClose: 1300,
+            sundayOpen: 0000,
+            sundayClose: 0000,
+            isOpen: false,
+            isFave: false
+        )
+        
+        
+        let shop30 = CoffeeShop(
+            name: "P R O V I D E R",
+            neighborhood: "Downtown",
+            long: 39.787991,
+            lat: -86.139434,
+            listBrew: "Ruby Roasters & Tinker Coffee",
+            listSpace: "Coffee & Long Drinks in the Tinker House Event Space. Coat Check's older, cooler brother.",
+            feature: featProvider!,
+            newShop: true,
+            igHandle: "providerindy",
+            distance: (userLocale.distance(from: CLLocation(latitude: 39.787991, longitude: -86.139434)))*0.000621371,
+            googleMap: "www.google.com/maps/place/P+R+O+V+I+D+E+R+Coffee/@39.7879854,-86.1416292,17z/data=!3m1!4b1!4m5!3m4!1s0x886b51fc83ebf6af:0xc1e63441facdde88!8m2!3d39.7879854!4d-86.1394405",
+            appleMap: "http://maps.apple.com/?daddr=1101+E+16th+Street,Indianapolis,IN,46202&dirflg=d&t=h",
+            mondayOpen: 0700,
+            mondayClose: 2200,
+            tuesdayOpen: 0700,
+            tuesdayClose: 2200,
+            wednesdayOpen: 0700,
+            wednesdayClose: 2200,
+            thursdayOpen: 0700,
+            thursdayClose: 2200,
+            fridayOpen: 0700,
+            fridayClose: 2300,
+            saturdayOpen: 0800,
+            saturdayClose: 1800,
+            sundayOpen: 0800,
+            sundayClose: 2200,
+            isOpen: false,
+            isFave: false
         )
         
         
         
-        shops += [shop1, shop2, shop3, shop4, shop5, shop6, shop7, shop8, shop9, shop10, shop11, shop12, shop13, shop16, shop17, shop18, shop19, shop20, shop21, shop22, shop23, shop24, shop25, shop26, shop27]
+        let shop31 = CoffeeShop(
+            name: "Square Cat Vinyl",
+            neighborhood: "Fountain Square",
+            long: 39.752780,
+            lat: -86.140364,
+            listBrew: "Tinker Coffee",
+            listSpace: "Half killer coffee shop, half vinyl record store. Does it get better?",
+            feature: featSquareCat!,
+            newShop: false,
+            igHandle: "squarecatvinyl",
+            distance: (userLocale.distance(from: CLLocation(latitude: 39.752780, longitude: -86.140364)))*0.000621371,
+            googleMap: "www.google.com/maps/place/Square+Cat+Vinyl/@39.7527784,-86.1425536,17z/data=!3m1!4b1!4m5!3m4!1s0x886b5a78a784033b:0x3f6b8d6a03de2556!8m2!3d39.7527784!4d-86.1403649",
+            appleMap: "http://maps.apple.com/?daddr=1054+Virginia+Avenue,Indianapolis,IN,46203&dirflg=d&t=h",
+            mondayOpen: 0800,
+            mondayClose: 2200,
+            tuesdayOpen: 0800,
+            tuesdayClose: 2200,
+            wednesdayOpen: 0800,
+            wednesdayClose: 2200,
+            thursdayOpen: 0800,
+            thursdayClose: 2200,
+            fridayOpen: 0800,
+            fridayClose: 2359,
+            saturdayOpen: 0900,
+            saturdayClose: 2359,
+            sundayOpen: 1100,
+            sundayClose: 1900,
+            isOpen: false,
+            isFave: false
+        )
+        
+        let shop32 = CoffeeShop(
+            name: "Porter Books & Bread",
+            neighborhood: "Lawrence",
+            long: 39.857898,
+            lat: -86.013075,
+            listBrew: "Roasted in house.",
+            listSpace: "Indy's best kept secret THAT SHOULDN'T BE A SECRET ANYMORE.",
+            feature: featPorter!,
+            newShop: false,
+            igHandle: "porterbooksandbread",
+            distance: (userLocale.distance(from: CLLocation(latitude: 39.857898, longitude: -86.013075)))*0.000621371,
+            googleMap: "www.google.com/maps/place/Porter+Books+and+Bread/@39.8578972,-86.0152651,17z/data=!3m1!4b1!4m5!3m4!1s0x886b4c763e5589af:0xd041b4815a5b6072!8m2!3d39.8578972!4d-86.0130764",
+            appleMap: "http://maps.apple.com/?daddr=5719+Lawton+Loop+E+Dr,Indianapolis,IN,46216&dirflg=d&t=h",
+            mondayOpen: 0600,
+            mondayClose: 1600,
+            tuesdayOpen: 0600,
+            tuesdayClose: 1600,
+            wednesdayOpen: 0600,
+            wednesdayClose: 1600,
+            thursdayOpen: 0600,
+            thursdayClose: 1600,
+            fridayOpen: 0600,
+            fridayClose: 1800,
+            saturdayOpen: 0800,
+            saturdayClose: 1800,
+            sundayOpen: 0000,
+            sundayClose:0000,
+            isOpen: false,
+            isFave: false
+        )
+        
+        let shop33 = CoffeeShop(
+            name: "Commissary Barber & Barista",
+            neighborhood: "Downtown",
+            long: 39.771395,
+            lat: -86.1522505,
+            listBrew: "Tinker Coffee",
+            listSpace: "Half kick-ass barbershop, Half amazing coffee shop. What else do you need?",
+            feature: featCommissary!,
+            newShop: true,
+            igHandle: "commissaryindy",
+            distance: (userLocale.distance(from: CLLocation(latitude: 39.771395, longitude:  -86.152250)))*0.000621371,
+            googleMap: "www.google.com/maps/place/Commissary+Barber+%26+Barista/@39.7713922,-86.1544407,17z/data=!3m1!4b1!4m5!3m4!1s0x886b51a28fe3a259:0xe2b149ea775ac363!8m2!3d39.7713922!4d-86.152252",
+            appleMap: "http://maps.apple.com/?daddr=304+E+New+York+St,Indianapolis,IN,46204&dirflg=d&t=h",
+            mondayOpen: 0730,
+            mondayClose: 1900,
+            tuesdayOpen: 0730,
+            tuesdayClose: 1900,
+            wednesdayOpen: 0730,
+            wednesdayClose: 1900,
+            thursdayOpen: 0730,
+            thursdayClose: 1900,
+            fridayOpen: 0730,
+            fridayClose: 1900,
+            saturdayOpen: 0800,
+            saturdayClose: 1900,
+            sundayOpen: 0900,
+            sundayClose:1800,
+            isOpen: false,
+            isFave: false
+        )
+        
+        let shop34 = CoffeeShop(
+            name: "Cafe Mansion",
+            neighborhood: "Downtown",
+            long: 39.767862,
+            lat: -86.211162,
+            listBrew: "Tinker Coffee & Intelligentsia",
+            listSpace: "The COOLEST cafe in the lobby of Central State Mansion with serious retro vibes.",
+            feature: featMansion!,
+            newShop: true,
+            igHandle: "cafemansion",
+            distance: (userLocale.distance(from: CLLocation(latitude: 39.767862, longitude:  -86.211162)))*0.000621371,
+            googleMap: "www.google.com/maps/place/Caf%C3%A9+Mansi%C3%B3n/@39.767857,-86.2133497,17z/data=!3m1!4b1!4m5!3m4!1s0x886b5787fb54af1f:0xa50cb7c3340ce5b0!8m2!3d39.767857!4d-86.211161",
+            appleMap: "http://maps.apple.com/?daddr=202+Steeples+Blvd,Indianapolis,IN,46222&dirflg=d&t=h",
+            mondayOpen: 0000,
+            mondayClose: 0000,
+            tuesdayOpen: 0700,
+            tuesdayClose: 1900,
+            wednesdayOpen: 0700,
+            wednesdayClose: 1900,
+            thursdayOpen: 0700,
+            thursdayClose: 1900,
+            fridayOpen: 0700,
+            fridayClose: 1900,
+            saturdayOpen: 0800,
+            saturdayClose: 1800,
+            sundayOpen: 0800,
+            sundayClose:1800,
+            isOpen: false,
+            isFave: false
+        )
+
+        
+        
+        shops += [shop1, shop2, shop3, shop5, shop6, shop7, shop9, shop10, shop11, shop12, shop13, shop16, shop17, shop19, shop20, shop21, shop22, shop23, shop24, shop25, shop26, shop27, shop28, shop29, shop30, shop31, shop32, shop33, shop34]
         
         
         

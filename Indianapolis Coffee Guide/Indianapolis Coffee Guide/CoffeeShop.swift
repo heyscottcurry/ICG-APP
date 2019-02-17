@@ -42,8 +42,9 @@ class CoffeeShop {
     var sundayOpen: Double
     var sundayClose: Double
     var isOpen: Bool
+    var isFave: Bool
     
-    init(name: String, neighborhood: String, long: Double, lat: Double, listBrew: String, listSpace: String, feature: UIImage?, newShop: Bool, igHandle: String, distance: Double, googleMap: String, appleMap: String, mondayOpen: Double, mondayClose: Double, tuesdayOpen: Double, tuesdayClose: Double, wednesdayOpen: Double, wednesdayClose: Double, thursdayOpen: Double, thursdayClose: Double, fridayOpen: Double, fridayClose: Double, saturdayOpen: Double, saturdayClose: Double, sundayOpen: Double, sundayClose: Double, isOpen: Bool ) {
+    init(name: String, neighborhood: String, long: Double, lat: Double, listBrew: String, listSpace: String, feature: UIImage?, newShop: Bool, igHandle: String, distance: Double, googleMap: String, appleMap: String, mondayOpen: Double, mondayClose: Double, tuesdayOpen: Double, tuesdayClose: Double, wednesdayOpen: Double, wednesdayClose: Double, thursdayOpen: Double, thursdayClose: Double, fridayOpen: Double, fridayClose: Double, saturdayOpen: Double, saturdayClose: Double, sundayOpen: Double, sundayClose: Double, isOpen: Bool, isFave: Bool ) {
         
         
         
@@ -75,6 +76,7 @@ class CoffeeShop {
         self.sundayOpen = sundayOpen
         self.sundayClose = sundayClose
         self.isOpen = isOpen
+        self.isFave = isFave
         
     }
     
