@@ -255,7 +255,6 @@ class ShopTableViewController: UITableViewController, CLLocationManagerDelegate 
     // MARK: - Table view data source
     
     override func numberOfSections(in tableView: UITableView) -> Int {
-        
         return 1
     }
     
@@ -592,6 +591,10 @@ class ShopTableViewController: UITableViewController, CLLocationManagerDelegate 
         let featProvider = UIImage(named: "feat-provider")
         let featSquareCat = UIImage(named: "feat-square-cat")
         let featPorter = UIImage(named: "feat-porter")
+        let featPorterCoffee = UIImage(named: "feat-portercoffee")
+        let featGavel = UIImage(named: "feat-gavel")
+        let featGreenfieldGrind = UIImage(named: "feat-greenfield-grind")
+        let featNineLives = UIImage(named: "feat-nine-lives")
         
         let userLocale = CLLocation(latitude: self.userLatitude, longitude: self.userLongitude)
         
@@ -1385,7 +1388,7 @@ class ShopTableViewController: UITableViewController, CLLocationManagerDelegate 
             feature: featHubbardBroad!,
             newShop: false,
             igHandle: "hubbardandcravens",
-            distance: (userLocale.distance(from: CLLocation(latitude: 39.868740, longitude: -86.144594)))*0.000621371,
+            distance: (userLocale.distance(from: CLLocation(latitude: 39.8687379, longitude: -86.1467892)))*0.000621371,
             googleMap: "www.google.com/maps/place/Hubbard+%26+Cravens+Coffee/@39.8687379,-86.1467892,17z/data=!3m1!4b1!4m5!3m4!1s0x886b53af7e2dd9f7:0xe30c306672c9f3db!8m2!3d39.8687379!4d-86.1445952",
             appleMap: "http://maps.apple.com/?daddr=6229+Carrollton+Ave,Indianapolis,IN,46220&dirflg=d&t=h",
             mondayOpen: 0630,
@@ -1446,7 +1449,7 @@ class ShopTableViewController: UITableViewController, CLLocationManagerDelegate 
             listBrew: "Ruby Roasters & Tinker Coffee",
             listSpace: "Coffee & Long Drinks in the Tinker House Event Space. Coat Check's older, cooler brother.",
             feature: featProvider!,
-            newShop: true,
+            newShop: false,
             igHandle: "providerindy",
             distance: (userLocale.distance(from: CLLocation(latitude: 39.787991, longitude: -86.139434)))*0.000621371,
             googleMap: "www.google.com/maps/place/P+R+O+V+I+D+E+R+Coffee/@39.7879854,-86.1416292,17z/data=!3m1!4b1!4m5!3m4!1s0x886b51fc83ebf6af:0xc1e63441facdde88!8m2!3d39.7879854!4d-86.1394405",
@@ -1541,7 +1544,7 @@ class ShopTableViewController: UITableViewController, CLLocationManagerDelegate 
             listBrew: "Tinker Coffee",
             listSpace: "Half kick-ass barbershop, Half amazing coffee shop. What else do you need?",
             feature: featCommissary!,
-            newShop: true,
+            newShop: false,
             igHandle: "commissaryindy",
             distance: (userLocale.distance(from: CLLocation(latitude: 39.771395, longitude:  -86.152250)))*0.000621371,
             googleMap: "www.google.com/maps/place/Commissary+Barber+%26+Barista/@39.7713922,-86.1544407,17z/data=!3m1!4b1!4m5!3m4!1s0x886b51a28fe3a259:0xe2b149ea775ac363!8m2!3d39.7713922!4d-86.152252",
@@ -1594,10 +1597,134 @@ class ShopTableViewController: UITableViewController, CLLocationManagerDelegate 
             isOpen: false,
             isFave: false
         )
+        
+        let shop35 = CoffeeShop(
+            name: "Gavel",
+            neighborhood: "Fountain Square",
+            long: 39.767862,
+            lat: -86.211162,
+            listBrew: "Tinker Coffee",
+            listSpace: "An old courtroom turned lobby of a marketing agency. Somewhere between a coffee shop and a cocktail bar.",
+            feature: featGavel!,
+            newShop: true,
+            igHandle: "gavel.indy",
+            distance: (userLocale.distance(from: CLLocation(latitude: 39.7546719, longitude:  -86.1422789)))*0.000621371,
+            googleMap: "www.google.com/maps/place/Gavel/@39.754702,-86.1421245,15z/data=!4m5!3m4!1s0x0:0xcd9368583dbde10e!8m2!3d39.754702!4d-86.1421245",
+            appleMap: "http://maps.apple.com/?daddr=902+Virgina+Ave,Indianapolis,IN,46203&dirflg=d&t=h",
+            mondayOpen: 0800,
+            mondayClose: 1830,
+            tuesdayOpen: 0800,
+            tuesdayClose: 1830,
+            wednesdayOpen: 0800,
+            wednesdayClose: 1830,
+            thursdayOpen: 0800,
+            thursdayClose: 1830,
+            fridayOpen: 0800,
+            fridayClose: 1830,
+            saturdayOpen: 0800,
+            saturdayClose: 1830,
+            sundayOpen: 0800,
+            sundayClose:1830,
+            isOpen: false,
+            isFave: false
+        )
+        
+        let shop36 = CoffeeShop(
+            name: "Porter Coffee",
+            neighborhood: "Greenfield",
+            long: 39.767862,
+            lat: -86.211162,
+            listBrew: "Roasted in house!",
+            listSpace: "Beautiful space that always smells like coffee and cookies. It's...heaven.",
+            feature: featPorterCoffee!,
+            newShop: true,
+            igHandle: "portercoffeeindy",
+            distance: (userLocale.distance(from: CLLocation(latitude: 39.7854673, longitude: -85.7714191)))*0.000621371,
+            googleMap: "www.google.com/maps/place/Porter+Coffee/@39.7854673,-85.7714191,17z/data=!3m1!4b1!4m5!3m4!1s0x886b33eb42d4455b:0xf31d8ba90b6bcbd!8m2!3d39.834822!4d-85.770607",
+            appleMap: "http://maps.apple.com/?daddr=9+N+State+St,Greenfield,IN,46140&dirflg=d&t=h",
+            mondayOpen: 0000,
+            mondayClose: 0000,
+            tuesdayOpen: 0730,
+            tuesdayClose: 1400,
+            wednesdayOpen: 0730,
+            wednesdayClose: 1400,
+            thursdayOpen: 0730,
+            thursdayClose: 1400,
+            fridayOpen: 0730,
+            fridayClose: 1400,
+            saturdayOpen: 0900,
+            saturdayClose: 1500,
+            sundayOpen: 0000,
+            sundayClose:0000,
+            isOpen: false,
+            isFave: false
+        )
+        
+        let shop37 = CoffeeShop(
+            name: "The Greenfield Grind",
+            neighborhood: "Greenfield",
+            long: 39.767862,
+            lat: -86.211162,
+            listBrew: "Blue Mind Roasting",
+            listSpace: "Bright, fun, beautiful space that is exactly where you want to be.",
+            feature: featGreenfieldGrind!,
+            newShop: true,
+            igHandle: "thegreenfieldgrind",
+            distance: (userLocale.distance(from: CLLocation(latitude: 39.7856421, longitude: -85.7716659)))*0.000621371,
+            googleMap: "www.google.com/maps/place/The+Greenfield+Grind/@39.7856421,-85.7716659,17z/data=!3m1!4b1!4m5!3m4!1s0x886b31d42c34b6c1:0x9c7165505395f3a!8m2!3d39.7856421!4d-85.7694772",
+            appleMap: "http://maps.apple.com/?daddr=14+N+State+St,Greenfield,IN,46140&dirflg=d&t=h",
+            mondayOpen: 0700,
+            mondayClose: 1500,
+            tuesdayOpen: 0700,
+            tuesdayClose: 1500,
+            wednesdayOpen: 0700,
+            wednesdayClose: 1500,
+            thursdayOpen: 0700,
+            thursdayClose: 1500,
+            fridayOpen: 0700,
+            fridayClose: 1500,
+            saturdayOpen: 0800,
+            saturdayClose: 1500,
+            sundayOpen: 0000,
+            sundayClose:0000,
+            isOpen: false,
+            isFave: false
+        )
+        
+        let shop38 = CoffeeShop(
+            name: "Nine Lives Cat Cafe",
+            neighborhood: "Fountain Square",
+            long: 39.767862,
+            lat: -86.211162,
+            listBrew: "Brickhouse Coffee",
+            listSpace: "CATS. THERE'S NOTHING ELSE YOU NEED TO KNOW.",
+            feature: featNineLives!,
+            newShop: false,
+            igHandle: "ninelivesindy",
+            distance: (userLocale.distance(from: CLLocation(latitude: 39.7497066, longitude: -86.141839)))*0.000621371,
+            googleMap: "www.google.com/maps/place/Nine+Lives+Cat+Café/@39.7497066,-86.141839,17z/data=!3m1!4b1!4m5!3m4!1s0x886b5a792d1e37ef:0x353d099e147fba54!8m2!3d39.7497066!4d-86.1396503",
+            appleMap: "http://maps.apple.com/?daddr=1315+Shelby+St,Indianapolis,IN,46203&dirflg=d&t=h",
+            mondayOpen: 0700,
+            mondayClose: 1500,
+            tuesdayOpen: 0700,
+            tuesdayClose: 1500,
+            wednesdayOpen: 0700,
+            wednesdayClose: 1500,
+            thursdayOpen: 0700,
+            thursdayClose: 1500,
+            fridayOpen: 0700,
+            fridayClose: 1500,
+            saturdayOpen: 0800,
+            saturdayClose: 1500,
+            sundayOpen: 0000,
+            sundayClose:0000,
+            isOpen: false,
+            isFave: false
+        )
 
         
         
-        shops += [shop1, shop2, shop3, shop5, shop6, shop7, shop9, shop10, shop11, shop12, shop13, shop16, shop17, shop19, shop20, shop21, shop22, shop23, shop24, shop25, shop26, shop27, shop28, shop29, shop30, shop31, shop32, shop33, shop34]
+        shops += [shop1, shop2, shop3, shop5, shop6, shop7, shop9, shop10, shop11, shop12, shop13, shop16, shop17, shop19, shop20, shop21, shop22, shop23, shop24, shop25, shop26, shop27, shop28, shop29, shop30, shop31, shop32, shop33, shop34, shop35, shop36, shop37, shop38]
         
         
         

@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="RbH-SZ-QX5">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="RbH-SZ-QX5">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -274,7 +273,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Come Along" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jKv-bx-eD4">
-                                <rect key="frame" x="20" y="413" width="374" height="43"/>
+                                <rect key="frame" x="20" y="413" width="375" height="43"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="43" id="4di-Pw-77J"/>
                                 </constraints>
@@ -283,7 +282,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ross-pouring" translatesAutoresizingMaskIntoConstraints="NO" id="KEn-o8-HA5">
-                                <rect key="frame" x="68" y="28" width="279" height="339"/>
+                                <rect key="frame" x="68" y="28" width="280" height="339"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
@@ -324,17 +323,17 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hzv-4I-yEK">
-                                        <rect key="frame" x="54" y="310" width="306" height="20"/>
+                                        <rect key="frame" x="53" y="311" width="308" height="20"/>
                                         <fontDescription key="fontDescription" name="Georgia-Italic" family="Georgia" pointSize="17"/>
                                         <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UG4-xg-IxX">
-                                        <rect key="frame" x="53" y="338" width="307" height="4"/>
+                                        <rect key="frame" x="53" y="339" width="308" height="3"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     </view>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="se4-9R-0os">
-                                        <rect key="frame" x="53" y="306" width="307" height="29"/>
+                                        <rect key="frame" x="53" y="306" width="308" height="30"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="20"/>
                                         <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress" keyboardAppearance="alert" returnKeyType="go"/>
@@ -343,7 +342,7 @@
                                         </connections>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jDV-8e-Ss1">
-                                        <rect key="frame" x="53" y="367" width="307" height="55"/>
+                                        <rect key="frame" x="53" y="367" width="308" height="55"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="55" id="rB9-Na-y5q"/>
                                         </constraints>
@@ -356,7 +355,7 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="this one’s for you." textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" minimumFontSize="20" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gVn-tB-k1u">
-                                        <rect key="frame" x="8" y="89" width="398" height="37"/>
+                                        <rect key="frame" x="8" y="89" width="399" height="37"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="37" id="yST-gy-H0d"/>
                                         </constraints>
@@ -365,7 +364,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3YY-PP-WTm">
-                                        <rect key="frame" x="54" y="455" width="306" height="30"/>
+                                        <rect key="frame" x="53" y="455" width="308" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="Xq3-dW-13A"/>
                                         </constraints>
@@ -379,7 +378,7 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="12" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="To4-FU-hIa">
-                                        <rect key="frame" x="54" y="134" width="306" height="112"/>
+                                        <rect key="frame" x="53" y="134" width="308" height="112"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="112" id="RAE-0k-ekA"/>
                                         </constraints>
@@ -389,7 +388,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Coffee lovers," textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" minimumFontSize="26" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8Gv-Ah-3ze">
-                                        <rect key="frame" x="44" y="50" width="325" height="44"/>
+                                        <rect key="frame" x="44" y="50" width="326" height="44"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="44" id="G4U-eT-r2g"/>
                                         </constraints>
@@ -1012,7 +1011,7 @@
                             <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         </view>
                         <view key="tableFooterView" contentMode="scaleToFill" id="NJe-up-xVU">
-                            <rect key="frame" x="0.0" y="243" width="414" height="155"/>
+                            <rect key="frame" x="0.0" y="804" width="414" height="155"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Be a part of the community:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fAs-fY-J38">
@@ -1045,13 +1044,13 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.25" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="feat-beeroaster" translatesAutoresizingMaskIntoConstraints="NO" id="Ns6-hM-K7p">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="155"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="154.66666666666666"/>
                                         </imageView>
                                         <view contentMode="scaleToFill" restorationIdentifier="cellback" translatesAutoresizingMaskIntoConstraints="NO" id="d3z-C5-vnX">
-                                            <rect key="frame" x="12" y="0.0" width="390" height="155"/>
+                                            <rect key="frame" x="12" y="0.0" width="390" height="154.66666666666666"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Neighborhood" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mjc-lR-nta">
-                                                    <rect key="frame" x="113" y="66" width="164" height="23"/>
+                                                    <rect key="frame" x="113" y="65.666666666666671" width="164" height="23"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="164" id="ftm-vW-MZK"/>
                                                     </constraints>
@@ -1070,7 +1069,7 @@
                                                     <size key="shadowOffset" width="0.0" height="0.0"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.0 miles" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aA3-fr-1Ez">
-                                                    <rect key="frame" x="0.0" y="90" width="390" height="21"/>
+                                                    <rect key="frame" x="0.0" y="89.666666666666671" width="390" height="21"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="21" id="mD1-en-OuZ"/>
                                                     </constraints>
@@ -1079,7 +1078,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jsR-LG-MY6">
-                                                    <rect key="frame" x="87" y="57" width="216" height="1"/>
+                                                    <rect key="frame" x="87" y="57" width="216" height="0.6666666666666643"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </view>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="New!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s4P-ha-PKi">
@@ -1569,20 +1568,20 @@
         </scene>
     </scenes>
     <resources>
-        <image name="clock-off" width="32" height="32"/>
-        <image name="close-icon" width="18" height="19"/>
-        <image name="feat-beeroaster" width="533" height="400"/>
-        <image name="feat-kaffeine" width="360" height="449"/>
-        <image name="feat-opensociety" width="466" height="366"/>
-        <image name="feat-quirkyfeather" width="266" height="400"/>
-        <image name="icon-shop" width="78" height="80"/>
-        <image name="ig-icon" width="193" height="193"/>
-        <image name="menu-icon" width="25" height="16"/>
-        <image name="onboarding-phone" width="186" height="244"/>
-        <image name="pourovers" width="360" height="449"/>
-        <image name="ross-pouring" width="360" height="450"/>
-        <image name="slogan-white" width="692" height="312"/>
-        <image name="title" width="370" height="47"/>
+        <image name="clock-off" width="32.666667938232422" height="32.666667938232422"/>
+        <image name="close-icon" width="18.666666030883789" height="19"/>
+        <image name="feat-beeroaster" width="1600" height="1200"/>
+        <image name="feat-kaffeine" width="1080" height="1349"/>
+        <image name="feat-opensociety" width="1400" height="1098"/>
+        <image name="feat-quirkyfeather" width="240" height="360"/>
+        <image name="icon-shop" width="59" height="60"/>
+        <image name="ig-icon" width="581" height="581"/>
+        <image name="menu-icon" width="25.333333969116211" height="16.333333969116211"/>
+        <image name="onboarding-phone" width="560" height="734"/>
+        <image name="pourovers" width="1080" height="1349"/>
+        <image name="ross-pouring" width="1080" height="1350"/>
+        <image name="slogan-white" width="2078" height="936"/>
+        <image name="title" width="1111" height="141"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="dqa-5O-oXb"/>
