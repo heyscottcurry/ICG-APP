@@ -564,17 +564,17 @@ class ShopTableViewController: UITableViewController, CLLocationManagerDelegate 
         let featGeorgiaStreet = UIImage(named: "feat-georgiastreet")
         let featQuills = UIImage(named: "feat-quills")
         let featCommissary = UIImage(named: "feat-commissary")
-        let featKaffeine = UIImage(named: "feat-kaffeine")
-        let featGeneralAmerican = UIImage(named: "feat-generalamerican")
+       // let featKaffeine = UIImage(named: "feat-kaffeine")
+     //   let featGeneralAmerican = UIImage(named: "feat-generalamerican")
         let featBee = UIImage(named: "feat-bee")
         let featMansion = UIImage(named: "feat-mansion")
         let featFoundry = UIImage(named: "feat-foundry")
-        let featRabble = UIImage(named: "feat-rabble")
+     //   let featRabble = UIImage(named: "feat-rabble")
         let featCoalYard = UIImage(named: "feat-coalyard")
         let featNeidhammer = UIImage(named: "feat-neidhammer")
         let featCalvinFletchers = UIImage(named: "feat-calvinfletcher")
         // let featQuirkyFeather = UIImage(named: "feat-quirkyfeather")
-        let featHubbardCarmel = UIImage(named: "feat-hubbardcarmel")
+     //   let featHubbardCarmel = UIImage(named: "feat-hubbardcarmel")
         let featTheWell = UIImage(named: "feat-thewell")
        //  let featSureShot = UIImage(named: "feat-sureshot")
         let featBeeRoaster = UIImage(named: "feat-beeroaster")
@@ -584,7 +584,7 @@ class ShopTableViewController: UITableViewController, CLLocationManagerDelegate 
         let featHubbardBR = UIImage(named: "feat-hubbard49thpenn")
         let featSmashSocial = UIImage(named: "feat-smashsocial")
         let featHaverstick = UIImage(named: "feat-haverstick")
-        let featDellaLava = UIImage(named: "feat-dellalava")
+        // let featDellaLava = UIImage(named: "feat-dellalava")
         let featSoHo = UIImage(named: "feat-soho")
         let featHubbardBroad = UIImage(named: "feat-hubbard-br")
         let featCoffeehouseFive = UIImage(named: "feat-coffeehouse-five")
@@ -592,9 +592,31 @@ class ShopTableViewController: UITableViewController, CLLocationManagerDelegate 
         let featSquareCat = UIImage(named: "feat-square-cat")
         let featPorter = UIImage(named: "feat-porter")
         let featPorterCoffee = UIImage(named: "feat-portercoffee")
-        let featGavel = UIImage(named: "feat-gavel")
+       // let featGavel = UIImage(named: "feat-gavel")
         let featGreenfieldGrind = UIImage(named: "feat-greenfield-grind")
         let featNineLives = UIImage(named: "feat-nine-lives")
+        let featRITV = UIImage(named: "feat-ritv")
+        let featFoundation = UIImage(named: "feat-foundation")
+        let featDryBones = UIImage(named: "feat-drybonesmudhouse")
+        let featNormal = UIImage(named: "feat-normal-coffee" )
+        let featBovaconti = UIImage(named: "feat-bovaconti")
+        let featschoolhouse7 = UIImage(named: "feat-schoolhouse7")
+        let featBrickhouse = UIImage(named: "feat-brickhouse")
+        let featRose = UIImage(named: "feat-rose-and-lois")
+        let featMochaNut = UIImage(named: "feat-mocha-nut")
+        let featLibrary = UIImage(named: "feat-thelibrary")
+        let featLincolnlane = UIImage(named: "feat-lincoln-lane")
+        let featGeist = UIImage(named: "feat-geist")
+        let featHitherto = UIImage(named: "feat-hitherto")
+        let featNcat = UIImage(named: "ncat")
+        let featPrufrock = UIImage(named: "feat-prufrock")
+        let featLulus = UIImage(named: "feat-lulus")
+        let featPercolate = UIImage(named: "feat-percolate")
+        let featAmberson = UIImage(named: "feat-amberson")
+        
+        
+        
+        
         
         let userLocale = CLLocation(latitude: self.userLatitude, longitude: self.userLongitude)
         
@@ -723,7 +745,7 @@ class ShopTableViewController: UITableViewController, CLLocationManagerDelegate 
          isFave: false
         )
  */
-        
+        /*
         let shop5 = CoffeeShop(
             name: "Kaffeine Coffee",
             neighborhood: "Downtown",
@@ -785,9 +807,9 @@ class ShopTableViewController: UITableViewController, CLLocationManagerDelegate 
             isOpen: false,
             isFave: false
         )
-        
+        */
         let shop7 = CoffeeShop(
-            name: "Bee Coffee",
+            name: "Bee Coffee : Swarm",
             neighborhood: "Downtown",
             long: 39.763533,
             lat: -86.161663,
@@ -878,7 +900,7 @@ class ShopTableViewController: UITableViewController, CLLocationManagerDelegate 
             isOpen: false,
             isFave: false
         )
-        
+        /*
         let shop10 = CoffeeShop(
             name: "Rabble Coffee",
             neighborhood: "Near Eastside",
@@ -908,7 +930,7 @@ class ShopTableViewController: UITableViewController, CLLocationManagerDelegate 
             sundayClose: 1500,
             isOpen: false,
             isFave: false
-        )
+        ) */
         
         
         let shop11 = CoffeeShop(
@@ -1004,7 +1026,7 @@ class ShopTableViewController: UITableViewController, CLLocationManagerDelegate 
             isFave: false
         )
     
-        
+        /*
         let shop16 = CoffeeShop(
             name: "Hubbard & Cravens",
             neighborhood: "Carmel",
@@ -1034,7 +1056,7 @@ class ShopTableViewController: UITableViewController, CLLocationManagerDelegate 
             sundayClose: 1900,
             isOpen: false,
             isFave: false
-        )
+        )*/
         
         let shop17 = CoffeeShop(
             name: "The Well Coffee House",
@@ -1226,14 +1248,14 @@ class ShopTableViewController: UITableViewController, CLLocationManagerDelegate 
         let shop23 = CoffeeShop(
             name: "Hubbard & Cravens",
             neighborhood: "Broad Ripple",
-            long: 39.8434367,
-            lat: -86.1573993,
+            long: 39.843416,
+            lat: -86.155206,
             listBrew: "Roasted just down the street.",
             listSpace: "Classic neighborhood coffeehouse.",
             feature: featHubbardBR!,
             newShop: false,
             igHandle: "hubbardandcravens",
-            distance: (userLocale.distance(from: CLLocation(latitude: 39.8434367, longitude: -86.1573993)))*0.000621371,
+            distance: (userLocale.distance(from: CLLocation(latitude: 39.843416, longitude: -86.155206)))*0.000621371,
             googleMap: "www.google.com/maps/place/Hubbard+%26+Cravens+Coffee+Co/@39.8434367,-86.1573993,17z/data=!3m1!4b1!4m5!3m4!1s0x886b53e78182bd45:0xdc59d6beac8b01e0!8m2!3d39.8434326!4d-86.1552106",
             appleMap: "http://maps.apple.com/?daddr=4930+N+Pennsylvania+Street,Indianapolis,IN,46205&dirflg=d&t=h",
             mondayOpen: 0530,
@@ -1315,7 +1337,7 @@ class ShopTableViewController: UITableViewController, CLLocationManagerDelegate 
             isOpen: false,
             isFave: false
         )
-        
+        /*
         let shop26 = CoffeeShop(
             name: "Della Leva",
             neighborhood: "Fishers",
@@ -1345,7 +1367,7 @@ class ShopTableViewController: UITableViewController, CLLocationManagerDelegate 
             sundayClose: 1500,
             isOpen: false,
             isFave: false
-        )
+        ) */
         
         let shop27 = CoffeeShop(
             name: "SoHo Cafe & Gallery",
@@ -1541,7 +1563,7 @@ class ShopTableViewController: UITableViewController, CLLocationManagerDelegate 
             neighborhood: "Downtown",
             long: 39.771395,
             lat: -86.1522505,
-            listBrew: "Tinker Coffee",
+            listBrew: "Tinker Coffee, Blue Mind, and others!",
             listSpace: "Half kick-ass barbershop, Half amazing coffee shop. What else do you need?",
             feature: featCommissary!,
             newShop: false,
@@ -1575,7 +1597,7 @@ class ShopTableViewController: UITableViewController, CLLocationManagerDelegate 
             listBrew: "Tinker Coffee & Intelligentsia",
             listSpace: "The COOLEST cafe in the lobby of Central State Mansion with serious retro vibes.",
             feature: featMansion!,
-            newShop: true,
+            newShop: false,
             igHandle: "cafemansion",
             distance: (userLocale.distance(from: CLLocation(latitude: 39.767862, longitude:  -86.211162)))*0.000621371,
             googleMap: "www.google.com/maps/place/Caf%C3%A9+Mansi%C3%B3n/@39.767857,-86.2133497,17z/data=!3m1!4b1!4m5!3m4!1s0x886b5787fb54af1f:0xa50cb7c3340ce5b0!8m2!3d39.767857!4d-86.211161",
@@ -1597,18 +1619,18 @@ class ShopTableViewController: UITableViewController, CLLocationManagerDelegate 
             isOpen: false,
             isFave: false
         )
-        
+        /*
         let shop35 = CoffeeShop(
             name: "Gavel",
             neighborhood: "Fountain Square",
-            long: 39.767862,
-            lat: -86.211162,
+            long: 39.754667,
+            lat: -86.142283,
             listBrew: "Tinker Coffee",
             listSpace: "An old courtroom turned lobby of a marketing agency. Somewhere between a coffee shop and a cocktail bar.",
             feature: featGavel!,
-            newShop: true,
+            newShop: false,
             igHandle: "gavel.indy",
-            distance: (userLocale.distance(from: CLLocation(latitude: 39.7546719, longitude:  -86.1422789)))*0.000621371,
+            distance: (userLocale.distance(from: CLLocation(latitude: 39.754667, longitude:  -86.142283)))*0.000621371,
             googleMap: "www.google.com/maps/place/Gavel/@39.754702,-86.1421245,15z/data=!4m5!3m4!1s0x0:0xcd9368583dbde10e!8m2!3d39.754702!4d-86.1421245",
             appleMap: "http://maps.apple.com/?daddr=902+Virgina+Ave,Indianapolis,IN,46203&dirflg=d&t=h",
             mondayOpen: 0800,
@@ -1628,18 +1650,18 @@ class ShopTableViewController: UITableViewController, CLLocationManagerDelegate 
             isOpen: false,
             isFave: false
         )
-        
+        */
         let shop36 = CoffeeShop(
             name: "Porter Coffee",
             neighborhood: "Greenfield",
-            long: 39.767862,
-            lat: -86.211162,
+            long: 39.785464,
+            lat: -85.769235,
             listBrew: "Roasted in house!",
             listSpace: "Beautiful space that always smells like coffee and cookies. It's...heaven.",
             feature: featPorterCoffee!,
-            newShop: true,
+            newShop: false,
             igHandle: "portercoffeeindy",
-            distance: (userLocale.distance(from: CLLocation(latitude: 39.7854673, longitude: -85.7714191)))*0.000621371,
+            distance: (userLocale.distance(from: CLLocation(latitude: 39.785464, longitude: -85.769235)))*0.000621371,
             googleMap: "www.google.com/maps/place/Porter+Coffee/@39.7854673,-85.7714191,17z/data=!3m1!4b1!4m5!3m4!1s0x886b33eb42d4455b:0xf31d8ba90b6bcbd!8m2!3d39.834822!4d-85.770607",
             appleMap: "http://maps.apple.com/?daddr=9+N+State+St,Greenfield,IN,46140&dirflg=d&t=h",
             mondayOpen: 0000,
@@ -1663,14 +1685,14 @@ class ShopTableViewController: UITableViewController, CLLocationManagerDelegate 
         let shop37 = CoffeeShop(
             name: "The Greenfield Grind",
             neighborhood: "Greenfield",
-            long: 39.767862,
-            lat: -86.211162,
+            long: 39.785638,
+            lat: -85.769476,
             listBrew: "Blue Mind Roasting",
             listSpace: "Bright, fun, beautiful space that is exactly where you want to be.",
             feature: featGreenfieldGrind!,
-            newShop: true,
+            newShop: false,
             igHandle: "thegreenfieldgrind",
-            distance: (userLocale.distance(from: CLLocation(latitude: 39.7856421, longitude: -85.7716659)))*0.000621371,
+            distance: (userLocale.distance(from: CLLocation(latitude: 39.785638, longitude: -85.769476)))*0.000621371,
             googleMap: "www.google.com/maps/place/The+Greenfield+Grind/@39.7856421,-85.7716659,17z/data=!3m1!4b1!4m5!3m4!1s0x886b31d42c34b6c1:0x9c7165505395f3a!8m2!3d39.7856421!4d-85.7694772",
             appleMap: "http://maps.apple.com/?daddr=14+N+State+St,Greenfield,IN,46140&dirflg=d&t=h",
             mondayOpen: 0700,
@@ -1694,14 +1716,14 @@ class ShopTableViewController: UITableViewController, CLLocationManagerDelegate 
         let shop38 = CoffeeShop(
             name: "Nine Lives Cat Cafe",
             neighborhood: "Fountain Square",
-            long: 39.767862,
-            lat: -86.211162,
+            long: 39.749693,
+            lat: -86.139644,
             listBrew: "Brickhouse Coffee",
             listSpace: "CATS. THERE'S NOTHING ELSE YOU NEED TO KNOW.",
             feature: featNineLives!,
             newShop: false,
             igHandle: "ninelivesindy",
-            distance: (userLocale.distance(from: CLLocation(latitude: 39.7497066, longitude: -86.141839)))*0.000621371,
+            distance: (userLocale.distance(from: CLLocation(latitude: 39.749693, longitude: -86.139644)))*0.000621371,
             googleMap: "www.google.com/maps/place/Nine+Lives+Cat+Café/@39.7497066,-86.141839,17z/data=!3m1!4b1!4m5!3m4!1s0x886b5a792d1e37ef:0x353d099e147fba54!8m2!3d39.7497066!4d-86.1396503",
             appleMap: "http://maps.apple.com/?daddr=1315+Shelby+St,Indianapolis,IN,46203&dirflg=d&t=h",
             mondayOpen: 0700,
@@ -1722,9 +1744,567 @@ class ShopTableViewController: UITableViewController, CLLocationManagerDelegate 
             isFave: false
         )
 
+        let shop39 = CoffeeShop(
+                   name: "Roasted in the Village",
+                   neighborhood: "Zionsville",
+                   long: 39.949893,
+                   lat: -86.261060,
+                   listBrew: "Sunergos Coffee (Louisville)",
+                   listSpace: "The perfect addition to Zionsville's brick streets. The perfectly warm small town cafe with great coffee and goodies.",
+                   feature: featRITV!,
+                   newShop: false,
+                   igHandle: "roastedinthevillage",
+                   distance: (userLocale.distance(from: CLLocation(latitude: 39.949893, longitude: -86.261060)))*0.000621371,
+                   googleMap: "www.google.com/maps/place/Roasted+in+the+Village/@39.9498404,-86.26103,19.95z/data=!4m5!3m4!1s0x881355c02740ad2f:0x314b976fb88ff92c!8m2!3d39.9498972!4d-86.2610636",
+                   appleMap: "http://maps.apple.com/?daddr=27+E+Pine+St,Zionsville,IN,46077&dirflg=d&t=h",
+                   mondayOpen: 0700,
+                   mondayClose: 1500,
+                   tuesdayOpen: 0700,
+                   tuesdayClose: 1500,
+                   wednesdayOpen: 0700,
+                   wednesdayClose: 1500,
+                   thursdayOpen: 0700,
+                   thursdayClose: 1500,
+                   fridayOpen: 0700,
+                   fridayClose: 1500,
+                   saturdayOpen: 0800,
+                   saturdayClose: 1500,
+                   sundayOpen: 0000,
+                   sundayClose:0000,
+                   isOpen: false,
+                   isFave: false
+               )
+        
+        let shop40 = CoffeeShop(
+                   name: "Dry Bones Mud House",
+                   neighborhood: "Downtown",
+                   long: 39.759363,
+                   lat: -86.158071,
+                   listBrew: "Tinker Coffee",
+                   listSpace: "Located in the lobby of Union 525, #WakeDemBonesUp with delicious coffee and food.",
+                   feature: featDryBones!,
+                   newShop: true,
+                   igHandle: "drybonesmudhouse",
+                   distance: (userLocale.distance(from: CLLocation(latitude: 39.759363, longitude: -86.158071)))*0.000621371,
+                   googleMap: "www.google.com/maps/place/Dry+Bones+Mud+House/@39.7593726,-86.1602773,17z/data=!3m1!4b1!4m5!3m4!1s0x886b5199739671b3:0x5a08a2765ee462cb!8m2!3d39.7593685!4d-86.1580833",
+                   appleMap: "http://maps.apple.com/?daddr=525+S+Meridian+St,Indianapolis,IN,46225&dirflg=d&t=h",
+                   mondayOpen: 0700,
+                   mondayClose: 1600,
+                   tuesdayOpen: 0700,
+                   tuesdayClose: 1600,
+                   wednesdayOpen: 0700,
+                   wednesdayClose: 1600,
+                   thursdayOpen: 0700,
+                   thursdayClose: 1600,
+                   fridayOpen: 0700,
+                   fridayClose: 1600,
+                   saturdayOpen: 0000,
+                   saturdayClose: 0000,
+                   sundayOpen: 1000,
+                   sundayClose:1400,
+                   isOpen: false,
+                   isFave: false
+               )
+        
+        let shop41 = CoffeeShop(
+                   name: "Normal Coffee",
+                   neighborhood: "Garfield Park",
+                   long: 39.729154,
+                   lat: -86.138747,
+                   listBrew: "Tinker Coffee",
+                   listSpace: "This groovy coffee bar sits inside one of Indy's hidden treasures - the Tube Factory Art Space. Loads of space, a small library, and so much local art.",
+                   feature: featNormal!,
+                   newShop: false,
+                   igHandle: "normalcoffeeindy",
+                   distance: (userLocale.distance(from: CLLocation(latitude: 39.729154, longitude: -86.138747)))*0.000621371,
+                   googleMap: "www.google.com/maps/place/Normal+Coffee/@39.7291636,-86.1409471,17z/data=!3m1!4b1!4m5!3m4!1s0x886b5b41d3cbc111:0x42294c31c8c8a7a4!8m2!3d39.7291595!4d-86.1387531",
+                   appleMap: "http://maps.apple.com/?daddr=1125+Cruft+St,Indianapolis,IN,46203&dirflg=d&t=h",
+                   mondayOpen: 0700,
+                   mondayClose: 1800,
+                   tuesdayOpen: 0700,
+                   tuesdayClose: 1800,
+                   wednesdayOpen: 0700,
+                   wednesdayClose: 1800,
+                   thursdayOpen: 0700,
+                   thursdayClose: 1800,
+                   fridayOpen: 0700,
+                   fridayClose: 1800,
+                   saturdayOpen: 0800,
+                   saturdayClose: 1500,
+                   sundayOpen: 0000,
+                   sundayClose:0000,
+                   isOpen: false,
+                   isFave: false
+               )
+        
+        let shop42 = CoffeeShop(
+            name: "Foundation Coffee Company",
+            neighborhood: "SoBro",
+            long: 39.839988,
+            lat: -86.134092,
+            listBrew: "A Special Foundation Blend",
+            listSpace: "Patachou's latest endeavoer is the perfect neighborhood coffee shop benefitting The Patachou Foundation. All proceeds go to ensuring no citizen of Indy goes hungry.",
+            feature: featFoundation!,
+            newShop: false,
+            igHandle: "foundationcoffeecompany",
+            distance: (userLocale.distance(from: CLLocation(latitude: 39.839988, longitude: -86.134092)))*0.000621371,
+            googleMap: "www.google.com/maps/place/Foundation+Coffee+Company/@39.8399937,-86.1362859,17z/data=!3m1!4b1!4m5!3m4!1s0x886b53e1b71d7c15:0x483a98655e7b29a0!8m2!3d39.8399896!4d-86.1340919",
+            appleMap: "http://maps.apple.com/?daddr=4565+Marcy+Ln,Indianapolis,IN,46205&dirflg=d&t=h",
+            mondayOpen: 0700,
+            mondayClose: 1400,
+            tuesdayOpen: 0700,
+            tuesdayClose: 1400,
+            wednesdayOpen: 0700,
+            wednesdayClose: 1400,
+            thursdayOpen: 0700,
+            thursdayClose: 1400,
+            fridayOpen: 0700,
+            fridayClose: 1400,
+            saturdayOpen: 0800,
+            saturdayClose: 1400,
+            sundayOpen: 0000,
+            sundayClose:0000,
+            isOpen: false,
+            isFave: false
+        )
+        
+        let shop43 = CoffeeShop(
+            name: "Schoolhouse 7 Cafe",
+            neighborhood: "Fishers",
+            long: 39.966820,
+            lat: -85.880887,
+            listBrew: "Brickhouse Coffee",
+            listSpace: "The cutest little schoolhouse turned coffee shop with 2 stories of cozy space, great coffee, and delicious food (full menu). Off the beaten path and totally worth the drive.",
+            feature: featschoolhouse7!,
+            newShop: false,
+            igHandle: "schoolhouse7cafe",
+            distance: (userLocale.distance(from: CLLocation(latitude: 39.966820, longitude: -85.880887)))*0.000621371,
+            googleMap: "www.google.com/maps/place/Schoolhouse+7+Cafe/@39.9668483,-85.8832158,17z/data=!3m1!4b1!4m5!3m4!1s0x8814cbb956fd7df5:0xa4b46158b8c8db9c!8m2!3d39.9668442!4d-85.8810218",
+            appleMap: "http://maps.apple.com/?daddr=4565+Marcy+Ln,Indianapolis,IN,46205&dirflg=d&t=h",
+            mondayOpen: 0630,
+            mondayClose: 1800,
+            tuesdayOpen: 0630,
+            tuesdayClose: 1800,
+            wednesdayOpen: 0630,
+            wednesdayClose: 1800,
+            thursdayOpen: 0630,
+            thursdayClose: 1800,
+            fridayOpen: 0630,
+            fridayClose: 1800,
+            saturdayOpen: 0730,
+            saturdayClose: 1600,
+            sundayOpen: 0730,
+            sundayClose:1600,
+            isOpen: false,
+            isFave: false
+        )
+        
+        let shop44 = CoffeeShop(
+            name: "Bovaconti Coffee",
+            neighborhood: "Fountain Square",
+            long: 39.752994,
+            lat: -86.140595,
+            listBrew: "Utopian Coffee & Many Others!",
+            listSpace: "It's hard to describe Bovaconti in just one phrase, so I'll leave you with these few: beautiful, modern, vintage, chic, tile, wallpaper, brass, delicious.",
+            feature: featBovaconti!,
+            newShop: false,
+            igHandle: "bovaconticoffee",
+            distance: (userLocale.distance(from: CLLocation(latitude: 39.752994, longitude: -86.140595)))*0.000621371,
+            googleMap: "www.google.com/maps/place/Bovaconti+Coffee/@39.7530547,-86.1426982,17z/data=!3m1!4b1!4m5!3m4!1s0x886b5109bafc4327:0xe52384a5ffb31827!8m2!3d39.7530506!4d-86.1405042",
+            appleMap: "http://maps.apple.com/?daddr=1042+Virginia+Ave,Indianapolis,IN,46203&dirflg=d&t=h",
+            mondayOpen: 0000,
+            mondayClose: 0000,
+            tuesdayOpen: 0700,
+            tuesdayClose: 1800,
+            wednesdayOpen: 0700,
+            wednesdayClose: 1800,
+            thursdayOpen: 0700,
+            thursdayClose: 1800,
+            fridayOpen: 0700,
+            fridayClose: 1800,
+            saturdayOpen: 0700,
+            saturdayClose: 1800,
+            sundayOpen: 0700,
+            sundayClose:1300,
+            isOpen: false,
+            isFave: false
+        )
+        
+        let shop45 = CoffeeShop(
+            name: "Brickhouse Coffee Co",
+            neighborhood: "Geist",
+            long: 39.897250,
+            lat: -85.995225,
+            listBrew: "Brickhouse!",
+            listSpace: "Awesome, family-friendly cafe in Geist that is the epitome of cozy coffee house. Plenty of room and delicious coffee.",
+            feature: featBrickhouse!,
+            newShop: true,
+            igHandle: "brickhousecoffeeatgeist",
+            distance: (userLocale.distance(from: CLLocation(latitude: 39.897250, longitude: -85.995225)))*0.000621371,
+            googleMap: "www.google.com/maps/place/Brickhouse+Coffee+Co.+at+Geist+Shoppes/@39.8972566,-85.9974183,17z/data=!3m1!4b1!4m5!3m4!1s0x886b4b3ea7908d69:0x5e0d47dc61e16443!8m2!3d39.8972566!4d-85.9952296",
+            appleMap: "http://maps.apple.com/?daddr=9771+Fall+Creek+Rd,Indianapolis,IN,46256&dirflg=d&t=h",
+            mondayOpen: 0700,
+            mondayClose: 1300,
+            tuesdayOpen: 0700,
+            tuesdayClose: 1300,
+            wednesdayOpen: 0700,
+            wednesdayClose: 1300,
+            thursdayOpen: 0700,
+            thursdayClose: 1300,
+            fridayOpen: 0700,
+            fridayClose: 1300,
+            saturdayOpen: 0700,
+            saturdayClose: 1300,
+            sundayOpen: 0000,
+            sundayClose: 0000,
+            isOpen: false,
+            isFave: false
+        )
+        
+        let shop46 = CoffeeShop(
+            name: "Rose & Lois",
+            neighborhood: "Carmel",
+            long: 39.999368,
+            lat:  -86.043542,
+            listBrew: "Blue Mind Roasting & others!",
+            listSpace: "The perfect little cafe with the perfect little drive-thru on 146 in Carmel!",
+            feature: featRose!,
+            newShop: true,
+            igHandle: "roseandlois",
+            distance: (userLocale.distance(from: CLLocation(latitude: 39.999368, longitude: -86.043542)))*0.000621371,
+            googleMap: "www.google.com/maps/place/Rose+%26+Lois/@39.9996921,-86.0451682,16.83z/data=!4m5!3m4!1s0x8814b10c015e2c37:0x569b85c1061cc866!8m2!3d39.9993847!4d-86.0435496",
+            appleMap: "http://maps.apple.com/?daddr=7249+E+146+St,Carmel,IN,46033&dirflg=d&t=h",
+            mondayOpen: 0700,
+            mondayClose: 1900,
+            tuesdayOpen: 0700,
+            tuesdayClose: 1900,
+            wednesdayOpen: 0700,
+            wednesdayClose: 1900,
+            thursdayOpen: 0700,
+            thursdayClose: 1900,
+            fridayOpen: 0700,
+            fridayClose: 1900,
+            saturdayOpen: 0900,
+            saturdayClose: 1700,
+            sundayOpen: 0000,
+            sundayClose: 0000,
+            isOpen: false,
+            isFave: false
+        )
+        
+        let shop47 = CoffeeShop(
+            name: "Hitherto Coffee + Gaming",
+            neighborhood: "Greenfield",
+            long: 39.806074,
+            lat: -85.771567,
+            listBrew: "Hitherto roasts",
+            listSpace: "Coffee AND Gaming Parlour? Sign me UP.",
+            feature: featHitherto!,
+            newShop: true,
+            igHandle: "hithertocoffee",
+            distance: (userLocale.distance(from: CLLocation(latitude: 39.806074, longitude: -85.771567)))*0.000621371,
+            googleMap: "www.google.com/maps/place/Hitherto+Coffee+and+Gaming+Parlour/@39.8060803,-85.7737559,17z/data=!3m1!4b1!4m5!3m4!1s0x886b317ea7bff885:0x5b24bcbaa007153c!8m2!3d39.8060803!4d-85.7715672",
+            appleMap: "http://maps.apple.com/?daddr=1558+N+State+Rd,Greenfield,IN,46140&dirflg=d&t=h",
+            mondayOpen: 0630,
+            mondayClose: 2000,
+            tuesdayOpen: 0630,
+            tuesdayClose: 2000,
+            wednesdayOpen: 0630,
+            wednesdayClose: 2000,
+            thursdayOpen: 0630,
+            thursdayClose: 2000,
+            fridayOpen: 0630,
+            fridayClose: 2000,
+            saturdayOpen: 0630,
+            saturdayClose: 2000,
+            sundayOpen: 0000,
+            sundayClose: 0000,
+            isOpen: false,
+            isFave: false
+        )
+        
+        let shop48 = CoffeeShop(
+            name: "Geist Coffee Co",
+            neighborhood: "Geist",
+            long: 39.935106,
+            lat: -85.948649,
+            listBrew: "Utopian Roasters",
+            listSpace: "It's like your family's own log cabin that happens to serve amazing coffee and food.",
+            feature: featGeist!,
+            newShop: false,
+            igHandle: "geistcoffeecompany",
+            distance: (userLocale.distance(from: CLLocation(latitude: 39.935106, longitude: -85.948649)))*0.000621371,
+            googleMap: "www.google.com/maps/place/Geist+Coffee+Company/@39.9351151,-85.9508437,17z/data=!3m1!4b1!4m5!3m4!1s0x8814b5122fe7e3a3:0xcf3ec131eb753b84!8m2!3d39.9351151!4d-85.948655",
+            appleMap: "http://maps.apple.com/?daddr=10110+Brooks+School+Rd,Fishers,IN,46037&dirflg=d&t=h",
+            mondayOpen: 0800,
+            mondayClose: 1700,
+            tuesdayOpen: 0800,
+            tuesdayClose: 1700,
+            wednesdayOpen: 0800,
+            wednesdayClose: 1700,
+            thursdayOpen: 0800,
+            thursdayClose: 1700,
+            fridayOpen: 0800,
+            fridayClose: 1700,
+            saturdayOpen: 0800,
+            saturdayClose: 1700,
+            sundayOpen: 0000,
+            sundayClose: 0000,
+            isOpen: false,
+            isFave: false
+        )
+        
+        let shop49 = CoffeeShop(
+            name: "Noble Coffee & Tea",
+            neighborhood: "Noblesville",
+            long: 40.046469,
+            lat: -86.013174,
+            listBrew: "Roasted in house!",
+            listSpace: "Noble Coffee & Tea Company makes me feel warm and comfortable – all the levels of nostalgia. It's the perfect space right off the square.",
+            feature: featNcat!,
+            newShop: false,
+            igHandle: "noblecoffeeandtea",
+            distance: (userLocale.distance(from: CLLocation(latitude: 40.046469, longitude: -86.013174)))*0.000621371,
+            googleMap: "www.google.com/maps/place/Noble+Coffee+%26+Tea+Company/@40.0464734,-86.0153638,17z/data=!3m1!4b1!4m5!3m4!1s0x8814b0cd5eb43b11:0x788df5dd7aad93a8!8m2!3d40.0464734!4d-86.0131751",
+            appleMap: "http://maps.apple.com/?daddr=933+Logan+St,Noblesville,IN,46060&dirflg=d&t=h",
+            mondayOpen: 0630,
+            mondayClose: 1500,
+            tuesdayOpen: 0630,
+            tuesdayClose: 1500,
+            wednesdayOpen: 0630,
+            wednesdayClose: 1500,
+            thursdayOpen: 0630,
+            thursdayClose: 1500,
+            fridayOpen: 0630,
+            fridayClose: 1500,
+            saturdayOpen: 0630,
+            saturdayClose: 1500,
+            sundayOpen: 0900,
+            sundayClose: 1500,
+            isOpen: false,
+            isFave: false
+        )
         
         
-        shops += [shop1, shop2, shop3, shop5, shop6, shop7, shop9, shop10, shop11, shop12, shop13, shop16, shop17, shop19, shop20, shop21, shop22, shop23, shop24, shop25, shop26, shop27, shop28, shop29, shop30, shop31, shop32, shop33, shop34, shop35, shop36, shop37, shop38]
+        let shop50 = CoffeeShop(
+            name: "The Library Coffee Bar",
+            neighborhood: "Broad Ripple",
+            long: 39.877774,
+            lat: -86.143933,
+            listBrew: "Tinker Coffee",
+            listSpace: "Located in the Indianapolis Arts Center, this coffee bar (and library!) is the art-lover's dream.",
+            feature: featLibrary!,
+            newShop: false,
+            igHandle: "the_librarycoffeebar",
+            distance: (userLocale.distance(from: CLLocation(latitude: 39.877774, longitude: -86.143933)))*0.000621371,
+            googleMap: "www.google.com/maps/place/Noble+Coffee+%26+Tea+Company/@40.0464734,-86.0153638,17z/data=!3m1!4b1!4m5!3m4!1s0x8814b0cd5eb43b11:0x788df5dd7aad93a8!8m2!3d40.0464734!4d-86.0131751",
+            appleMap: "http://maps.apple.com/?daddr=820+E+67th+St,Indianapolis,IN,46220&dirflg=d&t=h",
+            mondayOpen: 0900,
+            mondayClose: 1400,
+            tuesdayOpen: 0900,
+            tuesdayClose: 1400,
+            wednesdayOpen: 0900,
+            wednesdayClose: 1400,
+            thursdayOpen: 0900,
+            thursdayClose: 1400,
+            fridayOpen: 0900,
+            fridayClose: 1400,
+            saturdayOpen: 0900,
+            saturdayClose: 1400,
+            sundayOpen: 0900,
+            sundayClose: 1400,
+            isOpen: false,
+            isFave: false
+        )
+        
+        let shop51 = CoffeeShop(
+            name: "The Mocha Nut Coffee Shop",
+            neighborhood: "Greenwood",
+            long: 39.664572,
+            lat: -86.129019,
+            listBrew: "Mocha Nut roasts from Julian Coffee",
+            listSpace: "The Mocha Nut Coffee Shop feels like a college campus coffee shop in the best way. Nothing is too rushed, and the staff is always happy to see you.",
+            feature: featMochaNut!,
+            newShop: false,
+            igHandle: "themochanutcoffeeshop",
+            distance: (userLocale.distance(from: CLLocation(latitude: 39.664572, longitude: -86.129019)))*0.000621371,
+            googleMap: "www.google.com/maps/place/The+Mocha+Nut+Coffee+Shop/@39.6645483,-86.1312273,17z/data=!3m1!4b1!4m5!3m4!1s0x886b5df8bf273703:0x2a32037a7152c71c!8m2!3d39.6645954!4d-86.1290193",
+            appleMap: "http://maps.apple.com/?daddr=1625+E+Southport+Rd,Indianapolis,IN,46227&dirflg=d&t=h",
+            mondayOpen: 0800,
+            mondayClose: 1600,
+            tuesdayOpen: 0800,
+            tuesdayClose: 1600,
+            wednesdayOpen: 0800,
+            wednesdayClose: 1600,
+            thursdayOpen: 0800,
+            thursdayClose: 1600,
+            fridayOpen: 0800,
+            fridayClose: 1600,
+            saturdayOpen: 0800,
+            saturdayClose: 1600,
+            sundayOpen: 0000,
+            sundayClose: 0000,
+            isOpen: false,
+            isFave: false
+        )
+        
+        let shop52 = CoffeeShop(
+            name: "Lulu's Coffee & Bakehouse",
+            neighborhood: "Northside",
+            long: 39.913405,
+            lat: -86.200835,
+            listBrew: "Lots of rotating local roasters!",
+            listSpace: "So many local coffees, sweet treats, and delicious menu items! I’ve been so many times, and I’ve never had the same cookie twice.",
+            feature: featLulus!,
+            newShop: false,
+            igHandle: "luluscoffeeandbake",
+            distance: (userLocale.distance(from: CLLocation(latitude: 39.913405, longitude: -86.200835)))*0.000621371,
+            googleMap: "www.google.com/maps/place/Lulu's+Coffee+%26+Bakehouse/@39.9134263,-86.2030307,17z/data=!3m1!4b1!4m5!3m4!1s0x886b54ced27ba4c1:0xe2fa97b9f24dd7fe!8m2!3d39.9134263!4d-86.200842",
+            appleMap: "http://maps.apple.com/?daddr=2292+W+86th+St,Indianapolis,IN,46260&dirflg=d&t=h",
+            mondayOpen: 0630,
+            mondayClose: 1700,
+            tuesdayOpen: 0630,
+            tuesdayClose: 1700,
+            wednesdayOpen: 0630,
+            wednesdayClose: 1700,
+            thursdayOpen: 0630,
+            thursdayClose: 1700,
+            fridayOpen: 0630,
+            fridayClose: 1700,
+            saturdayOpen: 0700,
+            saturdayClose: 1500,
+            sundayOpen: 0700,
+            sundayClose: 1400,
+            isOpen: false,
+            isFave: false
+        )
+        
+        let shop53 = CoffeeShop(
+            name: "Lincoln Lane Coffee Company",
+            neighborhood: "Downtown",
+            long: 39.745697,
+            lat: -86.149353,
+            listBrew: "Calvin Fletcher (drip) Tinker Coffee ('spro)",
+            listSpace: "Lincoln Lane is a part of Dathouse, a beautiful community center in the Bates-Hendricks neighborhood that is focused on impacting young people and being good neighbors to the community.",
+            feature: featLincolnlane!,
+            newShop: false,
+            igHandle: "lincolnlanecoffeeco",
+            distance: (userLocale.distance(from: CLLocation(latitude: 39.745697, longitude: -86.149353)))*0.000621371,
+            googleMap: "www.google.com/maps/place/Lincoln+Lane+Coffee+Co./@39.7457029,-86.1515416,17z/data=!3m1!4b1!4m5!3m4!1s0x886b5a7170ade36f:0xe530c4a66a48adb7!8m2!3d39.7457029!4d-86.1493529",
+            appleMap: "http://maps.apple.com/?daddr=516+Lincoln+St,Indianapolis,IN,46203&dirflg=d&t=h",
+            mondayOpen: 0700,
+            mondayClose: 1500,
+            tuesdayOpen: 0700,
+            tuesdayClose: 1900,
+            wednesdayOpen: 0700,
+            wednesdayClose: 1500,
+            thursdayOpen: 0700,
+            thursdayClose: 1500,
+            fridayOpen: 0700,
+            fridayClose: 1500,
+            saturdayOpen: 0900,
+            saturdayClose: 1500,
+            sundayOpen: 0000,
+            sundayClose: 0000,
+            isOpen: false,
+            isFave: false
+        )
+        
+        let shop54 = CoffeeShop(
+            name: "Prufrock Coffee Co",
+            neighborhood: "Broad Ripple",
+            long: 39.846738,
+            lat: -86.145967,
+            listBrew: "Rotating Local Roasters",
+            listSpace: "This cafe is eclectic and just the right amount of cozy. Oh, and it’s right on the Red Line, so you really don’t have any excuses.",
+            feature: featPrufrock!,
+            newShop: false,
+            igHandle: "prufrockcoffeecompany",
+            distance: (userLocale.distance(from: CLLocation(latitude: 39.846738, longitude: -86.145967)))*0.000621371,
+            googleMap: "www.google.com/maps/place/Prufrock+Coffee+Company/@39.846745,-86.14816,17z/data=!3m1!4b1!4m5!3m4!1s0x886b53fffe0f6ec7:0x768d9a034d11bf35!8m2!3d39.846745!4d-86.1459713",
+            appleMap: "http://maps.apple.com/?daddr=5168+N+College+Ave,Indianapolis,IN,46205&dirflg=d&t=h",
+            mondayOpen: 0700,
+            mondayClose: 1500,
+            tuesdayOpen: 0700,
+            tuesdayClose: 1900,
+            wednesdayOpen: 0700,
+            wednesdayClose: 1500,
+            thursdayOpen: 0700,
+            thursdayClose: 1500,
+            fridayOpen: 0700,
+            fridayClose: 1500,
+            saturdayOpen: 0900,
+            saturdayClose: 1500,
+            sundayOpen: 0000,
+            sundayClose: 0000,
+            isOpen: false,
+            isFave: false
+        )
+        
+        let shop55 = CoffeeShop(
+            name: "Amberson Coffee + Grocer",
+            neighborhood: "Fountain Square",
+            long: 39.760761,
+            lat: -86.145671,
+            listBrew: "Several rotating",
+            listSpace: "This spot features amazing coffee and artisan goods from across the country in their grocery selection. AND their sustainable to-go program is an Indy first.",
+            feature: featAmberson!,
+            newShop: true,
+            igHandle: "ambersoncoffee",
+            distance: (userLocale.distance(from: CLLocation(latitude: 39.760761, longitude: -86.145671)))*0.000621371,
+            googleMap: "www.google.com/maps/place/Amberson+Coffee+%26+Grocer/@39.7607719,-86.1478519,17z/data=!3m1!4b1!4m5!3m4!1s0x886b5109595e19b3:0xc5b44a33ee59de55!8m2!3d39.7607678!4d-86.1456632",
+            appleMap: "http://maps.apple.com/?daddr=401+S+College+Ave,Indianapolis,IN,46203&dirflg=d&t=h",
+            mondayOpen: 0700,
+            mondayClose: 1500,
+            tuesdayOpen: 0700,
+            tuesdayClose: 1900,
+            wednesdayOpen: 0700,
+            wednesdayClose: 1500,
+            thursdayOpen: 0700,
+            thursdayClose: 1500,
+            fridayOpen: 0700,
+            fridayClose: 1500,
+            saturdayOpen: 0900,
+            saturdayClose: 1500,
+            sundayOpen: 0000,
+            sundayClose: 0000,
+            isOpen: false,
+            isFave: false
+        )
+        
+        let shop56 = CoffeeShop(
+                   name: "Percolate Irvington",
+                   neighborhood: "Irvington",
+                   long: 39.770532,
+                   lat: -86.072044,
+                   listBrew: "Bee Coffee Roasters",
+                   listSpace: "This cozy wine shop turned cafe is the perfect addition to Irvington. Plenty of seating, inside and out, the friendliest staff, and BEE COFFEE.",
+                   feature: featPercolate!,
+                   newShop: true,
+                   igHandle: "percolateirv",
+                   distance: (userLocale.distance(from: CLLocation(latitude: 39.770532, longitude: -86.072044)))*0.000621371,
+                   googleMap: "www.google.com/maps/place/Percolate+Irvington/@39.7705393,-86.0742497,17z/data=!3m1!4b1!4m5!3m4!1s0x886b4f7988b139dd:0x3ac13b335e1491d7!8m2!3d39.7705393!4d-86.072061",
+                   appleMap: "http://maps.apple.com/?daddr=5543+E+Washington+St,Indianapolis,IN,46219&dirflg=d&t=h",
+                   mondayOpen: 0730,
+                   mondayClose: 2000,
+                   tuesdayOpen: 0730,
+                   tuesdayClose: 2000,
+                   wednesdayOpen: 0730,
+                   wednesdayClose: 2000,
+                   thursdayOpen: 0730,
+                   thursdayClose: 2000,
+                   fridayOpen: 0730,
+                   fridayClose: 2000,
+                   saturdayOpen: 0900,
+                   saturdayClose: 1500,
+                   sundayOpen: 0900,
+                   sundayClose: 1500,
+                   isOpen: false,
+                   isFave: false
+               )
+        
+        
+        shops += [shop1, shop2, shop3, shop7, shop9, shop11, shop12, shop13, shop17, shop19, shop20, shop21, shop22, shop23, shop24, shop25,  shop27, shop28, shop29, shop30, shop31, shop32, shop33, shop34, shop36, shop37, shop38, shop39, shop40, shop41, shop42, shop43, shop44, shop45, shop46, shop47, shop48, shop49, shop50, shop51, shop52, shop53, shop54, shop55, shop56]
         
         
         
